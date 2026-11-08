@@ -4,7 +4,7 @@ import { voteLabel, methodLabel } from '../lib/analytics';
 import { dateShort, usd } from '../lib/format';
 
 export function VoteDots({ votes }: { votes: Record<string, VoteValue> }) {
-  return <span className="row" style={{ gap: 6 }}>{members.map((m) => <span key={m.id} className="small" title={`${m.full_name}: ${voteLabel[votes[m.id] ?? 'not_recorded']}`}><span className={`vote-dot vote-${votes[m.id] ?? 'not_recorded'}`} />{m.short_name}</span>)}</span>;
+  return <span className="row" style={{ gap: 6 }}>{members.filter((m) => votes[m.id]).map((m) => <span key={m.id} className="small" title={`${m.full_name}: ${voteLabel[votes[m.id]]}`}><span className={`vote-dot vote-${votes[m.id]}`} />{m.short_name}</span>)}</span>;
 }
 
 export function MotionRow({ m, showMeeting = true }: { m: Motion; showMeeting?: boolean }) {

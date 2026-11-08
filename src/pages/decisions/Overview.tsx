@@ -13,7 +13,7 @@ export default function DecisionsOverview() {
   const cats = CATEGORY_ORDER.filter((c) => topics.some((t) => (t as Record<string, unknown>)[c]));
   return (
     <>
-      <p className="lede">The Fiscal Court is the Judge-Executive plus four magistrates. It meets the third Wednesday of each month at 9:00 a.m. Everything here is compiled from the official minutes, and every item links to its PDF.</p>
+      <p className="lede">The Fiscal Court is the Judge-Executive plus four magistrates. It meets the third Wednesday of each month at 9:00 a.m. Everything here is compiled from the official minutes, November 2021 to the present, and every item links to its PDF.</p>
       <div className="grid cols-4">
         <Stat label="Meetings tracked" value={meetings.length} sub={`${dateLong(meetings[meetings.length - 1].date)} to ${dateLong(meetings[0].date)}`} />
         <Stat label="Motions" value={motions.length} sub={`${subst.length} substantive, ${motions.length - subst.length} routine`} />
@@ -24,7 +24,7 @@ export default function DecisionsOverview() {
 
       <Section title="Who makes the motions" action={<Link to="/decisions/members" className="small">Scorecards and the mover-seconder matrix ›</Link>} />
       <div className="grid cols-5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))' }}>
-        {stats.map((s) => { const m = members.find((x) => x.id === s.id)!; return (
+        {stats.filter((s) => members.find((x) => x.id === s.id)!.active !== false).map((s) => { const m = members.find((x) => x.id === s.id)!; return (
           <Link key={s.id} to={`/decisions/members/${s.id}`} className="linkcard">
             <h3 style={{ fontSize: 16 }}>{m.full_name}</h3><p style={{ marginBottom: 6 }}>{m.title}</p>
             <div className="small"><strong>{s.made}</strong> motions made · <strong>{s.seconded}</strong> seconded<br /><strong>{s.nays}</strong> nay{s.nays === 1 ? '' : 's'} · <strong>{s.abstentions}</strong> abstention{s.abstentions === 1 ? '' : 's'}<br />attended {s.attended} of {s.total}</div>
@@ -36,7 +36,7 @@ export default function DecisionsOverview() {
       <ul className="list-reset grid">{rec.map((m) => <MotionRow key={m.id} m={m} />)}</ul>
 
       <Section title="What the court spends its time on" />
-      <ChartFrame title="Substantive motions by topic, per quarter" intro="A motion can carry more than one topic." rows={topics} filename="motions-by-topic.csv" footer={<SourceNote>Fiscal Court minutes, January 2024 to April 2026. Topics are assigned by keyword and reviewed; report any that look wrong.</SourceNote>}>
+      <ChartFrame title="Substantive motions by topic, per quarter" intro="A motion can carry more than one topic." rows={topics} filename="motions-by-topic.csv" footer={<SourceNote>Fiscal Court minutes, November 2021 to September 2026. Topics are assigned by keyword and reviewed; report any that look wrong.</SourceNote>}>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={topics} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
             <CartesianGrid stroke={p.line} strokeDasharray="3 3" vertical={false} /><XAxis dataKey="quarter" tick={{ fill: p.muted, fontSize: 11 }} /><YAxis tick={{ fill: p.muted, fontSize: 12 }} width={30} />

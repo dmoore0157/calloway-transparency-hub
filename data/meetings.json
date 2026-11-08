@@ -1,6 +1,185 @@
 {
  "meetings": [
   {
+   "id": "2026-09-16",
+   "date": "2026-09-16",
+   "kind": "regular",
+   "date_label": "September 16, 2026",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2026/10/minutes-26-09-16.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statement, payment of bills, an additional last-minute road department bill, and cash transfers.",
+    "Held the public hearing on the second reading of an ordinance imposing a one-year moratorium on data centers; after discussion of guardrails, environmental effects, tax revenue and liability, tabled the second reading until the County Attorney adds a subsection requiring any prospective data center to bring its plans to the Fiscal Court during the moratorium.",
+    "Approved the Sheriff's 2025 franchise tax settlement.",
+    "Reappointed Cheryl Roberts (Chamber) and Dennis Helmurth (hotel industry) to the Tourism Commission (Destination Calloway) for terms expiring September 16, 2029; approved personnel appointments.",
+    "Deputy Judge-Executive Gina Winchester introduced Amber Gillum as the county's new HR Director; the Cemetery Board met, while the Admin/Ordinance and Safety committees did not."
+   ],
+   "vote_notes": [
+    "Data-center moratorium ordinance: Squire Rister and Judge Imes spoke at the public hearing as citizens, outside their roles on the Court."
+   ],
+   "source_doc_id": "minutes-2026-09-16",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2026-08-28-special",
+   "date": "2026-08-28",
+   "kind": "special",
+   "date_label": "August 28, 2026",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2026/09/minutes-26-08-28-special.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger"
+   ],
+   "summary": [
+    "Special meeting on cash transfers: $187,396.41 from the Auto Insurance Tax fund to the Road Fund, $500,000 from the Road Fund to the General Fund, and $350,000 from the General Fund to the Jail Fund.",
+    "Approved paying Murray Paving for the Red Bud Road project directly from the Auto Insurance Tax fund and the Bailey Cemetery Road project from the Road Fund."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2026-08-28-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2026-08-19",
+   "date": "2026-08-19",
+   "kind": "regular",
+   "date_label": "August 19, 2026",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2026/09/minutes-26-08-19.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger"
+   ],
+   "summary": [
+    "Heard the KYTC District 1 Rural and Secondary Road report, a $10,000 TVA donation for the courthouse bell and clock tower restoration, and the special taxing districts' presentations (Library, Extension, Fire District).",
+    "Approved the financial report, bills, cash transfers, and an amendment to the standing order adding the Road Department lease-purchase payment.",
+    "After a public hearing with no comments, adopted the 2026 county tax rates: real property at 13.90 cents per $100 (down from 14.10 in 2025), with motor vehicle and personal property rates unchanged.",
+    "Approved the annual Drug Free Workplace Policy, a Sheriff's budget amendment, and the surplus of a Sheriff's vehicle.",
+    "Adopted resolutions recognizing Twin Lakes Construction for painting the jail workhouse (26-0819-A); a revised KYTC agreement for the Wrather Road bridge, not to exceed $480,000 (26-0819-B); FY2026-27 FLEX funding of up to $411,471 (26-0819-C); directing the county's opioid settlement funds, about $46,857 accumulated and roughly $6,000 a year, to the Detention Center for eligible programs (26-0819-D); a supplemental Charley Miller Road bridge agreement (26-0819-E); and a KYTC agreement for the Tobacco Road grade, drain and resurfacing project (26-0819-F).",
+    "Authorized paying $22,000 to Verdin East Clock Restoration for the clock and bell tower project from TVA, Destination Calloway and Historical Society donations; Squire Rister asked that work continue on a one-year data-center moratorium ordinance."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2026-08-19",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2026-07-30-special",
+   "date": "2026-07-30",
+   "kind": "special",
+   "date_label": "July 30, 2026",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2026/08/minutes-26-07-30-special.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger",
+    "County Clerk Faulkner"
+   ],
+   "summary": [
+    "Special meeting to set tax rates from the state's certified ad valorem figures (KRS 68.245 to 68.249).",
+    "Accepted the 4% compensating-plus rate of 13.90 cents per $100 on real property.",
+    "After adjourning, withdrew the adjournment to set the remaining rates: personal property at 16.08 and motor vehicle at 14.00, both unchanged from last year."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2026-07-30-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2026-07-20-special",
+   "date": "2026-07-20",
+   "kind": "special",
+   "date_label": "July 20, 2026",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2026/08/minutes-26-07-20-special.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Entered executive session with a Kopperud Realty representative, then approved listing the remaining two Western Shores lots under a 90-day contract with Kopperud Realty, with no offer accepted for 21 days so the public can view them.",
+    "A motion to approve a personnel action failed when Squire Cherry withdrew his second after discussion; no action was taken."
+   ],
+   "vote_notes": [
+    "Personnel action: Judge Imes's motion was seconded by Squire Cherry, who withdrew the second after discussion. The motion failed for lack of a second and no action was taken."
+   ],
+   "source_doc_id": "minutes-2026-07-20-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2026-07-15",
+   "date": "2026-07-15",
+   "kind": "regular",
+   "date_label": "July 15, 2026",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2026/08/minutes-26-07-15.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Recognized Destination Calloway and the Calloway County Genealogical and Historical Society for donations to the courthouse clock renovation.",
+    "Approved the financial statement, bills, a $300,000 transfer from the money market account to the General Fund for the jail, a $250,000 transfer from the General Fund to the Road Fund, and the FY2025-26 final settlement.",
+    "Adopted Resolution 26-0715-A (KYTC agreement to resurface Bailey Cemetery, Winchester, Hollytree and Potts roads) and 26-0715-B (repair or replacement of the Wrather Road bridge, not to exceed $480,000).",
+    "Approved an updated electrical inspector contract and added Pavement Restoration, Inc. to the road department bid list for cold mix.",
+    "Squire Rister presented the first reading of a data-center moratorium ordinance to give the Court time to study the issue; a resident raised concerns about chicken barns on Green Plain Road; tire amnesty set for October 22 to 24."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2026-07-15",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2026-06-24",
+   "date": "2026-06-24",
+   "kind": "regular",
+   "date_label": "June 24, 2026",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2026/07/DOC071526-07152026095655.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Received a clock tower drawing by artist Daisy Mae Grimes and a $37,167 check from The Murray Bank for the courthouse clock tower renovation.",
+    "Approved the financial statement, bills, cash transfers and budget transfers; the Conservation District reported on its awards and watershed work.",
+    "After public hearings with no comments, adopted the second reading of a FY2025-26 budget amendment (Ordinance 26-0624-A) and the FY2026-27 county budget.",
+    "An Executive Order continued park funding at $7,500 a month for the rest of 2026 ($45,000 total), noting future courts may change park funding from 2027.",
+    "Adopted the revised county Administrative Code (Resolution 26-0713-A); reappointed Dannie Harrison and Chris Wooldridge (911 Appeals Board) to terms ending June 30, 2029, and appointed Sarah Loveless to fill Ronnie Burkeen's Library Board term to September 26, 2029.",
+    "Approved personnel appointments and the standard cost-of-living adjustment for fiscal court employees; added SRM to the red gravel bid list; voted to sell the Western Shores lots by online sealed bids opened in July; noted the City of Murray's coming data-center hearing."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2026-06-24",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2026-06-19-special",
+   "date": "2026-06-19",
+   "kind": "special",
+   "date_label": "June 19, 2026",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2026/06/minutes-26-06-19-special.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger"
+   ],
+   "summary": [
+    "Approved improvements to the courthouse clock: restoring the bell, adding a sound system and replacing the clock face, with private donations expected to offset the cost.",
+    "Approved proceeding with the Grubbs bridge replacement, a 24-foot prefabricated bridge installed by Harper Construction, reusing the old guard rails with the county handling backfill.",
+    "Allowed the neighboring owner of the county's Hwy 641/80 property to cut down a hill at no cost to the county, with the County Attorney to prepare a liability waiver."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2026-06-19-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2026-05-20",
+   "date": "2026-05-20",
+   "kind": "regular",
+   "date_label": "May 20, 2026",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2026/06/minutes-26-05-20.pdf",
+   "absent": [
+    "imes"
+   ],
+   "absent_other": [],
+   "summary": [
+    "Judge Imes was absent following an accident; Senior Magistrate Don Cherry presided.",
+    "Approved the financial statement, bills, cash transfers and budget transfers.",
+    "After a public hearing, approved the County Road Aid and LGEA agreement; first reading of the FY2026-27 county budget; approved the annual standing orders, blanket cash-transfer orders, and the first reading of budget amendment 1 for the dump-truck loan payments.",
+    "Adopted the new animal control ordinance (26-0520-A) on second reading and repealed the old Ordinance 06-0321-A.",
+    "Approved the Sheriff's 2025 final tax settlement; adopted resolutions honoring the late Ronnie Burkeen (26-0520-A) and retiring employee Ronnie Guthrie (26-0520-B).",
+    "Reappointed Danny Perry to the Murray Transit Authority (term to May 20, 2030); approved personnel appointments; named Morris and Ahart primary red-gravel providers and Max Arnold primary fuel provider; moved the $161,343 Animal Shelter Agency Fund into a conservative non-endowed investment account with the Community Foundation of West Kentucky; approved the road department surplus list and lights for the animal control truck."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2026-05-20",
+   "extraction": "hub-2026-11"
+  },
+  {
    "id": "2026-04-22",
    "date": "2026-04-22",
    "kind": "regular",
@@ -18,7 +197,8 @@
     "Approved a 4-year, $365,000 loan at 4.53% (FNB Bank) to purchase two dump trucks."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2026-04-22"
+   "source_doc_id": "minutes-2026-04-22",
+   "extraction": "legacy"
   },
   {
    "id": "2026-03-20",
@@ -37,7 +217,8 @@
     "Made board appointments to the Industrial Development Authority and the hospital (MCCH) board; approved revised job descriptions."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2026-03-20"
+   "source_doc_id": "minutes-2026-03-20",
+   "extraction": "legacy"
   },
   {
    "id": "2026-02-18",
@@ -56,7 +237,8 @@
     "Entered executive session under KRS 61.810(1)(f); returned with no action taken."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2026-02-18"
+   "source_doc_id": "minutes-2026-02-18",
+   "extraction": "legacy"
   },
   {
    "id": "2026-01-21",
@@ -74,7 +256,8 @@
     "Discussed a joint Community Development Block Grant application with the City of Murray to renovate the Senior Citizens Center; the Judge-Executive disclosed a conflict of interest and said he would abstain on that matter."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2026-01-21"
+   "source_doc_id": "minutes-2026-01-21",
+   "extraction": "legacy"
   },
   {
    "id": "2025-12-17",
@@ -92,7 +275,8 @@
     "Renewed the EMS affiliation agreement with Calloway County Fire-Rescue and approved the surplus of two Sheriff's vehicles."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-12-17"
+   "source_doc_id": "minutes-2025-12-17",
+   "extraction": "legacy"
   },
   {
    "id": "2025-11-19",
@@ -110,7 +294,8 @@
     "Awarded the Doores Trail culvert-to-bridge project to Youngblood at $415,389 (FEMA-submitted)."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-11-19"
+   "source_doc_id": "minutes-2025-11-19",
+   "extraction": "legacy"
   },
   {
    "id": "2025-10-15",
@@ -128,7 +313,8 @@
     "Approved changing the county cellular provider from Verizon to T-Mobile, and authorized an interlocal agreement with the City of Murray for the Weaks Senior Citizens Center grant."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-10-15"
+   "source_doc_id": "minutes-2025-10-15",
+   "extraction": "legacy"
   },
   {
    "id": "2025-09-24",
@@ -146,7 +332,8 @@
     "Authorized listing the remaining five county-owned lots in Western Shores; authorized Road Department fall maintenance on the Hwy 641 lot (per Resolution 24-0717-A requiring full-Court consent)."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-09-24"
+   "source_doc_id": "minutes-2025-09-24",
+   "extraction": "legacy"
   },
   {
    "id": "2025-08-20",
@@ -169,7 +356,8 @@
     "Entered executive session under KRS 61.810(1)(f) and (1)(b)."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-08-20"
+   "source_doc_id": "minutes-2025-08-20",
+   "extraction": "legacy"
   },
   {
    "id": "2025-07-16",
@@ -189,7 +377,8 @@
    "vote_notes": [
     "Street-Legal Special Purpose Vehicle ordinance 25-0716-A (second reading): passed 4-1 — Squire Cherry voted no; Judge Imes and Squires Rister, Crutcher, Stewart voted aye."
    ],
-   "source_doc_id": "minutes-2025-07-16"
+   "source_doc_id": "minutes-2025-07-16",
+   "extraction": "legacy"
   },
   {
    "id": "2025-06-30-special",
@@ -206,7 +395,8 @@
     "Discussed (no action) a ~$1.8M CCBIP award (7.3% of the first $25M round) for four bridges, and an $51,805 KYTC 80/20 swap from Grubbs Road to Cook Store bridge (about $6,000 added from road funds)."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-06-30-special"
+   "source_doc_id": "minutes-2025-06-30-special",
+   "extraction": "legacy"
   },
   {
    "id": "2025-06-18",
@@ -225,7 +415,8 @@
     "Discontinued Sharmae Lane and adjusted John Purdom/Harry Truman drive names."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-06-18"
+   "source_doc_id": "minutes-2025-06-18",
+   "extraction": "legacy"
   },
   {
    "id": "2025-05-21",
@@ -243,7 +434,8 @@
     "Authorized a purchase order for two dump trucks (~$174,000 each, delivery in 2026) and a $1,500 TVA 26A permit application for the Boatwright Trail project."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-05-21"
+   "source_doc_id": "minutes-2025-05-21",
+   "extraction": "legacy"
   },
   {
    "id": "2025-05-12-special",
@@ -258,7 +450,8 @@
     "Approved, by general consensus (all ayes), keeping the historic structure for community use as a small fishing/nature area, with KACO consulted on liability and Fish & Wildlife on collaboration."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-05-12-special"
+   "source_doc_id": "minutes-2025-05-12-special",
+   "extraction": "legacy"
   },
   {
    "id": "2025-04-28-special",
@@ -274,7 +467,8 @@
     "Discussed (no action) the 2026-2027 County Priority Project Program."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-04-28-special"
+   "source_doc_id": "minutes-2025-04-28-special",
+   "extraction": "legacy"
   },
   {
    "id": "2025-04-16",
@@ -292,7 +486,8 @@
     "First reading of the street-legal special-purpose-vehicle ordinance (SB 63 opt-in); reauthorized standing committees and added a Long Range Planning & Financing committee."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-04-16"
+   "source_doc_id": "minutes-2025-04-16",
+   "extraction": "legacy"
   },
   {
    "id": "2025-03-24-special",
@@ -307,7 +502,8 @@
     "Entered and exited executive session under KRS 61.810(1)(f) with no action taken."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-03-24-special"
+   "source_doc_id": "minutes-2025-03-24-special",
+   "extraction": "legacy"
   },
   {
    "id": "2025-03-19",
@@ -325,7 +521,8 @@
     "Noted the jail budget's $430,000 personnel-line increase tied to the salary survey."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-03-19"
+   "source_doc_id": "minutes-2025-03-19",
+   "extraction": "legacy"
   },
   {
    "id": "2025-02-19",
@@ -345,7 +542,8 @@
     "Approved the lowest Taylor Store bridge bid ($143,626, Jim Smith Construction) and up to $35,000 for Almo bridge repairs."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-02-19"
+   "source_doc_id": "minutes-2025-02-19",
+   "extraction": "legacy"
   },
   {
    "id": "2025-01-15",
@@ -362,7 +560,8 @@
     "Entered executive session under KRS 61.810(1)(b) on personnel matters; returned with no action."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2025-01-15"
+   "source_doc_id": "minutes-2025-01-15",
+   "extraction": "legacy"
   },
   {
    "id": "2024-12-18",
@@ -383,7 +582,27 @@
     "Grounds-maintenance contract (Swift Environmental): passed 4-1 — Judge Imes voted no.",
     "Tourism Commission appointments: Squire Rister abstained (board member)."
    ],
-   "source_doc_id": "minutes-2024-12-18"
+   "source_doc_id": "minutes-2024-12-18",
+   "extraction": "legacy"
+  },
+  {
+   "id": "2024-11-20",
+   "date": "2024-11-20",
+   "kind": "regular",
+   "date_label": "November 20, 2024",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2024/12/minutes-24-11.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Murray State University President Bob Jackson presented MSU projects and the university's economic impact, and raised a possible new animal shelter alongside the planned Vet Tech facility.",
+    "Approved the financial report, bills, and a transfer; approved the Sheriff's 2025 budget and annual order setting maximum pay for deputies and assistants, and surplus of a 2019 Dodge Charger.",
+    "Adopted Resolution 24-1120-A naming EM Director Josh Kerr as applicant agent for federal disaster assistance, and 24-1120-B authorizing a Kentucky Homeland Security cyber-security grant agreement.",
+    "After a public hearing, removed Cecil Lane from the county road system; named a private drive Warner Paradise Lane for 911 (24-1120-D); set a $100 fee for requesters of new road-name signs.",
+    "Approved personnel appointments; reappointed John Rudolph and appointed Nick Wyatt to the Extension Board (terms to December 2027); adopted a family and medical leave SOP; took no action on the single lawn-maintenance bid pending answers; executive session on personnel with no action."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2024-11-20",
+   "extraction": "hub-2026-11"
   },
   {
    "id": "2024-10-16",
@@ -401,7 +620,8 @@
     "Approved 911 purchases: a Nelson Systems maintenance renewal ($13,627.53) and three solar battery-backup systems for radio towers ($17,160)."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2024-10-16"
+   "source_doc_id": "minutes-2024-10-16",
+   "extraction": "legacy"
   },
   {
    "id": "2024-09-18",
@@ -421,7 +641,54 @@
    "vote_notes": [
     "2024-25 county tax rate ($0.14 per $100): passed 4-1 — Squire Crutcher voted no; Judge Imes and Squires Rister, Cherry, Stewart voted aye."
    ],
-   "source_doc_id": "minutes-2024-09-18"
+   "source_doc_id": "minutes-2024-09-18",
+   "extraction": "legacy"
+  },
+  {
+   "id": "2024-08-21",
+   "date": "2024-08-21",
+   "kind": "regular",
+   "date_label": "August 21, 2024",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2024/09/20240821-minutes.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger (training)"
+   ],
+   "summary": [
+    "Heard special taxing district rates (Health Department unchanged at 2.80; Library 4.90 real, 5.55 personal, 3.00 motor vehicle), a FEMA briefing on storm assistance, and a resident's complaint about WK&T broadband hookup fees of up to $1,000 for homes outside the grant area.",
+    "Approved the financial statement, bills (including questioned Total Tech auto-renewals, to be addressed), cash transfers, and three additional checks.",
+    "Adopted resolutions renaming Smith Road to Brame Road (24-0821-A), adopting a 14-criteria road surface rating system (24-0821-B), and listing bridges for 80/20 and CCBIP funding (Howard, Workman, Cherry Corner, Tobacco and Beechy roads; Furches Trail, Old Shiloh, Van Cleave, Clayton Drive and Clayton Town Road).",
+    "2024 tax rates: Squire Rister's motion for the 4% rate of 13.60 died for lack of a second; Squire Cherry's motion to keep rates at 14.00 real, 16.08 personal and 14.00 motor vehicle passed 3-2 on a roll call (Stewart, Cherry, Imes aye; Rister, Crutcher nay) as the first reading.",
+    "Appointed Barb Paschall and reappointed Paul Rister and Pamela Guy to the Tourism Commission (Rister abstaining); approved personnel changes, a $44,000 911 system upgrade, a $16,900 Hanna Resource Group salary study paid with LAFTCO funds, an $8,000 WorkEasy time-clock system, cancelling Total Tech contracts, and surplus of a Sheriff's 2014 Ram and an Animal Shelter 2006 GMC.",
+    "Voted 4-1 (Imes nay) to follow the engineer's recommendation to regrade and seed the Hwy 641 property so the state water permit can be closed, estimated at about $15,000."
+   ],
+   "vote_notes": [
+    "2024 tax rates: Rister's motion for the 4% rate (13.60) received no second. Cherry's motion to keep 2023 rates passed 3-2 on roll call: Stewart, Cherry, Imes aye; Rister, Crutcher nay.",
+    "Tourism Commission appointments: Rister abstained because he was being reappointed.",
+    "Hwy 641 permit closeout: passed 4-1, Judge Imes voting nay."
+   ],
+   "source_doc_id": "minutes-2024-08-21",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2024-07-26-special",
+   "date": "2024-07-26",
+   "kind": "special",
+   "date_label": "July 26, 2024",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2024/08/minutes-24-7-26-special.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Treasurer Robinson"
+   ],
+   "summary": [
+    "Authorized a $10,000 purchase of 0.424 acres of right-of-way from Sundown Property Holdings for the Old Salem Road bridge approach.",
+    "Heard that FEMA declared a disaster on July 23 for the May 21 to 27 storms.",
+    "Approved the KYTC Rural and Municipal Aid agreement (Resolution 24-0726-A) with assurance that Harry Truman Drive would be paved along with Abe Lincoln and John Purdom drives.",
+    "Approved joining the West Kentucky Law Enforcement Mental Health and Resiliency Program interlocal agreement for peer support teams."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2024-07-26-special",
+   "extraction": "hub-2026-11"
   },
   {
    "id": "2024-07-17",
@@ -441,7 +708,8 @@
     "Resolution 24-0717-A (no action on the 641 & 80 property without full-Court approval at an open meeting): passed with Judge Imes abstaining (four ayes).",
     "Cannabis-referendum resolution for the 2024 ballot (as amended): roll-call passed 3-2 — Squires Stewart, Crutcher, Cherry aye; Squire Rister and Judge Imes nay. (The amendment adding the ballot wording passed unanimously first.)"
    ],
-   "source_doc_id": "minutes-2024-07-17"
+   "source_doc_id": "minutes-2024-07-17",
+   "extraction": "legacy"
   },
   {
    "id": "2024-06-28-special",
@@ -458,7 +726,48 @@
     "Held discussion (no vote) on the draft medical-cannabis ordinance ahead of the state opening dispensary applications July 1."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2024-06-28-special"
+   "source_doc_id": "minutes-2024-06-28-special",
+   "extraction": "legacy"
+  },
+  {
+   "id": "2024-06-19",
+   "date": "2024-06-19",
+   "kind": "regular",
+   "date_label": "June 19, 2024",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2024/07/minutes-24-06.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements, bills, budget transfers, and the second reading of budget amendment Ordinance 24-0619-A.",
+    "After a public hearing, adopted Ordinance 24-0619-B setting road standards for accepting roads into county maintenance.",
+    "Approved the LAFTCO purchase list, the county Emergency Operations Plan, an Amateur Radio Week proclamation, and renewal of the Bridges LLC employee assistance contract.",
+    "Approved personnel salary increases with Squire Cherry abstaining because he missed the work session; approved personnel actions.",
+    "Reappointed Larry Crutcher to the Fire District Board, Ricky Walls to the 641 Water District, and Sue Outland, Ricky Stewart, Tonia Casey and Justin Tidwell to PADD boards and committees (terms to June 30, 2027); supported an Executive Order creating an EM/911 Center Facility Committee.",
+    "911 reported a denied Homeland Security grant; first broadband hookup in northeast Calloway County announced."
+   ],
+   "vote_notes": [
+    "Personnel salary increases: Squire Cherry abstained because he was unable to attend the work session."
+   ],
+   "source_doc_id": "minutes-2024-06-19",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2024-05-24-special",
+   "date": "2024-05-24",
+   "kind": "special",
+   "date_label": "May 24, 2024",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2024/06/24-05-24-special.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger"
+   ],
+   "summary": [
+    "Approved Resolution 24-0524-A authorizing a GRANT program application of up to $500,000 on behalf of the Murray-Calloway Industrial Development Authority for a workforce training project.",
+    "Discussed letters of support for GRANT funds and solar panels under federal local-government energy programs; no action."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2024-05-24-special",
+   "extraction": "hub-2026-11"
   },
   {
    "id": "2024-05-15",
@@ -478,7 +787,8 @@
    "vote_notes": [
     "Medical-cannabis ballot-question resolution: a motion was made but received no second; it was laid on the clerk's desk with no vote taken."
    ],
-   "source_doc_id": "minutes-2024-05-15"
+   "source_doc_id": "minutes-2024-05-15",
+   "extraction": "legacy"
   },
   {
    "id": "2024-04-17",
@@ -496,7 +806,8 @@
     "Adopted Resolution 24-0417-A (discontinuing Ft. Heiman Road and Nelom Brown Drive) and 24-0417-B (Public Safety Telecommunications Week)."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2024-04-17"
+   "source_doc_id": "minutes-2024-04-17",
+   "extraction": "legacy"
   },
   {
    "id": "2024-03-20",
@@ -514,7 +825,8 @@
     "Split the county pest-control contract between Bug Master and McGee; adopted Homeland Security (24-0320-A) and road/PADD/CDBG resolutions (24-0320-B through -G)."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2024-03-20"
+   "source_doc_id": "minutes-2024-03-20",
+   "extraction": "legacy"
   },
   {
    "id": "2024-02-21",
@@ -534,7 +846,8 @@
     "Reappointed two members to the Weaks Center Board."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2024-02-21"
+   "source_doc_id": "minutes-2024-02-21",
+   "extraction": "legacy"
   },
   {
    "id": "2024-01-24",
@@ -552,7 +865,633 @@
     "Appointed a Fiscal Court member to the hospital Personnel Committee and named EM volunteer deputy directors by executive order."
    ],
    "vote_notes": [],
-   "source_doc_id": "minutes-2024-01-24"
+   "source_doc_id": "minutes-2024-01-24",
+   "extraction": "legacy"
+  },
+  {
+   "id": "2023-12-20",
+   "date": "2023-12-20",
+   "kind": "regular",
+   "date_label": "December 20, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2024/01/minutes-23-12-20.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements, bills, transfers, a training-day check, and payment of a Homeland Security radio-equipment invoice for Calloway County Fire-Rescue.",
+    "Accepted the Sheriff's and County Clerk's department administrative codes under Section 2.1(c) of the county code; approved the Sheriff's mineral tax settlement and the County Clerk's 2024 budget and salary order.",
+    "Approved a seven-year MediaCom franchise renewal, the 2024 holiday and meeting schedule, and signing the Emergency Management Performance Grant.",
+    "Adopted resolutions discontinuing Larry Cherry Lane and Mardis Lane as county roads (23-1220-A), applying for up to $44,018 in House Bill 1 jail arraignment equipment funds (23-1220-B), and supporting a Murray State School of Veterinary Medicine (23-1220-C).",
+    "Reappointed Warren Hopkins, Charles Nesbitt, Darryel Lee, Shirley Robinson and Ronald Babb to the Senior Citizens Board through 2024; executive session on personnel followed by approval of personnel changes."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-12-20",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-11-15",
+   "date": "2023-11-15",
+   "kind": "regular",
+   "date_label": "November 15, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/12/minutes-23-11-15.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements and bills; heard a presentation on Recovery Ready Community certification (HB 7).",
+    "Approved the Sheriff's 2024 annual salary order and 2024 budget; the Sheriff reported 63.89% of property taxes collected to date.",
+    "After a public hearing, discontinued county maintenance of Tulip Lane and 0.1 mile of Marr Lane (Resolution 23-1125-A); began the process on a request to close Larry Cherry Lane.",
+    "Adopted the PADD regional hazard mitigation plan (23-1115-B); approved an Executive Order formally signing the 2019 EMS agreement; reappointed Brian Stedelin and Gina Wilmurth to the Extension Council through 2026.",
+    "Approved personnel changes; authorized the Old Salem Road bridge demolition and redesign contract with low bidder Jim Smith Contracting; approved a letter of support for the Murray/Calloway Area Technology Center."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-11-15",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-10-18",
+   "date": "2023-10-18",
+   "kind": "regular",
+   "date_label": "October 18, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/11/minutes-23-10-18.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger (Assistant County Attorney Perlow attended)"
+   ],
+   "summary": [
+    "Approved the financial statements and bills; approved the jail's annual policy update.",
+    "After a public hearing, approved the second reading repealing Ordinance 17-0221-A.",
+    "Reappointed Dennis Helmurth and Hailey Anderson to the Tourism Board (to September 16, 2026) and Adam Wade and Jonathan Baskin to the Transit Board (to October 16, 2027); Tourism Director Jeremy Whitmore named county representative to the Purchase District Fair Board.",
+    "Approved personnel changes; accepted Charles Deering's high bid for a surplus road department tractor; added 18-foot and 21-foot dirt pans ($325 and $350 per hour) to the Swift Environmental contract.",
+    "Squire Rister asked to begin removing Tulip Lane from the county road system; the Community Foundation reported a spay/neuter grant and a search for a new animal shelter site."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-10-18",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-09-20",
+   "date": "2023-09-20",
+   "kind": "regular",
+   "date_label": "September 20, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/10/minutes-23-09-20.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements, bills and cash transfers; approved redeeming a certificate of deposit maturing September 22 and placing $1,000,000 in the Road Fund and $1,601,299 in the General Fund money market account.",
+    "Approved the Sheriff's final settlement of 2022 property taxes and an amended 2023 Sheriff's budget.",
+    "First reading of the repeal of Ordinance 17-0221-A (transparency of agencies spending tax proceeds on marketing), relying on stricter state law instead.",
+    "Reappointed Vonnie Hays Adams to the Library Board of Trustees; approved personnel changes and swore in Josh Kerr as full-time Emergency Management Director.",
+    "Surplused a road department Case Farmall tractor, spoil dirt at Hwy 641 and 80, and a 2000 Chevy Tahoe EM truck gifted to Bill Call."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-09-20",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-08-16",
+   "date": "2023-08-16",
+   "kind": "regular",
+   "date_label": "August 16, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/10/minutes-23-08-16.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements, bills and transfers; heard the Fire District and Library tax rates.",
+    "After a public hearing with no comment, adopted the second reading of the 2023 county tax rate at 0.140 per $100, unchanged from the prior year.",
+    "Authorized listing the county's 19 Western Shores lots with Kopperud Realty.",
+    "Adopted resolutions honoring Darla Jackson's service (23-0816-A), memorializing Janna Page York (23-0816-B), revising the Drug and Alcohol-Free Workplace Policy (23-0816-C), authorizing Homeland Security project applications (23-0816-D), and recognizing Calloway County Fire-Rescue (23-0816-E).",
+    "Gifted a state-donated 2022 RV to Calloway County Fire-Rescue; approved personnel changes including Darla Jackson's retirement from the Animal Shelter."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-08-16",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-08-01-special",
+   "date": "2023-08-01",
+   "kind": "special",
+   "date_label": "August 1, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/08/minutes-23-08-01-special.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger",
+    "County Clerk Faulkner"
+   ],
+   "summary": [
+    "Adopted a resolution executing a Rural Secondary Program agreement with the Transportation Cabinet with FLEX funding reimbursement not to exceed $379,834, and accepting the listed roads as part of the county road system."
+   ],
+   "vote_notes": [
+    "Squire Rister attended via Zoom."
+   ],
+   "source_doc_id": "minutes-2023-08-01-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-07-19",
+   "date": "2023-07-19",
+   "kind": "regular",
+   "date_label": "July 19, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/08/minutes-23-07-19.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger (Assistant County Attorney Perlow attended)"
+   ],
+   "summary": [
+    "Approved the financial statements, bills and transfers; the Tourism Commission presented its budget.",
+    "Approved the Treasurer's FY2022-23 final settlement; Squire Rister noted only about 15% (about $3.9 million) of the county's $26 million in revenue comes from local property taxes.",
+    "After public hearings, adopted the revised Code of Ethics (Ordinance 23-0719-B) and repealed the old code (99-0104-A), and adopted Ordinance 23-0719-A setting new magisterial district boundaries.",
+    "First reading of the 2023 property tax rate at 14.0 cents per $100, unchanged.",
+    "Approved personnel changes and surplus of an election-equipment trailer; an Executive Order on confidential county information was presented."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-07-19",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-06-21",
+   "date": "2023-06-21",
+   "kind": "regular",
+   "date_label": "June 21, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/08/minutes-23-06-21.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements, bills, cash transfers (amended to add $200,000 from the General Fund to the Jail Fund) and budget transfers.",
+    "After public hearings, adopted the second readings of budget amendment #3 (FEMA and KYTC funds), the FY2023-24 county budget, and a contingent gas tax ordinance that takes effect only if state law allows.",
+    "First readings of an updated Ethics ordinance and the repeal of the old one (99-0104-A).",
+    "Accepted the Reapportionment Committee's option 4, moving 21 census blocks from District 3 to District 2 and cutting the population variance between districts to 0.4%; first readings of the new district boundary ordinance and repeal of Ordinance 01-0918-A.",
+    "Reappointed Treasurer Tonya Robinson to a four-year term; renewed a Murray Bank CD for three months; corrected the Hazel Community Center deed; tabled the revised Administrative Code at Squire Cherry's request.",
+    "Adopted Resolution 23-0621-B moving county health insurance to the state KEHP plan on July 1, 2023; created an Animal Shelter agency fund with the Community Foundation seeded with up to $10,000; honored David Ryan Graham (23-0621-D).",
+    "Approved personnel changes and July 1 pay adjustments; named Emily Cook animal care and control director; reappointed Dannie Harrison (Fire District) and Jordan Smith (911 Appeals), appointed Pamela Guy to Tourism; surplused the 19 Western Shores lots received in a settlement."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-06-21",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-05-17",
+   "date": "2023-05-17",
+   "kind": "regular",
+   "date_label": "May 17, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/08/minutes-23-05-17.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements, bills and cash transfers; after public hearings, approved the use of County Road Aid and LGEA funds and the second readings of budget amendment #2 and the repeal of Ordinance 03-2018-A (state mutual aid).",
+    "First readings of budget amendment #3 (FEMA and KYTC money), the FY2023-24 county budget (including a pay raise), and a contingent gas tax ordinance; approved the FY2023-24 blanket and standing orders.",
+    "Approved personnel changes; reappointed Joe Dan Taylor to the Dexter-Almo Water District; appointed Jane Benson, Bill Marcum and Lisa Farris to a Reapportionment Committee at $200 each.",
+    "Approved advertising bids for the Old Salem Road bridge replacement (opening June 19).",
+    "After executive session, authorized an agreement to acquire 3.6 acres adjoining the county's Hwy 641 North property in exchange for paying up to $86,400 of the neighboring cemetery's repair work, with $100,000 placed in escrow and the purchase paid from ARPA funds.",
+    "Approved Resolution 23-0517-A supporting a grant for jail court-video equipment; discussed reviving an ankle-monitoring program."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-05-17",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-04-19",
+   "date": "2023-04-19",
+   "kind": "regular",
+   "date_label": "April 19, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/08/minutes-23-04-19.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements, bills and cash transfers; heard the KYTC Rural and Secondary Road report ($1,922,201 tentative state allocation) and a public hearing on the PADD Hazard Mitigation Plan.",
+    "After a public hearing, amended the Flood Damage Prevention ordinance (10-0709-A) to meet state standards.",
+    "First reading of the repeal of Ordinance 03-2018-A (expired state mutual aid agreement) and approval of the Regional Emergency Management Mutual Aid Agreement.",
+    "First reading of a budget amendment; approved an amended 2023 County Clerk budget and Resolution 23-0419-A for an HB 1 election equipment grant.",
+    "Approved the County Road Aid Cooperative Program agreement (Resolution 23-0419-B) with FY2023-24 apportionment of $1,529,214.81; approved road department bids and master agreement changes; approved personnel changes."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-04-19",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-03-14",
+   "date": "2023-03-14",
+   "kind": "regular",
+   "date_label": "March 14, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/05/March-14-2023-Meeting-Minutes.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements, bills and cash transfers.",
+    "After a public hearing where an insurance agent spoke against the insurance tax, adopted Ordinance 23-0314-A taxing gaming machines and the second reading of Ordinance 23-0314-B imposing a 7% insurance premium tax dedicated to county roads.",
+    "Approved the County Clerk's 2022 final settlement; the Jailer presented the 2023 jail budget (no action required).",
+    "Approved jail personnel appointments; appointed Pat Scott to the Fire District Board through June 30, 2026; accepted road material bids; accepted Siteworks LLC's bid to clean up an illegal dump at 470 Rowlett Trail, reimbursed by a state grant.",
+    "Squire Rister noted approval of the county's five-year solid waste plan and digitization of Fiscal Court minutes back to the 1930s."
+   ],
+   "vote_notes": [
+    "Gaming machine tax (Ordinance 23-0314-A): the minutes record the motion and second but state the vote only after the insurance tax motion that followed."
+   ],
+   "source_doc_id": "minutes-2023-03-14",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-02-15",
+   "date": "2023-02-15",
+   "kind": "regular",
+   "date_label": "February 15, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/03/February-15-2023-Meeting-Minutes.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statements, bills and budget transfers.",
+    "After a public hearing, repealed Ordinance 97-0213-A (concealed carry in county buildings) and 12-0221-A (cannabinoids).",
+    "Approved Resolution 23-0215-A for an HB 1 election equipment grant of up to $59,500 for electronic poll books, and payment to vendor KNOWINK; approved Resolution 23-0215-B for two 911 Homeland Security grants and the Nelson Systems low bid for a new recording system.",
+    "First readings of an amended floodplain ordinance (10-0709-A), a gaming machine tax ordinance, and a 7% automobile insurance premium tax ordinance to fund roads and bridges, the latter passing on a 5-0 roll call.",
+    "Approved the Sheriff's final settlement turning over $289,459.23 in excess fees and returned the fees to the Sheriff in four payments, March to June, less the cost of a trip to the National Law Enforcement Officers Memorial in memory of Chief Deputy Jody Cash.",
+    "Approved personnel actions; appointed Jeff Gentry, Holly Bloodworth, Carol Workman and Lauren Hines to the Board of Ethics through January 1, 2027; the county received a publisher's award for its bicentennial history book."
+   ],
+   "vote_notes": [
+    "Automobile insurance premium tax (first reading): roll call, all five ayes (Imes, Rister, Cherry, Crutcher, Stewart)."
+   ],
+   "source_doc_id": "minutes-2023-02-15",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2023-01-18",
+   "date": "2023-01-18",
+   "kind": "regular",
+   "date_label": "January 18, 2023",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Minutes-January-2023.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "First meeting of the 2023-2026 Fiscal Court; Judge Imes welcomed new District 1 Magistrate Ricky Stewart.",
+    "Approved the financial statements and bills; after a public hearing, adopted budget amendment Ordinance 23-0118-A.",
+    "Approved a $5 bail bond fee for the Jailer (KRS 431.5305) and the County Clerk's 2023 budget and salary order; the Jailer presented the 2022 jail report.",
+    "First reading of the repeal of Ordinance 97-0213-A (concealed carry in county buildings) and 12-0221-A (cannabinoids).",
+    "Approved payment of county surety bonds; reaffirmed all county employment under KRS 67.710; appointed Squire Stewart to Eddie Clyde Hale's former seats on the Health Department Board and PADD Transportation Committee; approved an invitation for road material and equipment bids due March 13."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2023-01-18",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-12-21",
+   "date": "2022-12-21",
+   "kind": "regular",
+   "date_label": "December 21, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/01/CCFC-12.21.22-Regular-Meeting.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Clerk Faulkner"
+   ],
+   "summary": [
+    "Last meeting for District 1 Magistrate Eddie Clyde Hale, who was honored by the Court, the Road Department and State Representative Mary Beth Imes.",
+    "Approved the financial statement, bills, cash transfers and budget transfers; approved the Sheriff's 2023 budget ($2,325,300) and maximum salary order ($1,800,000); approved a jail policy update.",
+    "Approved the 2023 holiday schedule and kept Fiscal Court meetings on the third Wednesday at 9:00 a.m.; approved a training luncheon check, a new checking account for opioid settlement funds, moving $2 million into a six-month CD at 3.75% with The Murray Bank, and the first reading of a budget amendment adding $200,000 in KYTC Outland Bridge funds and $1 million from Kentucky Land Partners.",
+    "Renewed the Calloway County Fire-Rescue affiliation agreement; approved buying about 1.5 acres at 3027 Hwy 641 N for $177,500 with ARPA funds.",
+    "After public hearings, adopted Ordinance 22-1221-A revising the transient room tax to comply with KRS 91A.390 and 22-1221-B on annual salary increases for certain elected officials.",
+    "Adopted the Western Shores settlement roads into the county road system; renamed Colen Jones Road to Colon Jones Road; reappointed Velvet Wilson (Transit Board), Robert and Allison Geurin (Extension Council) and five Senior Citizens Board members; surplused 46 Sheriff's Glock pistols."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-12-21",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-11-15",
+   "date": "2022-11-15",
+   "kind": "regular",
+   "date_label": "November 15, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2023/01/CCFC-11.15.22-Regular-Meeting.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Held a public hearing on annexing unserved areas into the Dexter-Almo Heights Water District (no comment).",
+    "Approved the financial statement, bills and transfers; Bobbie Smith Bryant gave the final Bicentennial report.",
+    "Raised the jail housing fee from $30 to $35 per day effective January 1, 2023 and approved the updated jail policy.",
+    "First readings (no vote) of ordinances revising the transient room tax and annual salary increases for certain elected officials.",
+    "Adopted Resolution 22-1115-A on library board appointments and 22-1115-B adopting the revised Administrative Code; approved Jennings Communications ($93,753) for a Homeland Security-funded fire-rescue radio project; reappointed Lance Allison to the Library Board through August 15, 2026; approved personnel actions.",
+    "Funded continued digitization of Fiscal Court minutes from clerk document storage fees; after executive session, authorized final settlement of the Western Shores subdivision litigation with venue in Calloway County.",
+    "The minutes reference a November 8, 2022 special meeting whose minutes are not posted on the county website."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-11-15",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-10-19",
+   "date": "2022-10-19",
+   "kind": "regular",
+   "date_label": "October 19, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/11/Fiscal-Court-10.19.22.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statement and bills (no transfers).",
+    "Accepted FiscalSoft's single bid for new payroll and accounting software at $44,985.",
+    "Appointed Bradley Michael Smith to the Dexter-Almo Water District through May 19, 2025; appointed Tori Saul as executive assistant to the Judge and Justin Tidwell to a full-time position.",
+    "Bicentennial committee reported on Founder's Day plans and a coloring contest; the November meeting was moved to Tuesday, November 15."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-10-19",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-09-21",
+   "date": "2022-09-21",
+   "kind": "regular",
+   "date_label": "September 21, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/10/September-2022-CCFC-Meeting-Minutes.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statement, bills and transfers; accepted the 2022 tax rates of the taxing districts (except schools); approved a Sheriff's budget amendment.",
+    "Approved an amended Vulcan rock contract through July 2023 reflecting price increases.",
+    "Adopted Resolution 22-0921-A joining the Kentucky Deferred Compensation 457 and 401(k) plans, 22-0921-B adopting the five-year Solid Waste Management Plan, and 22-0921-C adopting the revised Administrative Code.",
+    "Surplused a Sheriff's 2016 Dodge; switched emergency notifications from Code Red ($16,000 a year) to Hyper-Reach ($9,500 a year) paid from 911 funds; authorized bids for new payroll and accounting systems; approved Road Department personnel changes.",
+    "After executive session, approved buying 8.716 acres on Hwy 641 N near KY 80 for $400,000."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-09-21",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-09-13-special",
+   "date": "2022-09-13",
+   "kind": "special",
+   "date_label": "September 13, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/10/September-2022-Special-CCFC-Meeting-Minutes.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved payment of an MPI road paving bill.",
+    "Heard the Health Department's unchanged tax rates (3.1 cents motor vehicle, 2.8 cents real and personal property).",
+    "Approved personnel changes, adding Floodplain Coordinator duties to Solid Waste Coordinator Justin Tidwell; reappointed Bob Rogers and Kenneth Imes to the Industrial Development Authority board through July 31, 2026."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-09-13-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-08-17",
+   "date": "2022-08-17",
+   "kind": "regular",
+   "date_label": "August 17, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/10/August-2022-CCFC-Meeting-Minutes.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statement, bills and transfers; the Murray Art Guild reported on its CDBG application for a new facility.",
+    "Heard special taxing district rates (East Fork Clarks River 4% millage increase; Extension compensating rate 0.017; Fire District 0.0900), approved by law absent Court action.",
+    "After a public hearing, adopted the 2022 county tax rates on second reading: 0.1400 real property and 0.1608 tangible property per $100, unchanged from 2021.",
+    "Approved an escrow account for animal shelter donations and Resolution 22-0817-A on the animal shelter construction project.",
+    "Reappointed Lauren Kelly and Adam Carver to the Tourism Commission (Rister abstaining as a commission member); surplused school recycling trailers to donate to the school system; updated the Drug Free Workplace Policy's EAP provider to Human Development Company."
+   ],
+   "vote_notes": [
+    "Tourism Commission reappointments: Squire Rister abstained as a member of the commission."
+   ],
+   "source_doc_id": "minutes-2022-08-17",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-08-05-special",
+   "date": "2022-08-05",
+   "kind": "special",
+   "date_label": "August 5, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/08/minutes-22-08-special.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger"
+   ],
+   "summary": [
+    "Approved the FY2023 Rural Secondary FLEX program agreement, not to exceed $463,476 (Resolution 22-0805-A).",
+    "Approved a corrected Sheriff's tax settlement (math error, no change to the bottom line).",
+    "First reading of the 2022 county tax rates, keeping the 2021 rates, passed 4-1 with Squire Crutcher voting nay."
+   ],
+   "vote_notes": [
+    "2022 tax rates (first reading): Hale, Cherry and Rister voted aye with Judge Imes (the mover); Crutcher voted nay."
+   ],
+   "source_doc_id": "minutes-2022-08-05-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-07-20",
+   "date": "2022-07-20",
+   "kind": "regular",
+   "date_label": "July 20, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/08/minutes-22-07.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statement, bills, cash transfers, expenditure transfers and the Treasurer's final settlement.",
+    "The Jailer reported the jail ran under budget, averaging about 175 inmates a day with 789 bookings in six months and $127,786 in offender fees collected.",
+    "Adopted Resolution 22-0720-A joining the Purchase/Pennyrile workforce consortium and 22-0720-B renaming segments of Duncan Trail, Crouch Road and Martin Chapel Road after their partial discontinuance.",
+    "Surplused Sheriff's equipment including a 2014 Dodge Caravan and a Glock sold to a retiring deputy; appointed a part-time animal shelter technician; executive session with no action."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-07-20",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-06-29-special",
+   "date": "2022-06-29",
+   "kind": "special",
+   "date_label": "June 29, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/08/minutes-22-06-special.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "After a public hearing, approved budget amendment #4 (Sheriff excess fees); approved a 911-to-General Fund cash transfer for emergency management and budget expenditure transfers.",
+    "Amended the Vulcan road material contract to add a diesel fuel surcharge that falls away when diesel drops below $3.50 a gallon.",
+    "Approved the Don Franklin Auto bid for a 911 vehicle and a slate of PADD, Transit and 911 Appeals board appointments.",
+    "Approved part-time appointments of Jeff Steen as Emergency Management Director and Richard Palmer as deputy; executive session under KRS 61.810(1)(c) with no action."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-06-29-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-06-15",
+   "date": "2022-06-15",
+   "kind": "regular",
+   "date_label": "June 15, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/08/minutes-22-06.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statement, bills, cash transfers and expenditure transfers.",
+    "Approved the Tourism Commission budget (Squire Rister recused as a commission member).",
+    "After a public hearing, adopted the FY2022-23 county budget on second reading; approved the Sheriff's 2021 tax settlement and the County Clerk's 2021 financial statement; adopted the revised Administrative Code (Resolution 22-0615-A).",
+    "Reappointed Mark Manning to the West Kentucky Workforce Investment Board and appointed Lauren Hines to the Ethics Board; contracted Saving Grace Consulting for HR services; approved a $5,527.50 FEMA-funded stipend for Justin Tidwell's 2021 flood work; approved a bid request for a 911 vehicle."
+   ],
+   "vote_notes": [
+    "Tourism Commission budget: Squire Rister recused himself as a member of the commission."
+   ],
+   "source_doc_id": "minutes-2022-06-15",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-06-13-special",
+   "date": "2022-06-13",
+   "kind": "special",
+   "date_label": "June 13, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/08/minutes-22-06-special-1.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved a corrected first reading of the Sheriff excess fees budget amendment, superseding the May 18 version that had a typo.",
+    "Executive session under KRS 61.810(c) with no action."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-06-13-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-05-18",
+   "date": "2022-05-18",
+   "kind": "regular",
+   "date_label": "May 18, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/08/minutes-22-05.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statement, bills, transfers and expenditure transfers; heard the KYTC Rural and Secondary Road recommendations with about $477,696 in FLEX funds.",
+    "After a public hearing on County Road Aid and LGEA funds, approved the first reading of the FY2022-23 county budget, the blanket cash-transfer order and the annual standing order.",
+    "Paid off $6,419.90 remaining on two tandem dump trucks; approved the AOC contract reimbursing $88,400 in rent and $152,300 in operating costs for the judicial center; adopted a Fiscal Court mission statement.",
+    "Adopted budget amendment #2 (Ordinance 22-0518-A, $844,749.10) on second reading and the first reading of budget amendment #4 ($169,778.63 Sheriff excess fees).",
+    "Approved Resolution 22-0518-B supporting the Murray Art Guild's block grant application and 22-0518-A executing the $1,562,813.55 County Road Aid contract; reappointed Rhonda Lamb to the Fire District Board.",
+    "Approved Southern Concrete as primary concrete supplier, Vulcan price increases, Morris Family Farms as secondary red gravel hauler, and a health insurance renewal absorbing a 4.6% increase; adjourned in memory of Deputy Sheriff Jody Cash."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-05-18",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-04-20",
+   "date": "2022-04-20",
+   "kind": "regular",
+   "date_label": "April 20, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/05/minutes-22-04.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the minutes, an amendment to the September 15, 2021 minutes, the financial statement, bills and a transfer.",
+    "Authorized the final Energy Systems Group contract after County Attorney review.",
+    "After public hearings, closed segments of Crouch Road, Duncan Trail (creating Duncan Trail East and West) and Martins Chapel Road to county maintenance.",
+    "Authorized the Smith Construction contract for the Outland School Road bridge; adopted budget amendment Ordinance 22-0420-A on second reading and a new first-reading amendment; repealed Ordinance 99-0316-A (defunct EDC revolving fund).",
+    "Adopted Resolution 22-0420-A declaring $7,575,487 in ARPA funds as lost revenue; approved FY2022-23 employee wages and magistrate pay of $21,000 a year; surplused a 2007 jail Crown Victoria; approved inmate seasonal workers at the Road Department."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-04-20",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-03-16",
+   "date": "2022-03-16",
+   "kind": "regular",
+   "date_label": "March 16, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/04/minutes-22-03.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the minutes of the February 16 regular and March 3 special meetings, the financial statement, bills and a transfer.",
+    "Authorized the two-year state jail contract and approved proceeding with both Energy Systems Group projects.",
+    "Began the process to discontinue portions of Duncan Trail, Crouch Road and Martin Chapel Road by appointing viewers; first readings of a budget amendment and the repeal of the EDC revolving fund ordinance.",
+    "Appointed Jonathan Baskin to the Transit Board; set water district commissioner pay at the $3,600 statutory maximum; approved a seasonal Road Department hire, a temporary $25-per-load Vulcan fuel surcharge, pest control bids (McGee for county buildings, Bug Masters for fire stations) and a used engine for the bob truck.",
+    "The minutes reference a March 3, 2022 special meeting whose minutes are not posted on the county website."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-03-16",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-02-16",
+   "date": "2022-02-16",
+   "kind": "regular",
+   "date_label": "February 16, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/04/minutes-22-02.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statement, bills and a transfer.",
+    "Approved the Sheriff's final settlement and returned the excess fees to the Sheriff's office over four months.",
+    "First reading of a budget amendment adding $113,000 in Road Fund receipts from a dozer sale; second reading of Ordinance 22-0216-A amending the solid waste permit process.",
+    "Adopted Resolution 22-0216-A supporting a federal EDA grant for a Recovery Kentucky Center in Calloway County.",
+    "Appointed Shawn Reynolds to the Hospital Board and Jodi Hanneman to the Tourism Commission; approved part-time and temporary hires; accepted Federal Signal's low bid for weather sirens."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2022-02-16",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2022-01-19",
+   "date": "2022-01-19",
+   "kind": "regular",
+   "date_label": "January 19, 2022",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/02/2022-01.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the financial statement, payment of bills, and transfers.",
+    "Entered executive session to discuss pending litigation and returned with no action recorded.",
+    "Approved the County Clerk's 2022 budget and the annual order setting deputies' salaries.",
+    "Renewed the annual affiliation agreement with Calloway County Fire-Rescue.",
+    "First reading of a revision to Ordinance #20 creating a permit process for licensing solid-waste management facilities.",
+    "Adopted Resolution 22-0119-A (Homeland Security grant for a 911 early-warning system) and 22-0119-B (naming Solid Waste Coordinator Justin Tidwell as county applicant agent).",
+    "Reappointed Ali Robertson to the Hazel 641 Water District board (term to January 18, 2026); approved 911 Center personnel changes and surplus of 911 computer equipment; Jailer Ken Claud gave the 2021 jail report."
+   ],
+   "vote_notes": [
+    "Squire Cherry attended by phone."
+   ],
+   "source_doc_id": "minutes-2022-01-19",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2021-12-15",
+   "date": "2021-12-15",
+   "kind": "regular",
+   "date_label": "December 15, 2021",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2022/01/minutes-1.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Approved the minutes of the November 17 regular and November 19 special meetings, the financial statement, bills, transfers and additional budget transfers.",
+    "Received the Hickory Woods bicentennial calendar and an update on the Bicentennial book, due for Founder's Day, November 3, 2022.",
+    "Approved the 2022 holiday schedule, a $2,500 contribution to Paws for a Cause at the park from the park equipment line, and personnel appointments.",
+    "Heard reports on tornado relief help to Graves and Marshall counties."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2021-12-15",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2021-11-19-special",
+   "date": "2021-11-19",
+   "kind": "special",
+   "date_label": "November 19, 2021",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2021/12/21-november-special-minutes.pdf",
+   "absent": [],
+   "absent_other": [
+    "County Attorney Ernstberger"
+   ],
+   "summary": [
+    "Approved the state FLEX fund agreement and Resolution 21-1119-A."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2021-11-19-special",
+   "extraction": "hub-2026-11"
+  },
+  {
+   "id": "2021-11-17",
+   "date": "2021-11-17",
+   "kind": "regular",
+   "date_label": "November 17, 2021",
+   "minutes_url": "https://callowaycountyky.gov/wp-content/uploads/2021/12/21-november-minutes.pdf",
+   "absent": [],
+   "absent_other": [],
+   "summary": [
+    "Introduced new Health Department director Jamie Hughes; approved the minutes, financial statement, bills and transfers; executive session on pending litigation with no action.",
+    "Approved the Sheriff's 2022 budget of $2,101,200 and the annual salary order of $1,660,000.",
+    "Approved a Guaranteed Energy Savings project development agreement with Energy Systems Group for county buildings (estimated $1 million to $1.5 million, repaid from energy savings).",
+    "Adopted Resolution 21-1117-A designating SPGE funds to the Murray-Calloway Industrial Development Authority and 21-1117-B making November 3, 2022 Founder's Day and a county holiday.",
+    "Appointed Hailey Anderson to the Tourism Commission; reappointed Connie Talent and appointed John Rudolph to the Extension Council; approved personnel changes; surplused a 2010 Nissan Altima; granted the park $12,728.21 for a utility vehicle and pitching mounds."
+   ],
+   "vote_notes": [],
+   "source_doc_id": "minutes-2021-11-17",
+   "extraction": "hub-2026-11"
   }
  ],
  "minutes_index_url": "https://callowaycountyky.gov/meeting-minutes/",

@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
-import { members, memberById, motions, meetings, links, CATEGORY_ORDER } from '../../lib/data';
+import { members, memberById, motions, meetings, links, CATEGORY_ORDER, rosterOn } from '../../lib/data';
 import { memberStats, moverSeconderMatrix } from '../../lib/analytics';
 import { Section, SourceNote, Empty, Crumb, ShareButton, Stat, Ext, ChartFrame } from '../../components/ui';
 import { MotionRow } from '../../components/VoteBits';
@@ -14,11 +14,11 @@ export default function Members() {
   const rows = stats.map((s) => ({ member: memberById[s.id].full_name, title: memberById[s.id].title, attended: `${s.attended}/${s.total}`, made: s.made, seconded: s.seconded, nays: s.nays, abstentions: s.abstentions, dollars_moved: s.dollarsMoved }));
   return (
     <>
-      <p className="lede">The five members of the Fiscal Court, with what the minutes record for each: attendance, motions made and seconded, and every nay or abstention. Counts sit side by side and are never ranked, because more motions is neither better nor worse.</p>
+      <p className="lede">The members of the Fiscal Court since November 2021, with what the minutes record for each: attendance, motions made and seconded, and every nay or abstention. Counts sit side by side and are never ranked, because more motions is neither better nor worse.</p>
       <div className="grid cols-3">
         {stats.map((s) => { const m = memberById[s.id]; return (
-          <Link key={s.id} to={`/decisions/members/${s.id}`} className="linkcard">
-            <div className="eyebrow">{m.title}</div><h3>{m.full_name}</h3>
+          <Link key={s.id} to={`/decisions/members/${s.id}`} className="linkcard" style={m.active === false ? { opacity: .85, borderTopColor: 'var(--line)' } : undefined}>
+            <div className="eyebrow">{m.title}{m.active === false && <span className="badge" style={{ marginLeft: 6 }}>Former</span>}</div><h3>{m.full_name}</h3>
             <div className="grid cols-2" style={{ gap: 6 }}>
               <div><div className="small muted">Motions made</div><strong style={{ fontSize: 20, fontFamily: 'var(--serif)' }}>{s.made}</strong></div>
               <div><div className="small muted">Seconded</div><strong style={{ fontSize: 20, fontFamily: 'var(--serif)' }}>{s.seconded}</strong></div>
@@ -29,7 +29,7 @@ export default function Members() {
           </Link>); })}
       </div>
       <Section title="Who moves, who seconds" />
-      <ChartFrame title="Mover × seconder, substantive motions" intro="Rows are who made the motion; columns are who seconded it. Darker cells are more frequent pairs. Working pairs, and pairs that never occur, both show up here." rows={members.map((a) => ({ mover: a.short_name, ...Object.fromEntries(members.map((b) => [b.short_name, matrix[a.id][b.id]])) }))} filename="mover-seconder-matrix.csv" footer={<SourceNote>Fiscal Court minutes, Jan 2024 to Apr 2026, excluding routine motions.</SourceNote>}>
+      <ChartFrame title="Mover × seconder, substantive motions" intro="Rows are who made the motion; columns are who seconded it. Darker cells are more frequent pairs. Working pairs, and pairs that never occur, both show up here." rows={members.map((a) => ({ mover: a.short_name, ...Object.fromEntries(members.map((b) => [b.short_name, matrix[a.id][b.id]])) }))} filename="mover-seconder-matrix.csv" footer={<SourceNote>Fiscal Court minutes, Nov 2021 to Sep 2026, excluding routine motions.</SourceNote>}>
         <div style={{ overflowX: 'auto' }}>
           <div className="matrix" style={{ gridTemplateColumns: `110px repeat(${members.length}, minmax(64px, 1fr))`, minWidth: 440 }}>
             <div className="small muted" style={{ textAlign: 'left' }}>moved by ↓ / seconded by →</div>{members.map((b) => <div key={b.id} className="small" style={{ fontWeight: 700 }}>{b.short_name}</div>)}
@@ -50,7 +50,7 @@ export default function Members() {
         </ResponsiveContainer>
       </ChartFrame>
       <div className="card" style={{ marginTop: 12 }}><table className="data"><thead><tr><th>Member</th><th>Attended</th><th className="num">Made</th><th className="num">Seconded</th><th className="num">Nays</th><th className="num">Abstained</th><th className="num">Dollars named</th></tr></thead><tbody>{rows.map((r) => <tr key={r.member}><td>{r.member} <span className="small muted">{r.title}</span></td><td>{r.attended}</td><td className="num">{r.made}</td><td className="num">{r.seconded}</td><td className="num">{r.nays}</td><td className="num">{r.abstentions}</td><td className="num">{usd(r.dollars_moved)}</td></tr>)}</tbody></table></div>
-      <SourceNote>Fiscal Court minutes. Official names and contact details: <Ext href={links.officials}>county elected-officials page</Ext>.</SourceNote>
+      <SourceNote>Fiscal Court minutes, November 2021 to September 2026 ({meetings.length} meetings; attendance counts only meetings during each member's term, so {rosterOn('2022-06-01').length} members sat in 2022). Official names and contact details: <Ext href={links.officials}>county elected-officials page</Ext>.</SourceNote>
     </>
   );
 }
@@ -83,7 +83,7 @@ export function MemberPage() {
       {made.length > 12 && <p className="small"><Link to={`/decisions/votes?member=${id}`}>See all {made.length} in the vote tracker ›</Link></p>}
       <Section title={`Motions seconded (${seconded.length})`} />
       <ul className="list-reset grid">{seconded.slice(0, 6).map((x) => <MotionRow key={x.id} m={x} />)}</ul>
-      <SourceNote>Fiscal Court minutes, Jan 2024 to Apr 2026. "All voted aye" votes are recorded as aye for every present member.</SourceNote>
+      <SourceNote>Fiscal Court minutes, Nov 2021 to Sep 2026. "All voted aye" votes are recorded as aye for every present member.</SourceNote>
     </>
   );
 }

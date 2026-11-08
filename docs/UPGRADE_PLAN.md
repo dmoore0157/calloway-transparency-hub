@@ -22,6 +22,13 @@ votes. What differs from the plan as written:
 - Public views are `SECURITY DEFINER` (owned by postgres) so the anon role sees only whitelisted columns and rows;
   Supabase's advisor flags this pattern, and it is intentional here.
 
+### Minutes coverage (November 2026)
+
+All 76 sets of minutes the county has published online (November 17, 2021 to September 16, 2026) are now in the hub:
+949 motions with mover, seconder, result and per-member votes. The 46 meetings added in November 2026 were extracted from
+the PDFs by the hub and are labeled on their pages as not yet independently reviewed. Two special meetings the minutes
+refer to (March 3, 2022 and November 8, 2022) have no minutes posted on the county site and are not in the hub.
+
 ### Decisions so far
 
 | Topic | Decision (Nov 2026) |

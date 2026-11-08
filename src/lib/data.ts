@@ -12,13 +12,13 @@ import glossaryJson from '../../data/glossary.json';
 import lawJson from '../../data/law.json';
 import roadmapJson from '../../data/roadmap.json';
 
-export type Member = { id: string; full_name: string; short_name: string; title: string; role: 'judge_executive' | 'magistrate'; district: number | null };
-export type Meeting = { id: string; date: string; kind: 'regular' | 'special'; date_label: string; minutes_url: string; absent: string[]; absent_other: string[]; summary: string[]; vote_notes: string[]; source_doc_id: string };
+export type Member = { id: string; full_name: string; short_name: string; title: string; role: 'judge_executive' | 'magistrate'; district: number | null; term_start?: string | null; term_end?: string | null; active?: boolean };
+export type Meeting = { id: string; date: string; kind: 'regular' | 'special'; date_label: string; minutes_url: string; absent: string[]; absent_other: string[]; summary: string[]; vote_notes: string[]; source_doc_id: string; extraction?: string };
 export type VoteValue = 'aye' | 'nay' | 'abstain' | 'absent' | 'not_recorded';
 export type Motion = {
   id: string; meeting_id: string; date: string; seq: number; text: string; mover: string | null; seconder: string | null;
   outcome: 'passed' | 'failed' | 'no_second' | 'tabled' | 'withdrawn'; vote_method: string; result_label: string; note: string | null;
-  is_routine: boolean; category: string[]; dollar_amount: number | null; votes: Record<string, VoteValue>; source_doc_id: string; minutes_url: string; fragment?: boolean; text_note?: string | null;
+  is_routine: boolean; category: string[]; dollar_amount: number | null; votes: Record<string, VoteValue>; source_doc_id: string; minutes_url: string; fragment?: boolean; text_note?: string | null; extraction?: string;
 };
 export type BudgetLine = { fund: string; kind: 'revenue' | 'appropriation'; account: string; name: string; amount: number };
 export type Grant = { mk: string; cat: string; prog: string; purpose: string; amt: string; match: string; kind: string; stage: string; meeting_id: string | null; minutes_url: string | null };
@@ -26,11 +26,13 @@ export type Enactment = { id: string; title: string; category: string; status: s
 export type Term = { badge: string; what: string; why: string };
 
 export const members = membersJson.members as Member[];
+export const currentMembers = members.filter((m) => m.active !== false);
+export const rosterOn = (date: string) => members.filter((m) => (!m.term_start || m.term_start <= date) && (!m.term_end || m.term_end >= date));
 export const memberById = Object.fromEntries(members.map((m) => [m.id, m])) as Record<string, Member>;
-export const meetings = meetingsJson.meetings as Meeting[];
+export const meetings = meetingsJson.meetings as unknown as Meeting[];
 export const meetingById = Object.fromEntries(meetings.map((m) => [m.id, m])) as Record<string, Meeting>;
 export const meetingsMeta = { minutes_index_url: meetingsJson.minutes_index_url, regular_schedule: meetingsJson.regular_schedule };
-export const motions = motionsJson.motions as Motion[];
+export const motions = motionsJson.motions as unknown as Motion[];
 export const motionNotes = motionsJson.notes;
 export const overview = overviewJson;
 export const fy2027 = fy2027Json as typeof fy2027Json & { lines: BudgetLine[] };

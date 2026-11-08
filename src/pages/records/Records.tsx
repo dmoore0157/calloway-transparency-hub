@@ -36,7 +36,7 @@ export function Sources() {
     ['FY2022–FY2025 revenue, spending, budget vs. actual', 'County quarterly financial reports filed with KY DLG', 'County-reported, unaudited'],
     ['FY2024-25 General Fund line items', 'County year-end General Fund expenditure report', 'County year-end report'],
     ['FY2026-27 budget lines, all funds', 'Adopted budget, uniform DLG form', 'Adopted budget'],
-    ['Meetings, motions, votes, grants, debt since 2024', 'Official Fiscal Court minutes (PDF), callowaycountyky.gov', 'Compiled from minutes'],
+    ['Meetings, motions and votes since Nov 2021; grants and debt', 'Official Fiscal Court minutes (PDF), callowaycountyky.gov', 'Compiled from minutes; meetings added Nov 2026 are marked as not yet independently reviewed'],
     ['Ordinances', 'County ordinance records, callowaycountyky.gov', 'Linked to county PDFs'],
     ['Staffing counts', 'Calloway County Treasurer, June 2026', 'County-reported'],
     ['Population (37,103)', 'U.S. Census 2020', 'Federal'],

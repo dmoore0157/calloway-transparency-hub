@@ -10,7 +10,9 @@ for (const m of motions) {
   if (!m.minutes_url || !m.source_doc_id) errors.push(`motion ${m.id} has no source`);
   if (m.mover && !memberIds.has(m.mover)) errors.push(`motion ${m.id} unknown mover ${m.mover}`);
   if (m.seconder && !memberIds.has(m.seconder)) errors.push(`motion ${m.id} unknown seconder ${m.seconder}`);
-  for (const id of memberIds) if (!m.votes[id]) errors.push(`motion ${m.id} missing vote for ${id}`);
+  const roster = members.filter((x) => (!x.term_start || x.term_start <= m.date) && (!x.term_end || x.term_end >= m.date)).map((x) => x.id);
+  for (const id of roster) if (!m.votes[id]) errors.push(`motion ${m.id} missing vote for ${id}`);
+  for (const id of Object.keys(m.votes)) if (!roster.includes(id)) errors.push(`motion ${m.id} has a vote for ${id}, who was not on the court that day`);
   if (m.vote_method === 'voice_unanimous' && Object.values(m.votes).some((v) => v === 'nay' || v === 'abstain')) errors.push(`motion ${m.id} is marked unanimous but has a nay/abstain`);
 }
 const fy = read('data/budget/fy2027.json'); const total = fy.lines.filter((l) => l.kind === 'appropriation').reduce((s, l) => s + l.amount, 0);

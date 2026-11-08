@@ -41,7 +41,7 @@ export default function Home() {
       <div className="grid cols-4">
         <Stat label={`General Fund spending, FY${overview.stats.latestFY}`} value={usd(overview.stats.latestSpend, { compact: true })} sub={`${overview.stats.latestYoY > 0 ? '+' : ''}${overview.stats.latestYoY}% vs. the year before`} />
         <Stat label="Per resident" value={usd(overview.stats.latestPerRes)} sub={`General Fund ÷ ${overview.population.toLocaleString()} residents`} />
-        <Stat label="Motions tracked" value={motions.length} sub={`${meetings.length} meetings since Jan 2024`} />
+        <Stat label="Motions tracked" value={motions.length} sub={`${meetings.length} meetings since Nov 2021`} />
         <Stat label="Recorded or split votes" value={split} sub="Every other motion passed by voice, all ayes" />
       </div>
 

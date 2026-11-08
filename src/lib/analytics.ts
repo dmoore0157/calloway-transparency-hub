@@ -1,4 +1,4 @@
-import { motions, members, meetings, type Motion, type VoteValue } from './data';
+import { motions, members, meetings, rosterOn, type Motion, type VoteValue } from './data';
 
 export type MemberStats = { id: string; attended: number; total: number; made: number; seconded: number; nays: number; abstentions: number; dollarsMoved: number; byCategory: Record<string, number> };
 
@@ -7,7 +7,8 @@ export function substantive(ms: Motion[] = motions) { return ms.filter((m) => !m
 export function memberStats(ms: Motion[] = motions): MemberStats[] {
   return members.map((mem) => {
     const s: MemberStats = { id: mem.id, attended: 0, total: meetings.length, made: 0, seconded: 0, nays: 0, abstentions: 0, dollarsMoved: 0, byCategory: {} };
-    for (const mt of meetings) if (!mt.absent.includes(mem.id)) s.attended++;
+    const mine = meetings.filter((mt) => rosterOn(mt.date).some((r) => r.id === mem.id)); s.total = mine.length;
+    for (const mt of mine) if (!mt.absent.includes(mem.id)) s.attended++;
     for (const m of ms) {
       if (m.is_routine) continue;
       if (m.mover === mem.id) { s.made++; s.dollarsMoved += m.dollar_amount ?? 0; for (const c of m.category) s.byCategory[c] = (s.byCategory[c] ?? 0) + 1; }

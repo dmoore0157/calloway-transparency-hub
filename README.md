@@ -11,7 +11,7 @@ Every figure links to a public record. Not affiliated with Calloway County gover
 | Layer | What | Where |
 |---|---|---|
 | Site | Vite + React + TypeScript, prerendered to one HTML file per route, served by GitHub Pages | `src/`, `scripts/prerender.mjs` |
-| Data | Budgets, meetings, motions, votes, grants, debt, ordinances, glossary as JSON (public, CC BY 4.0) | `data/` |
+| Data | Budgets, 76 meetings and 949 motions with votes (Nov 2021 to Sep 2026), grants, debt, ordinances, glossary as JSON (public, CC BY 4.0) | `data/` |
 | Backend | Supabase project `calloway-transparency-hub`: Postgres + PostGIS, Row Level Security, Storage, Edge Functions, cron | `supabase/` |
 | Live features | Road tickets with map and photos, idea board, data-error flags, commitments tracker, admin review queues | edge functions + `public.*_public` views |
 
@@ -42,6 +42,8 @@ For a custom domain, add `public/CNAME`; `vite.config.ts` then uses `/` as the b
 ### Updating data
 
 Edit the files in `data/` (or regenerate them), run `node scripts/check-data.mjs`, commit, push to `main`.
+New meetings: transcribe the minutes PDF into the scratch JSON shape used by `scripts/merge-minutes.mjs`, run it, then load the
+same rows into Supabase with the `public.load_minutes` function (grant it to a role only for the load, then revoke).
 The repository history is the public change log for every number on the site.
 
 ## Documents

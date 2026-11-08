@@ -7,6 +7,21 @@ Companion documents:
 - `docs/backend/schema.sql` : the full Postgres schema (Supabase) for every feature below
 - `docs/backend/API.md` : public and admin API contract, edge functions, jobs, and moderation flow
 
+### Build status (November 2026)
+
+Phases 0 to 3 of this plan are implemented on the `claude/calloway-hub-improvements-aou06k` branch and the Supabase
+project `calloway-transparency-hub` is live: schema, RLS, storage buckets, six edge functions, seeded meetings and
+votes. What differs from the plan as written:
+
+- Hosting stays on GitHub Pages (section 7.5). The Supabase project was created in the only organization the
+  account had at build time; transfer it to a hub-owned organization from the project's Settings → General page.
+- Fonts are system fonts rather than self-hosted files, so no font downloads are needed.
+- Anti-spam runs on rate limits, a honeypot, and moderation; Turnstile switches on when `TURNSTILE_SECRET` is set.
+- Magistrate district boundaries and county road centerlines are not yet loaded, so "Who represents me" links to the
+  county map and tickets use the reporter's district choice until boundaries are available.
+- Public views are `SECURITY DEFINER` (owned by postgres) so the anon role sees only whitelisted columns and rows;
+  Supabase's advisor flags this pattern, and it is intentional here.
+
 ### Decisions so far
 
 | Topic | Decision (Nov 2026) |

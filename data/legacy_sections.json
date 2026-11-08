@@ -1,0 +1,89 @@
+[
+ {
+  "key": "money",
+  "name": "County Budget",
+  "status": "live",
+  "tab": "money",
+  "blurb": "Where the money comes from and where it goes — 8 years, traced to the record."
+ },
+ {
+  "key": "bva",
+  "name": "Budget vs. Actual",
+  "status": "live",
+  "tab": "bva",
+  "blurb": "What was budgeted vs. what was actually spent, by category, every year."
+ },
+ {
+  "key": "explore",
+  "name": "Spending Detail",
+  "status": "live",
+  "tab": "explore",
+  "blurb": "Drill the General Fund down to individual line items, year by year."
+ },
+ {
+  "key": "meetings",
+  "name": "Meeting Records & Minutes",
+  "status": "live",
+  "tab": "meetings",
+  "blurb": "Every Fiscal Court meeting's official minutes, linked straight to the county's records."
+ },
+ {
+  "key": "reports",
+  "name": "DLG Reports & Audits",
+  "status": "live",
+  "tab": "reports",
+  "blurb": "The county's own state filings and independent audits, linked at the source."
+ },
+ {
+  "key": "debt",
+  "name": "Debt & Obligations",
+  "status": "live",
+  "tab": "debt",
+  "blurb": "What the county owes, for what, and when it's paid off — from the audited financial notes."
+ },
+ {
+  "key": "ordinances",
+  "name": "Ordinances & Resolutions",
+  "status": "live",
+  "tab": "meetings",
+  "blurb": "What the Fiscal Court has formally enacted — linked to the county's ordinance records."
+ },
+ {
+  "key": "checkbook",
+  "name": "County Checkbook",
+  "status": "records",
+  "blurb": "Every vendor payment — check, claim, department, amount. Needs the county claims register (open records)."
+ },
+ {
+  "key": "vendors",
+  "name": "Vendor Spending",
+  "status": "records",
+  "blurb": "Top vendors and multi-year totals, built from the claims register once obtained."
+ },
+ {
+  "key": "votes",
+  "name": "Vote Tracker",
+  "status": "live",
+  "tab": "votes",
+  "blurb": "Every motion in one searchable place — who moved it, who seconded, the result, and the roll-call detail on split votes."
+ },
+ {
+  "key": "grants",
+  "name": "Grants & Outside Funding",
+  "status": "live",
+  "tab": "grants",
+  "blurb": "Outside funding the county pursued and won — bridges, broadband, FEMA, economic development — from the public record. Spend-by-grant reconciliation still needs the claims register."
+ },
+ {
+  "key": "projects",
+  "name": "Capital Projects",
+  "status": "office",
+  "blurb": "Roads, buildings, equipment by district — budget, status, and outcome."
+ },
+ {
+  "key": "openrec",
+  "name": "Open Records Log",
+  "status": "office",
+  "blurb": "Requests received and turnaround time — published by the county, privacy-protected."
+ }
+]

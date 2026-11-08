@@ -1,0 +1,8294 @@
+{
+ "v": {
+  "navy": "#1A2744",
+  "red": "#C0272D",
+  "gold": "#C9A84C",
+  "cream": "#F5F1EA",
+  "warm": "#E8E2D9",
+  "charcoal": "#2C2C2C",
+  "stone": "#6B6860",
+  "green": "#3A7D44",
+  "orange": "#D4752A",
+  "white": "#FFFFFF"
+ },
+ "se": "Georgia, 'Times New Roman', serif",
+ "U": "'Trebuchet MS', 'Segoe UI', sans-serif",
+ "r4": 37103,
+ "X_": [
+  {
+   "source": "Property & other taxes",
+   "v": [
+    3650150,
+    3700780,
+    3945727,
+    3903429,
+    4506470,
+    4801486,
+    5143974,
+    5445956
+   ]
+  },
+  {
+   "source": "Intergovernmental (state/federal)",
+   "v": [
+    408091,
+    801123,
+    996595,
+    6371939,
+    756487,
+    696898,
+    785432,
+    1303667
+   ]
+  },
+  {
+   "source": "Excess fees (from fee offices)",
+   "v": [
+    117858,
+    138789,
+    120245,
+    336920,
+    648732,
+    488224,
+    422450,
+    399765
+   ]
+  },
+  {
+   "source": "In-lieu-of-tax payments",
+   "v": [
+    106403,
+    121073,
+    134371,
+    124758,
+    110776,
+    109451,
+    135816,
+    131230
+   ]
+  },
+  {
+   "source": "Licenses & permits",
+   "v": [
+    51677,
+    31736,
+    69292,
+    66103,
+    65594,
+    66783,
+    66028,
+    80778
+   ]
+  },
+  {
+   "source": "Miscellaneous",
+   "v": [
+    135201,
+    231066,
+    244848,
+    407290,
+    140813,
+    1150489,
+    177505,
+    90814
+   ]
+  },
+  {
+   "source": "Charges for services",
+   "v": [
+    13814,
+    10956,
+    29784,
+    38626,
+    45293,
+    53599,
+    73477,
+    82171
+   ]
+  },
+  {
+   "source": "Interest",
+   "v": [
+    38972,
+    35126,
+    35821,
+    20028,
+    13493,
+    81297,
+    90281,
+    48503
+   ]
+  }
+ ],
+ "pJ": [
+  4522166,
+  5070649,
+  5576683,
+  11269093,
+  6287658,
+  7448227,
+  6894963,
+  7582884
+ ],
+ "$_": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "mJ": [
+  "audited",
+  "audited",
+  "audited",
+  "audited",
+  "county",
+  "county",
+  "county",
+  "county"
+ ],
+ "Os": {
+  "General Fund": [
+   3179616,
+   4108316,
+   4183435,
+   4646800,
+   4120326,
+   4854242,
+   5046116,
+   5767731
+  ],
+  "Road Fund": [
+   4347998,
+   5532874,
+   4247983,
+   4434547,
+   4339459,
+   3446460,
+   4795844,
+   3150180
+  ],
+  "Jail Fund": [
+   2447586,
+   2497937,
+   2639004,
+   2632066,
+   2758154,
+   2972451,
+   3040569,
+   3171526
+  ]
+ },
+ "hl": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "hJ": [
+  "audited",
+  "audited",
+  "audited",
+  "audited",
+  "county",
+  "county",
+  "county",
+  "county"
+ ],
+ "vJ": {
+  "asOf": "June 30, 2021",
+  "total": 616460,
+  "beginning": 869542,
+  "paid": 253082,
+  "dueWithin": 210823,
+  "annualService": 278238,
+  "items": [
+   {
+    "n": "Two motor graders",
+    "purpose": "Road department equipment",
+    "orig": 498234,
+    "bal": 403386,
+    "rate": "2.66%",
+    "matures": "June 2025"
+   },
+   {
+    "n": "Four tractors",
+    "purpose": "Road department equipment",
+    "orig": 370000,
+    "bal": 170016,
+    "rate": "4.30%",
+    "matures": "Aug 2023"
+   },
+   {
+    "n": "Two dump trucks",
+    "purpose": "Road department equipment",
+    "orig": 175308,
+    "bal": 43058,
+    "rate": "3.25%",
+    "matures": "Aug 2022"
+   }
+  ],
+  "retired": {
+   "n": "Excavator",
+   "orig": 250000,
+   "year": 2015,
+   "note": "Financed 2015; all payments made and debt retired by August 2021."
+  },
+  "current": {
+   "orig": 365400,
+   "rate": "4.53%",
+   "term": "4-year",
+   "lender": "FNB Bank",
+   "date": "April 2026",
+   "purpose": "two dump trucks (road department)",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2026/05/minutes-26-04-22.pdf"
+  }
+ },
+ "yJ": "https://callowaycountyky.gov/meeting-minutes/",
+ "ag": [
+  {
+   "d": "April 22, 2026",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2026/05/minutes-26-04-22.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the treasurer's report, payment of bills, and fund transfers.",
+    "First reading of a revision to the animal-control ordinance (06-0321-A) adding a trap-neuter-vaccinate-return program for community cats.",
+    "Adopted Resolution 26-0422-A executing the County Road Aid agreement with the state Transportation Cabinet.",
+    "Awarded FY2026-27 road-material and service bids (aggregate, asphalt, fuel, paving and more); rejected the red-gravel bids for resubmission.",
+    "Awarded fire-extinguisher service to Fire Safe Services and county-facility pest control to McGee Pest Control (about $667/year savings).",
+    "Approved an amended 2026 budget (no change to the bottom line) and a CD renewal at The Murray Bank.",
+    "Approved a 4-year, $365,000 loan at 4.53% (FNB Bank) to purchase two dump trucks."
+   ]
+  },
+  {
+   "d": "March 20, 2026",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2026/04/minutes-26-03-20.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statement, bills, and cash transfers.",
+    "Second reading and adoption of Ordinance 20-0320-A, a budget amendment involving Sheriff's funds.",
+    "Approved the County Clerk's 2025 final settlement.",
+    "Adopted Resolution 26-0320-C (agreement with the state Transportation Cabinet) for replacement of the Howard Road bridge, funded through CCBIP at $800,000.",
+    "Adopted Resolution 26-0320-D supporting a grant application (up to about $1 million) toward a new fire station, and 26-0320-E supporting agricultural hemp development.",
+    "Made board appointments to the Industrial Development Authority and the hospital (MCCH) board; approved revised job descriptions."
+   ]
+  },
+  {
+   "d": "February 18, 2026",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2026/03/minutes-26-02-18.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial report and payment of bills; approved 2026 incentive pay for several officials.",
+    "Approved the Sheriff's 2025 excess-fee final settlement and agreed to return $202,189.26 to the Sheriff's office, disbursed quarterly (March-June), with a related budget-amendment first reading.",
+    "Adopted Resolution 26-0218-A (adopting Sack Farm Drive for 911 addressing), 26-0218-B (authorizing application for KY Homeland Security grants), and 26-0218-C (supporting HB 557, cited as benefiting the jail budget).",
+    "Reappointed members to the Ethics Board.",
+    "Held the Grubbs Road bridge bids until the next meeting to standardize a 20-foot width.",
+    "Entered executive session under KRS 61.810(1)(f); returned with no action taken."
+   ]
+  },
+  {
+   "d": "January 21, 2026",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2026/02/minutes-26-01-21.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the treasurer's report, bills, and cash transfers; approved a contract with ACA Prime for 1095 health-insurance forms.",
+    "Adopted resolutions honoring a retiring jail deputy (26-0121-A), memorializing the late Magistrate Johnny Gingles (26-0121-B), and joining the America250KY Liberty Tree planting (26-0121-C).",
+    "Made board appointments to the Hazel 641 Water District.",
+    "Approved a contract with Shelter Planners of America for a first-step survey toward a new animal shelter.",
+    "Discussed a joint Community Development Block Grant application with the City of Murray to renovate the Senior Citizens Center; the Judge-Executive disclosed a conflict of interest and said he would abstain on that matter."
+   ]
+  },
+  {
+   "d": "December 17, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2026/01/minutes-25-12-17.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statement, bills, and budget/cash transfers.",
+    "Approved the 2026 County Clerk budget and salary order and set election-worker pay at $250.",
+    "Approved the 2026 holiday and meeting schedule.",
+    "Adopted resolutions recognizing local students and the Murray High football team; discontinuing county maintenance on Nova Lane (after a public hearing with no comment); supporting an MCIDA training-center grant application (25-1217-D); and a Transportation Cabinet agreement for the Potts Road bridge using CCBIP funds (25-1217-E).",
+    "Renewed the EMS affiliation agreement with Calloway County Fire-Rescue and approved the surplus of two Sheriff's vehicles."
+   ]
+  },
+  {
+   "d": "November 19, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/12/minutes-25-11-19.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statement, bills, and transfers.",
+    "Approved the 2026 Sheriff's budget and the annual order setting maximum Sheriff's-office salaries at $2,200,000.",
+    "Adopted Resolution 25-1119-A for a CCBIP agreement with the Transportation Cabinet to repair/replace the Graham Road bridge (state-managed work).",
+    "Created a county Cemetery Board (five members) and reappointed/appointed UK Cooperative Extension board members.",
+    "Awarded the Doores Trail culvert-to-bridge project to Youngblood at $415,389 (FEMA-submitted)."
+   ]
+  },
+  {
+   "d": "October 15, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/11/minutes-25-10-15.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statement.",
+    "Approved jail firearms-policy updates.",
+    "Authorized a Regional Development Agency Assistance Program application of $153,846 toward a Workforce Training Center, and signed an Emergency Management Performance Grant.",
+    "Authorized a FEMA-grant culvert replacement on Doores Trail (county share is a portion of a statewide allocation).",
+    "Approved changing the county cellular provider from Verizon to T-Mobile, and authorized an interlocal agreement with the City of Murray for the Weaks Senior Citizens Center grant."
+   ]
+  },
+  {
+   "d": "September 24, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/10/minutes-25-09-24.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statement, bills, and transfers.",
+    "Second reading and adoption of Ordinance 25-0924-A regulating medical-cannabis business operations (public hearing, no comment).",
+    "Adopted a resolution discontinuing road maintenance on Eldridge Lane and began the removal process for Nova Lane and East Y Road.",
+    "Made appointments to the Tourism Commission, Dexter-Almo Water District, 911 Appeals Board, and Library Board.",
+    "Authorized listing the remaining five county-owned lots in Western Shores; authorized Road Department fall maintenance on the Hwy 641 lot (per Resolution 24-0717-A requiring full-Court consent)."
+   ]
+  },
+  {
+   "d": "August 20, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/09/minutes-25-08-20.pdf",
+   "absent": [
+    "Squire Stewart",
+    "County Attorney Ernstberger"
+   ],
+   "splits": [],
+   "b": [
+    "Approved the financial statement, bills, and cash transfers.",
+    "Second reading and adoption of Ordinance 25-0821-A setting the 2025 county tax rates (public hearing, no comment).",
+    "First reading of an ordinance regulating medical-cannabis operations.",
+    "Heard special taxing-district rates (Library 4.8c real property; Extension 2.5c, up from 1.5c, citing reserve drawdown).",
+    "Adopted resolutions accepting Victory Lane into the county road system (25-0820-E), accepting 2025 FLEX funds (25-0820-D), and supporting a DRA grant for Hopkins Road (25-0820-C).",
+    "Entered executive session under KRS 61.810(1)(f) and (1)(b)."
+   ]
+  },
+  {
+   "d": "July 16, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/08/minutes-25-07-16.pdf",
+   "absent": [],
+   "splits": [
+    "Street-Legal Special Purpose Vehicle ordinance 25-0716-A (second reading): passed 4-1 — Squire Cherry voted no; Judge Imes and Squires Rister, Crutcher, Stewart voted aye."
+   ],
+   "b": [
+    "Approved the financial statement, bills, transfers, and a $100,000 transfer to the Road Department.",
+    "First reading of the 2025 county tax rate at 14.10 cents/$100 — described as 4% over the compensating rate, an estimated ~$29,000 in added revenue (rate last increased in 2021).",
+    "Adopted the EM State Mutual Aid agreement and resolution 25-0716-A.",
+    "Awarded a $73,600 contract to Henry and Son to paint the courthouse; approved an HVAC replacement (Thornton's) for the EM office.",
+    "Approved an updated drug-testing contract (Tri-State), with a rebid to follow per the two-year requirement."
+   ]
+  },
+  {
+   "d": "June 30, 2025 (special)",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/07/minutes-25-06-30-special.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved a $529.22 budget transfer to the County Attorney salary line.",
+    "Authorized a $300,000 transfer (money market to general to jail) to cover July jail insurance and workers'-comp bills.",
+    "Adopted a resolution for a Transportation Cabinet agreement to repair/replace the Charley Miller Road bridge with grant funds up to $490,000.",
+    "Discussed (no action) a ~$1.8M CCBIP award (7.3% of the first $25M round) for four bridges, and an $51,805 KYTC 80/20 swap from Grubbs Road to Cook Store bridge (about $6,000 added from road funds)."
+   ]
+  },
+  {
+   "d": "June 18, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/07/minutes-25-06-18.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statement, bills, transfers, and the second reading of budget amendment 25-0618-A (Flex Funds).",
+    "Set the Health Department tax rates for 2026 (unchanged).",
+    "Approved the Sheriff's 2024 tax settlement.",
+    "Adopted Resolution 25-0618-A (administrative-code amendments) and 25-0618-B (supporting the Job Corps program).",
+    "Approved a 2.9% cost-of-living increase for non-elected county employees and appointed Chris Franklin as Road Supervisor (KRS 179.020).",
+    "Discontinued Sharmae Lane and adjusted John Purdom/Harry Truman drive names."
+   ]
+  },
+  {
+   "d": "May 21, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/06/minutes-25-05-21.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial report, bills, transfers, and first reading of a Flex-funds budget amendment.",
+    "Second reading and adoption of the 2025-2026 county budget (public hearing, no comment).",
+    "Adopted Resolution 25-0521-A (Transportation Cabinet agreement) for replacement of the Clayton Town Road bridge.",
+    "Approved a $89,629 Grubbs Road bridge repair contract (Jim Smith Contracting) and a 4-year paving agreement for 3.58 miles in Western Shores.",
+    "Authorized a purchase order for two dump trucks (~$174,000 each, delivery in 2026) and a $1,500 TVA 26A permit application for the Boatwright Trail project."
+   ]
+  },
+  {
+   "d": "May 12, 2025 (special)",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/05/minutes-25-05-12-special.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Special session on the disposition of the old Old Salem Road bridge after the new bridge's completion.",
+    "Approved, by general consensus (all ayes), keeping the historic structure for community use as a small fishing/nature area, with KACO consulted on liability and Fish & Wildlife on collaboration."
+   ]
+  },
+  {
+   "d": "April 28, 2025 (special)",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/05/minutes-25-04-28-special.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Authorized a $1,500,000 12-month CD at The Murray Bank (4.25% APY) funded from the jail-grant account, and a $625,000 12-month CD (4.25% APY) funded from the E911 account, with matching budget line items added.",
+    "Approved issuing an RFP (two-week timeline) for the Grubbs Road bridge, weighing closure against an estimated $91,000 repair.",
+    "Discussed (no action) the 2026-2027 County Priority Project Program."
+   ]
+  },
+  {
+   "d": "April 16, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/05/minutes-25-04-16.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial report, bills, second reading of a budget amendment (Sheriff excess fees and the 80/20 bridge program), the annual standing order, and a cash-transfer blanket order.",
+    "Accepted reduced LGEA funds ($8,000 down to $6,000) and noted a MAG block-grant payment of $163,980 (third payment).",
+    "Adopted Resolution 25-0416-A for the County Road Aid Cooperative Program ($1,649,680.39 for FY beginning July 1, 2025).",
+    "First reading of the 2025-2026 county budget totaling $20,277,141.58.",
+    "First reading of the street-legal special-purpose-vehicle ordinance (SB 63 opt-in); reauthorized standing committees and added a Long Range Planning & Financing committee."
+   ]
+  },
+  {
+   "d": "March 24, 2025 (special)",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/05/minutes-25-03-24-special.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Adopted Resolution 25-0324-A for a Rural Secondary Program agreement with the Transportation Cabinet to address drainage at the Dodd Road bridge.",
+    "Entered and exited executive session under KRS 61.810(1)(f) with no action taken."
+   ]
+  },
+  {
+   "d": "March 19, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/05/minutes-25-03-19.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial report, bills, transfers, and a first-reading budget amendment (Sheriff excess fees and 80/20 bridge funds).",
+    "Noted a $157,227 MAG block-grant payment (second payment) to Clark Construction.",
+    "Approved the County Clerk's 2024 final settlement and recurring 911 software contracts (Active911, Virtual Academy).",
+    "Adopted a PADD/Murray Art Guild CDBG administration resolution (25-0319-E) and resolutions honoring community members.",
+    "Noted the jail budget's $430,000 personnel-line increase tied to the salary survey."
+   ]
+  },
+  {
+   "d": "February 19, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/03/minutes-25-02-19.pdf",
+   "absent": [
+    "County Attorney Ernstberger"
+   ],
+   "splits": [],
+   "b": [
+    "Approved the financial report and bills, including a $83,862 MAG block-grant payment to Clark Construction.",
+    "Approved the Sheriff's 2024 final settlement ($259,727.37 turned over) and returned the funds for deputy salaries in four payments.",
+    "Adopted resolutions for Transportation Cabinet agreements on the Clayton Road bridge ($430,000) and Furches Trail bridge ($505,000), and a Homeland Security application (24-0219-E).",
+    "Confirmed a $1,786,301 25% local match (G.R.A.N.T./HB 9) tied to a WK&T USDA ReConnect award for ~94 miles of fiber.",
+    "Approved the lowest Taylor Store bridge bid ($143,626, Jim Smith Construction) and up to $35,000 for Almo bridge repairs."
+   ]
+  },
+  {
+   "d": "January 15, 2025",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/02/minutes-25-01-15.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statement, bills, and a transfer.",
+    "Approved 911 policy changes and the annual Calloway County Fire-Rescue affiliation.",
+    "Heard 2024 jail and sheriff reports; noted research on 1,506 unpaid 2023 property-tax bills and related legislation (KRS 132.012).",
+    "Entered executive session under KRS 61.810(1)(b) on personnel matters; returned with no action."
+   ]
+  },
+  {
+   "d": "December 18, 2024",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2025/01/minutes-24-12-18.pdf",
+   "absent": [],
+   "splits": [
+    "Grounds-maintenance contract (Swift Environmental): passed 4-1 — Judge Imes voted no.",
+    "Tourism Commission appointments: Squire Rister abstained (board member)."
+   ],
+   "b": [
+    "Approved the financial statement, bills, transfers, and a $180,062.50 check (on delivery) for a Road Department dump truck.",
+    "Approved Sheriff and Clerk administrative-code changes and the 2025 County Clerk budget and salary order.",
+    "Approved the 2025 holiday/meeting schedule (12 observed holidays).",
+    "Adopted Resolution 24-1218-A (revised administrative code, part-time holiday pay), 24-1218-B (remaining ARPA funds for the Old Salem Road bridge), and 24-1218-C (designating MCIDA to receive TVA funds).",
+    "Noted 2024 auto-insurance-premium-tax use: $1.1M for paving and $700K allocated for bridges; authorized TVA permit applications for Boatwright Landing and Chandler Park."
+   ]
+  },
+  {
+   "d": "October 16, 2024",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2024/11/minutes-24-10-16.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statement, bills, and cash transfers.",
+    "Amended the Sheriff's 2024 budget (reflecting returned excess fees) and approved jail-policy updates.",
+    "Second reading and adoption of amendments to the Solar Farm ordinance 24-0417-A (public hearing, no comment).",
+    "Adopted Resolution 24-1016-A for the 80/20 KYTC bridge program (up to $80,000 reimbursement toward a $100,000+ five-bridge project) and 24-1016-C naming two private drives for 911.",
+    "Approved 911 purchases: a Nelson Systems maintenance renewal ($13,627.53) and three solar battery-backup systems for radio towers ($17,160)."
+   ]
+  },
+  {
+   "d": "September 18, 2024",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2024/10/minutes-24-09-18.pdf",
+   "absent": [],
+   "splits": [
+    "2024-25 county tax rate ($0.14 per $100): passed 4-1 — Squire Crutcher voted no; Judge Imes and Squires Rister, Cherry, Stewart voted aye."
+   ],
+   "b": [
+    "Approved the financial statement, bills, and transfers.",
+    "Held a public hearing and adopted the 2024-25 tax rate at $0.14/$100.",
+    "First reading of an amendment to the Solar Farm ordinance 24-0417-A (floating systems, TVA/PSC rules, fees).",
+    "Approved an ER Assist contract for FEMA debris-removal coordination after the May storm (with a local-hire provision).",
+    "Adopted Resolution 24-0918-A (drug- and alcohol-free workplace policy) and 24-0918-B (new job descriptions); dismissed the 911 Relocation Committee (no relocation)."
+   ]
+  },
+  {
+   "d": "July 17, 2024",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2024/08/minutes-24-07-17.pdf",
+   "absent": [],
+   "splits": [
+    "Resolution 24-0717-A (no action on the 641 & 80 property without full-Court approval at an open meeting): passed with Judge Imes abstaining (four ayes).",
+    "Cannabis-referendum resolution for the 2024 ballot (as amended): roll-call passed 3-2 — Squires Stewart, Crutcher, Cherry aye; Squire Rister and Judge Imes nay. (The amendment adding the ballot wording passed unanimously first.)"
+   ],
+   "b": [
+    "Approved the financial statement, bills, transfers, and the 2023-2024 Treasurer's settlement.",
+    "Approved the Sheriff's 2023 tax settlement.",
+    "Placed a medical-cannabis question on the 2024 ballot by resolution (see vote note).",
+    "Approved the jail's purchase of a 2017 minivan for inmate transport ($5,000); noted a $4,396 jail taser grant."
+   ]
+  },
+  {
+   "d": "June 28, 2024 (special)",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2024/07/minutes-24-06-28-special.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Adopted Resolution 24-0628-A approving the revised Calloway County Administrative Code.",
+    "Adopted Resolution 24-0628-B authorizing transfer of Nelom Brown Drive to the National Park Service.",
+    "Approved a budget transfer and authorized payment from LAFTA funds for an Animal Shelter vehicle.",
+    "Held discussion (no vote) on the draft medical-cannabis ordinance ahead of the state opening dispensary applications July 1."
+   ]
+  },
+  {
+   "d": "May 15, 2024",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2024/06/minutes-24-05-15.pdf",
+   "absent": [],
+   "splits": [
+    "Medical-cannabis ballot-question resolution: a motion was made but received no second; it was laid on the clerk's desk with no vote taken."
+   ],
+   "b": [
+    "Approved the financial statements, bills, cash and budget transfers, and additional payments to Jim Smith Contracting and Murray Paving.",
+    "First reading of a 2023-2024 budget amendment for KYTC emergency funds (Coleman Branch and Squire Holland bridges).",
+    "Created a new Auto Insurance Tax line item and opened a dedicated Murray Bank account, transferring $942,317.37 from the Road Fund into it.",
+    "Adopted Resolution 24-0515-A (County Road Aid Cooperative Program agreement).",
+    "Second reading and adoption of the 2024-2025 county budget; first readings of road-acceptance-requirements and medical-cannabis ordinances; accepted Westhaven Lane into the county road system."
+   ]
+  },
+  {
+   "d": "April 17, 2024",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2024/05/minutes-24-04-17.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statements, bills, cash transfers, and the second reading of a budget amendment (public hearing, no comment).",
+    "Approved the annual standing order and a blanket cash-transfer order for FY2024-25.",
+    "First reading of the FY2024-2025 county budget.",
+    "Second reading and adoption of the Solar Farm ordinance 24-0417-A (public hearing; supportive comment from KY Farm Bureau).",
+    "Adopted Resolution 24-0417-A (discontinuing Ft. Heiman Road and Nelom Brown Drive) and 24-0417-B (Public Safety Telecommunications Week)."
+   ]
+  },
+  {
+   "d": "March 20, 2024",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2024/04/minutes-24-03-20.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statements, bills, cash transfers, budget transfers, and a first-reading budget amendment.",
+    "Approved the County Clerk's 2023 final settlement ($179,475).",
+    "First reading of a solar-energy-system licensing ordinance (public hearing/second reading set for April).",
+    "Began the KRS process to remove Ft. Heiman Road and Nelom Brown Road from county maintenance (pending National Park Service deed transfer).",
+    "Split the county pest-control contract between Bug Master and McGee; adopted Homeland Security (24-0320-A) and road/PADD/CDBG resolutions (24-0320-B through -G)."
+   ]
+  },
+  {
+   "d": "February 21, 2024",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2024/03/minutes-24-02-21.pdf",
+   "absent": [
+    "County Attorney Ernstberger"
+   ],
+   "splits": [],
+   "b": [
+    "Approved the financial statements and bills.",
+    "Approved the Sheriff's final settlement ($242,673.22 in excess fees turned over) and returned the funds for deputy support over four months (March-June).",
+    "Approved a Regional Mutual Aid Agreement and accepted Hill Drive and Landon Lane into the county road system.",
+    "Discontinued a portion of Mills Trail after a public-comment period (deemed to serve no public purpose by two viewers and the Road Supervisor).",
+    "Reappointed two members to the Weaks Center Board."
+   ]
+  },
+  {
+   "d": "January 24, 2024",
+   "u": "https://callowaycountyky.gov/wp-content/uploads/2024/02/minutes-24-01-24.pdf",
+   "absent": [],
+   "splits": [],
+   "b": [
+    "Approved the financial statements and payment of bills.",
+    "Authorized moving forward on Coleman Branch and Squire Holland bridge repairs (Jim Smith Contracting), pending an 80/20 state grant match.",
+    "Heard 2023 jail and sheriff reports.",
+    "Adopted Resolution 24-0124-A (accepting Edinborough Drive West and Starview Trail into the county road system), 24-0124-B (Regional Transportation Safety Action Plan), and 24-0124-C (honoring an Eagle Scout).",
+    "Appointed a Fiscal Court member to the hospital Personnel Committee and named EM volunteer deputy directors by executive order."
+   ]
+  }
+ ],
+ "Jy": {
+  "ordinances": "https://callowaycountyky.gov/ordinances/",
+  "forms": "https://callowaycountyky.gov/forms/",
+  "officials": "https://callowaycountyky.gov/elected-officials/",
+  "districts": "https://callowaycountyky.gov/magistrate-districts-map/",
+  "budget": "https://callowaycountyky.gov/budget-admin-code/"
+ },
+ "n4": {
+  "24-01-24": [
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Cherry",
+    "s": "Stewart",
+    "a": "to approve the payment of the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to approve the motion",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Cherry",
+    "a": "After a discussion",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the Executive Order",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "24-02-21": [
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the payment of the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the agreement and signing by Judge Imes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "s found they were not; the developer made finai improvements and requested the acceptance",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Imes",
+    "a": "After a discussion",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve the recommended re-appointment",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "24-03-20": [
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the payment of the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the cash transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Cherry",
+    "a": "to approve the first reading of the budget amendment",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve budget transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve the settlement of $179,475",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the bids as recommended",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve Resolution 24-0320-A",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the resolution 24-0320-B",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the resolutions and contract",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the termination of the Measurement and Verification Services contract with Energy Systems Group",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the personnel changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "24-04-17": [
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the payment of the bilis",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to approve the cash transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the second reading of the budget amendment",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "After a discussion",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to approve the blanket order",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to amend",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the second reading of ordinance #24-0417-A as amended",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Crutcher",
+    "a": "to approve resolution #24-0417-A",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "24-05-15": [
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the payment of the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to grant permission to County Treasurer, Tonya Robinson to pay additional bills to Jim Smith Contracting and Murray Paving",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the cash transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the budget transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the first reading",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to authorize the new line item in the current 2023-2024 budget",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to authorize Mrs",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Imes",
+    "a": "to approve resolution #24-0515-A County Road Aid Cooperative program agreement",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve the request",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the second reading of the 2024-2025 county budget",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the inclusion of Westhaven Lane into the County Road system",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "Judge Imes asked the approval of the personnel changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "24-06-28-special": [
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve Resolution # 24-0628-B",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the request",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "24-07-17": [
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Imes",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve them",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve the financial statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the settlement",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the settlement",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve Resolution #24-0717-A",
+    "r": "Passed 4–0 — abstention",
+    "x": "Judge Imes abstained (county property matter)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Stewart",
+    "a": "to approve the resolution",
+    "r": "Roll-call vote — passed 3–2",
+    "x": "AYE: Stewart, Crutcher, Cherry · NAY: Rister, Imes (cannabis referendum)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Crutcher",
+    "a": "to approve the purchase of the 2017 Chrysler Pacifica for $5,000 and allow the treasurer to issue the check",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "24-09-18": [
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the payment of the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to approve payment to MPI and Swift Environmental",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Imes",
+    "a": "to approve the rate at",
+    "r": "Roll-call vote — passed 4–1",
+    "x": "NAY: Crutcher · AYE: Rister, Cherry, Stewart, Imes (county tax rate)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the contract with changes made and allow Judge Imes to sign as needed",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Stewart",
+    "a": "to approve Resolution 24-0918-A regarding adopting a revised Drug and Alcohol Free Workplace Policy",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve Resolution 24-0918-B in the matter of approving new job descriptions",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the appointment",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Crutcher",
+    "a": "to reappoint Bonnie Byerly to the 911 Appeals Board, appointment to expire 6/3/2027",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "24-10-16": [
+   {
+    "m": "—",
+    "s": "Rister",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Cherry",
+    "a": "to approve the payment of the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Cherry",
+    "a": "to approve the cash transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the amendment",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the updates",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Cherry",
+    "a": "to approve the amendments",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve Resolution 24-1016-A",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve Resolution 24-1016-B",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve Resolution 24-1016-C",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to adjour | vo ed aye and it was so ordered",
+    "r": "Unanimous (voice)"
+   }
+  ],
+  "24-12-18": [
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the financial statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve the payment of the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to approve the issuance of a check for $180,062",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve a check to be written for 12/18/24 training luncheon",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve the changes/additions",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the annual order setting maximum amount for Clerk deputies and assistants",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Rister",
+    "a": "to approve the calendar",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Cherry",
+    "a": "to appoint Mrs",
+    "r": "Passed — abstention",
+    "x": "Rister abstained (Tourism Commission board member)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to reappoint Ms",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to surplus the vehicle",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve the contract with Dale Swift/Swift Environmental",
+    "r": "Passed 4–1",
+    "x": "NAY: Judge Imes (grounds-maintenance contract)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Cherry",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-01-15": [
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the financial statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Cherry",
+    "s": "Crutcher",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the transfer",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the affiliation",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to enter executive session regarding personnel matters under KRS 61",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-02-19": [
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the report",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve the payment of bills",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to return the money to the sheriff for deputy salaries in four (4) payments",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the surplus",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve Resolution #24-0219-B confirming the Courts commitment to make application to the G",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve the execution of a Memorandum of Agreement between Calloway County Fiscal Court and Commonwealth of Kentucky, Transportation Cabi",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve Resolution #24-0219-A",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the contract",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Stewart",
+    "a": "to approve the MOU",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Stewart",
+    "a": "to approve the bid",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to authorize Judge Imes to follow up with repairs to the bridge not to exceed $35,000",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Cherry",
+    "a": "to appoint Mr",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Cherry",
+    "a": "to approve the personnel changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the surplus and donation",
+    "r": "Unanimous (voice)"
+   }
+  ],
+  "25-03-19": [
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the Resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the report",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the first reading",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Rister",
+    "a": "to approve the request",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the settlement",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to the resolution #25- 0319-E and contract",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Stewart",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to re-appoint Bradley Smith to serve another 4-year term on the Dexter/Almo Water District board to expire 5/2028",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-03-24-special": [
+   {
+    "m": "Crutcher",
+    "s": "Cherry",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Imes",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-04-16": [
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve waive the formal reading and approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the report",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the second reading",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve a blanket order for cash transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to approve, accept, and disperse those funds",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve Resolution #25-0416-A",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the first reading of the budget",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the request",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the first reading",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to accept the vendors",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to appoint Kaeleigh Morris to serve until 8/18/25",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Stewart",
+    "a": "to approve Ms",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve the changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the surplus",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Stewart",
+    "a": "to approve the request",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the purchase of the equipment as requested",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-04-28-special": [
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to authorize Tonya Robinson, County Treasurer, to open a Certificate of Deposit in the amount of $1,500,000",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "After a discussion",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to authorize the treasurer to add a line item in the 2024-2025 budget in the amount of $625,000",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Cherry",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-05-12-special": [
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to leave the bridge adopting the general concept",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-05-21": [
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the report",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve the transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the first reading",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve’the 2025-2026 Budget",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve Resolution #25-0521-A approving the execution of MOA between the Fiscal Court and the Commonwealth of Kentucky, Transportation Ca",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve Judge Imes to sign the contract",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the agreement",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the request",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to close the regular session and enter executive session",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Cherry",
+    "a": "ng no action to take regarding Executive Session and no further business before the Court",
+    "r": "Unanimous (voice)"
+   }
+  ],
+  "25-06-18": [
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to pay the bills, all voted aye, and it was so ordered",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the settlement",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Crutcher",
+    "a": "to approve resolution # 25-0618-B supporting The JOB CORPS program and it’s continued operation and federal funding",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Cherry",
+    "a": "There being no public comment or other business before the Court the",
+    "r": "Unanimous (voice)"
+   }
+  ],
+  "25-06-30-special": [
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to authorize Tonya Robinson, County Treasurer, to transfer funds",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to authorize Mrs",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "018C00120N on Charley Miller Road with grant funds up to $490,000.00",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-07-16": [
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to pay the bills, all voted aye, and it was so ordered",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the budget transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve a $100,000 cash transfer from the money market to the road department",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the settlement",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the second reading of the ordinance",
+    "r": "Roll-call vote — passed 4–1",
+    "x": "NO: Cherry · AYE: Imes, Rister, Crutcher, Stewart (street-legal vehicle ordinance)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Stewart",
+    "a": "to reappoint Ms",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to accept the bid from Henry and Son Painting at $73,600",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to have Thornton’s replace the unit",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Crutcher",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-08-20": [
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Cherry",
+    "a": "to approve the financial statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve the cash transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the Ordinance #25-0821- Aas presented",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve resolution #25-0820-F",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "After a discussion",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to surplus the vehicles as requested",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the policy with no changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to exit regular session and enter into executive session",
+    "r": "Unanimous (voice)"
+   }
+  ],
+  "25-09-24": [
+   {
+    "m": "Imes",
+    "s": "Crutcher",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Cherry",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the financial statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Cherry",
+    "s": "Stewart",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the second reading of Ordinance #25-0924-A",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Crutcher",
+    "a": "After a discussion",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to appoint Randy McCallon to fill the remainder of the term to expire 5-19-2025",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Stewart",
+    "a": "to appoint Ronnie Burkeen to the board to expire 8/15/2029",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the appointments",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to surplus a 2022 Jayco M174BH travel trailer acquired through FEMA",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the authorization",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to allow the future payment for background checks for CERT Volunteers",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to have the Road Dept",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Crutcher",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-10-15": [
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the financial statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the jails firearms policy changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to authorize Judge Imes to sign",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Stewart",
+    "a": "to approve the move",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Crutcher",
+    "a": "n to authorize Judge Imes to sign the agreement once approved by all the parties involved",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-11-19": [
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the financial statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Cherry",
+    "a": "to approve the budget as a whole",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the Sheriffs annual order for maximum salaries set at $2,200,000",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve Resolution #25-1119-A",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "Personnel appointments were reviewed",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to reappoint Robert Geurin as he is willing to serve another term, and to appoint Chris Woodall, as Ms",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "25-12-17": [
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve the financial statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the budget transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the cash transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the budget",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the Clerk’s annual order setting maximum salaries",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "After a discussion",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "The Court approved the 2026 holiday and meeting schedule with a",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve Resolution #25-1217-B recognizing the Murray High School Football team for a historic winning season",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Crutcher",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the reappointment of Ronald Babb, Warren Hopkins, Darryel Lee, Charles Nesbitt, and Shirley Robinson",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the MOA",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve the surplus",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "26-01-21": [
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the financial report",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the cash transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the contract",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the appointments",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to reappoint Alli Hillard-Robertson to another 4-year term to expire 1/18/2030, appoint Scooter Paschall to expire 7/7/2028 to replace Nancy",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve Resolution 26-0121-B",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Stewart",
+    "a": "to approve the first step survey",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "(motion — see minutes)",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "26-02-18": [
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the financial report",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to pay the bills, all voted aye and it was ordered",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the settlement",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve return of funds and the first reading of the Budget Amendment",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve RES 26-0218-A adopting Sack Farm Drive at the request of 911 for addressing, emergency services, and postal services",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the changes",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to reappoint Holly Bloodworth, Jeff Gentry, Lauren Hines, and Carol Lane to the Ethics Board to serve a 4-year term to expire 1/18/2030",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the list",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to move into executive session per KRS 61",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to exit Executive Session with no action taken",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to adjourn",
+    "r": "Unanimous (voice)",
+    "g": 1
+   }
+  ],
+  "26-03-20": [
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to approve the statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the second reading of the ordinance",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the cash transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the settlement and accept the excess funds",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to approve both resolutions",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Crutcher",
+    "a": "to approve Resolution #26-0320-C approving the execution of a MOA between Calloway County Fiscal Court and the Commonwealth of Kentucky Tran",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Stewart",
+    "a": "to approve Resolution #26-0320-D",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the appointments",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to appoint Mr",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve the appointments",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "There being no further business before the Court",
+    "r": "Unanimous (voice)"
+   }
+  ],
+  "26-04-22": [
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to waive the formal reading and approve the minutes",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the statement",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to pay the bills",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Stewart",
+    "s": "Rister",
+    "a": "to approve the transfers",
+    "r": "Unanimous (voice)",
+    "g": 1
+   },
+   {
+    "m": "Rister",
+    "s": "Crutcher",
+    "a": "to approve the payment",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Cherry",
+    "a": "to approve the first reading",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Cherry",
+    "s": "Rister",
+    "a": "to approve the resolution",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to approve the appointments",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Rister",
+    "a": "to accept the bids",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the contract",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Crutcher",
+    "a": "to approve the 3 bids received",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Rister",
+    "s": "Stewart",
+    "a": "to approve McGee Pest Control",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to surplus the mentioned items and any additional items on the road department lot (this does not include the dump trucks mentioned on the a",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Stewart",
+    "s": "Cherry",
+    "a": "to approve the amended budget",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Rister",
+    "a": "to approve the renewal",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Imes",
+    "s": "Crutcher",
+    "a": "to approve a 4-year loan for $365K with FNB Bank at 4",
+    "r": "Unanimous (voice)"
+   },
+   {
+    "m": "Crutcher",
+    "s": "Stewart",
+    "a": "to adj ONCE aye cL so ordered",
+    "r": "Unanimous (voice)"
+   }
+  ]
+ },
+ "gJ": [
+  {
+   "mk": "26-03-20",
+   "cat": "Roads & bridges",
+   "prog": "CCBIP — County/City Bridge Improvement Program",
+   "purpose": "Howard Road bridge replacement",
+   "amt": "$800,000",
+   "match": "",
+   "kind": "State",
+   "stage": "Agreement executed (KYTC)"
+  },
+  {
+   "mk": "26-03-20",
+   "cat": "Economic development",
+   "prog": "Fire-station grant",
+   "purpose": "New fire station",
+   "amt": "up to ~$1,000,000 (application)",
+   "match": "",
+   "kind": "",
+   "stage": "Resolution of support"
+  },
+  {
+   "mk": "26-02-18",
+   "cat": "Emergency & federal",
+   "prog": "KY Homeland Security grants",
+   "purpose": "Authorize grant applications",
+   "amt": "",
+   "match": "",
+   "kind": "State/Federal",
+   "stage": "Application authorized"
+  },
+  {
+   "mk": "25-12-17",
+   "cat": "Roads & bridges",
+   "prog": "CCBIP",
+   "purpose": "Potts Road bridge",
+   "amt": "",
+   "match": "",
+   "kind": "State",
+   "stage": "Agreement executed (KYTC)"
+  },
+  {
+   "mk": "25-12-17",
+   "cat": "Economic development",
+   "prog": "MCIDA training-center grant",
+   "purpose": "Workforce / training center",
+   "amt": "",
+   "match": "",
+   "kind": "",
+   "stage": "Resolution of support"
+  },
+  {
+   "mk": "25-11-19",
+   "cat": "Roads & bridges",
+   "prog": "CCBIP",
+   "purpose": "Graham Road bridge repair/replacement",
+   "amt": "",
+   "match": "",
+   "kind": "State",
+   "stage": "Agreement executed (KYTC)"
+  },
+  {
+   "mk": "25-11-19",
+   "cat": "Emergency & federal",
+   "prog": "FEMA",
+   "purpose": "Doores Trail culvert → bridge",
+   "amt": "$415,389 project",
+   "match": "",
+   "kind": "Federal",
+   "stage": "Submitted to FEMA"
+  },
+  {
+   "mk": "25-10-15",
+   "cat": "Emergency & federal",
+   "prog": "FEMA",
+   "purpose": "Doores Trail culvert replacement",
+   "amt": "",
+   "match": "",
+   "kind": "Federal",
+   "stage": "Authorized"
+  },
+  {
+   "mk": "25-10-15",
+   "cat": "Emergency & federal",
+   "prog": "EMPG — Emergency Management Performance Grant",
+   "purpose": "Emergency management",
+   "amt": "",
+   "match": "",
+   "kind": "Federal",
+   "stage": "Agreement signed"
+  },
+  {
+   "mk": "25-10-15",
+   "cat": "Economic development",
+   "prog": "RDA Assistance Program (Regional)",
+   "purpose": "Workforce Training Center",
+   "amt": "$153,846 (application)",
+   "match": "",
+   "kind": "Federal",
+   "stage": "Application"
+  },
+  {
+   "mk": "25-08-20",
+   "cat": "Economic development",
+   "prog": "DRA — Delta Regional Authority",
+   "purpose": "Hopkins Road",
+   "amt": "",
+   "match": "",
+   "kind": "Federal",
+   "stage": "Support / application"
+  },
+  {
+   "mk": "25-08-20",
+   "cat": "Other",
+   "prog": "FLEX funds",
+   "purpose": "Accept 2025 FLEX funds",
+   "amt": "",
+   "match": "",
+   "kind": "State",
+   "stage": "Accepted (budget amendment)"
+  },
+  {
+   "mk": "25-06-30-special",
+   "cat": "Roads & bridges",
+   "prog": "CCBIP (first $25M state round)",
+   "purpose": "Four county bridges",
+   "amt": "~$1.8M (7.3% share)",
+   "match": "",
+   "kind": "State",
+   "stage": "Awarded / allocated"
+  },
+  {
+   "mk": "25-06-30-special",
+   "cat": "Roads & bridges",
+   "prog": "KYTC bridge grant",
+   "purpose": "Charley Miller Road bridge",
+   "amt": "up to $490,000",
+   "match": "",
+   "kind": "State",
+   "stage": "Agreement executed"
+  },
+  {
+   "mk": "25-06-30-special",
+   "cat": "Roads & bridges",
+   "prog": "KYTC 80/20 swap",
+   "purpose": "Grubbs Rd → Cook Store bridge",
+   "amt": "$51,805",
+   "match": "~$6,000 county",
+   "kind": "State",
+   "stage": "Agreement executed"
+  },
+  {
+   "mk": "25-05-21",
+   "cat": "Roads & bridges",
+   "prog": "KYTC agreement",
+   "purpose": "Clayton Town Road bridge",
+   "amt": "",
+   "match": "",
+   "kind": "State",
+   "stage": "Agreement executed"
+  },
+  {
+   "mk": "25-04-16",
+   "cat": "Roads & bridges",
+   "prog": "County Road Aid Cooperative Program",
+   "purpose": "County road maintenance (FY25–26)",
+   "amt": "$1,649,680.39",
+   "match": "",
+   "kind": "State",
+   "stage": "Agreement executed"
+  },
+  {
+   "mk": "25-04-16",
+   "cat": "Roads & bridges",
+   "prog": "MAG block grant",
+   "purpose": "3rd payment",
+   "amt": "$163,980 (payment)",
+   "match": "",
+   "kind": "State",
+   "stage": "Payment received"
+  },
+  {
+   "mk": "25-04-16",
+   "cat": "Other",
+   "prog": "LGEA — Local Government Economic Assistance",
+   "purpose": "Severance-share allocation",
+   "amt": "$6,000 (down from $8,000)",
+   "match": "",
+   "kind": "State",
+   "stage": "Allocation"
+  },
+  {
+   "mk": "25-03-24-special",
+   "cat": "Roads & bridges",
+   "prog": "Rural Secondary Program",
+   "purpose": "Dodd Road bridge drainage",
+   "amt": "",
+   "match": "",
+   "kind": "State",
+   "stage": "Agreement executed"
+  },
+  {
+   "mk": "25-03-19",
+   "cat": "Roads & bridges",
+   "prog": "MAG block grant",
+   "purpose": "2nd payment (Clark Construction)",
+   "amt": "$157,227 (payment)",
+   "match": "",
+   "kind": "State",
+   "stage": "Payment received"
+  },
+  {
+   "mk": "25-03-19",
+   "cat": "Economic development",
+   "prog": "CDBG (PADD-administered)",
+   "purpose": "Murray Art Guild CDBG administration",
+   "amt": "",
+   "match": "",
+   "kind": "Federal",
+   "stage": "Administration resolution"
+  },
+  {
+   "mk": "25-02-19",
+   "cat": "Roads & bridges",
+   "prog": "KYTC agreement",
+   "purpose": "Clayton Road bridge",
+   "amt": "$430,000",
+   "match": "",
+   "kind": "State",
+   "stage": "Agreement executed"
+  },
+  {
+   "mk": "25-02-19",
+   "cat": "Roads & bridges",
+   "prog": "KYTC agreement",
+   "purpose": "Furches Trail bridge",
+   "amt": "$505,000",
+   "match": "",
+   "kind": "State",
+   "stage": "Agreement executed"
+  },
+  {
+   "mk": "25-02-19",
+   "cat": "Roads & bridges",
+   "prog": "MAG block grant",
+   "purpose": "Road project payment (Clark Construction)",
+   "amt": "$83,862 (payment)",
+   "match": "",
+   "kind": "State",
+   "stage": "Payment received"
+  },
+  {
+   "mk": "25-02-19",
+   "cat": "Broadband",
+   "prog": "USDA ReConnect (WK&T) + G.R.A.N.T./HB 9",
+   "purpose": "~94 miles of rural fiber",
+   "amt": "$1,786,301 county match",
+   "match": "25% local match",
+   "kind": "Federal/State",
+   "stage": "Match committed"
+  },
+  {
+   "mk": "25-02-19",
+   "cat": "Emergency & federal",
+   "prog": "Homeland Security",
+   "purpose": "Grant application",
+   "amt": "",
+   "match": "",
+   "kind": "State/Federal",
+   "stage": "Application"
+  },
+  {
+   "mk": "24-12-18",
+   "cat": "Emergency & federal",
+   "prog": "ARPA (federal relief)",
+   "purpose": "Old Salem Road bridge (remaining ARPA)",
+   "amt": "",
+   "match": "",
+   "kind": "Federal",
+   "stage": "Allocated"
+  },
+  {
+   "mk": "24-12-18",
+   "cat": "Economic development",
+   "prog": "TVA funds (via MCIDA)",
+   "purpose": "Designate MCIDA to receive TVA funds",
+   "amt": "",
+   "match": "",
+   "kind": "Other",
+   "stage": "Designation"
+  },
+  {
+   "mk": "24-10-16",
+   "cat": "Roads & bridges",
+   "prog": "KYTC 80/20 bridge program",
+   "purpose": "Five-bridge project",
+   "amt": "up to $80,000 reimbursed",
+   "match": "20% county",
+   "kind": "State",
+   "stage": "Awarded"
+  },
+  {
+   "mk": "24-09-18",
+   "cat": "Emergency & federal",
+   "prog": "FEMA (ER Assist coordination)",
+   "purpose": "May 2024 storm debris removal",
+   "amt": "",
+   "match": "",
+   "kind": "Federal",
+   "stage": "Contracted"
+  },
+  {
+   "mk": "24-05-15",
+   "cat": "Roads & bridges",
+   "prog": "KYTC emergency funds",
+   "purpose": "Coleman Branch & Squire Holland bridges",
+   "amt": "",
+   "match": "",
+   "kind": "State",
+   "stage": "Awarded (budget amendment)"
+  },
+  {
+   "mk": "24-01-24",
+   "cat": "Roads & bridges",
+   "prog": "KYTC 80/20 bridge program",
+   "purpose": "Coleman Branch & Squire Holland repairs",
+   "amt": "",
+   "match": "20% county",
+   "kind": "State",
+   "stage": "Application / pending match"
+  }
+ ],
+ "xJ": {
+  "total": 20559888.51,
+  "period": "July 1, 2026 – June 30, 2027",
+  "loanName": "Two dump trucks (purchasing)",
+  "loanAmt": 365400,
+  "funds": [
+   {
+    "name": "General Fund",
+    "total": 6701630.62,
+    "pct": "32.60%",
+    "note": "Day-to-day county government — courthouse, elected offices, animal shelter, contributions.",
+    "rev": [
+     [
+      "Taxes",
+      5737280
+     ],
+     [
+      "In-lieu tax payments",
+      137000
+     ],
+     [
+      "Excess fees",
+      200000
+     ],
+     [
+      "Licenses & permits",
+      65900
+     ],
+     [
+      "Intergovernmental",
+      1308824.27
+     ],
+     [
+      "Charges for services",
+      82000
+     ],
+     [
+      "Miscellaneous",
+      91500
+     ],
+     [
+      "Interest",
+      30000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      -950873.65
+     ]
+    ],
+    "app": [
+     [
+      "General government",
+      3763890.88
+     ],
+     [
+      "Protection of persons & property",
+      179015.2
+     ],
+     [
+      "Health & sanitation",
+      540202.54
+     ],
+     [
+      "Social services",
+      144250
+     ],
+     [
+      "Recreation & culture",
+      432624
+     ],
+     [
+      "Capital projects",
+      825000
+     ],
+     [
+      "General services",
+      309000
+     ],
+     [
+      "Contingency",
+      100000
+     ],
+     [
+      "Fringe benefits (employer share)",
+      407648
+     ]
+    ]
+   },
+   {
+    "name": "Road Fund",
+    "total": 4113143.23,
+    "pct": "20.01%",
+    "note": "County roads, bridges, paving, and the road department.",
+    "rev": [
+     [
+      "Intergovernmental",
+      2409220.9
+     ],
+     [
+      "Miscellaneous",
+      87800
+     ],
+     [
+      "Interest",
+      15000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      1601122.33
+     ]
+    ],
+    "app": [
+     [
+      "Roads",
+      2423877.23
+     ],
+     [
+      "Leases",
+      120000
+     ],
+     [
+      "Capital projects",
+      910146
+     ],
+     [
+      "General services",
+      85120
+     ],
+     [
+      "Contingency",
+      100000
+     ],
+     [
+      "Fringe benefits (employer share)",
+      474000
+     ]
+    ]
+   },
+   {
+    "name": "Jail Fund",
+    "total": 3908134,
+    "pct": "19.01%",
+    "note": "Operating the county jail — staff, inmate care, medical, food, utilities.",
+    "rev": [
+     [
+      "Intergovernmental",
+      1267305
+     ],
+     [
+      "Charges for services",
+      360100
+     ],
+     [
+      "Miscellaneous",
+      59000
+     ],
+     [
+      "Interest",
+      10500
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      2211229
+     ]
+    ],
+    "app": [
+     [
+      "Protection of persons & property",
+      2790000
+     ],
+     [
+      "General services",
+      176134
+     ],
+     [
+      "Contingency",
+      100000
+     ],
+     [
+      "Fringe benefits (employer share)",
+      842000
+     ]
+    ]
+   },
+   {
+    "name": "Auto Insurance Tax",
+    "total": 2062500,
+    "pct": "10.03%",
+    "note": "Insurance premium tax dedicated to roads and bridges.",
+    "rev": [
+     [
+      "Taxes",
+      1450000
+     ],
+     [
+      "Interest",
+      12500
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      600000
+     ]
+    ],
+    "app": [
+     [
+      "Capital projects — bridge repair",
+      1031190
+     ],
+     [
+      "Capital projects — road paving",
+      1031190
+     ],
+     [
+      "Bank charges",
+      120
+     ]
+    ]
+   },
+   {
+    "name": "E-911 Fund",
+    "total": 1828368.29,
+    "pct": "8.89%",
+    "note": "Emergency dispatch — 911 fees and the statewide wireless charge.",
+    "rev": [
+     [
+      "Taxes (911 fees)",
+      785000
+     ],
+     [
+      "Intergovernmental",
+      75000
+     ],
+     [
+      "Miscellaneous",
+      600
+     ],
+     [
+      "Interest",
+      18000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      949768.29
+     ]
+    ],
+    "app": [
+     [
+      "Protection of persons & property",
+      844000
+     ],
+     [
+      "General services",
+      750000
+     ],
+     [
+      "Fringe benefits (employer share)",
+      234368.29
+     ]
+    ]
+   },
+   {
+    "name": "Jail Grant Fund",
+    "total": 1596814.65,
+    "pct": "7.77%",
+    "note": "Grant funds held for the jail (largely a certificate of deposit).",
+    "rev": [
+     [
+      "Interest",
+      33000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      1563814.65
+     ]
+    ],
+    "app": [
+     [
+      "General services",
+      1563814.65
+     ],
+     [
+      "Contingency",
+      33000
+     ]
+    ]
+   },
+   {
+    "name": "Co. Clerk Storage Fee",
+    "total": 216820,
+    "pct": "1.05%",
+    "note": "Records-storage fee revenue and clerk software/support.",
+    "rev": [
+     [
+      "Miscellaneous",
+      59220
+     ],
+     [
+      "Interest",
+      2600
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      155000
+     ]
+    ],
+    "app": [
+     [
+      "General government",
+      216820
+     ]
+    ]
+   },
+   {
+    "name": "Jail Construction Fund",
+    "total": 82448.76,
+    "pct": "0.40%",
+    "note": "Legacy jail-construction account (small ad valorem and carryover).",
+    "rev": [
+     [
+      "Taxes",
+      11169.76
+     ],
+     [
+      "Interest",
+      1000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      70279
+     ]
+    ],
+    "app": [
+     [
+      "Holding company bonds",
+      100
+     ],
+     [
+      "Contingency",
+      82348.76
+     ]
+    ]
+   },
+   {
+    "name": "Opioid Settlement",
+    "total": 46028.96,
+    "pct": "0.22%",
+    "note": "Opioid litigation settlement funds (held and transferred).",
+    "rev": [
+     [
+      "Miscellaneous",
+      5000
+     ],
+     [
+      "Interest",
+      900
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      40128.96
+     ]
+    ],
+    "app": [
+     [
+      "Transfers to other funds",
+      46028.96
+     ]
+    ]
+   },
+   {
+    "name": "L.G.E.A.",
+    "total": 4000,
+    "pct": "0.02%",
+    "note": "Local Government Economic Assistance — mineral-severance share, to roads.",
+    "rev": [
+     [
+      "Intergovernmental",
+      4000
+     ]
+    ],
+    "app": [
+     [
+      "Roads",
+      4000
+     ]
+    ]
+   },
+   {
+    "name": "ARPA",
+    "total": 0,
+    "pct": "0.00%",
+    "note": "Federal pandemic-relief fund — no activity budgeted this year.",
+    "rev": [],
+    "app": []
+   }
+  ]
+ },
+ "Z_": [
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4101",
+   "n": "Real property taxes",
+   "v": 4021000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4102",
+   "n": "Tangible personal property taxes",
+   "v": 200000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4103",
+   "n": "Motor vehicle property tax",
+   "v": 499900
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4104",
+   "n": "Delinquent property tax",
+   "v": 50000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4105",
+   "n": "Delinquent personal property tax",
+   "v": 200
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4119",
+   "n": "Forestry taxes",
+   "v": 1200
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4120",
+   "n": "Other ad valorem",
+   "v": 52000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4121",
+   "n": "Adv costs sheriff",
+   "v": 100
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4130",
+   "n": "Franchise taxes — bank",
+   "v": 340000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4135",
+   "n": "Deed transfer",
+   "v": 230000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4138",
+   "n": "Transient room tax",
+   "v": 438780
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4201",
+   "n": "Public housing in lieu",
+   "v": 2000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4203",
+   "n": "TVA in lieu of tax",
+   "v": 112000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4206",
+   "n": "Electric utilities in lieu",
+   "v": 23000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4302",
+   "n": "Excess fees — clerk",
+   "v": 100000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4304",
+   "n": "Excess fees — sheriff",
+   "v": 100000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4401",
+   "n": "Business license fees",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4417",
+   "n": "Cable TV franchise/telecom",
+   "v": 64900
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4501",
+   "n": "Omitted property taxes",
+   "v": 27000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4503",
+   "n": "Federal reimb. disaster relief",
+   "v": 10000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4504",
+   "n": "Federal grants",
+   "v": 750000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4505",
+   "n": "Motor vehicle tax — other counties",
+   "v": 30000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4506",
+   "n": "State reimb./refunds",
+   "v": 3000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4510",
+   "n": "State grants",
+   "v": 25000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4510-D",
+   "n": "Illegal dump grant",
+   "v": 10000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4510-S",
+   "n": "Solid waste litter abatement grant",
+   "v": 54010.85
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4510-T",
+   "n": "Tire grant",
+   "v": 4000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4512",
+   "n": "Homeland security",
+   "v": 50000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4520",
+   "n": "Election expense reimbursement",
+   "v": 12000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4521",
+   "n": "Board of assessment appeals",
+   "v": 200
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4522",
+   "n": "Legal process tax",
+   "v": 180
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4530",
+   "n": "Refund sheriff bond",
+   "v": 100
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4532",
+   "n": "AOC space rental",
+   "v": 280000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4541",
+   "n": "Emergency mgmt reimbursement",
+   "v": 18333.42
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4543",
+   "n": "Misc payments — state",
+   "v": 2000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4559",
+   "n": "Social security incentive",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4561",
+   "n": "AOC court facility",
+   "v": 32000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4612",
+   "n": "Animal shelter fees",
+   "v": 70000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4680",
+   "n": "CCSO paper service fee",
+   "v": 12000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4726",
+   "n": "Insurance proceeds",
+   "v": 15000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4727",
+   "n": "Reimbursement",
+   "v": 20000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4728",
+   "n": "Animal shelter building donations",
+   "v": 25000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4731",
+   "n": "Miscellaneous revenues",
+   "v": 5000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4732",
+   "n": "Animal shelter loan",
+   "v": 25000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4733",
+   "n": "Insurance reimbursements",
+   "v": 500
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4799",
+   "n": "Other receipts",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4801",
+   "n": "Interest",
+   "v": 30000
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4901",
+   "n": "Surplus from prior year",
+   "v": 2065577.68
+  },
+  {
+   "f": "General",
+   "k": "R",
+   "a": "01-4909",
+   "n": "Transfers to other funds",
+   "v": -3112351.33
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5001-101",
+   "n": "County Judge/Exec — salary",
+   "v": 130517.24
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5001-185",
+   "n": "Co. Judge/Exec — other salaries",
+   "v": 110000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5001-212",
+   "n": "County Judge/Exec training incentive",
+   "v": 5588.44
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5001-332",
+   "n": "County Judge legal advice",
+   "v": 3000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5001-346",
+   "n": "Annex pest control",
+   "v": 200
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5001-445",
+   "n": "Judge office supplies",
+   "v": 8000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5001-571",
+   "n": "Annex building maintenance",
+   "v": 10000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5001-578",
+   "n": "Annex utilities",
+   "v": 20000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5005-101",
+   "n": "County Attorney — salary",
+   "v": 45514.58
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5005-566",
+   "n": "County Attorney expense",
+   "v": 177500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5005-578",
+   "n": "County Attorney utilities",
+   "v": 1450
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5010-167",
+   "n": "Pmt co clerk fiscal court",
+   "v": 500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5010-201",
+   "n": "Co. Clerk social security",
+   "v": 60000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5010-299",
+   "n": "Co. Clerk health insurance",
+   "v": 160000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5010-368",
+   "n": "Co. Clerk tax bill prep",
+   "v": 32000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5015-209",
+   "n": "Sheriff worker's compensation",
+   "v": 75000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5015-348",
+   "n": "Sheriff program support",
+   "v": 1531160
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5015-521",
+   "n": "Sheriff insurance — buildings etc.",
+   "v": 110000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5015-741",
+   "n": "Sheriff state grants pass-through",
+   "v": 40000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5020-101",
+   "n": "Coroner salary",
+   "v": 19395.44
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5020-103",
+   "n": "Coroner deputies salary",
+   "v": 20793.73
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5020-210",
+   "n": "Coroner expense account",
+   "v": 7200
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5020-348",
+   "n": "Coroner program support",
+   "v": 12500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5020-578",
+   "n": "Coroner utilities",
+   "v": 3000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5025-101",
+   "n": "Magistrates salaries",
+   "v": 112249.44
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5025-210",
+   "n": "Magistrates committee allowance",
+   "v": 14400
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5025-212",
+   "n": "Training fringe benefit",
+   "v": 22350
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5025-301",
+   "n": "Accounting service paid clerk",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5025-302",
+   "n": "Public notices",
+   "v": 33000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5025-569",
+   "n": "Registration & conf training",
+   "v": 15000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5030-367",
+   "n": "P.V.A. statutory contribution",
+   "v": 102400
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5035-191",
+   "n": "Board of assessment appeals",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5040-102",
+   "n": "County Treasurer — salary",
+   "v": 83961.5
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5040-185",
+   "n": "Co. Treasurer — other salaries",
+   "v": 57155.16
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5040-319",
+   "n": "Computer software",
+   "v": 19000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5040-445",
+   "n": "Co. Treasurer office supplies & postage",
+   "v": 10000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5046-185",
+   "n": "HR salary",
+   "v": 70315.2
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5046-348",
+   "n": "HR program support",
+   "v": 1500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5046-445",
+   "n": "HR office supplies",
+   "v": 2100
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5046-569",
+   "n": "HR registration & conference",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5046-574",
+   "n": "HR mandatory staff training",
+   "v": 2500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5060-101",
+   "n": "Law library — circuit clerk",
+   "v": 600
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5065-192",
+   "n": "Election officers",
+   "v": 40000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5065-193",
+   "n": "Election commissioners",
+   "v": 2500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5065-194",
+   "n": "Election tabulators",
+   "v": 3500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5065-199",
+   "n": "Per diem fees — election",
+   "v": 500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5065-347",
+   "n": "Polling places",
+   "v": 600
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5065-348",
+   "n": "Elections program support",
+   "v": 65000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5065-565",
+   "n": "Printing & stationery",
+   "v": 2500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5075-348",
+   "n": "Industrial recruitment",
+   "v": 50000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5075-505",
+   "n": "Chamber of Commerce",
+   "v": 2780
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5080-179",
+   "n": "Part-time personnel",
+   "v": 40000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5080-346",
+   "n": "Courthouse pest control",
+   "v": 424
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5080-352",
+   "n": "Elevator maintenance",
+   "v": 5000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5080-406",
+   "n": "Building maintenance supplies",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5080-411",
+   "n": "Custodial supplies",
+   "v": 1500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5080-571",
+   "n": "Courthouse renewals & repairs",
+   "v": 120000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5080-578",
+   "n": "Courthouse utilities",
+   "v": 30000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5086-175",
+   "n": "Judicial custodial personnel",
+   "v": 40156.15
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5086-346",
+   "n": "Judicial bldg pest control",
+   "v": 580
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5086-446",
+   "n": "Judicial bldg other supplies & maint",
+   "v": 125000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5086-571",
+   "n": "Judicial bldg renewals & repairs",
+   "v": 50000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5086-578",
+   "n": "Judicial utilities",
+   "v": 50000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5121-446",
+   "n": "Fire protection — CC Fire Rescue Squad",
+   "v": 12000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5135-141",
+   "n": "Office EM mgmt salary",
+   "v": 70315.2
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5135-315",
+   "n": "OEM phone/internet/data",
+   "v": 5000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5135-348",
+   "n": "OEM program support",
+   "v": 6000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5135-429",
+   "n": "OEM vehicle maint. & fuel",
+   "v": 4000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5135-445",
+   "n": "EM mgmt office supplies",
+   "v": 3000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5135-566",
+   "n": "Emergency disaster relief",
+   "v": 20000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5135-569",
+   "n": "OEM registration & conference",
+   "v": 2500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5136-383",
+   "n": "Homeland security grant",
+   "v": 50000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5150-348",
+   "n": "Forestry tax payment",
+   "v": 1200
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5175-903",
+   "n": "Public defender pay",
+   "v": 5000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-102",
+   "n": "Animal warden",
+   "v": 67965.69
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-106",
+   "n": "Animal shelter salary",
+   "v": 180000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-346",
+   "n": "Animal shelter pest control",
+   "v": 576
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-366",
+   "n": "Animal shelter disposal",
+   "v": 150
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-384",
+   "n": "Animal shelter SNAP reimb.",
+   "v": 25000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-402",
+   "n": "Animal shelter kennel supplies",
+   "v": 12000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-403",
+   "n": "Animal shelter dog & cat food",
+   "v": 2000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-406",
+   "n": "Animal shelter building supp/maint",
+   "v": 4000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-429",
+   "n": "Animal shelter vehicle maint & fuel",
+   "v": 10000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-445",
+   "n": "Animal shelter office supplies",
+   "v": 4000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-481",
+   "n": "Animal shelter uniforms",
+   "v": 2000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-550",
+   "n": "Animal medical services",
+   "v": 30000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-574",
+   "n": "Animal shelter employee training",
+   "v": 1500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-578",
+   "n": "Animal shelter utilities",
+   "v": 10000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-590",
+   "n": "Animal shelter IT & repair",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5205-742",
+   "n": "Animal shelter building construction",
+   "v": 50000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5212-107",
+   "n": "Supervisor — environmental plan",
+   "v": 48000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5212-366",
+   "n": "Enviro planner litter abatement",
+   "v": 54010.85
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5212-366-D",
+   "n": "Illegal dump grant",
+   "v": 10000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5212-366-T",
+   "n": "Tire grant",
+   "v": 4000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5212-429",
+   "n": "Enviro planner vehicle maint. & fuel",
+   "v": 2000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5212-445",
+   "n": "Environmental office supplies",
+   "v": 500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5212-569",
+   "n": "Environmental plan reg & conf",
+   "v": 500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5232-739",
+   "n": "Ambulance/rescue/other equipment",
+   "v": 20000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5240-348",
+   "n": "Flood control project prog support",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5301-398",
+   "n": "Indigent order awarding fees",
+   "v": 12000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5305-741",
+   "n": "Weaks Center project",
+   "v": 50000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5330-344",
+   "n": "County burials/cremation",
+   "v": 2250
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5330-348",
+   "n": "County contingency",
+   "v": 80000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5405-548",
+   "n": "Boatwright public access development",
+   "v": 6624
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-5420-348",
+   "n": "Calloway Co. Tourism & Convention",
+   "v": 426000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-8011-742",
+   "n": "CCFR CDBG building grant",
+   "v": 750000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-8099-711",
+   "n": "Heating & AC purchase",
+   "v": 75000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9100-307",
+   "n": "Audit",
+   "v": 60000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9100-315",
+   "n": "Employee health insurance",
+   "v": 160000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9100-382",
+   "n": "Employee drug testing",
+   "v": 1500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9100-503",
+   "n": "Bank charges",
+   "v": 200
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9100-521",
+   "n": "Insurance — buildings",
+   "v": 70000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9100-531",
+   "n": "Insurance — fidelity bonds",
+   "v": 10000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9100-551",
+   "n": "Memberships",
+   "v": 1000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9100-553",
+   "n": "Memberships — additional",
+   "v": 4100
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9100-555",
+   "n": "Memberships — KACo",
+   "v": 2200
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9200-999",
+   "n": "Reserve for transfers",
+   "v": 100000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9400-201",
+   "n": "Social security — county contribution",
+   "v": 90148
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9400-202",
+   "n": "Retirement — county contribution",
+   "v": 260000
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9400-208",
+   "n": "Unemployment insurance",
+   "v": 12500
+  },
+  {
+   "f": "General",
+   "k": "E",
+   "a": "01-9400-209",
+   "n": "Workers comp.",
+   "v": 45000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4506",
+   "n": "State reimb./refunds",
+   "v": 1000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4513",
+   "n": "Bridge emergency 80/20",
+   "v": 20000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4514",
+   "n": "Transportation Cabinet flex",
+   "v": 378746
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4514-B",
+   "n": "Bridge program 80/20",
+   "v": 20000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4516",
+   "n": "Truck license refund",
+   "v": 222000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4517",
+   "n": "Driver's license refund",
+   "v": 9135
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4518",
+   "n": "County road aid",
+   "v": 1352839.9
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4518-B",
+   "n": "LARP paving program",
+   "v": 405500
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4704",
+   "n": "Surplus equipment sale",
+   "v": 50000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4706",
+   "n": "Road material sales",
+   "v": 100
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4710",
+   "n": "Western Shores",
+   "v": 35000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4727",
+   "n": "Road reimbursements",
+   "v": 200
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4731",
+   "n": "Miscellaneous revenues",
+   "v": 1000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4733",
+   "n": "Insurance reimbursements",
+   "v": 500
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4799",
+   "n": "Other receipts",
+   "v": 1000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4801",
+   "n": "Interest earned",
+   "v": 15000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4901",
+   "n": "Surplus from prior year",
+   "v": 300000
+  },
+  {
+   "f": "Road",
+   "k": "R",
+   "a": "02-4910",
+   "n": "Transfers from other funds",
+   "v": 1301122.33
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6103-102",
+   "n": "Road supervisor",
+   "v": 69225.33
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-143",
+   "n": "Road workers",
+   "v": 820000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-311",
+   "n": "Bridge repair",
+   "v": 100000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-346",
+   "n": "Pest control",
+   "v": 180
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-348",
+   "n": "Program support",
+   "v": 125000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-382",
+   "n": "Employee drug testing",
+   "v": 1500
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-405",
+   "n": "Paving projects",
+   "v": 100000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-406",
+   "n": "Building repairs",
+   "v": 25000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-409",
+   "n": "Crushed stone & gravel",
+   "v": 420000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-411",
+   "n": "Cleaning supplies",
+   "v": 1000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-441",
+   "n": "Machinery and equipment",
+   "v": 90000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-443",
+   "n": "Motor vehicle parts",
+   "v": 225000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-445",
+   "n": "Office supplies",
+   "v": 3000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-447",
+   "n": "Road maintenance",
+   "v": 50000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-455",
+   "n": "Petroleum products",
+   "v": 265971.9
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-459",
+   "n": "Pipes & culverts",
+   "v": 65000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-481",
+   "n": "Department uniforms",
+   "v": 5500
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-549",
+   "n": "Department physicals",
+   "v": 300
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-574",
+   "n": "Employee training",
+   "v": 200
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-578",
+   "n": "Utilities",
+   "v": 22000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-6105-730",
+   "n": "Western Shores paving",
+   "v": 35000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-7700-602",
+   "n": "Road lease/purchases",
+   "v": 120000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-8003-566",
+   "n": "Transportation Cab. 80/20 bridge",
+   "v": 20000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-8003-566-B",
+   "n": "Transportation Cab. 80/20 emergency",
+   "v": 20000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-8005-566",
+   "n": "Transportation Cab. flex",
+   "v": 378746
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-8005-730",
+   "n": "Transportation Cab. LARP paving",
+   "v": 491400
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-9100-503",
+   "n": "Bank charges",
+   "v": 120
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-9100-521",
+   "n": "Insurance — building",
+   "v": 85000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-9200-999",
+   "n": "Reserve for transfers",
+   "v": 100000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-9400-201",
+   "n": "Social security",
+   "v": 80000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-9400-202",
+   "n": "Retirement",
+   "v": 157000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-9400-205",
+   "n": "Employee health insurance",
+   "v": 165000
+  },
+  {
+   "f": "Road",
+   "k": "E",
+   "a": "02-9400-209",
+   "n": "Workers' compensation",
+   "v": 72000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4506",
+   "n": "State reimb./refunds",
+   "v": 225000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4510",
+   "n": "State grants",
+   "v": 10000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4533",
+   "n": "State jail allotment",
+   "v": 53300
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4534",
+   "n": "State jail medical",
+   "v": 4205
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4535",
+   "n": "Court cost collection",
+   "v": 7000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4536",
+   "n": "Contracts with other counties",
+   "v": 20000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4537",
+   "n": "State prisoners",
+   "v": 900000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4538",
+   "n": "DUI fees",
+   "v": 7200
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4559",
+   "n": "Social security adm. incentive fee",
+   "v": 3600
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4569",
+   "n": "House Bill 463",
+   "v": 37000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4621",
+   "n": "General prisoner population",
+   "v": 165000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4633",
+   "n": "Jail bond collection fees",
+   "v": 100
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4634",
+   "n": "Prisoner reimbursement",
+   "v": 30000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4699",
+   "n": "Other charges",
+   "v": 65000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4699-L",
+   "n": "Litter cleanup",
+   "v": 30000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4699-M",
+   "n": "Mowing",
+   "v": 70000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4702",
+   "n": "Telephone commissions",
+   "v": 25000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4727",
+   "n": "Reimbursements",
+   "v": 30000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4733",
+   "n": "Insurance reimbursements",
+   "v": 1000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4799",
+   "n": "Other receipts",
+   "v": 3000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4801",
+   "n": "Interest earned",
+   "v": 10500
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4901",
+   "n": "Surplus from prior year",
+   "v": 400000
+  },
+  {
+   "f": "Jail",
+   "k": "R",
+   "a": "03-4910",
+   "n": "Transfers from other funds",
+   "v": 1811229
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-101",
+   "n": "Jailers salary",
+   "v": 115000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-123",
+   "n": "Jail personnel",
+   "v": 1800000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-212",
+   "n": "Training fringe benefit",
+   "v": 2000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-334",
+   "n": "Building maintenance & repair",
+   "v": 33000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-346",
+   "n": "Pest control",
+   "v": 1500
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-382",
+   "n": "Employee drug testing",
+   "v": 2000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-406",
+   "n": "Building maintenance supplies",
+   "v": 35000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-411",
+   "n": "Cleaning supplies",
+   "v": 3000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-423",
+   "n": "Food prep & serving supplies",
+   "v": 6000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-425",
+   "n": "Food",
+   "v": 255000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-445",
+   "n": "Office supplies",
+   "v": 10500
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-465",
+   "n": "Prisoner clothing/linens/hygiene",
+   "v": 20000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-481",
+   "n": "Staff uniforms",
+   "v": 6500
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-549",
+   "n": "Medical services",
+   "v": 320000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-555",
+   "n": "Medical supplies",
+   "v": 3000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-569",
+   "n": "Registrations, conferences",
+   "v": 6000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-573",
+   "n": "Telecommunications",
+   "v": 1500
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-576",
+   "n": "Training & travel",
+   "v": 6000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-578",
+   "n": "Utilities",
+   "v": 112000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-588",
+   "n": "Equipment repair",
+   "v": 23000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-705",
+   "n": "Data processing equipment",
+   "v": 4000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-723",
+   "n": "Vehicles",
+   "v": 8000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-725",
+   "n": "Office equipment",
+   "v": 2000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5101-739",
+   "n": "Safety equipment",
+   "v": 13000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-5102-314",
+   "n": "Juvenile housing",
+   "v": 2000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-9100-503",
+   "n": "Bank charges",
+   "v": 150
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-9100-521",
+   "n": "Building insurance",
+   "v": 175000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-9100-551",
+   "n": "Association dues",
+   "v": 984
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-9200-999",
+   "n": "Reserve for transfer",
+   "v": 100000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-9400-201",
+   "n": "Employee benefits — social security",
+   "v": 120000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-9400-202",
+   "n": "Employee benefits — retirement",
+   "v": 320000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-9400-205",
+   "n": "Employee health insurance",
+   "v": 325000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-9400-208",
+   "n": "Unemployment insurance",
+   "v": 2000
+  },
+  {
+   "f": "Jail",
+   "k": "E",
+   "a": "03-9400-209",
+   "n": "Workers compensation",
+   "v": 75000
+  },
+  {
+   "f": "LGEA",
+   "k": "R",
+   "a": "04-4529",
+   "n": "LGEA mineral severance",
+   "v": 4000
+  },
+  {
+   "f": "LGEA",
+   "k": "E",
+   "a": "04-6105-447",
+   "n": "Road maintenance",
+   "v": 4000
+  },
+  {
+   "f": "Jail Grant",
+   "k": "R",
+   "a": "06-4801",
+   "n": "Jail grant interest",
+   "v": 33000
+  },
+  {
+   "f": "Jail Grant",
+   "k": "R",
+   "a": "06-4901",
+   "n": "Prior year carryover",
+   "v": 1563814.65
+  },
+  {
+   "f": "Jail Grant",
+   "k": "E",
+   "a": "06-9100-741",
+   "n": "Jail grant CD",
+   "v": 1563814.65
+  },
+  {
+   "f": "Jail Grant",
+   "k": "E",
+   "a": "06-9200-999",
+   "n": "Reserve for transfer",
+   "v": 33000
+  },
+  {
+   "f": "Jail Const",
+   "k": "R",
+   "a": "20-4104",
+   "n": "Delinquent property tax",
+   "v": 100
+  },
+  {
+   "f": "Jail Const",
+   "k": "R",
+   "a": "20-4120",
+   "n": "Other ad valorem tax",
+   "v": 11069.76
+  },
+  {
+   "f": "Jail Const",
+   "k": "R",
+   "a": "20-4801",
+   "n": "Jail construction",
+   "v": 1000
+  },
+  {
+   "f": "Jail Const",
+   "k": "R",
+   "a": "20-4901",
+   "n": "Surplus from prior year",
+   "v": 70279
+  },
+  {
+   "f": "Jail Const",
+   "k": "E",
+   "a": "20-7200-699",
+   "n": "Trustee fees/other debt svc",
+   "v": 100
+  },
+  {
+   "f": "Jail Const",
+   "k": "E",
+   "a": "20-9200-999",
+   "n": "Reserve for transfers",
+   "v": 82348.76
+  },
+  {
+   "f": "Opioid",
+   "k": "R",
+   "a": "74-4760",
+   "n": "Opioid court settlement",
+   "v": 5000
+  },
+  {
+   "f": "Opioid",
+   "k": "R",
+   "a": "74-4801",
+   "n": "Opioid interest",
+   "v": 900
+  },
+  {
+   "f": "Opioid",
+   "k": "R",
+   "a": "74-4901",
+   "n": "Prior year carryover",
+   "v": 40128.96
+  },
+  {
+   "f": "Opioid",
+   "k": "E",
+   "a": "74-9300-999",
+   "n": "Reserve for transfer",
+   "v": 46028.96
+  },
+  {
+   "f": "E-911",
+   "k": "R",
+   "a": "75-4140",
+   "n": "911 fees",
+   "v": 550000
+  },
+  {
+   "f": "E-911",
+   "k": "R",
+   "a": "75-4140-W",
+   "n": "911 wireless",
+   "v": 235000
+  },
+  {
+   "f": "E-911",
+   "k": "R",
+   "a": "75-4512",
+   "n": "Homeland security",
+   "v": 75000
+  },
+  {
+   "f": "E-911",
+   "k": "R",
+   "a": "75-4727",
+   "n": "Reimbursements",
+   "v": 500
+  },
+  {
+   "f": "E-911",
+   "k": "R",
+   "a": "75-4733",
+   "n": "Insurance reimbursements",
+   "v": 100
+  },
+  {
+   "f": "E-911",
+   "k": "R",
+   "a": "75-4801",
+   "n": "Interest",
+   "v": 18000
+  },
+  {
+   "f": "E-911",
+   "k": "R",
+   "a": "75-4901",
+   "n": "Prior year carryover",
+   "v": 949768.29
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-159",
+   "n": "911 dispatch salaries",
+   "v": 416000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-338",
+   "n": "Emergency power equipment",
+   "v": 1500
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-339",
+   "n": "Radio system repair",
+   "v": 1500
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-364",
+   "n": "Lease & rental payments",
+   "v": 25000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-366",
+   "n": "Building maint & repair",
+   "v": 5000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-382",
+   "n": "Employee drug testing",
+   "v": 500
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-445",
+   "n": "Office supplies",
+   "v": 5000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-545",
+   "n": "GIS/mapping system",
+   "v": 25000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-569",
+   "n": "Registration conf & training",
+   "v": 10000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-573",
+   "n": "Telephone service/trunks",
+   "v": 25000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-578",
+   "n": "Utilities",
+   "v": 35000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-585",
+   "n": "Maintenance/service agreement",
+   "v": 12000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-588",
+   "n": "Remote 911 hardware",
+   "v": 5000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-590",
+   "n": "Computer workstations",
+   "v": 15000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-592",
+   "n": "Vehicle maintenance",
+   "v": 62500
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-703",
+   "n": "Communication equipment",
+   "v": 10000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-725",
+   "n": "Other equipment & software",
+   "v": 5000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-739",
+   "n": "CAD system repair",
+   "v": 85000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-5145-999",
+   "n": "Reserve for transfer",
+   "v": 100000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-9100-741",
+   "n": "E911 fund CD",
+   "v": 750000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-9400-201",
+   "n": "Social security contribution",
+   "v": 33000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-9400-202",
+   "n": "Retirement county contribution",
+   "v": 85868.29
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-9400-205",
+   "n": "Employee health insurance",
+   "v": 80000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-9400-208",
+   "n": "Unemployment insurance",
+   "v": 10000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-9400-209",
+   "n": "Workers compensation",
+   "v": 15000
+  },
+  {
+   "f": "E-911",
+   "k": "E",
+   "a": "75-9400-521",
+   "n": "KACo insurance",
+   "v": 10500
+  },
+  {
+   "f": "Co Clerk",
+   "k": "R",
+   "a": "76-4731",
+   "n": "Misc revenues",
+   "v": 59220
+  },
+  {
+   "f": "Co Clerk",
+   "k": "R",
+   "a": "76-4801",
+   "n": "County clerk storage fee interest",
+   "v": 2600
+  },
+  {
+   "f": "Co Clerk",
+   "k": "R",
+   "a": "76-4901",
+   "n": "Prior year surplus",
+   "v": 155000
+  },
+  {
+   "f": "Co Clerk",
+   "k": "E",
+   "a": "76-5010-319",
+   "n": "Computer software lease",
+   "v": 4000
+  },
+  {
+   "f": "Co Clerk",
+   "k": "E",
+   "a": "76-5010-348",
+   "n": "Program support",
+   "v": 50000
+  },
+  {
+   "f": "Co Clerk",
+   "k": "E",
+   "a": "76-5010-999",
+   "n": "Reserve for transfer",
+   "v": 162820
+  },
+  {
+   "f": "Auto Tax",
+   "k": "R",
+   "a": "86-4137",
+   "n": "Auto insurance tax",
+   "v": 1450000
+  },
+  {
+   "f": "Auto Tax",
+   "k": "R",
+   "a": "86-4801",
+   "n": "Auto tax interest",
+   "v": 12500
+  },
+  {
+   "f": "Auto Tax",
+   "k": "R",
+   "a": "86-4901",
+   "n": "Surplus from prior year",
+   "v": 600000
+  },
+  {
+   "f": "Auto Tax",
+   "k": "E",
+   "a": "86-8003-312",
+   "n": "Bridge repair",
+   "v": 1031190
+  },
+  {
+   "f": "Auto Tax",
+   "k": "E",
+   "a": "86-8005-447",
+   "n": "Road paving",
+   "v": 1031190
+  },
+  {
+   "f": "Auto Tax",
+   "k": "E",
+   "a": "86-9100-503",
+   "n": "Bank charges",
+   "v": 120
+  }
+ ],
+ "bJ": [
+  {
+   "q": "How much goes to roads & bridges?",
+   "v": 6175643.23,
+   "basis": "Road Fund + Auto Insurance Tax fund combined.",
+   "find": "road"
+  },
+  {
+   "q": "What does the county jail cost?",
+   "v": 3908134,
+   "basis": "Jail Fund — much of it funded by transfers from other county funds.",
+   "find": "jail"
+  },
+  {
+   "q": "What does the Sheriff's office get?",
+   "v": 1756160,
+   "basis": "General Fund sheriff lines (program support, insurance, comp, grants).",
+   "find": "sheriff"
+  },
+  {
+   "q": "What about 911 / emergency dispatch?",
+   "v": 1828368.29,
+   "basis": "The whole E-911 Fund — dispatch, equipment, and salaries.",
+   "find": "911"
+  },
+  {
+   "q": "What does the animal shelter cost?",
+   "v": 400191.69,
+   "basis": "Animal warden and shelter (includes a $50,000 building line).",
+   "find": "animal"
+  },
+  {
+   "q": "How much for the tourism commission?",
+   "v": 426000,
+   "basis": "General Fund — Calloway Co. Tourism & Convention.",
+   "find": "tourism"
+  },
+  {
+   "q": "What do elections cost?",
+   "v": 114600,
+   "basis": "General Fund election lines (officers, machines, support).",
+   "find": "election"
+  },
+  {
+   "q": "Employee health insurance, all funds?",
+   "v": 890000,
+   "basis": "Health-insurance lines across the General, Road, Jail, and E-911 funds.",
+   "find": "health insurance"
+  }
+ ],
+ "Qy": {
+  "asOf": "early June 2026",
+  "source": "Calloway County Treasurer",
+  "budgetFunded": [
+   [
+    "General government",
+    26
+   ],
+   [
+    "Road department",
+    14
+   ],
+   [
+    "E-911 / dispatch",
+    8
+   ]
+  ],
+  "feeOffices": [
+   [
+    "Sheriff's office",
+    27
+   ],
+   [
+    "County Clerk's office",
+    13
+   ]
+  ]
+ },
+ "xw": [
+  [
+   "Taxes, Bonds & Fees",
+   [
+    {
+     "n": "20-0617-A",
+     "t": "Transient (lodging) tax",
+     "s": "Revised by 22-1221-B",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/20-0617-A.pdf"
+    },
+    {
+     "n": "22-1221-B",
+     "t": "Transient (lodging) tax",
+     "s": "Revises 20-0617-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2024/01/22-1221-B.pdf"
+    },
+    {
+     "n": "23-0134-B",
+     "t": "Insurance premium tax",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/03/Ordinance-23-0314-B.pdf"
+    },
+    {
+     "n": "23-0621-A",
+     "t": "Tax on retail gasoline distribution & motor vehicles",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/06/23-0621-A.pdf"
+    },
+    {
+     "n": "23-0134-A",
+     "t": "Skill game machines",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/03/Ordinance-23-0314-A.pdf"
+    },
+    {
+     "n": "00-0815-A",
+     "t": "Fees for courthouse bond expenses",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-8-00-0815-B-Fees-for-paying-expenses-of-courthouse-bonds.pdf"
+    },
+    {
+     "n": "02-0709-A",
+     "t": "Fees for courthouse bond expenses",
+     "s": "Amends 00-0815-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-8-02-0709-A-Amendment-to-00-0815-B-Fees-for-paying-expenses-of-courthouse-bonds.pdf"
+    },
+    {
+     "n": "22-1221-A",
+     "t": "Annual salary of elected officials",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2024/01/22-1221-A.pdf"
+    }
+   ]
+  ],
+  [
+   "Franchise & Fees",
+   [
+    {
+     "n": "96-0808-A",
+     "t": "Bank-deposits franchise fee",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-9-96-0808-A-Franchise-Fee-on-Bank-Deposits.pdf"
+    },
+    {
+     "n": "05-0621-A",
+     "t": "Telecommunications franchise fee",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-27-05-0621-A-Franchise-Fees-for-telecommunication-companies.pdf"
+    },
+    {
+     "n": "20-0916-A",
+     "t": "Telecommunications franchise",
+     "s": "Amends 05-0621-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-34-20-0916-A-Amendment-of-05-0621-A-Telecommunications-Franchise.pdf"
+    },
+    {
+     "n": "08-1118-A",
+     "t": "Non-exclusive franchise for public rights-of-way (cable)",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-08-1118-A-Non-Exclusive-Franchise-to-use-Public-Right-of-Ways.pdf"
+    },
+    {
+     "n": "20-1216-A",
+     "t": "Cable franchise",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/11/20-1216-A.pdf"
+    }
+   ]
+  ],
+  [
+   "911",
+   [
+    {
+     "n": "91-1101-A",
+     "t": "Establish 911 telephone fee",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-28-91-1115-A-Establish-911-Telephone-Service.pdf"
+    },
+    {
+     "n": "10-0929-A",
+     "t": "911 telephone fee",
+     "s": "Amends 91-1101-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-28-10-0929-A-Amendment-of-91-1115-A-Establish-911-Telephone-Service.pdf"
+    },
+    {
+     "n": "21-0120-A",
+     "t": "911 telephone fee",
+     "s": "Repeals 91-1101-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-37-21-0120-A-Repealing-91-1101-A-911-Telephone-Service.pdf"
+    },
+    {
+     "n": "94-0908-A",
+     "t": "Implementation & maintenance of 911",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-14-94-0908-A-94-3-Implemention-and-Maintenance-of-911.pdf"
+    },
+    {
+     "n": "96-0523-A",
+     "t": "Road-name changes for 911 system",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-96-0523-A-Changing-the-Names-of-Roads-for-the-purpose-of-911.pdf"
+    },
+    {
+     "n": "19-1016-A",
+     "t": "$30 911 fee",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/03/19-1016-A.pdf"
+    }
+   ]
+  ],
+  [
+   "County Regulations",
+   [
+    {
+     "n": "87-1013-A",
+     "t": "Subdivision development (6+ lots)",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-17-87-1013-A-6-Development-of-Subdivision-containing-6-or-more-lots.pdf"
+    },
+    {
+     "n": "87-1125-A",
+     "t": "Subdivision development (6+ lots)",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-17-87-1125-A-8-Development-of-Subdivision-containing-6-or-more-lots.pdf"
+    },
+    {
+     "n": "03-0121-A",
+     "t": "Subdivision regulations",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-16-03-0121-A-Subdivision-Regulations.pdf"
+    },
+    {
+     "n": "20-0916-B",
+     "t": "Subdivision regulations",
+     "s": "Amendment",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/05/Ordinance-2020-0916-B.pdf"
+    },
+    {
+     "n": "02-0716-A",
+     "t": "Building inspector",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-13-02-0716-A-Building-Inspector.pdf"
+    },
+    {
+     "n": "17-0815-A",
+     "t": "Building inspector",
+     "s": "Amends 02-0716-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-13-17-0815-A-Amendment-to-02-0716-A-Building-Inspector.pdf"
+    },
+    {
+     "n": "15-1117-A",
+     "t": "Electrical inspection fees",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-31-15-1117-A-Electrical-Inspection-Fees.pdf"
+    },
+    {
+     "n": "97-1016-A",
+     "t": "Hog facilities",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-15-97-1016-A-97-8-Hog-Facilities.pdf"
+    },
+    {
+     "n": "07-0619-B",
+     "t": "Cemetery board",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-23-07-0619-B-Cemetery-Board.pdf"
+    },
+    {
+     "n": "97-0213-A",
+     "t": "Concealed carry in county buildings",
+     "s": "Repealed 02/15/23",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-97-0213-A-97-1-Carry-Concealed-Weapons.pdf"
+    },
+    {
+     "n": "12-0221-A",
+     "t": "Sale of cannabinoids",
+     "s": "Repealed 02/15/23",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-29-12-0221-A-Prohibiting-the-Possession-or-Sale-of-Cannabinoids.pdf"
+    },
+    {
+     "n": "24-0417-A",
+     "t": "Solar energy system installation requirements",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2024/10/24-0417-A-rev1.pdf"
+    },
+    {
+     "n": "24-0619-B",
+     "t": "Road requirements to join county maintenance system",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2024/06/24-0619-b.pdf"
+    },
+    {
+     "n": "25-0716-A",
+     "t": "Street-legal special-purpose vehicles on public roads",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2025/07/25-0716-A-street-legal.pdf"
+    },
+    {
+     "n": "25-0924-A",
+     "t": "Medical-cannabis business operations",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2025/09/25-0924-A.pdf"
+    },
+    {
+     "n": "26-0520-A",
+     "t": "Animal control & TNVR program for community cats",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2026/05/26-0520-A-tnvr.pdf"
+    },
+    {
+     "n": "06-0321-A",
+     "t": "Animal control conditions & maintenance",
+     "s": "Repealed 5/20/26",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-21-06-0321-A-Regulation-for-Conditions-and-Maintenance-of-Animals.pdf"
+    }
+   ]
+  ],
+  [
+   "Elected Office & Ethics",
+   [
+    {
+     "n": "99-0429-A",
+     "t": "Constable emergency vehicle equipment",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-11-99-0429-A-Constables-use-of-Emergency-Vehicle-Equipment.pdf"
+    },
+    {
+     "n": "04-0921-A",
+     "t": "Prohibit electioneering near polling place",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-1-04-0921-A-Prohibiting-Electioneering-near-Polling-Place.pdf"
+    },
+    {
+     "n": "21-0421-C",
+     "t": "Electioneering near polling place",
+     "s": "Amends 04-0921-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-1-21-0421-C-Amendment-of-04-0921-A-Prohibiting-Electioneering-near-Polling-Place.pdf"
+    },
+    {
+     "n": "17-0221-A",
+     "t": "Transparency & accountability of agencies using tax revenue",
+     "s": "Repealed 10/18/23",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-17-0221-A-Transparency-and-Accountablity-of-Public-Agencies-using-Tax-Proceeds.pdf"
+    },
+    {
+     "n": "18-0619-A",
+     "t": "Continuity of local government",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-18-0619-A-Continuity-of-Local-Government.pdf"
+    },
+    {
+     "n": "23-0719-A",
+     "t": "Code of ethics",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/07/23-0719-A.pdf"
+    },
+    {
+     "n": "99-0104-A",
+     "t": "Code of ethics",
+     "s": "Repealed 7/19/23",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-26-99-0104-A-Code-of-Ethics.pdf"
+    },
+    {
+     "n": "23-0719-B",
+     "t": "Magistrate district boundaries",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/07/23-0719-B.pdf"
+    },
+    {
+     "n": "01-0918-A",
+     "t": "Magisterial boundaries",
+     "s": "Repealed",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-10-01-0918-A-Adopting-Magistrate-District-Boundaries.pdf"
+    }
+   ]
+  ],
+  [
+   "Floodplain",
+   [
+    {
+     "n": "05-0125-A",
+     "t": "Flood prevention",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-19-05-0125-A-Flood-Prevention.pdf"
+    },
+    {
+     "n": "10-0709-A",
+     "t": "Flood prevention",
+     "s": "Amends 05-0125-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-19-10-0709-A-Amendment-of-05-0125-A-Flood-Prevention.pdf"
+    },
+    {
+     "n": "23-0419-A",
+     "t": "Flood damage prevention",
+     "s": "Amends 10-0709-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/04/23-0419-A.pdf"
+    }
+   ]
+  ],
+  [
+   "Emergency Management",
+   [
+    {
+     "n": "03-0218-A",
+     "t": "Statewide EM mutual aid agreement",
+     "s": "Repealed 05/17/23",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-3-03-0218-A-Statewide-EM-Mutual-Aid.pdf"
+    },
+    {
+     "n": "03-0218-B",
+     "t": "Cost recovery for hazardous material",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-22-03-0218-B-Cost-Recovery-for-Hazardous-Material.pdf"
+    }
+   ]
+  ],
+  [
+   "Solid Waste",
+   [
+    {
+     "n": "92-1222-A",
+     "t": "Licensing of solid-waste facilities",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-20-92-1222-A-Licensing-Solid-Waste-Facilities.pdf"
+    },
+    {
+     "n": "17-0815-B",
+     "t": "Solid-waste facility licensing",
+     "s": "Amends 92-1222-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-20-17-0815-B-Amendment-of-92-1222-A-Licensing-Solid-Waste-Facilities.pdf"
+    },
+    {
+     "n": "22-0216-A",
+     "t": "Solid-waste facility licensing",
+     "s": "Amends 17-0815-B",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-20-22-0216-A-Amendment-of-17-0815-B-Licensing-Solid-Waste-Facilities.pdf"
+    }
+   ]
+  ],
+  [
+   "Nuisance Property",
+   [
+    {
+     "n": "07-1120-A",
+     "t": "Nuisance property",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-25-07-1120-A-Nusiance-Property.pdf"
+    },
+    {
+     "n": "16-0612-A",
+     "t": "Abatement of nuisance property",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-25-16-0612-B-Abatement-of-Nusiance-Property.pdf"
+    },
+    {
+     "n": "19-0416-A",
+     "t": "Abatement of nuisance property",
+     "s": "Amends 16-0612-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-25-19-0416-A-Amendment-of-16-0612-B-Abatement-of-Nusiance-Property.pdf"
+    }
+   ]
+  ],
+  [
+   "Public Decency",
+   [
+    {
+     "n": "98-1030-A",
+     "t": "Moratorium on adult businesses",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-4-98-1030-A-Moratorium-Adult-Businesses.pdf"
+    },
+    {
+     "n": "99-0615-A",
+     "t": "Prohibit nudity in public",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-5-99-0615-A-Prohibiting-Nudity-in-a-Public-Place.pdf"
+    },
+    {
+     "n": "99-0720-A",
+     "t": "Regulate adult-entertainment enterprises",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-6-99-0720-A-Regulating-Commercial-Enterprises-offering-Adult-Entertainment.pdf"
+    },
+    {
+     "n": "04-1116-B",
+     "t": "Regulation of sexually oriented businesses",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-7-04-1221-A-Regulation-of-Sexually-Oriented-Business.pdf"
+    }
+   ]
+  ],
+  [
+   "Boards",
+   [
+    {
+     "n": "04-0622-A",
+     "t": "Industrial Development Authority",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-18-04-0622-A-Industrial-Development-Authority.pdf"
+    },
+    {
+     "n": "20-0617-B",
+     "t": "Create Transient Tax Board",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/20-0617-B.pdf"
+    },
+    {
+     "n": "99-0216-B",
+     "t": "Murray-Calloway EDC revolving-fund agreement",
+     "s": "Repealed 04/20/22",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-12-99-0216-B-Murray-Calloway-EDC-Revolving-Fund-Agreement.pdf"
+    }
+   ]
+  ],
+  [
+   "Jail",
+   [
+    {
+     "n": "95-0124-A",
+     "t": "Revenue source for detention-facility repayment",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-24-95-0124-A-Revenue-Source-for-Repayment-on-Detention-Center-and-OM.pdf"
+    },
+    {
+     "n": "95-0413-A",
+     "t": "Bond for detention facility",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-95-0413-A-Bond-for-Acquisition-and-Construction-of-Detention-Facilities.pdf"
+    },
+    {
+     "n": "96-1114-A",
+     "t": "Bond for detention facility",
+     "s": "Amends 95-0413-A",
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-96-1114-A-Bond-for-Acquisition-and-Construction-of-Detention-Facilities.pdf"
+    },
+    {
+     "n": "15-0422-A",
+     "t": "Community corrections / ankle monitoring",
+     "s": null,
+     "u": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-30-15-0422-A-Community-Corrections-Monitored-Release-Program-Ankle-Monitoring.pdf"
+    }
+   ]
+  ]
+ ],
+ "SJ": [
+  [
+   "Calloway County Road Concern",
+   "Report a road issue",
+   "https://callowaycountyky.gov/calloway-county-road-concern/"
+  ],
+  [
+   "Public Solid Waste Complaint",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2021/12/abatement-of-nuisance.pdf"
+  ],
+  [
+   "Board Application",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2021/12/board-application.pdf"
+  ],
+  [
+   "Solid Waste Hauler Permit Info",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2022/01/Solid-Waste-Letter.docx-2.pdf"
+  ],
+  [
+   "Petition for County Road",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2024/05/petition-for-county-road.pdf"
+  ],
+  [
+   "Petition to Close County Road",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2024/05/petition-to-close-road-private-drive.pdf"
+  ],
+  [
+   "Petition to Rename County Road",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2025/02/road-name-change-petition.pdf"
+  ],
+  [
+   "Solar Farm Application",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2024/07/solar-app.pdf"
+  ],
+  [
+   "Tobacco Barn Registration",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2024/09/tobacco-barn-registration-form.pdf"
+  ],
+  [
+   "911 Service Fee Form",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2021/12/911-service-fee-form.pdf"
+  ],
+  [
+   "911 Address Form",
+   null,
+   "https://callowaycountyky.gov/wp-content/uploads/2024/03/911-address-form.xlsx"
+  ]
+ ],
+ "bw": {
+  "genGov": "General Government",
+  "protect": "Protection of Persons & Property",
+  "health": "General Health & Sanitation",
+  "social": "Social Services",
+  "rec": "Recreation & Culture",
+  "capital": "Capital Projects",
+  "admin": "Administration"
+ },
+ "Sw": {
+  "FY2018": {
+   "genGov": {
+    "b": 2375116,
+    "a": 1881121
+   },
+   "protect": {
+    "b": 107071,
+    "a": 43753
+   },
+   "health": {
+    "b": 384317,
+    "a": 301905
+   },
+   "social": {
+    "b": 46568,
+    "a": 27728
+   },
+   "rec": {
+    "b": 132746,
+    "a": 130246
+   },
+   "capital": {
+    "b": 528008,
+    "a": 446386
+   },
+   "admin": {
+    "b": 569432,
+    "a": 348477
+   }
+  },
+  "FY2019": {
+   "genGov": {
+    "b": 2752692,
+    "a": 2568358
+   },
+   "protect": {
+    "b": 58398,
+    "a": 52763
+   },
+   "health": {
+    "b": 354060,
+    "a": 337661
+   },
+   "social": {
+    "b": 36563,
+    "a": 24610
+   },
+   "rec": {
+    "b": 144939,
+    "a": 142439
+   },
+   "capital": {
+    "b": 529985,
+    "a": 524554
+   },
+   "admin": {
+    "b": 495696,
+    "a": 457931
+   }
+  },
+  "FY2020": {
+   "genGov": {
+    "b": 2829935,
+    "a": 2469626
+   },
+   "protect": {
+    "b": 204552,
+    "a": 52804
+   },
+   "health": {
+    "b": 458354,
+    "a": 450633
+   },
+   "social": {
+    "b": 28440,
+    "a": 24730
+   },
+   "rec": {
+    "b": 153571,
+    "a": 153571
+   },
+   "capital": {
+    "b": 556592,
+    "a": 483012
+   },
+   "admin": {
+    "b": 660714,
+    "a": 549059
+   }
+  },
+  "FY2021": {
+   "genGov": {
+    "b": 3929923,
+    "a": 2894293
+   },
+   "protect": {
+    "b": 257202,
+    "a": 53179
+   },
+   "health": {
+    "b": 2266540,
+    "a": 997326
+   },
+   "social": {
+    "b": 33000,
+    "a": 22576
+   },
+   "rec": {
+    "b": 405000,
+    "a": 212339
+   },
+   "capital": {
+    "b": 111000,
+    "a": 10000
+   },
+   "admin": {
+    "b": 603488,
+    "a": 457087
+   }
+  },
+  "FY2022": {
+   "genGov": {
+    "b": 3982757,
+    "a": 2718438
+   },
+   "protect": {
+    "b": 316795,
+    "a": 86643
+   },
+   "health": {
+    "b": 406258,
+    "a": 341827
+   },
+   "social": {
+    "b": 32000,
+    "a": 23434
+   },
+   "rec": {
+    "b": 496668,
+    "a": 488896
+   },
+   "capital": {
+    "b": 78861,
+    "a": 7500
+   },
+   "admin": {
+    "b": 706456,
+    "a": 453587
+   }
+  },
+  "FY2023": {
+   "genGov": {
+    "b": 3559112,
+    "a": 3401148
+   },
+   "protect": {
+    "b": 224259,
+    "a": 163671
+   },
+   "health": {
+    "b": 404310,
+    "a": 362846
+   },
+   "social": {
+    "b": 21240,
+    "a": 21240
+   },
+   "rec": {
+    "b": 434207,
+    "a": 433207
+   },
+   "capital": {
+    "b": 8500,
+    "a": 7500
+   },
+   "admin": {
+    "b": 1520344,
+    "a": 464630
+   }
+  },
+  "FY2024": {
+   "genGov": {
+    "b": 3926873,
+    "a": 3639432
+   },
+   "protect": {
+    "b": 201200,
+    "a": 87872
+   },
+   "health": {
+    "b": 407918,
+    "a": 337595
+   },
+   "social": {
+    "b": 29600,
+    "a": 27904
+   },
+   "rec": {
+    "b": 471100,
+    "a": 468746
+   },
+   "capital": {
+    "b": 67496,
+    "a": 7500
+   },
+   "admin": {
+    "b": 680865,
+    "a": 477067
+   }
+  },
+  "FY2025": {
+   "genGov": {
+    "b": 3830581,
+    "a": 3614293
+   },
+   "protect": {
+    "b": 165168,
+    "a": 111305
+   },
+   "health": {
+    "b": 493445,
+    "a": 382948
+   },
+   "social": {
+    "b": 35600,
+    "a": 23756
+   },
+   "rec": {
+    "b": 1283000,
+    "a": 1036279
+   },
+   "capital": {
+    "b": 174256,
+    "a": 36225
+   },
+   "admin": {
+    "b": 733882,
+    "a": 562925
+   }
+  }
+ },
+ "Rs": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "CJ": {
+  "FY2018": "audited",
+  "FY2019": "audited",
+  "FY2020": "audited",
+  "FY2021": "audited",
+  "FY2022": "county",
+  "FY2023": "county",
+  "FY2024": "county",
+  "FY2025": "county"
+ },
+ "wJ": [
+  {
+   "y": "FY18",
+   "v": 3179616,
+   "src": "audited"
+  },
+  {
+   "y": "FY19",
+   "v": 4108316,
+   "src": "audited"
+  },
+  {
+   "y": "FY20",
+   "v": 4183435,
+   "src": "audited"
+  },
+  {
+   "y": "FY21",
+   "v": 4646800,
+   "src": "audited"
+  },
+  {
+   "y": "FY22",
+   "v": 4120326,
+   "src": "county"
+  },
+  {
+   "y": "FY23",
+   "v": 4854242,
+   "src": "county"
+  },
+  {
+   "y": "FY24",
+   "v": 5046116,
+   "src": "county"
+  },
+  {
+   "y": "FY25",
+   "v": 5767731,
+   "src": "yearend"
+  }
+ ],
+ "o4": {
+  "audited": "#1A2744",
+  "county": "#D4752A",
+  "yearend": "#C0272D"
+ },
+ "J_": {
+  "audited": "Independently audited (state)",
+  "county": "County-reported to DLG (unaudited)",
+  "yearend": "County year-end report"
+ },
+ "ia": {
+  "avgSpend": 4488323,
+  "growth": 81,
+  "avgExec": 79.7,
+  "latestFY": 2025,
+  "latestSpend": 5767731,
+  "latestYoY": 14.3,
+  "latestPerRes": 155,
+  "spanLow": 3179616,
+  "spanHigh": 5767731,
+  "avgRevTyp": 6197604
+ },
+ "Aw": {
+  "live": [
+   "LIVE NOW",
+   "#3A7D44"
+  ],
+  "records": [
+   "NEEDS PUBLIC RECORDS",
+   "#C9A84C"
+  ],
+  "office": [
+   "AS JUDGE-EXECUTIVE",
+   "#1A2744"
+  ]
+ },
+ "rg": [
+  {
+   "key": "money",
+   "name": "County Budget",
+   "status": "live",
+   "tab": "money",
+   "blurb": "Where the money comes from and where it goes — 8 years, traced to the record."
+  },
+  {
+   "key": "bva",
+   "name": "Budget vs. Actual",
+   "status": "live",
+   "tab": "bva",
+   "blurb": "What was budgeted vs. what was actually spent, by category, every year."
+  },
+  {
+   "key": "explore",
+   "name": "Spending Detail",
+   "status": "live",
+   "tab": "explore",
+   "blurb": "Drill the General Fund down to individual line items, year by year."
+  },
+  {
+   "key": "meetings",
+   "name": "Meeting Records & Minutes",
+   "status": "live",
+   "tab": "meetings",
+   "blurb": "Every Fiscal Court meeting's official minutes, linked straight to the county's records."
+  },
+  {
+   "key": "reports",
+   "name": "DLG Reports & Audits",
+   "status": "live",
+   "tab": "reports",
+   "blurb": "The county's own state filings and independent audits, linked at the source."
+  },
+  {
+   "key": "debt",
+   "name": "Debt & Obligations",
+   "status": "live",
+   "tab": "debt",
+   "blurb": "What the county owes, for what, and when it's paid off — from the audited financial notes."
+  },
+  {
+   "key": "ordinances",
+   "name": "Ordinances & Resolutions",
+   "status": "live",
+   "tab": "meetings",
+   "blurb": "What the Fiscal Court has formally enacted — linked to the county's ordinance records."
+  },
+  {
+   "key": "checkbook",
+   "name": "County Checkbook",
+   "status": "records",
+   "blurb": "Every vendor payment — check, claim, department, amount. Needs the county claims register (open records)."
+  },
+  {
+   "key": "vendors",
+   "name": "Vendor Spending",
+   "status": "records",
+   "blurb": "Top vendors and multi-year totals, built from the claims register once obtained."
+  },
+  {
+   "key": "votes",
+   "name": "Vote Tracker",
+   "status": "live",
+   "tab": "votes",
+   "blurb": "Every motion in one searchable place — who moved it, who seconded, the result, and the roll-call detail on split votes."
+  },
+  {
+   "key": "grants",
+   "name": "Grants & Outside Funding",
+   "status": "live",
+   "tab": "grants",
+   "blurb": "Outside funding the county pursued and won — bridges, broadband, FEMA, economic development — from the public record. Spend-by-grant reconciliation still needs the claims register."
+  },
+  {
+   "key": "projects",
+   "name": "Capital Projects",
+   "status": "office",
+   "blurb": "Roads, buildings, equipment by district — budget, status, and outcome."
+  },
+  {
+   "key": "openrec",
+   "name": "Open Records Log",
+   "status": "office",
+   "blurb": "Requests received and turnaround time — published by the county, privacy-protected."
+  }
+ ],
+ "AJ": [
+  [
+   "How much did the county spend last year?",
+   "money"
+  ],
+  [
+   "What did the Fiscal Court decide recently?",
+   "meetings"
+  ],
+  [
+   "How much does the county owe?",
+   "debt"
+  ],
+  [
+   "What does the county spend on, line by line?",
+   "explore"
+  ]
+ ],
+ "dd": [
+  {
+   "n": "County Judge Exec Salary",
+   "a": 125364.08,
+   "c": "Judge-Executive & Administration"
+  },
+  {
+   "n": "Co Judge Exec Other Salary",
+   "a": 144659.73,
+   "c": "Judge-Executive & Administration"
+  },
+  {
+   "n": "Co Judge Training Incentive",
+   "a": 5302.12,
+   "c": "Judge-Executive & Administration"
+  },
+  {
+   "n": "Judge Office Supplies",
+   "a": 5955.67,
+   "c": "Judge-Executive & Administration"
+  },
+  {
+   "n": "Annex Pest Control",
+   "a": 200,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Annex Building Maintenance",
+   "a": 4387.79,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Annex Utilities",
+   "a": 18952.44,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "County Attorney Reimbursement",
+   "a": 174000,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Attorney Salary",
+   "a": 43555.03,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Attorney Utilities",
+   "a": 1289.64,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Clerk, Social Security",
+   "a": 52422.41,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Clerk, Health",
+   "a": 135038.24,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Clerk, Tax Bill",
+   "a": 23881.92,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Sheriff Deputies Salary Support",
+   "a": 1640887.4,
+   "c": "Sheriff & Law Enforcement"
+  },
+  {
+   "n": "Sheriff, Work Comp",
+   "a": 44256,
+   "c": "Sheriff & Law Enforcement"
+  },
+  {
+   "n": "Sheriff, Building Insurance",
+   "a": 88715.91,
+   "c": "Sheriff & Law Enforcement"
+  },
+  {
+   "n": "Sheriff, State Grant Payment",
+   "a": 82326.4,
+   "c": "Sheriff & Law Enforcement"
+  },
+  {
+   "n": "Coroner, Expense Account",
+   "a": 7200,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Coroner Salary",
+   "a": 18560.41,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Deputy Coroner Salary",
+   "a": 13828.46,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Coroner, Programs",
+   "a": 8020.55,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Coroner, Utilities",
+   "a": 2497.72,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Magistrate Salary",
+   "a": 93636.52,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "Magistrate Committee Allowance",
+   "a": 14400,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "Training Incentive",
+   "a": 25035.63,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "LATCF Funding",
+   "a": 90669.38,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "Public Notices",
+   "a": 27774,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "Registration & Conference",
+   "a": 21887.82,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "PVA, Statutory Contribution",
+   "a": 102400,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Board of Assessment",
+   "a": 200,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Computer Software",
+   "a": 15263.22,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Treasurer Salary",
+   "a": 69160,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Treasurer Other Salary",
+   "a": 53898.3,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Treasurer, Office Supply",
+   "a": 7707.56,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "HR Office Supply",
+   "a": 1081.21,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "HR Registration & Conference",
+   "a": 1260.19,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "HR Mandatory Staff Training",
+   "a": 1301.54,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Election Officers",
+   "a": 10530,
+   "c": "Elections"
+  },
+  {
+   "n": "Election Commission",
+   "a": 1380,
+   "c": "Elections"
+  },
+  {
+   "n": "Election Tabulation",
+   "a": 1605,
+   "c": "Elections"
+  },
+  {
+   "n": "Polling Places",
+   "a": 300,
+   "c": "Elections"
+  },
+  {
+   "n": "Election Programs",
+   "a": 78150.82,
+   "c": "Elections"
+  },
+  {
+   "n": "Printing",
+   "a": 4599.49,
+   "c": "Elections"
+  },
+  {
+   "n": "Courthouse Pest Control",
+   "a": 330,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Elevator Maintenance",
+   "a": 2529.36,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Building Maintenance Supply",
+   "a": 792.97,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Custodial Supply",
+   "a": 831.1,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Courthouse, Renewal",
+   "a": 84159.09,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Courthouse, Utilities",
+   "a": 28843.32,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Building Pest",
+   "a": 428,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Custodial Staff",
+   "a": 36736.04,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Building, Other",
+   "a": 91002.88,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Building, Renewal",
+   "a": 62232.25,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Building, Utilities",
+   "a": 42865.77,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Property Facility Development",
+   "a": 28725,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "CC Fire Rescue",
+   "a": 12000,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Office of EM Salary",
+   "a": 54836.92,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "OEM Phone, Internet, Data",
+   "a": 3621.66,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "OEM Vehicle",
+   "a": 2765.05,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "OEM Registration & Conference",
+   "a": 958.27,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "OEM CCFR Program Support",
+   "a": 8005.9,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Emergency Mgmt Office Supply",
+   "a": 582.18,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Emergency Disaster Relief",
+   "a": 802.41,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Homeland Security Grant",
+   "a": 21948.32,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Forestry Tax Payment",
+   "a": 1146,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Public Defender",
+   "a": 4637.88,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Animal Shelter Pest Control",
+   "a": 480,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Director Salary",
+   "a": 48545.04,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Staff Salary",
+   "a": 144977.96,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Disposal",
+   "a": 174.53,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Warden, Promotional Support",
+   "a": 10521.28,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Office Supplies",
+   "a": 2665.04,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter, Building",
+   "a": 2471.5,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Vehicle",
+   "a": 8643.85,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Staff Uniforms",
+   "a": 1332.99,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter, Medical",
+   "a": 21351.6,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter, Training",
+   "a": 594.14,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter IT Repairs",
+   "a": 647.95,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter, Utilities",
+   "a": 8817.81,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Environment Staff Salary",
+   "a": 39597.03,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Litter Abatement",
+   "a": 67912.8,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Tire Grant",
+   "a": 1335,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Environment, Supplies",
+   "a": 322.14,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Environmental Vehicle",
+   "a": 2548.8,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Ambulance",
+   "a": 10000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Mental Health Watch",
+   "a": 5000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "East Fork Clarks River",
+   "a": 5000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Flood Control Project",
+   "a": 8.48,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Indigent Order",
+   "a": 3506,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Needline",
+   "a": 8000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Senior Center",
+   "a": 6000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Pauper Burials",
+   "a": 250,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Gentry House / Hope Calloway",
+   "a": 6000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Murray-Calloway Park, General Budget",
+   "a": 90000,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Calloway County Tourism",
+   "a": 323901.59,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Special Event, 200th Year",
+   "a": 3010.31,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Murray Art Guild Pass-Through Grant",
+   "a": 619367.15,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Murray-Calloway Airport",
+   "a": 7500,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Audit",
+   "a": 49819.08,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Health Insurance",
+   "a": 118071.3,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Drug Testing",
+   "a": 782.25,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Bank Charges",
+   "a": 21.52,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Insurance, Buildings",
+   "a": 64677.23,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Insurance, Fidelity Bonds",
+   "a": 7685.9,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Membership, ADD",
+   "a": 4081.33,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Social Security Contribution",
+   "a": 69492.06,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Retirement Contribution",
+   "a": 209679.8,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Unemployment Insurance",
+   "a": 1821.63,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Workers Compensation",
+   "a": 36792.99,
+   "c": "Insurance, Benefits & Overhead"
+  }
+ ],
+ "eg": 5767731.05,
+ "i4": {
+  "Sheriff & Law Enforcement": "#1A2744",
+  "Parks, Tourism & Culture": "#C9A84C",
+  "Elected Offices & Courts": "#C0272D",
+  "Insurance, Benefits & Overhead": "#6B6860",
+  "County Buildings & Facilities": "#5B7A9E",
+  "Judge-Executive & Administration": "#3A7D44",
+  "Fiscal Court & Magistrates": "#D4752A",
+  "Animal Shelter": "#8C6BA0",
+  "Environment & Solid Waste": "#6E8B5A",
+  "Emergency Management & Fire": "#B5483E",
+  "Elections": "#3E7C8C",
+  "Health & Human Services": "#C98B3C"
+ },
+ "jr": {
+  "County Road Aid": {
+   "badge": "item",
+   "what": "Your county's share of the state gas tax, sent back to build and maintain county roads. Kentucky sets aside 18.3% of the motor-fuels tax and splits it among counties using a 'formula of fifths' that gives extra weight to rural road miles, land area, and population.",
+   "why": "It's the single biggest source of road money for most Kentucky counties, and it rises and falls with gas-tax revenue. (KRS 177.320)"
+  },
+  "LARP (Local Assistance Road Program)": {
+   "badge": "item",
+   "what": "A state program that helps counties and cities pay to resurface and rehabilitate existing roads — no new lanes. The county applies to the Kentucky Transportation Cabinet, projects are scored for priority, and the legislature approves which ones get funded, up to $500,000 each with a local match.",
+   "why": "The General Assembly created it in 2025 (House Bill 546) to give local governments a more structured way to get state help with road repairs."
+  },
+  "Transportation Cabinet Flex Funds": {
+   "badge": "item",
+   "what": "Extra state resurfacing money, set aside from the Rural Secondary road program, to help counties keep up existing asphalt.",
+   "why": "Unlike formula road aid, it's discretionary — the Kentucky Transportation Cabinet decides each county's amount based on rural-road needs. (KYTC Office of Rural & Secondary Roads)"
+  },
+  "80/20 Bridge Program": {
+   "badge": "item",
+   "what": "State help to repair or replace an existing bridge or drainage structure: the state pays 80% and the county pays the other 20%.",
+   "why": "It comes out of the state's Rural Secondary road funds and can't be used to build a brand-new structure. (KYTC Office of Rural & Secondary Roads)"
+  },
+  "Vehicle & license fee refunds": {
+   "badge": "item",
+   "what": "A portion of state vehicle and license fees (truck licenses, driver's licenses) returned to the county.",
+   "why": "These dollars flow into the Road Fund to help pay for road work."
+  },
+  "LGEA (Local Government Economic Assistance)": {
+   "badge": "item",
+   "what": "A state program that shares certain revenues — largely coal and mineral-severance taxes — with local governments for priority needs.",
+   "why": "Calloway's small LGEA fund is dedicated here to road maintenance."
+  },
+  "Ad valorem tax": {
+   "badge": "item",
+   "what": "Latin for 'according to value.' A tax based on the assessed value of property — real estate, vehicles, and similar.",
+   "why": "Most local property taxes are ad valorem taxes."
+  },
+  "Transient room tax": {
+   "badge": "item",
+   "what": "A tax on short-term lodging, like hotel and motel stays.",
+   "why": "It is commonly used to support tourism activity."
+  },
+  "In-lieu-of-tax payment": {
+   "badge": "item",
+   "what": "A payment made instead of regular property taxes by an entity that's exempt from them — for example, TVA or public housing makes 'in-lieu' payments to the county.",
+   "why": "It stands in for tax revenue the county otherwise couldn't collect on those properties."
+  },
+  "Deed transfer tax": {
+   "badge": "item",
+   "what": "A tax collected when a piece of real estate changes hands and the deed is recorded.",
+   "why": "It rises and falls with local real-estate sales."
+  },
+  "Franchise tax": {
+   "badge": "item",
+   "what": "A tax on certain businesses — here, mainly banks — for operating in the county.",
+   "why": ""
+  },
+  "Surplus from prior year": {
+   "badge": "item",
+   "what": "Money left unspent at the end of last year and carried into this budget. It is not new income — it's the county's carryover.",
+   "why": "Counties list carryover as a 'revenue' line so the books balance, but it represents money already collected in past years."
+  },
+  "Transfers between funds": {
+   "badge": "item",
+   "what": "Money moved between the county's own funds — for example, the General Fund sending money to help cover the Jail or Road funds.",
+   "why": "These are internal movements, not new outside money; they're why some funds show large 'transfer' lines."
+  },
+  "Reserve for transfer": {
+   "badge": "item",
+   "what": "Money a fund sets aside to move to another county fund, rather than to spend directly on services.",
+   "why": "It's a balancing/transfer line, not spending."
+  },
+  "Contingency": {
+   "badge": "item",
+   "what": "Money set aside for unexpected needs during the year, not yet assigned to a specific purpose.",
+   "why": "It gives the Fiscal Court room to handle surprises without reopening the budget."
+  },
+  "Fringe benefits": {
+   "badge": "item",
+   "what": "The employer's share of employee costs — Social Security, retirement, and health insurance.",
+   "why": "It's a normal cost of having employees, shown separately from salaries."
+  },
+  "AOC (Administrative Office of the Courts)": {
+   "badge": "item",
+   "what": "Kentucky's statewide court system administration.",
+   "why": "The county leases courthouse space to AOC and receives payments, which show up as revenue."
+  },
+  "CDBG (Community Development Block Grant)": {
+   "badge": "item",
+   "what": "Federal money, passed through the state, for community and economic-development projects.",
+   "why": "Here it funds a building grant (the CCFR CDBG building grant)."
+  },
+  "ARPA (American Rescue Plan Act)": {
+   "badge": "item",
+   "what": "Federal pandemic-relief money sent to local governments in 2021–2022.",
+   "why": "Calloway's ARPA fund shows no new activity budgeted this year, meaning those funds have been spent or committed."
+  },
+  "Opioid settlement funds": {
+   "badge": "item",
+   "what": "Money the county receives from national legal settlements with opioid manufacturers and distributors.",
+   "why": "These funds are restricted to addressing the opioid crisis — prevention, treatment, and related needs."
+  },
+  "General Fund": {
+   "badge": "fund",
+   "what": "The county's main checking account. It pays for most day-to-day government — the Judge-Executive's office, the courthouse, elections, the animal shelter, and the county's required support for elected offices like the Sheriff and Clerk.",
+   "why": "Most of its money comes from local property and other taxes, so it's the part of the budget where county leaders have the most say."
+  },
+  "Road Fund": {
+   "badge": "fund",
+   "what": "A separate, restricted account for building and maintaining county roads and bridges.",
+   "why": "It's funded mostly by the state gas-tax 'road aid' the county receives, which by law can generally only be spent on roads — not shifted to other uses."
+  },
+  "Jail Fund": {
+   "badge": "fund",
+   "what": "Pays to operate the county jail — staffing, inmate care, and the facility.",
+   "why": "Funded by a mix of state and local money, fees for housing prisoners, and transfers from the General Fund."
+  },
+  "Property & other taxes": {
+   "badge": "in",
+   "what": "Local taxes the county sets — mainly real-estate (property) taxes, plus motor-vehicle and tangible-property taxes.",
+   "why": "The county's largest and steadiest source of its own money."
+  },
+  "Intergovernmental (state/federal)": {
+   "badge": "in",
+   "what": "Money passed to the county from the state and federal governments for specific programs and grants.",
+   "why": "This line can swing dramatically when one-time programs — like pandemic relief — arrive and then end."
+  },
+  "Excess fees (from fee offices)": {
+   "badge": "in",
+   "what": "Kentucky's elected fee officers (Clerk, Sheriff) collect fees for their services. After covering allowed salaries and office costs, any surplus is turned back over to the county.",
+   "why": "The public's money returning to the county budget rather than staying in one office."
+  },
+  "In-lieu-of-tax payments": {
+   "badge": "in",
+   "what": "Payments by certain tax-exempt entities in place of the property taxes they don't pay.",
+   "why": "Lets exempt organizations still contribute toward local services."
+  },
+  "Licenses & permits": {
+   "badge": "in",
+   "what": "Fees residents and businesses pay for county licenses and permits.",
+   "why": "A small, steady source tied to local activity."
+  },
+  "Miscellaneous": {
+   "badge": "in",
+   "what": "Smaller and one-time receipts that don't fit the main categories.",
+   "why": "Refunds, reimbursements, and odd items."
+  },
+  "Charges for services": {
+   "badge": "in",
+   "what": "Money the county collects when it provides a specific service to whoever uses it.",
+   "why": "The user of a service helps pay for it."
+  },
+  "Interest": {
+   "badge": "in",
+   "what": "Interest earned on the county's bank balances.",
+   "why": "Idle public funds earn a little while they sit."
+  },
+  "General Government": {
+   "badge": "out",
+   "what": "The core cost of running the county — the Judge-Executive and Fiscal Court, the courthouse and offices, elections, and required support for separately elected offices (Sheriff, Clerk, County Attorney, PVA).",
+   "why": "The largest slice — it's the basic machinery of county government."
+  },
+  "General Health & Sanitation": {
+   "badge": "out",
+   "what": "Public-health and environmental services — the animal shelter, litter and solid-waste programs, and related contributions.",
+   "why": "Keeps the county clean, healthy, and safe day to day."
+  },
+  "Administration": {
+   "badge": "out",
+   "what": "Cross-cutting costs that keep the whole operation running — insurance, the annual audit, employee benefits, and overhead.",
+   "why": "Shared costs not tied to any single department."
+  },
+  "Capital Projects": {
+   "badge": "out",
+   "what": "Larger one-time investments in buildings, equipment, and property — not everyday operating costs.",
+   "why": "These rise and fall depending on what the county is building or buying that year."
+  },
+  "Recreation & Culture": {
+   "badge": "out",
+   "what": "Support for parks, tourism, and cultural programs.",
+   "why": "Quality-of-life spending; some is restricted or passes through to other organizations."
+  },
+  "Protection of Persons & Property": {
+   "badge": "out",
+   "what": "Public-safety spending that runs through the General Fund.",
+   "why": "Much of law enforcement and the jail are funded through separate accounts, so this line is modest."
+  },
+  "Social Services": {
+   "badge": "out",
+   "what": "Modest county support for local human-services needs.",
+   "why": "A small but recurring commitment to residents in need."
+  },
+  "Sheriff & Law Enforcement": {
+   "badge": "cat",
+   "what": "The county's required financial support to the separately elected Sheriff's office, plus related insurance and state-grant pass-throughs.",
+   "why": "This is the county's contribution, not the Sheriff office's entire payroll — that office also funds itself through the fees it collects."
+  },
+  "Parks, Tourism & Culture": {
+   "badge": "cat",
+   "what": "Support for the Murray-Calloway park, the county tourism commission, the airport, and cultural grants.",
+   "why": "Some is restricted money (tourism is funded by a room tax) or grants that pass through the county to another organization."
+  },
+  "Elected Offices & Courts": {
+   "badge": "cat",
+   "what": "The county's required contributions to other independently elected offices — County Clerk, County Attorney, Coroner, PVA, Treasurer — plus court costs like the Public Defender.",
+   "why": "State law sets much of what the county must pay toward these offices."
+  },
+  "Insurance, Benefits & Overhead": {
+   "badge": "cat",
+   "what": "County-wide costs not tied to one department — employee benefits and payroll taxes, liability and building insurance, the annual audit, software, and bank fees.",
+   "why": "The shared 'keeping-the-lights-on' costs of any organization."
+  },
+  "County Buildings & Facilities": {
+   "badge": "cat",
+   "what": "Keeping the courthouse, judicial building, and county annex running — utilities, maintenance, custodial work, and renewals.",
+   "why": "The county owns and must maintain public buildings."
+  },
+  "Judge-Executive & Administration": {
+   "badge": "cat",
+   "what": "The office of the County Judge-Executive — the county's chief elected executive — including salaries and office costs.",
+   "why": "This is the office on this November's ballot."
+  },
+  "Fiscal Court & Magistrates": {
+   "badge": "cat",
+   "what": "The county's legislative body — the magistrates who, with the Judge-Executive, set the budget and policy — plus allowances and required public notices.",
+   "why": "These are the elected officials who vote on the budget."
+  },
+  "Animal Shelter": {
+   "badge": "cat",
+   "what": "Operating the county animal shelter — staff, medical care, the building, vehicles, and supplies.",
+   "why": "A standalone county service with its own staff and facility."
+  },
+  "Environment & Solid Waste": {
+   "badge": "cat",
+   "what": "Litter cleanup, waste-tire programs, and related environmental staff and equipment.",
+   "why": "Keeps roadsides and public spaces clean."
+  },
+  "Emergency Management & Fire": {
+   "badge": "cat",
+   "what": "The county Office of Emergency Management and support for fire/rescue — preparedness, equipment, and grants.",
+   "why": "Coordinates the county's response to storms, floods, and emergencies."
+  },
+  "Elections": {
+   "badge": "cat",
+   "what": "Running county elections — poll workers, the election commission, ballot programming, polling places, and printing.",
+   "why": "The cost of administering local democracy; it rises in election years."
+  },
+  "Health & Human Services": {
+   "badge": "cat",
+   "what": "Modest county support for local health and assistance needs — the ambulance service, a senior center, food and housing assistance nonprofits, and indigent and pauper costs.",
+   "why": "Small contributions, but a direct safety net for residents."
+  },
+  "Sheriff Deputies Salary Support": {
+   "badge": "item",
+   "what": "The county's budgeted contribution toward the Sheriff's deputies.",
+   "why": "The Sheriff's office also funds itself through the fees it collects, so this is a support payment — not the office's full payroll."
+  },
+  "LATCF Funding": {
+   "badge": "item",
+   "what": "The federal Local Assistance and Tribal Consistency Fund — a one-time, no-strings payment from the U.S. Treasury (under the 2021 American Rescue Plan) to eligible counties.",
+   "why": "It can be used for almost any government purpose, so it shows up as a flexible general resource rather than a tax."
+  },
+  "PVA, Statutory Contribution": {
+   "badge": "item",
+   "what": "The county's required payment to the Property Valuation Administrator — the office that assesses property values used to set tax bills.",
+   "why": "State law sets the county's share of funding this office."
+  },
+  "Murray Art Guild Pass-Through Grant": {
+   "badge": "item",
+   "what": "Grant money that passed through the county to the Murray Art Guild.",
+   "why": "The county acted as the conduit, so these dollars went out to the Guild — they did not fund county operations. That's why this single line is unusually large."
+  },
+  "Calloway County Tourism": {
+   "badge": "item",
+   "what": "Funding for the county tourism commission, which promotes local attractions and events.",
+   "why": "Tourism is funded largely by a restricted 'transient room tax' on lodging, which by law is meant for tourism — not general county use."
+  },
+  "Special Event, 200th Year": {
+   "badge": "item",
+   "what": "Costs tied to Calloway County's bicentennial — the county was established in 1822, making 2022 its 200th year.",
+   "why": "A one-time commemorative expense."
+  },
+  "East Fork Clarks River": {
+   "badge": "item",
+   "what": "The county's contribution to the East Fork Clarks River watershed and flood-control effort — a multi-county project run through local conservation districts (under Kentucky's watershed conservancy district law) to manage flooding and erosion along the East Fork of the Clarks River, which runs through Calloway County.",
+   "why": "Flood prevention for low-lying farmland and property along the river."
+  },
+  "Forestry Tax Payment": {
+   "badge": "item",
+   "what": "The county's timberland fire-protection assessment, paid to the Kentucky Division of Forestry — set by state law at a few cents per acre of timberland.",
+   "why": "It helps fund the state's wildland fire detection and suppression that protects rural forest and farm property."
+  },
+  "Needline": {
+   "badge": "item",
+   "what": "The county's contribution to Murray-Calloway County Need Line, a local nonprofit (serving the area since 1974) that runs a food pantry, USDA commodities, and a weekend backpack program for kids, plus emergency help with rent, utilities, and medication.",
+   "why": "A direct county contribution to the local safety net."
+  },
+  "Gentry House / Hope Calloway": {
+   "badge": "item",
+   "what": "The county's contribution to a local nonprofit providing transitional housing for homeless families with children. The Gentry House merged with the Murray-Calloway County Homeless Coalition in 2020 to form HOPE Calloway.",
+   "why": "Helps families move from homelessness toward stable housing."
+  },
+  "Membership, ADD": {
+   "badge": "item",
+   "what": "The county's membership dues to the Purchase Area Development District (PADD) — the regional planning agency serving the eight far-western Kentucky counties, including Calloway, since 1969.",
+   "why": "Membership gives the county access to regional planning help and a pipeline for state and federal grants."
+  },
+  "Tire Grant": {
+   "badge": "item",
+   "what": "The county's waste-tire program, supported by an annual state Direct Grant from Kentucky's Waste Tire Trust Fund (funded by a fee on new tire sales).",
+   "why": "Pays to collect and recycle scrap tires and run periodic free tire drop-off events — keeping illegal tire dumps down."
+  }
+ },
+ "IJ": [
+  [
+   "county road aid",
+   "County Road Aid"
+  ],
+  [
+   "larp",
+   "LARP (Local Assistance Road Program)"
+  ],
+  [
+   "flex",
+   "Transportation Cabinet Flex Funds"
+  ],
+  [
+   "80/20",
+   "80/20 Bridge Program"
+  ],
+  [
+   "80-20",
+   "80/20 Bridge Program"
+  ],
+  [
+   "truck license refund",
+   "Vehicle & license fee refunds"
+  ],
+  [
+   "driver's license refund",
+   "Vehicle & license fee refunds"
+  ],
+  [
+   "drivers license refund",
+   "Vehicle & license fee refunds"
+  ],
+  [
+   "lgea",
+   "LGEA (Local Government Economic Assistance)"
+  ],
+  [
+   "l.g.e.a",
+   "LGEA (Local Government Economic Assistance)"
+  ],
+  [
+   "mineral severance",
+   "LGEA (Local Government Economic Assistance)"
+  ],
+  [
+   "ad valorem",
+   "Ad valorem tax"
+  ],
+  [
+   "advalorem",
+   "Ad valorem tax"
+  ],
+  [
+   "transient room",
+   "Transient room tax"
+  ],
+  [
+   "in lieu",
+   "In-lieu-of-tax payment"
+  ],
+  [
+   "deed transfer",
+   "Deed transfer tax"
+  ],
+  [
+   "franchise",
+   "Franchise tax"
+  ],
+  [
+   "surplus from prior year",
+   "Surplus from prior year"
+  ],
+  [
+   "prior year carryover",
+   "Surplus from prior year"
+  ],
+  [
+   "prior yr adjustment",
+   "Surplus from prior year"
+  ],
+  [
+   "prior year surplus",
+   "Surplus from prior year"
+  ],
+  [
+   "surplus, borrowing",
+   "Surplus from prior year"
+  ],
+  [
+   "reserve for transfer",
+   "Reserve for transfer"
+  ],
+  [
+   "transfers to other funds",
+   "Transfers between funds"
+  ],
+  [
+   "transfers from other funds",
+   "Transfers between funds"
+  ],
+  [
+   "transfers in from other funds",
+   "Transfers between funds"
+  ],
+  [
+   "transfer out",
+   "Transfers between funds"
+  ],
+  [
+   "transfer from other funds",
+   "Transfers between funds"
+  ],
+  [
+   "contingency",
+   "Contingency"
+  ],
+  [
+   "contingent",
+   "Contingency"
+  ],
+  [
+   "fringe benefit",
+   "Fringe benefits"
+  ],
+  [
+   "capital project",
+   "Capital Projects"
+  ],
+  [
+   "p.v.a",
+   "PVA, Statutory Contribution"
+  ],
+  [
+   "pva",
+   "PVA, Statutory Contribution"
+  ],
+  [
+   "aoc ",
+   "AOC (Administrative Office of the Courts)"
+  ],
+  [
+   "cdbg",
+   "CDBG (Community Development Block Grant)"
+  ],
+  [
+   "arpa",
+   "ARPA (American Rescue Plan Act)"
+  ],
+  [
+   "opioid",
+   "Opioid settlement funds"
+  ],
+  [
+   "excess fees",
+   "Excess fees (from fee offices)"
+  ]
+ ],
+ "Q_": {
+  "fund": [
+   "FUND",
+   "#1A2744"
+  ],
+  "in": [
+   "INCOME",
+   "#3A7D44"
+  ],
+  "out": [
+   "SPENDING",
+   "#C0272D"
+  ],
+  "cat": [
+   "CATEGORY",
+   "#C9A84C"
+  ],
+  "item": [
+   "LINE ITEM",
+   "#6B6860"
+  ]
+ },
+ "kJ": {
+  "audited": [
+   "AUDITED ACTUAL",
+   "#3A7D44"
+  ],
+  "budget": [
+   "ADOPTED BUDGET",
+   "#C9A84C"
+  ],
+  "yearend": [
+   "YEAR-END REPORT",
+   "#C0272D"
+  ],
+  "bva": [
+   "AUDITED: BUDGET vs ACTUAL",
+   "#3A7D44"
+  ],
+  "county": [
+   "COUNTY-REPORTED · DLG (UNAUDITED)",
+   "#D4752A"
+  ],
+  "countybva": [
+   "COUNTY-REPORTED · DLG (UNAUDITED)",
+   "#D4752A"
+  ]
+ },
+ "ri": {
+  "generalFund": {
+   "law": "KRS Chapter 68 · 109 KAR 15:020",
+   "url": "https://apps.legislature.ky.gov/law/kar/titles/109/015/020/",
+   "detail": "The county budget is prepared on the State Local Finance Officer's uniform form, adopted by the Fiscal Court, and overseen by the state Department for Local Government."
+  },
+  "roadFund": {
+   "law": "KRS Chapter 179",
+   "url": "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=38003",
+   "detail": "Governs county roads and bridges and the County Road Aid Cooperative Program funded through the state Transportation Cabinet."
+  },
+  "jailFund": {
+   "law": "KRS Chapter 441",
+   "url": "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=39333",
+   "detail": "Counties are required to provide for the jail and the care of inmates; the state sets jail standards and cost-sharing."
+  },
+  "insTax": {
+   "law": "KRS 91A.080",
+   "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=43399",
+   "detail": "A local-government insurance premium tax the county enacted (Ordinance 23-0134-B), collected from insurers; in Calloway it is dedicated to roads and bridges."
+  },
+  "transient": {
+   "law": "KRS 91A.350–91A.394",
+   "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=53341",
+   "detail": "The county lodging / transient room tax (Ordinances 20-0617-A and 22-1221-B), charged on overnight lodging."
+  },
+  "e911": {
+   "law": "KRS 65.760 · 65.7621–65.7643",
+   "url": "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=37327",
+   "detail": "911 service is funded by local 911 fees and the statewide CMRS (wireless) charge, dedicated to emergency dispatch."
+  },
+  "sheriffFees": {
+   "law": "KRS 134.192",
+   "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=51773",
+   "detail": "The Sheriff annually settles tax collections and turns excess fees over to the Fiscal Court, which may return funds for office operations."
+  },
+  "bids": {
+   "law": "KRS 424.260",
+   "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=53787",
+   "detail": "Materials, supplies, equipment, or services above the statutory threshold must be put out for competitive bid before purchase."
+  }
+ },
+ "GJ": {
+  "checkbook": {
+   "see": "Every payment the county makes — the vendor, the amount, the date, the check or claim number, the department, and what it was for.",
+   "how": "Search a vendor and see every payment to them across years; filter by department, fund, or any dollar threshold; download the whole thing as a spreadsheet.",
+   "why": "This is the clearest possible answer to \"where did my tax dollars actually go?\" It turns a budget category into the real checks behind it — the difference between a number and an explanation.",
+   "needs": "The county's claims register / check register. It isn't in the state's summary reports; it comes from Fiscal Court records via an open-records request, and every figure gets verified before it's published."
+  },
+  "vendors": {
+   "see": "The county's top vendors, multi-year totals, which vendors are recurring vs. new this year, and any payments above a threshold you choose.",
+   "how": "Built on the same claims data as the Checkbook, summarized so patterns are visible at a glance instead of buried across hundreds of line items.",
+   "why": "Spending concentration and long-running vendor relationships are exactly what residents can't see today — and exactly what sound oversight keeps an eye on. Visibility isn't an accusation; it's just good practice.",
+   "needs": "The same claims register as the Checkbook."
+  },
+  "votes": {
+   "see": "Each Fiscal Court decision as a searchable record — the motion, who made and seconded it, the roll-call, and the dollars it moved.",
+   "how": "Built from the official minutes, which are already public (see Meetings & Records), structured and linked back to each source PDF so every entry is checkable.",
+   "why": "Decisions and dollars belong together. A resident should be able to follow what was decided and what it cost without opening and reading every monthly PDF.",
+   "needs": "Structuring the minutes the county already publishes — nothing private, nothing new from the county."
+  },
+  "grants": {
+   "see": "Each grant the county wins — the agency, the amount, any required local match, the deadline, and how much was actually spent.",
+   "how": "Combines the grant revenue already visible under \"Where it comes from\" with award and spending detail in one place.",
+   "why": "Outside funding only helps taxpayers if it's pursued actively and used well — and that case can only be made if every grant is tracked end to end.",
+   "needs": "Grant award letters and reporting. Some is already in the audits and revenue filings; the rest assembled into a single view."
+  },
+  "projects": {
+   "see": "Capital projects — roads, buildings, equipment — by district, with budgeted vs. actual cost, funding source, contractor, status, and final outcome.",
+   "how": "A simple status board (proposed → funded → in progress → complete → over budget) with an optional county map showing where the work is happening.",
+   "why": "District-level road accountability is what residents feel most directly. \"What's actually happening in my district?\" should have a clear, current answer — not a rumor.",
+   "needs": "Project records and capital tracking, best wired in from inside the county accounting system — a standing dashboard rather than a one-time pull."
+  },
+  "openrec": {
+   "see": "A running log of open-records requests — the category, the status, and how many days the county took to respond. No private requester information.",
+   "how": "The county maintains the log and publishes the turnaround stats; the hub simply displays them.",
+   "why": "It measures whether government answers the public promptly — transparency about transparency itself. It holds the Judge-Executive's office to the same transparency standard as every other office.",
+   "needs": "The county to keep and publish the log on an ongoing basis."
+  }
+ },
+ "a4": {
+  "cursor": "pointer",
+  "fontFamily": "'Trebuchet MS', 'Segoe UI', sans-serif",
+  "fontSize": 13,
+  "fontWeight": 700,
+  "background": "transparent",
+  "border": "none",
+  "padding": 0,
+  "display": "inline-flex",
+  "alignItems": "center",
+  "gap": 5
+ }
+}

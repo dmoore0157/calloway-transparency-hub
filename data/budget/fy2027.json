@@ -1,0 +1,2776 @@
+{
+ "fiscal_year": 2027,
+ "label": "FY2026-27 adopted budget",
+ "summary": {
+  "total": 20559888.51,
+  "period": "July 1, 2026 – June 30, 2027",
+  "loanName": "Two dump trucks (purchasing)",
+  "loanAmt": 365400,
+  "funds": [
+   {
+    "name": "General Fund",
+    "total": 6701630.62,
+    "pct": "32.60%",
+    "note": "Day-to-day county government — courthouse, elected offices, animal shelter, contributions.",
+    "rev": [
+     [
+      "Taxes",
+      5737280
+     ],
+     [
+      "In-lieu tax payments",
+      137000
+     ],
+     [
+      "Excess fees",
+      200000
+     ],
+     [
+      "Licenses & permits",
+      65900
+     ],
+     [
+      "Intergovernmental",
+      1308824.27
+     ],
+     [
+      "Charges for services",
+      82000
+     ],
+     [
+      "Miscellaneous",
+      91500
+     ],
+     [
+      "Interest",
+      30000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      -950873.65
+     ]
+    ],
+    "app": [
+     [
+      "General government",
+      3763890.88
+     ],
+     [
+      "Protection of persons & property",
+      179015.2
+     ],
+     [
+      "Health & sanitation",
+      540202.54
+     ],
+     [
+      "Social services",
+      144250
+     ],
+     [
+      "Recreation & culture",
+      432624
+     ],
+     [
+      "Capital projects",
+      825000
+     ],
+     [
+      "General services",
+      309000
+     ],
+     [
+      "Contingency",
+      100000
+     ],
+     [
+      "Fringe benefits (employer share)",
+      407648
+     ]
+    ]
+   },
+   {
+    "name": "Road Fund",
+    "total": 4113143.23,
+    "pct": "20.01%",
+    "note": "County roads, bridges, paving, and the road department.",
+    "rev": [
+     [
+      "Intergovernmental",
+      2409220.9
+     ],
+     [
+      "Miscellaneous",
+      87800
+     ],
+     [
+      "Interest",
+      15000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      1601122.33
+     ]
+    ],
+    "app": [
+     [
+      "Roads",
+      2423877.23
+     ],
+     [
+      "Leases",
+      120000
+     ],
+     [
+      "Capital projects",
+      910146
+     ],
+     [
+      "General services",
+      85120
+     ],
+     [
+      "Contingency",
+      100000
+     ],
+     [
+      "Fringe benefits (employer share)",
+      474000
+     ]
+    ]
+   },
+   {
+    "name": "Jail Fund",
+    "total": 3908134,
+    "pct": "19.01%",
+    "note": "Operating the county jail — staff, inmate care, medical, food, utilities.",
+    "rev": [
+     [
+      "Intergovernmental",
+      1267305
+     ],
+     [
+      "Charges for services",
+      360100
+     ],
+     [
+      "Miscellaneous",
+      59000
+     ],
+     [
+      "Interest",
+      10500
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      2211229
+     ]
+    ],
+    "app": [
+     [
+      "Protection of persons & property",
+      2790000
+     ],
+     [
+      "General services",
+      176134
+     ],
+     [
+      "Contingency",
+      100000
+     ],
+     [
+      "Fringe benefits (employer share)",
+      842000
+     ]
+    ]
+   },
+   {
+    "name": "Auto Insurance Tax",
+    "total": 2062500,
+    "pct": "10.03%",
+    "note": "Insurance premium tax dedicated to roads and bridges.",
+    "rev": [
+     [
+      "Taxes",
+      1450000
+     ],
+     [
+      "Interest",
+      12500
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      600000
+     ]
+    ],
+    "app": [
+     [
+      "Capital projects — bridge repair",
+      1031190
+     ],
+     [
+      "Capital projects — road paving",
+      1031190
+     ],
+     [
+      "Bank charges",
+      120
+     ]
+    ]
+   },
+   {
+    "name": "E-911 Fund",
+    "total": 1828368.29,
+    "pct": "8.89%",
+    "note": "Emergency dispatch — 911 fees and the statewide wireless charge.",
+    "rev": [
+     [
+      "Taxes (911 fees)",
+      785000
+     ],
+     [
+      "Intergovernmental",
+      75000
+     ],
+     [
+      "Miscellaneous",
+      600
+     ],
+     [
+      "Interest",
+      18000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      949768.29
+     ]
+    ],
+    "app": [
+     [
+      "Protection of persons & property",
+      844000
+     ],
+     [
+      "General services",
+      750000
+     ],
+     [
+      "Fringe benefits (employer share)",
+      234368.29
+     ]
+    ]
+   },
+   {
+    "name": "Jail Grant Fund",
+    "total": 1596814.65,
+    "pct": "7.77%",
+    "note": "Grant funds held for the jail (largely a certificate of deposit).",
+    "rev": [
+     [
+      "Interest",
+      33000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      1563814.65
+     ]
+    ],
+    "app": [
+     [
+      "General services",
+      1563814.65
+     ],
+     [
+      "Contingency",
+      33000
+     ]
+    ]
+   },
+   {
+    "name": "Co. Clerk Storage Fee",
+    "total": 216820,
+    "pct": "1.05%",
+    "note": "Records-storage fee revenue and clerk software/support.",
+    "rev": [
+     [
+      "Miscellaneous",
+      59220
+     ],
+     [
+      "Interest",
+      2600
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      155000
+     ]
+    ],
+    "app": [
+     [
+      "General government",
+      216820
+     ]
+    ]
+   },
+   {
+    "name": "Jail Construction Fund",
+    "total": 82448.76,
+    "pct": "0.40%",
+    "note": "Legacy jail-construction account (small ad valorem and carryover).",
+    "rev": [
+     [
+      "Taxes",
+      11169.76
+     ],
+     [
+      "Interest",
+      1000
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      70279
+     ]
+    ],
+    "app": [
+     [
+      "Holding company bonds",
+      100
+     ],
+     [
+      "Contingency",
+      82348.76
+     ]
+    ]
+   },
+   {
+    "name": "Opioid Settlement",
+    "total": 46028.96,
+    "pct": "0.22%",
+    "note": "Opioid litigation settlement funds (held and transferred).",
+    "rev": [
+     [
+      "Miscellaneous",
+      5000
+     ],
+     [
+      "Interest",
+      900
+     ],
+     [
+      "Surplus, borrowing & transfers",
+      40128.96
+     ]
+    ],
+    "app": [
+     [
+      "Transfers to other funds",
+      46028.96
+     ]
+    ]
+   },
+   {
+    "name": "L.G.E.A.",
+    "total": 4000,
+    "pct": "0.02%",
+    "note": "Local Government Economic Assistance — mineral-severance share, to roads.",
+    "rev": [
+     [
+      "Intergovernmental",
+      4000
+     ]
+    ],
+    "app": [
+     [
+      "Roads",
+      4000
+     ]
+    ]
+   },
+   {
+    "name": "ARPA",
+    "total": 0,
+    "pct": "0.00%",
+    "note": "Federal pandemic-relief fund — no activity budgeted this year.",
+    "rev": [],
+    "app": []
+   }
+  ]
+ },
+ "lines": [
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4101",
+   "name": "Real property taxes",
+   "amount": 4021000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4102",
+   "name": "Tangible personal property taxes",
+   "amount": 200000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4103",
+   "name": "Motor vehicle property tax",
+   "amount": 499900
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4104",
+   "name": "Delinquent property tax",
+   "amount": 50000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4105",
+   "name": "Delinquent personal property tax",
+   "amount": 200
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4119",
+   "name": "Forestry taxes",
+   "amount": 1200
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4120",
+   "name": "Other ad valorem",
+   "amount": 52000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4121",
+   "name": "Adv costs sheriff",
+   "amount": 100
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4130",
+   "name": "Franchise taxes — bank",
+   "amount": 340000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4135",
+   "name": "Deed transfer",
+   "amount": 230000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4138",
+   "name": "Transient room tax",
+   "amount": 438780
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4201",
+   "name": "Public housing in lieu",
+   "amount": 2000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4203",
+   "name": "TVA in lieu of tax",
+   "amount": 112000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4206",
+   "name": "Electric utilities in lieu",
+   "amount": 23000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4302",
+   "name": "Excess fees — clerk",
+   "amount": 100000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4304",
+   "name": "Excess fees — sheriff",
+   "amount": 100000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4401",
+   "name": "Business license fees",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4417",
+   "name": "Cable TV franchise/telecom",
+   "amount": 64900
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4501",
+   "name": "Omitted property taxes",
+   "amount": 27000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4503",
+   "name": "Federal reimb. disaster relief",
+   "amount": 10000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4504",
+   "name": "Federal grants",
+   "amount": 750000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4505",
+   "name": "Motor vehicle tax — other counties",
+   "amount": 30000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4506",
+   "name": "State reimb./refunds",
+   "amount": 3000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4510",
+   "name": "State grants",
+   "amount": 25000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4510-D",
+   "name": "Illegal dump grant",
+   "amount": 10000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4510-S",
+   "name": "Solid waste litter abatement grant",
+   "amount": 54010.85
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4510-T",
+   "name": "Tire grant",
+   "amount": 4000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4512",
+   "name": "Homeland security",
+   "amount": 50000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4520",
+   "name": "Election expense reimbursement",
+   "amount": 12000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4521",
+   "name": "Board of assessment appeals",
+   "amount": 200
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4522",
+   "name": "Legal process tax",
+   "amount": 180
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4530",
+   "name": "Refund sheriff bond",
+   "amount": 100
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4532",
+   "name": "AOC space rental",
+   "amount": 280000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4541",
+   "name": "Emergency mgmt reimbursement",
+   "amount": 18333.42
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4543",
+   "name": "Misc payments — state",
+   "amount": 2000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4559",
+   "name": "Social security incentive",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4561",
+   "name": "AOC court facility",
+   "amount": 32000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4612",
+   "name": "Animal shelter fees",
+   "amount": 70000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4680",
+   "name": "CCSO paper service fee",
+   "amount": 12000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4726",
+   "name": "Insurance proceeds",
+   "amount": 15000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4727",
+   "name": "Reimbursement",
+   "amount": 20000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4728",
+   "name": "Animal shelter building donations",
+   "amount": 25000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4731",
+   "name": "Miscellaneous revenues",
+   "amount": 5000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4732",
+   "name": "Animal shelter loan",
+   "amount": 25000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4733",
+   "name": "Insurance reimbursements",
+   "amount": 500
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4799",
+   "name": "Other receipts",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4801",
+   "name": "Interest",
+   "amount": 30000
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4901",
+   "name": "Surplus from prior year",
+   "amount": 2065577.68
+  },
+  {
+   "fund": "General",
+   "kind": "revenue",
+   "account": "01-4909",
+   "name": "Transfers to other funds",
+   "amount": -3112351.33
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5001-101",
+   "name": "County Judge/Exec — salary",
+   "amount": 130517.24
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5001-185",
+   "name": "Co. Judge/Exec — other salaries",
+   "amount": 110000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5001-212",
+   "name": "County Judge/Exec training incentive",
+   "amount": 5588.44
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5001-332",
+   "name": "County Judge legal advice",
+   "amount": 3000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5001-346",
+   "name": "Annex pest control",
+   "amount": 200
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5001-445",
+   "name": "Judge office supplies",
+   "amount": 8000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5001-571",
+   "name": "Annex building maintenance",
+   "amount": 10000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5001-578",
+   "name": "Annex utilities",
+   "amount": 20000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5005-101",
+   "name": "County Attorney — salary",
+   "amount": 45514.58
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5005-566",
+   "name": "County Attorney expense",
+   "amount": 177500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5005-578",
+   "name": "County Attorney utilities",
+   "amount": 1450
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5010-167",
+   "name": "Pmt co clerk fiscal court",
+   "amount": 500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5010-201",
+   "name": "Co. Clerk social security",
+   "amount": 60000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5010-299",
+   "name": "Co. Clerk health insurance",
+   "amount": 160000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5010-368",
+   "name": "Co. Clerk tax bill prep",
+   "amount": 32000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5015-209",
+   "name": "Sheriff worker's compensation",
+   "amount": 75000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5015-348",
+   "name": "Sheriff program support",
+   "amount": 1531160
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5015-521",
+   "name": "Sheriff insurance — buildings etc.",
+   "amount": 110000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5015-741",
+   "name": "Sheriff state grants pass-through",
+   "amount": 40000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5020-101",
+   "name": "Coroner salary",
+   "amount": 19395.44
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5020-103",
+   "name": "Coroner deputies salary",
+   "amount": 20793.73
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5020-210",
+   "name": "Coroner expense account",
+   "amount": 7200
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5020-348",
+   "name": "Coroner program support",
+   "amount": 12500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5020-578",
+   "name": "Coroner utilities",
+   "amount": 3000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5025-101",
+   "name": "Magistrates salaries",
+   "amount": 112249.44
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5025-210",
+   "name": "Magistrates committee allowance",
+   "amount": 14400
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5025-212",
+   "name": "Training fringe benefit",
+   "amount": 22350
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5025-301",
+   "name": "Accounting service paid clerk",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5025-302",
+   "name": "Public notices",
+   "amount": 33000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5025-569",
+   "name": "Registration & conf training",
+   "amount": 15000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5030-367",
+   "name": "P.V.A. statutory contribution",
+   "amount": 102400
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5035-191",
+   "name": "Board of assessment appeals",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5040-102",
+   "name": "County Treasurer — salary",
+   "amount": 83961.5
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5040-185",
+   "name": "Co. Treasurer — other salaries",
+   "amount": 57155.16
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5040-319",
+   "name": "Computer software",
+   "amount": 19000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5040-445",
+   "name": "Co. Treasurer office supplies & postage",
+   "amount": 10000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5046-185",
+   "name": "HR salary",
+   "amount": 70315.2
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5046-348",
+   "name": "HR program support",
+   "amount": 1500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5046-445",
+   "name": "HR office supplies",
+   "amount": 2100
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5046-569",
+   "name": "HR registration & conference",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5046-574",
+   "name": "HR mandatory staff training",
+   "amount": 2500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5060-101",
+   "name": "Law library — circuit clerk",
+   "amount": 600
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5065-192",
+   "name": "Election officers",
+   "amount": 40000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5065-193",
+   "name": "Election commissioners",
+   "amount": 2500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5065-194",
+   "name": "Election tabulators",
+   "amount": 3500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5065-199",
+   "name": "Per diem fees — election",
+   "amount": 500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5065-347",
+   "name": "Polling places",
+   "amount": 600
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5065-348",
+   "name": "Elections program support",
+   "amount": 65000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5065-565",
+   "name": "Printing & stationery",
+   "amount": 2500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5075-348",
+   "name": "Industrial recruitment",
+   "amount": 50000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5075-505",
+   "name": "Chamber of Commerce",
+   "amount": 2780
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5080-179",
+   "name": "Part-time personnel",
+   "amount": 40000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5080-346",
+   "name": "Courthouse pest control",
+   "amount": 424
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5080-352",
+   "name": "Elevator maintenance",
+   "amount": 5000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5080-406",
+   "name": "Building maintenance supplies",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5080-411",
+   "name": "Custodial supplies",
+   "amount": 1500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5080-571",
+   "name": "Courthouse renewals & repairs",
+   "amount": 120000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5080-578",
+   "name": "Courthouse utilities",
+   "amount": 30000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5086-175",
+   "name": "Judicial custodial personnel",
+   "amount": 40156.15
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5086-346",
+   "name": "Judicial bldg pest control",
+   "amount": 580
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5086-446",
+   "name": "Judicial bldg other supplies & maint",
+   "amount": 125000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5086-571",
+   "name": "Judicial bldg renewals & repairs",
+   "amount": 50000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5086-578",
+   "name": "Judicial utilities",
+   "amount": 50000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5121-446",
+   "name": "Fire protection — CC Fire Rescue Squad",
+   "amount": 12000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5135-141",
+   "name": "Office EM mgmt salary",
+   "amount": 70315.2
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5135-315",
+   "name": "OEM phone/internet/data",
+   "amount": 5000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5135-348",
+   "name": "OEM program support",
+   "amount": 6000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5135-429",
+   "name": "OEM vehicle maint. & fuel",
+   "amount": 4000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5135-445",
+   "name": "EM mgmt office supplies",
+   "amount": 3000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5135-566",
+   "name": "Emergency disaster relief",
+   "amount": 20000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5135-569",
+   "name": "OEM registration & conference",
+   "amount": 2500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5136-383",
+   "name": "Homeland security grant",
+   "amount": 50000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5150-348",
+   "name": "Forestry tax payment",
+   "amount": 1200
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5175-903",
+   "name": "Public defender pay",
+   "amount": 5000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-102",
+   "name": "Animal warden",
+   "amount": 67965.69
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-106",
+   "name": "Animal shelter salary",
+   "amount": 180000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-346",
+   "name": "Animal shelter pest control",
+   "amount": 576
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-366",
+   "name": "Animal shelter disposal",
+   "amount": 150
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-384",
+   "name": "Animal shelter SNAP reimb.",
+   "amount": 25000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-402",
+   "name": "Animal shelter kennel supplies",
+   "amount": 12000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-403",
+   "name": "Animal shelter dog & cat food",
+   "amount": 2000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-406",
+   "name": "Animal shelter building supp/maint",
+   "amount": 4000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-429",
+   "name": "Animal shelter vehicle maint & fuel",
+   "amount": 10000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-445",
+   "name": "Animal shelter office supplies",
+   "amount": 4000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-481",
+   "name": "Animal shelter uniforms",
+   "amount": 2000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-550",
+   "name": "Animal medical services",
+   "amount": 30000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-574",
+   "name": "Animal shelter employee training",
+   "amount": 1500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-578",
+   "name": "Animal shelter utilities",
+   "amount": 10000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-590",
+   "name": "Animal shelter IT & repair",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5205-742",
+   "name": "Animal shelter building construction",
+   "amount": 50000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5212-107",
+   "name": "Supervisor — environmental plan",
+   "amount": 48000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5212-366",
+   "name": "Enviro planner litter abatement",
+   "amount": 54010.85
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5212-366-D",
+   "name": "Illegal dump grant",
+   "amount": 10000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5212-366-T",
+   "name": "Tire grant",
+   "amount": 4000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5212-429",
+   "name": "Enviro planner vehicle maint. & fuel",
+   "amount": 2000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5212-445",
+   "name": "Environmental office supplies",
+   "amount": 500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5212-569",
+   "name": "Environmental plan reg & conf",
+   "amount": 500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5232-739",
+   "name": "Ambulance/rescue/other equipment",
+   "amount": 20000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5240-348",
+   "name": "Flood control project prog support",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5301-398",
+   "name": "Indigent order awarding fees",
+   "amount": 12000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5305-741",
+   "name": "Weaks Center project",
+   "amount": 50000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5330-344",
+   "name": "County burials/cremation",
+   "amount": 2250
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5330-348",
+   "name": "County contingency",
+   "amount": 80000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5405-548",
+   "name": "Boatwright public access development",
+   "amount": 6624
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-5420-348",
+   "name": "Calloway Co. Tourism & Convention",
+   "amount": 426000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-8011-742",
+   "name": "CCFR CDBG building grant",
+   "amount": 750000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-8099-711",
+   "name": "Heating & AC purchase",
+   "amount": 75000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9100-307",
+   "name": "Audit",
+   "amount": 60000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9100-315",
+   "name": "Employee health insurance",
+   "amount": 160000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9100-382",
+   "name": "Employee drug testing",
+   "amount": 1500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9100-503",
+   "name": "Bank charges",
+   "amount": 200
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9100-521",
+   "name": "Insurance — buildings",
+   "amount": 70000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9100-531",
+   "name": "Insurance — fidelity bonds",
+   "amount": 10000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9100-551",
+   "name": "Memberships",
+   "amount": 1000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9100-553",
+   "name": "Memberships — additional",
+   "amount": 4100
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9100-555",
+   "name": "Memberships — KACo",
+   "amount": 2200
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9200-999",
+   "name": "Reserve for transfers",
+   "amount": 100000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9400-201",
+   "name": "Social security — county contribution",
+   "amount": 90148
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9400-202",
+   "name": "Retirement — county contribution",
+   "amount": 260000
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9400-208",
+   "name": "Unemployment insurance",
+   "amount": 12500
+  },
+  {
+   "fund": "General",
+   "kind": "appropriation",
+   "account": "01-9400-209",
+   "name": "Workers comp.",
+   "amount": 45000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4506",
+   "name": "State reimb./refunds",
+   "amount": 1000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4513",
+   "name": "Bridge emergency 80/20",
+   "amount": 20000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4514",
+   "name": "Transportation Cabinet flex",
+   "amount": 378746
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4514-B",
+   "name": "Bridge program 80/20",
+   "amount": 20000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4516",
+   "name": "Truck license refund",
+   "amount": 222000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4517",
+   "name": "Driver's license refund",
+   "amount": 9135
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4518",
+   "name": "County road aid",
+   "amount": 1352839.9
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4518-B",
+   "name": "LARP paving program",
+   "amount": 405500
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4704",
+   "name": "Surplus equipment sale",
+   "amount": 50000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4706",
+   "name": "Road material sales",
+   "amount": 100
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4710",
+   "name": "Western Shores",
+   "amount": 35000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4727",
+   "name": "Road reimbursements",
+   "amount": 200
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4731",
+   "name": "Miscellaneous revenues",
+   "amount": 1000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4733",
+   "name": "Insurance reimbursements",
+   "amount": 500
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4799",
+   "name": "Other receipts",
+   "amount": 1000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4801",
+   "name": "Interest earned",
+   "amount": 15000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4901",
+   "name": "Surplus from prior year",
+   "amount": 300000
+  },
+  {
+   "fund": "Road",
+   "kind": "revenue",
+   "account": "02-4910",
+   "name": "Transfers from other funds",
+   "amount": 1301122.33
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6103-102",
+   "name": "Road supervisor",
+   "amount": 69225.33
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-143",
+   "name": "Road workers",
+   "amount": 820000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-311",
+   "name": "Bridge repair",
+   "amount": 100000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-346",
+   "name": "Pest control",
+   "amount": 180
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-348",
+   "name": "Program support",
+   "amount": 125000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-382",
+   "name": "Employee drug testing",
+   "amount": 1500
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-405",
+   "name": "Paving projects",
+   "amount": 100000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-406",
+   "name": "Building repairs",
+   "amount": 25000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-409",
+   "name": "Crushed stone & gravel",
+   "amount": 420000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-411",
+   "name": "Cleaning supplies",
+   "amount": 1000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-441",
+   "name": "Machinery and equipment",
+   "amount": 90000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-443",
+   "name": "Motor vehicle parts",
+   "amount": 225000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-445",
+   "name": "Office supplies",
+   "amount": 3000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-447",
+   "name": "Road maintenance",
+   "amount": 50000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-455",
+   "name": "Petroleum products",
+   "amount": 265971.9
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-459",
+   "name": "Pipes & culverts",
+   "amount": 65000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-481",
+   "name": "Department uniforms",
+   "amount": 5500
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-549",
+   "name": "Department physicals",
+   "amount": 300
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-574",
+   "name": "Employee training",
+   "amount": 200
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-578",
+   "name": "Utilities",
+   "amount": 22000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-6105-730",
+   "name": "Western Shores paving",
+   "amount": 35000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-7700-602",
+   "name": "Road lease/purchases",
+   "amount": 120000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-8003-566",
+   "name": "Transportation Cab. 80/20 bridge",
+   "amount": 20000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-8003-566-B",
+   "name": "Transportation Cab. 80/20 emergency",
+   "amount": 20000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-8005-566",
+   "name": "Transportation Cab. flex",
+   "amount": 378746
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-8005-730",
+   "name": "Transportation Cab. LARP paving",
+   "amount": 491400
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-9100-503",
+   "name": "Bank charges",
+   "amount": 120
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-9100-521",
+   "name": "Insurance — building",
+   "amount": 85000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-9200-999",
+   "name": "Reserve for transfers",
+   "amount": 100000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-9400-201",
+   "name": "Social security",
+   "amount": 80000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-9400-202",
+   "name": "Retirement",
+   "amount": 157000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-9400-205",
+   "name": "Employee health insurance",
+   "amount": 165000
+  },
+  {
+   "fund": "Road",
+   "kind": "appropriation",
+   "account": "02-9400-209",
+   "name": "Workers' compensation",
+   "amount": 72000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4506",
+   "name": "State reimb./refunds",
+   "amount": 225000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4510",
+   "name": "State grants",
+   "amount": 10000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4533",
+   "name": "State jail allotment",
+   "amount": 53300
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4534",
+   "name": "State jail medical",
+   "amount": 4205
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4535",
+   "name": "Court cost collection",
+   "amount": 7000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4536",
+   "name": "Contracts with other counties",
+   "amount": 20000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4537",
+   "name": "State prisoners",
+   "amount": 900000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4538",
+   "name": "DUI fees",
+   "amount": 7200
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4559",
+   "name": "Social security adm. incentive fee",
+   "amount": 3600
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4569",
+   "name": "House Bill 463",
+   "amount": 37000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4621",
+   "name": "General prisoner population",
+   "amount": 165000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4633",
+   "name": "Jail bond collection fees",
+   "amount": 100
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4634",
+   "name": "Prisoner reimbursement",
+   "amount": 30000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4699",
+   "name": "Other charges",
+   "amount": 65000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4699-L",
+   "name": "Litter cleanup",
+   "amount": 30000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4699-M",
+   "name": "Mowing",
+   "amount": 70000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4702",
+   "name": "Telephone commissions",
+   "amount": 25000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4727",
+   "name": "Reimbursements",
+   "amount": 30000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4733",
+   "name": "Insurance reimbursements",
+   "amount": 1000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4799",
+   "name": "Other receipts",
+   "amount": 3000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4801",
+   "name": "Interest earned",
+   "amount": 10500
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4901",
+   "name": "Surplus from prior year",
+   "amount": 400000
+  },
+  {
+   "fund": "Jail",
+   "kind": "revenue",
+   "account": "03-4910",
+   "name": "Transfers from other funds",
+   "amount": 1811229
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-101",
+   "name": "Jailers salary",
+   "amount": 115000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-123",
+   "name": "Jail personnel",
+   "amount": 1800000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-212",
+   "name": "Training fringe benefit",
+   "amount": 2000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-334",
+   "name": "Building maintenance & repair",
+   "amount": 33000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-346",
+   "name": "Pest control",
+   "amount": 1500
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-382",
+   "name": "Employee drug testing",
+   "amount": 2000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-406",
+   "name": "Building maintenance supplies",
+   "amount": 35000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-411",
+   "name": "Cleaning supplies",
+   "amount": 3000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-423",
+   "name": "Food prep & serving supplies",
+   "amount": 6000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-425",
+   "name": "Food",
+   "amount": 255000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-445",
+   "name": "Office supplies",
+   "amount": 10500
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-465",
+   "name": "Prisoner clothing/linens/hygiene",
+   "amount": 20000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-481",
+   "name": "Staff uniforms",
+   "amount": 6500
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-549",
+   "name": "Medical services",
+   "amount": 320000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-555",
+   "name": "Medical supplies",
+   "amount": 3000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-569",
+   "name": "Registrations, conferences",
+   "amount": 6000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-573",
+   "name": "Telecommunications",
+   "amount": 1500
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-576",
+   "name": "Training & travel",
+   "amount": 6000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-578",
+   "name": "Utilities",
+   "amount": 112000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-588",
+   "name": "Equipment repair",
+   "amount": 23000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-705",
+   "name": "Data processing equipment",
+   "amount": 4000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-723",
+   "name": "Vehicles",
+   "amount": 8000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-725",
+   "name": "Office equipment",
+   "amount": 2000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5101-739",
+   "name": "Safety equipment",
+   "amount": 13000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-5102-314",
+   "name": "Juvenile housing",
+   "amount": 2000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-9100-503",
+   "name": "Bank charges",
+   "amount": 150
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-9100-521",
+   "name": "Building insurance",
+   "amount": 175000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-9100-551",
+   "name": "Association dues",
+   "amount": 984
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-9200-999",
+   "name": "Reserve for transfer",
+   "amount": 100000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-9400-201",
+   "name": "Employee benefits — social security",
+   "amount": 120000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-9400-202",
+   "name": "Employee benefits — retirement",
+   "amount": 320000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-9400-205",
+   "name": "Employee health insurance",
+   "amount": 325000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-9400-208",
+   "name": "Unemployment insurance",
+   "amount": 2000
+  },
+  {
+   "fund": "Jail",
+   "kind": "appropriation",
+   "account": "03-9400-209",
+   "name": "Workers compensation",
+   "amount": 75000
+  },
+  {
+   "fund": "LGEA",
+   "kind": "revenue",
+   "account": "04-4529",
+   "name": "LGEA mineral severance",
+   "amount": 4000
+  },
+  {
+   "fund": "LGEA",
+   "kind": "appropriation",
+   "account": "04-6105-447",
+   "name": "Road maintenance",
+   "amount": 4000
+  },
+  {
+   "fund": "Jail Grant",
+   "kind": "revenue",
+   "account": "06-4801",
+   "name": "Jail grant interest",
+   "amount": 33000
+  },
+  {
+   "fund": "Jail Grant",
+   "kind": "revenue",
+   "account": "06-4901",
+   "name": "Prior year carryover",
+   "amount": 1563814.65
+  },
+  {
+   "fund": "Jail Grant",
+   "kind": "appropriation",
+   "account": "06-9100-741",
+   "name": "Jail grant CD",
+   "amount": 1563814.65
+  },
+  {
+   "fund": "Jail Grant",
+   "kind": "appropriation",
+   "account": "06-9200-999",
+   "name": "Reserve for transfer",
+   "amount": 33000
+  },
+  {
+   "fund": "Jail Const",
+   "kind": "revenue",
+   "account": "20-4104",
+   "name": "Delinquent property tax",
+   "amount": 100
+  },
+  {
+   "fund": "Jail Const",
+   "kind": "revenue",
+   "account": "20-4120",
+   "name": "Other ad valorem tax",
+   "amount": 11069.76
+  },
+  {
+   "fund": "Jail Const",
+   "kind": "revenue",
+   "account": "20-4801",
+   "name": "Jail construction",
+   "amount": 1000
+  },
+  {
+   "fund": "Jail Const",
+   "kind": "revenue",
+   "account": "20-4901",
+   "name": "Surplus from prior year",
+   "amount": 70279
+  },
+  {
+   "fund": "Jail Const",
+   "kind": "appropriation",
+   "account": "20-7200-699",
+   "name": "Trustee fees/other debt svc",
+   "amount": 100
+  },
+  {
+   "fund": "Jail Const",
+   "kind": "appropriation",
+   "account": "20-9200-999",
+   "name": "Reserve for transfers",
+   "amount": 82348.76
+  },
+  {
+   "fund": "Opioid",
+   "kind": "revenue",
+   "account": "74-4760",
+   "name": "Opioid court settlement",
+   "amount": 5000
+  },
+  {
+   "fund": "Opioid",
+   "kind": "revenue",
+   "account": "74-4801",
+   "name": "Opioid interest",
+   "amount": 900
+  },
+  {
+   "fund": "Opioid",
+   "kind": "revenue",
+   "account": "74-4901",
+   "name": "Prior year carryover",
+   "amount": 40128.96
+  },
+  {
+   "fund": "Opioid",
+   "kind": "appropriation",
+   "account": "74-9300-999",
+   "name": "Reserve for transfer",
+   "amount": 46028.96
+  },
+  {
+   "fund": "E-911",
+   "kind": "revenue",
+   "account": "75-4140",
+   "name": "911 fees",
+   "amount": 550000
+  },
+  {
+   "fund": "E-911",
+   "kind": "revenue",
+   "account": "75-4140-W",
+   "name": "911 wireless",
+   "amount": 235000
+  },
+  {
+   "fund": "E-911",
+   "kind": "revenue",
+   "account": "75-4512",
+   "name": "Homeland security",
+   "amount": 75000
+  },
+  {
+   "fund": "E-911",
+   "kind": "revenue",
+   "account": "75-4727",
+   "name": "Reimbursements",
+   "amount": 500
+  },
+  {
+   "fund": "E-911",
+   "kind": "revenue",
+   "account": "75-4733",
+   "name": "Insurance reimbursements",
+   "amount": 100
+  },
+  {
+   "fund": "E-911",
+   "kind": "revenue",
+   "account": "75-4801",
+   "name": "Interest",
+   "amount": 18000
+  },
+  {
+   "fund": "E-911",
+   "kind": "revenue",
+   "account": "75-4901",
+   "name": "Prior year carryover",
+   "amount": 949768.29
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-159",
+   "name": "911 dispatch salaries",
+   "amount": 416000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-338",
+   "name": "Emergency power equipment",
+   "amount": 1500
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-339",
+   "name": "Radio system repair",
+   "amount": 1500
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-364",
+   "name": "Lease & rental payments",
+   "amount": 25000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-366",
+   "name": "Building maint & repair",
+   "amount": 5000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-382",
+   "name": "Employee drug testing",
+   "amount": 500
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-445",
+   "name": "Office supplies",
+   "amount": 5000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-545",
+   "name": "GIS/mapping system",
+   "amount": 25000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-569",
+   "name": "Registration conf & training",
+   "amount": 10000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-573",
+   "name": "Telephone service/trunks",
+   "amount": 25000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-578",
+   "name": "Utilities",
+   "amount": 35000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-585",
+   "name": "Maintenance/service agreement",
+   "amount": 12000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-588",
+   "name": "Remote 911 hardware",
+   "amount": 5000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-590",
+   "name": "Computer workstations",
+   "amount": 15000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-592",
+   "name": "Vehicle maintenance",
+   "amount": 62500
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-703",
+   "name": "Communication equipment",
+   "amount": 10000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-725",
+   "name": "Other equipment & software",
+   "amount": 5000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-739",
+   "name": "CAD system repair",
+   "amount": 85000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-5145-999",
+   "name": "Reserve for transfer",
+   "amount": 100000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-9100-741",
+   "name": "E911 fund CD",
+   "amount": 750000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-9400-201",
+   "name": "Social security contribution",
+   "amount": 33000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-9400-202",
+   "name": "Retirement county contribution",
+   "amount": 85868.29
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-9400-205",
+   "name": "Employee health insurance",
+   "amount": 80000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-9400-208",
+   "name": "Unemployment insurance",
+   "amount": 10000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-9400-209",
+   "name": "Workers compensation",
+   "amount": 15000
+  },
+  {
+   "fund": "E-911",
+   "kind": "appropriation",
+   "account": "75-9400-521",
+   "name": "KACo insurance",
+   "amount": 10500
+  },
+  {
+   "fund": "Co Clerk",
+   "kind": "revenue",
+   "account": "76-4731",
+   "name": "Misc revenues",
+   "amount": 59220
+  },
+  {
+   "fund": "Co Clerk",
+   "kind": "revenue",
+   "account": "76-4801",
+   "name": "County clerk storage fee interest",
+   "amount": 2600
+  },
+  {
+   "fund": "Co Clerk",
+   "kind": "revenue",
+   "account": "76-4901",
+   "name": "Prior year surplus",
+   "amount": 155000
+  },
+  {
+   "fund": "Co Clerk",
+   "kind": "appropriation",
+   "account": "76-5010-319",
+   "name": "Computer software lease",
+   "amount": 4000
+  },
+  {
+   "fund": "Co Clerk",
+   "kind": "appropriation",
+   "account": "76-5010-348",
+   "name": "Program support",
+   "amount": 50000
+  },
+  {
+   "fund": "Co Clerk",
+   "kind": "appropriation",
+   "account": "76-5010-999",
+   "name": "Reserve for transfer",
+   "amount": 162820
+  },
+  {
+   "fund": "Auto Tax",
+   "kind": "revenue",
+   "account": "86-4137",
+   "name": "Auto insurance tax",
+   "amount": 1450000
+  },
+  {
+   "fund": "Auto Tax",
+   "kind": "revenue",
+   "account": "86-4801",
+   "name": "Auto tax interest",
+   "amount": 12500
+  },
+  {
+   "fund": "Auto Tax",
+   "kind": "revenue",
+   "account": "86-4901",
+   "name": "Surplus from prior year",
+   "amount": 600000
+  },
+  {
+   "fund": "Auto Tax",
+   "kind": "appropriation",
+   "account": "86-8003-312",
+   "name": "Bridge repair",
+   "amount": 1031190
+  },
+  {
+   "fund": "Auto Tax",
+   "kind": "appropriation",
+   "account": "86-8005-447",
+   "name": "Road paving",
+   "amount": 1031190
+  },
+  {
+   "fund": "Auto Tax",
+   "kind": "appropriation",
+   "account": "86-9100-503",
+   "name": "Bank charges",
+   "amount": 120
+  }
+ ],
+ "source": "Calloway County Fiscal Court adopted budget FY2026-27 (uniform DLG budget form)."
+}

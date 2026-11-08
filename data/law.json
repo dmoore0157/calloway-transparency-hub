@@ -1,0 +1,42 @@
+{
+ "generalFund": {
+  "law": "KRS Chapter 68 · 109 KAR 15:020",
+  "url": "https://apps.legislature.ky.gov/law/kar/titles/109/015/020/",
+  "detail": "The county budget is prepared on the State Local Finance Officer's uniform form, adopted by the Fiscal Court, and overseen by the state Department for Local Government."
+ },
+ "roadFund": {
+  "law": "KRS Chapter 179",
+  "url": "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=38003",
+  "detail": "Governs county roads and bridges and the County Road Aid Cooperative Program funded through the state Transportation Cabinet."
+ },
+ "jailFund": {
+  "law": "KRS Chapter 441",
+  "url": "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=39333",
+  "detail": "Counties are required to provide for the jail and the care of inmates; the state sets jail standards and cost-sharing."
+ },
+ "insTax": {
+  "law": "KRS 91A.080",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=43399",
+  "detail": "A local-government insurance premium tax the county enacted (Ordinance 23-0134-B), collected from insurers; in Calloway it is dedicated to roads and bridges."
+ },
+ "transient": {
+  "law": "KRS 91A.350–91A.394",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=53341",
+  "detail": "The county lodging / transient room tax (Ordinances 20-0617-A and 22-1221-B), charged on overnight lodging."
+ },
+ "e911": {
+  "law": "KRS 65.760 · 65.7621–65.7643",
+  "url": "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=37327",
+  "detail": "911 service is funded by local 911 fees and the statewide CMRS (wireless) charge, dedicated to emergency dispatch."
+ },
+ "sheriffFees": {
+  "law": "KRS 134.192",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=51773",
+  "detail": "The Sheriff annually settles tax collections and turns excess fees over to the Fiscal Court, which may return funds for office operations."
+ },
+ "bids": {
+  "law": "KRS 424.260",
+  "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=53787",
+  "detail": "Materials, supplies, equipment, or services above the statutory threshold must be put out for competitive bid before purchase."
+ }
+}

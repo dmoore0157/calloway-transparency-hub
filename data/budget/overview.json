@@ -1,0 +1,589 @@
+{
+ "population": 37103,
+ "years": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "source_by_year": [
+  "audited",
+  "audited",
+  "audited",
+  "audited",
+  "county",
+  "county",
+  "county",
+  "county"
+ ],
+ "source_labels": {
+  "audited": "Independently audited (state)",
+  "county": "County-reported to DLG (unaudited)",
+  "yearend": "County year-end report"
+ },
+ "revenue_sources": [
+  {
+   "name": "Property & other taxes",
+   "values": [
+    3650150,
+    3700780,
+    3945727,
+    3903429,
+    4506470,
+    4801486,
+    5143974,
+    5445956
+   ]
+  },
+  {
+   "name": "Intergovernmental (state/federal)",
+   "values": [
+    408091,
+    801123,
+    996595,
+    6371939,
+    756487,
+    696898,
+    785432,
+    1303667
+   ]
+  },
+  {
+   "name": "Excess fees (from fee offices)",
+   "values": [
+    117858,
+    138789,
+    120245,
+    336920,
+    648732,
+    488224,
+    422450,
+    399765
+   ]
+  },
+  {
+   "name": "In-lieu-of-tax payments",
+   "values": [
+    106403,
+    121073,
+    134371,
+    124758,
+    110776,
+    109451,
+    135816,
+    131230
+   ]
+  },
+  {
+   "name": "Licenses & permits",
+   "values": [
+    51677,
+    31736,
+    69292,
+    66103,
+    65594,
+    66783,
+    66028,
+    80778
+   ]
+  },
+  {
+   "name": "Miscellaneous",
+   "values": [
+    135201,
+    231066,
+    244848,
+    407290,
+    140813,
+    1150489,
+    177505,
+    90814
+   ]
+  },
+  {
+   "name": "Charges for services",
+   "values": [
+    13814,
+    10956,
+    29784,
+    38626,
+    45293,
+    53599,
+    73477,
+    82171
+   ]
+  },
+  {
+   "name": "Interest",
+   "values": [
+    38972,
+    35126,
+    35821,
+    20028,
+    13493,
+    81297,
+    90281,
+    48503
+   ]
+  }
+ ],
+ "revenue_total_by_year": [
+  4522166,
+  5070649,
+  5576683,
+  11269093,
+  6287658,
+  7448227,
+  6894963,
+  7582884
+ ],
+ "funds": {
+  "General Fund": [
+   3179616,
+   4108316,
+   4183435,
+   4646800,
+   4120326,
+   4854242,
+   5046116,
+   5767731
+  ],
+  "Road Fund": [
+   4347998,
+   5532874,
+   4247983,
+   4434547,
+   4339459,
+   3446460,
+   4795844,
+   3150180
+  ],
+  "Jail Fund": [
+   2447586,
+   2497937,
+   2639004,
+   2632066,
+   2758154,
+   2972451,
+   3040569,
+   3171526
+  ]
+ },
+ "general_fund_spending": [
+  {
+   "y": "FY18",
+   "v": 3179616,
+   "src": "audited"
+  },
+  {
+   "y": "FY19",
+   "v": 4108316,
+   "src": "audited"
+  },
+  {
+   "y": "FY20",
+   "v": 4183435,
+   "src": "audited"
+  },
+  {
+   "y": "FY21",
+   "v": 4646800,
+   "src": "audited"
+  },
+  {
+   "y": "FY22",
+   "v": 4120326,
+   "src": "county"
+  },
+  {
+   "y": "FY23",
+   "v": 4854242,
+   "src": "county"
+  },
+  {
+   "y": "FY24",
+   "v": 5046116,
+   "src": "county"
+  },
+  {
+   "y": "FY25",
+   "v": 5767731,
+   "src": "yearend"
+  }
+ ],
+ "stats": {
+  "avgSpend": 4488323,
+  "growth": 81,
+  "avgExec": 79.7,
+  "latestFY": 2025,
+  "latestSpend": 5767731,
+  "latestYoY": 14.3,
+  "latestPerRes": 155,
+  "spanLow": 3179616,
+  "spanHigh": 5767731,
+  "avgRevTyp": 6197604
+ },
+ "budget_vs_actual": {
+  "labels": {
+   "genGov": "General Government",
+   "protect": "Protection of Persons & Property",
+   "health": "General Health & Sanitation",
+   "social": "Social Services",
+   "rec": "Recreation & Culture",
+   "capital": "Capital Projects",
+   "admin": "Administration"
+  },
+  "by_year": {
+   "FY2018": {
+    "genGov": {
+     "b": 2375116,
+     "a": 1881121
+    },
+    "protect": {
+     "b": 107071,
+     "a": 43753
+    },
+    "health": {
+     "b": 384317,
+     "a": 301905
+    },
+    "social": {
+     "b": 46568,
+     "a": 27728
+    },
+    "rec": {
+     "b": 132746,
+     "a": 130246
+    },
+    "capital": {
+     "b": 528008,
+     "a": 446386
+    },
+    "admin": {
+     "b": 569432,
+     "a": 348477
+    }
+   },
+   "FY2019": {
+    "genGov": {
+     "b": 2752692,
+     "a": 2568358
+    },
+    "protect": {
+     "b": 58398,
+     "a": 52763
+    },
+    "health": {
+     "b": 354060,
+     "a": 337661
+    },
+    "social": {
+     "b": 36563,
+     "a": 24610
+    },
+    "rec": {
+     "b": 144939,
+     "a": 142439
+    },
+    "capital": {
+     "b": 529985,
+     "a": 524554
+    },
+    "admin": {
+     "b": 495696,
+     "a": 457931
+    }
+   },
+   "FY2020": {
+    "genGov": {
+     "b": 2829935,
+     "a": 2469626
+    },
+    "protect": {
+     "b": 204552,
+     "a": 52804
+    },
+    "health": {
+     "b": 458354,
+     "a": 450633
+    },
+    "social": {
+     "b": 28440,
+     "a": 24730
+    },
+    "rec": {
+     "b": 153571,
+     "a": 153571
+    },
+    "capital": {
+     "b": 556592,
+     "a": 483012
+    },
+    "admin": {
+     "b": 660714,
+     "a": 549059
+    }
+   },
+   "FY2021": {
+    "genGov": {
+     "b": 3929923,
+     "a": 2894293
+    },
+    "protect": {
+     "b": 257202,
+     "a": 53179
+    },
+    "health": {
+     "b": 2266540,
+     "a": 997326
+    },
+    "social": {
+     "b": 33000,
+     "a": 22576
+    },
+    "rec": {
+     "b": 405000,
+     "a": 212339
+    },
+    "capital": {
+     "b": 111000,
+     "a": 10000
+    },
+    "admin": {
+     "b": 603488,
+     "a": 457087
+    }
+   },
+   "FY2022": {
+    "genGov": {
+     "b": 3982757,
+     "a": 2718438
+    },
+    "protect": {
+     "b": 316795,
+     "a": 86643
+    },
+    "health": {
+     "b": 406258,
+     "a": 341827
+    },
+    "social": {
+     "b": 32000,
+     "a": 23434
+    },
+    "rec": {
+     "b": 496668,
+     "a": 488896
+    },
+    "capital": {
+     "b": 78861,
+     "a": 7500
+    },
+    "admin": {
+     "b": 706456,
+     "a": 453587
+    }
+   },
+   "FY2023": {
+    "genGov": {
+     "b": 3559112,
+     "a": 3401148
+    },
+    "protect": {
+     "b": 224259,
+     "a": 163671
+    },
+    "health": {
+     "b": 404310,
+     "a": 362846
+    },
+    "social": {
+     "b": 21240,
+     "a": 21240
+    },
+    "rec": {
+     "b": 434207,
+     "a": 433207
+    },
+    "capital": {
+     "b": 8500,
+     "a": 7500
+    },
+    "admin": {
+     "b": 1520344,
+     "a": 464630
+    }
+   },
+   "FY2024": {
+    "genGov": {
+     "b": 3926873,
+     "a": 3639432
+    },
+    "protect": {
+     "b": 201200,
+     "a": 87872
+    },
+    "health": {
+     "b": 407918,
+     "a": 337595
+    },
+    "social": {
+     "b": 29600,
+     "a": 27904
+    },
+    "rec": {
+     "b": 471100,
+     "a": 468746
+    },
+    "capital": {
+     "b": 67496,
+     "a": 7500
+    },
+    "admin": {
+     "b": 680865,
+     "a": 477067
+    }
+   },
+   "FY2025": {
+    "genGov": {
+     "b": 3830581,
+     "a": 3614293
+    },
+    "protect": {
+     "b": 165168,
+     "a": 111305
+    },
+    "health": {
+     "b": 493445,
+     "a": 382948
+    },
+    "social": {
+     "b": 35600,
+     "a": 23756
+    },
+    "rec": {
+     "b": 1283000,
+     "a": 1036279
+    },
+    "capital": {
+     "b": 174256,
+     "a": 36225
+    },
+    "admin": {
+     "b": 733882,
+     "a": 562925
+    }
+   }
+  },
+  "source_by_year": {
+   "FY2018": "audited",
+   "FY2019": "audited",
+   "FY2020": "audited",
+   "FY2021": "audited",
+   "FY2022": "county",
+   "FY2023": "county",
+   "FY2024": "county",
+   "FY2025": "county"
+  }
+ },
+ "staffing": {
+  "asOf": "early June 2026",
+  "source": "Calloway County Treasurer",
+  "budgetFunded": [
+   [
+    "General government",
+    26
+   ],
+   [
+    "Road department",
+    14
+   ],
+   [
+    "E-911 / dispatch",
+    8
+   ]
+  ],
+  "feeOffices": [
+   [
+    "Sheriff's office",
+    27
+   ],
+   [
+    "County Clerk's office",
+    13
+   ]
+  ]
+ },
+ "questions": [
+  {
+   "q": "How much goes to roads & bridges?",
+   "v": 6175643.23,
+   "basis": "Road Fund + Auto Insurance Tax fund combined.",
+   "find": "road"
+  },
+  {
+   "q": "What does the county jail cost?",
+   "v": 3908134,
+   "basis": "Jail Fund — much of it funded by transfers from other county funds.",
+   "find": "jail"
+  },
+  {
+   "q": "What does the Sheriff's office get?",
+   "v": 1756160,
+   "basis": "General Fund sheriff lines (program support, insurance, comp, grants).",
+   "find": "sheriff"
+  },
+  {
+   "q": "What about 911 / emergency dispatch?",
+   "v": 1828368.29,
+   "basis": "The whole E-911 Fund — dispatch, equipment, and salaries.",
+   "find": "911"
+  },
+  {
+   "q": "What does the animal shelter cost?",
+   "v": 400191.69,
+   "basis": "Animal warden and shelter (includes a $50,000 building line).",
+   "find": "animal"
+  },
+  {
+   "q": "How much for the tourism commission?",
+   "v": 426000,
+   "basis": "General Fund — Calloway Co. Tourism & Convention.",
+   "find": "tourism"
+  },
+  {
+   "q": "What do elections cost?",
+   "v": 114600,
+   "basis": "General Fund election lines (officers, machines, support).",
+   "find": "election"
+  },
+  {
+   "q": "Employee health insurance, all funds?",
+   "v": 890000,
+   "basis": "Health-insurance lines across the General, Road, Jail, and E-911 funds.",
+   "find": "health insurance"
+  }
+ ],
+ "home_questions": [
+  [
+   "How much did the county spend last year?",
+   "money"
+  ],
+  [
+   "What did the Fiscal Court decide recently?",
+   "meetings"
+  ],
+  [
+   "How much does the county owe?",
+   "debt"
+  ],
+  [
+   "What does the county spend on, line by line?",
+   "explore"
+  ]
+ ]
+}

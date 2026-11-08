@@ -1,0 +1,474 @@
+{
+ "enactments": [
+  {
+   "id": "20-0617-A",
+   "title": "Transient (lodging) tax",
+   "category": "Taxes, Bonds & Fees",
+   "status": "Revised by 22-1221-B",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/20-0617-A.pdf"
+  },
+  {
+   "id": "22-1221-B",
+   "title": "Transient (lodging) tax",
+   "category": "Taxes, Bonds & Fees",
+   "status": "Revises 20-0617-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2024/01/22-1221-B.pdf"
+  },
+  {
+   "id": "23-0134-B",
+   "title": "Insurance premium tax",
+   "category": "Taxes, Bonds & Fees",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/03/Ordinance-23-0314-B.pdf"
+  },
+  {
+   "id": "23-0621-A",
+   "title": "Tax on retail gasoline distribution & motor vehicles",
+   "category": "Taxes, Bonds & Fees",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/06/23-0621-A.pdf"
+  },
+  {
+   "id": "23-0134-A",
+   "title": "Skill game machines",
+   "category": "Taxes, Bonds & Fees",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/03/Ordinance-23-0314-A.pdf"
+  },
+  {
+   "id": "00-0815-A",
+   "title": "Fees for courthouse bond expenses",
+   "category": "Taxes, Bonds & Fees",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-8-00-0815-B-Fees-for-paying-expenses-of-courthouse-bonds.pdf"
+  },
+  {
+   "id": "02-0709-A",
+   "title": "Fees for courthouse bond expenses",
+   "category": "Taxes, Bonds & Fees",
+   "status": "Amends 00-0815-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-8-02-0709-A-Amendment-to-00-0815-B-Fees-for-paying-expenses-of-courthouse-bonds.pdf"
+  },
+  {
+   "id": "22-1221-A",
+   "title": "Annual salary of elected officials",
+   "category": "Taxes, Bonds & Fees",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2024/01/22-1221-A.pdf"
+  },
+  {
+   "id": "96-0808-A",
+   "title": "Bank-deposits franchise fee",
+   "category": "Franchise & Fees",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-9-96-0808-A-Franchise-Fee-on-Bank-Deposits.pdf"
+  },
+  {
+   "id": "05-0621-A",
+   "title": "Telecommunications franchise fee",
+   "category": "Franchise & Fees",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-27-05-0621-A-Franchise-Fees-for-telecommunication-companies.pdf"
+  },
+  {
+   "id": "20-0916-A",
+   "title": "Telecommunications franchise",
+   "category": "Franchise & Fees",
+   "status": "Amends 05-0621-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-34-20-0916-A-Amendment-of-05-0621-A-Telecommunications-Franchise.pdf"
+  },
+  {
+   "id": "08-1118-A",
+   "title": "Non-exclusive franchise for public rights-of-way (cable)",
+   "category": "Franchise & Fees",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-08-1118-A-Non-Exclusive-Franchise-to-use-Public-Right-of-Ways.pdf"
+  },
+  {
+   "id": "20-1216-A",
+   "title": "Cable franchise",
+   "category": "Franchise & Fees",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/11/20-1216-A.pdf"
+  },
+  {
+   "id": "91-1101-A",
+   "title": "Establish 911 telephone fee",
+   "category": "911",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-28-91-1115-A-Establish-911-Telephone-Service.pdf"
+  },
+  {
+   "id": "10-0929-A",
+   "title": "911 telephone fee",
+   "category": "911",
+   "status": "Amends 91-1101-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-28-10-0929-A-Amendment-of-91-1115-A-Establish-911-Telephone-Service.pdf"
+  },
+  {
+   "id": "21-0120-A",
+   "title": "911 telephone fee",
+   "category": "911",
+   "status": "Repeals 91-1101-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-37-21-0120-A-Repealing-91-1101-A-911-Telephone-Service.pdf"
+  },
+  {
+   "id": "94-0908-A",
+   "title": "Implementation & maintenance of 911",
+   "category": "911",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-14-94-0908-A-94-3-Implemention-and-Maintenance-of-911.pdf"
+  },
+  {
+   "id": "96-0523-A",
+   "title": "Road-name changes for 911 system",
+   "category": "911",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-96-0523-A-Changing-the-Names-of-Roads-for-the-purpose-of-911.pdf"
+  },
+  {
+   "id": "19-1016-A",
+   "title": "$30 911 fee",
+   "category": "911",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/03/19-1016-A.pdf"
+  },
+  {
+   "id": "87-1013-A",
+   "title": "Subdivision development (6+ lots)",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-17-87-1013-A-6-Development-of-Subdivision-containing-6-or-more-lots.pdf"
+  },
+  {
+   "id": "87-1125-A",
+   "title": "Subdivision development (6+ lots)",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-17-87-1125-A-8-Development-of-Subdivision-containing-6-or-more-lots.pdf"
+  },
+  {
+   "id": "03-0121-A",
+   "title": "Subdivision regulations",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-16-03-0121-A-Subdivision-Regulations.pdf"
+  },
+  {
+   "id": "20-0916-B",
+   "title": "Subdivision regulations",
+   "category": "County Regulations",
+   "status": "Amendment",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/05/Ordinance-2020-0916-B.pdf"
+  },
+  {
+   "id": "02-0716-A",
+   "title": "Building inspector",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-13-02-0716-A-Building-Inspector.pdf"
+  },
+  {
+   "id": "17-0815-A",
+   "title": "Building inspector",
+   "category": "County Regulations",
+   "status": "Amends 02-0716-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-13-17-0815-A-Amendment-to-02-0716-A-Building-Inspector.pdf"
+  },
+  {
+   "id": "15-1117-A",
+   "title": "Electrical inspection fees",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-31-15-1117-A-Electrical-Inspection-Fees.pdf"
+  },
+  {
+   "id": "97-1016-A",
+   "title": "Hog facilities",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-15-97-1016-A-97-8-Hog-Facilities.pdf"
+  },
+  {
+   "id": "07-0619-B",
+   "title": "Cemetery board",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-23-07-0619-B-Cemetery-Board.pdf"
+  },
+  {
+   "id": "97-0213-A",
+   "title": "Concealed carry in county buildings",
+   "category": "County Regulations",
+   "status": "Repealed 02/15/23",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-97-0213-A-97-1-Carry-Concealed-Weapons.pdf"
+  },
+  {
+   "id": "12-0221-A",
+   "title": "Sale of cannabinoids",
+   "category": "County Regulations",
+   "status": "Repealed 02/15/23",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-29-12-0221-A-Prohibiting-the-Possession-or-Sale-of-Cannabinoids.pdf"
+  },
+  {
+   "id": "24-0417-A",
+   "title": "Solar energy system installation requirements",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2024/10/24-0417-A-rev1.pdf"
+  },
+  {
+   "id": "24-0619-B",
+   "title": "Road requirements to join county maintenance system",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2024/06/24-0619-b.pdf"
+  },
+  {
+   "id": "25-0716-A",
+   "title": "Street-legal special-purpose vehicles on public roads",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2025/07/25-0716-A-street-legal.pdf"
+  },
+  {
+   "id": "25-0924-A",
+   "title": "Medical-cannabis business operations",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2025/09/25-0924-A.pdf"
+  },
+  {
+   "id": "26-0520-A",
+   "title": "Animal control & TNVR program for community cats",
+   "category": "County Regulations",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2026/05/26-0520-A-tnvr.pdf"
+  },
+  {
+   "id": "06-0321-A",
+   "title": "Animal control conditions & maintenance",
+   "category": "County Regulations",
+   "status": "Repealed 5/20/26",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-21-06-0321-A-Regulation-for-Conditions-and-Maintenance-of-Animals.pdf"
+  },
+  {
+   "id": "99-0429-A",
+   "title": "Constable emergency vehicle equipment",
+   "category": "Elected Office & Ethics",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-11-99-0429-A-Constables-use-of-Emergency-Vehicle-Equipment.pdf"
+  },
+  {
+   "id": "04-0921-A",
+   "title": "Prohibit electioneering near polling place",
+   "category": "Elected Office & Ethics",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-1-04-0921-A-Prohibiting-Electioneering-near-Polling-Place.pdf"
+  },
+  {
+   "id": "21-0421-C",
+   "title": "Electioneering near polling place",
+   "category": "Elected Office & Ethics",
+   "status": "Amends 04-0921-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-1-21-0421-C-Amendment-of-04-0921-A-Prohibiting-Electioneering-near-Polling-Place.pdf"
+  },
+  {
+   "id": "17-0221-A",
+   "title": "Transparency & accountability of agencies using tax revenue",
+   "category": "Elected Office & Ethics",
+   "status": "Repealed 10/18/23",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-17-0221-A-Transparency-and-Accountablity-of-Public-Agencies-using-Tax-Proceeds.pdf"
+  },
+  {
+   "id": "18-0619-A",
+   "title": "Continuity of local government",
+   "category": "Elected Office & Ethics",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-18-0619-A-Continuity-of-Local-Government.pdf"
+  },
+  {
+   "id": "23-0719-A",
+   "title": "Code of ethics",
+   "category": "Elected Office & Ethics",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/07/23-0719-A.pdf"
+  },
+  {
+   "id": "99-0104-A",
+   "title": "Code of ethics",
+   "category": "Elected Office & Ethics",
+   "status": "Repealed 7/19/23",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-26-99-0104-A-Code-of-Ethics.pdf"
+  },
+  {
+   "id": "23-0719-B",
+   "title": "Magistrate district boundaries",
+   "category": "Elected Office & Ethics",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/07/23-0719-B.pdf"
+  },
+  {
+   "id": "01-0918-A",
+   "title": "Magisterial boundaries",
+   "category": "Elected Office & Ethics",
+   "status": "Repealed",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-10-01-0918-A-Adopting-Magistrate-District-Boundaries.pdf"
+  },
+  {
+   "id": "05-0125-A",
+   "title": "Flood prevention",
+   "category": "Floodplain",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-19-05-0125-A-Flood-Prevention.pdf"
+  },
+  {
+   "id": "10-0709-A",
+   "title": "Flood prevention",
+   "category": "Floodplain",
+   "status": "Amends 05-0125-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-19-10-0709-A-Amendment-of-05-0125-A-Flood-Prevention.pdf"
+  },
+  {
+   "id": "23-0419-A",
+   "title": "Flood damage prevention",
+   "category": "Floodplain",
+   "status": "Amends 10-0709-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/04/23-0419-A.pdf"
+  },
+  {
+   "id": "03-0218-A",
+   "title": "Statewide EM mutual aid agreement",
+   "category": "Emergency Management",
+   "status": "Repealed 05/17/23",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-3-03-0218-A-Statewide-EM-Mutual-Aid.pdf"
+  },
+  {
+   "id": "03-0218-B",
+   "title": "Cost recovery for hazardous material",
+   "category": "Emergency Management",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-22-03-0218-B-Cost-Recovery-for-Hazardous-Material.pdf"
+  },
+  {
+   "id": "92-1222-A",
+   "title": "Licensing of solid-waste facilities",
+   "category": "Solid Waste",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-20-92-1222-A-Licensing-Solid-Waste-Facilities.pdf"
+  },
+  {
+   "id": "17-0815-B",
+   "title": "Solid-waste facility licensing",
+   "category": "Solid Waste",
+   "status": "Amends 92-1222-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-20-17-0815-B-Amendment-of-92-1222-A-Licensing-Solid-Waste-Facilities.pdf"
+  },
+  {
+   "id": "22-0216-A",
+   "title": "Solid-waste facility licensing",
+   "category": "Solid Waste",
+   "status": "Amends 17-0815-B",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-20-22-0216-A-Amendment-of-17-0815-B-Licensing-Solid-Waste-Facilities.pdf"
+  },
+  {
+   "id": "07-1120-A",
+   "title": "Nuisance property",
+   "category": "Nuisance Property",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-25-07-1120-A-Nusiance-Property.pdf"
+  },
+  {
+   "id": "16-0612-A",
+   "title": "Abatement of nuisance property",
+   "category": "Nuisance Property",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-25-16-0612-B-Abatement-of-Nusiance-Property.pdf"
+  },
+  {
+   "id": "19-0416-A",
+   "title": "Abatement of nuisance property",
+   "category": "Nuisance Property",
+   "status": "Amends 16-0612-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-25-19-0416-A-Amendment-of-16-0612-B-Abatement-of-Nusiance-Property.pdf"
+  },
+  {
+   "id": "98-1030-A",
+   "title": "Moratorium on adult businesses",
+   "category": "Public Decency",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-4-98-1030-A-Moratorium-Adult-Businesses.pdf"
+  },
+  {
+   "id": "99-0615-A",
+   "title": "Prohibit nudity in public",
+   "category": "Public Decency",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-5-99-0615-A-Prohibiting-Nudity-in-a-Public-Place.pdf"
+  },
+  {
+   "id": "99-0720-A",
+   "title": "Regulate adult-entertainment enterprises",
+   "category": "Public Decency",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-6-99-0720-A-Regulating-Commercial-Enterprises-offering-Adult-Entertainment.pdf"
+  },
+  {
+   "id": "04-1116-B",
+   "title": "Regulation of sexually oriented businesses",
+   "category": "Public Decency",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-7-04-1221-A-Regulation-of-Sexually-Oriented-Business.pdf"
+  },
+  {
+   "id": "04-0622-A",
+   "title": "Industrial Development Authority",
+   "category": "Boards",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-18-04-0622-A-Industrial-Development-Authority.pdf"
+  },
+  {
+   "id": "20-0617-B",
+   "title": "Create Transient Tax Board",
+   "category": "Boards",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/20-0617-B.pdf"
+  },
+  {
+   "id": "99-0216-B",
+   "title": "Murray-Calloway EDC revolving-fund agreement",
+   "category": "Boards",
+   "status": "Repealed 04/20/22",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-12-99-0216-B-Murray-Calloway-EDC-Revolving-Fund-Agreement.pdf"
+  },
+  {
+   "id": "95-0124-A",
+   "title": "Revenue source for detention-facility repayment",
+   "category": "Jail",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-24-95-0124-A-Revenue-Source-for-Repayment-on-Detention-Center-and-OM.pdf"
+  },
+  {
+   "id": "95-0413-A",
+   "title": "Bond for detention facility",
+   "category": "Jail",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-95-0413-A-Bond-for-Acquisition-and-Construction-of-Detention-Facilities.pdf"
+  },
+  {
+   "id": "96-1114-A",
+   "title": "Bond for detention facility",
+   "category": "Jail",
+   "status": "Amends 95-0413-A",
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-96-1114-A-Bond-for-Acquisition-and-Construction-of-Detention-Facilities.pdf"
+  },
+  {
+   "id": "15-0422-A",
+   "title": "Community corrections / ankle monitoring",
+   "category": "Jail",
+   "status": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2023/02/Ordinance-30-15-0422-A-Community-Corrections-Monitored-Release-Program-Ankle-Monitoring.pdf"
+  }
+ ],
+ "county_ordinance_index": "https://callowaycountyky.gov/ordinances/"
+}

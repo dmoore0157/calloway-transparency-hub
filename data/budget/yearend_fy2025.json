@@ -1,0 +1,566 @@
+{
+ "fiscal_year": 2025,
+ "total": 5767731.05,
+ "lines": [
+  {
+   "n": "County Judge Exec Salary",
+   "a": 125364.08,
+   "c": "Judge-Executive & Administration"
+  },
+  {
+   "n": "Co Judge Exec Other Salary",
+   "a": 144659.73,
+   "c": "Judge-Executive & Administration"
+  },
+  {
+   "n": "Co Judge Training Incentive",
+   "a": 5302.12,
+   "c": "Judge-Executive & Administration"
+  },
+  {
+   "n": "Judge Office Supplies",
+   "a": 5955.67,
+   "c": "Judge-Executive & Administration"
+  },
+  {
+   "n": "Annex Pest Control",
+   "a": 200,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Annex Building Maintenance",
+   "a": 4387.79,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Annex Utilities",
+   "a": 18952.44,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "County Attorney Reimbursement",
+   "a": 174000,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Attorney Salary",
+   "a": 43555.03,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Attorney Utilities",
+   "a": 1289.64,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Clerk, Social Security",
+   "a": 52422.41,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Clerk, Health",
+   "a": 135038.24,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "County Clerk, Tax Bill",
+   "a": 23881.92,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Sheriff Deputies Salary Support",
+   "a": 1640887.4,
+   "c": "Sheriff & Law Enforcement"
+  },
+  {
+   "n": "Sheriff, Work Comp",
+   "a": 44256,
+   "c": "Sheriff & Law Enforcement"
+  },
+  {
+   "n": "Sheriff, Building Insurance",
+   "a": 88715.91,
+   "c": "Sheriff & Law Enforcement"
+  },
+  {
+   "n": "Sheriff, State Grant Payment",
+   "a": 82326.4,
+   "c": "Sheriff & Law Enforcement"
+  },
+  {
+   "n": "Coroner, Expense Account",
+   "a": 7200,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Coroner Salary",
+   "a": 18560.41,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Deputy Coroner Salary",
+   "a": 13828.46,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Coroner, Programs",
+   "a": 8020.55,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Coroner, Utilities",
+   "a": 2497.72,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Magistrate Salary",
+   "a": 93636.52,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "Magistrate Committee Allowance",
+   "a": 14400,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "Training Incentive",
+   "a": 25035.63,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "LATCF Funding",
+   "a": 90669.38,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "Public Notices",
+   "a": 27774,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "Registration & Conference",
+   "a": 21887.82,
+   "c": "Fiscal Court & Magistrates"
+  },
+  {
+   "n": "PVA, Statutory Contribution",
+   "a": 102400,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Board of Assessment",
+   "a": 200,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Computer Software",
+   "a": 15263.22,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Treasurer Salary",
+   "a": 69160,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Treasurer Other Salary",
+   "a": 53898.3,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Treasurer, Office Supply",
+   "a": 7707.56,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "HR Office Supply",
+   "a": 1081.21,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "HR Registration & Conference",
+   "a": 1260.19,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "HR Mandatory Staff Training",
+   "a": 1301.54,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Election Officers",
+   "a": 10530,
+   "c": "Elections"
+  },
+  {
+   "n": "Election Commission",
+   "a": 1380,
+   "c": "Elections"
+  },
+  {
+   "n": "Election Tabulation",
+   "a": 1605,
+   "c": "Elections"
+  },
+  {
+   "n": "Polling Places",
+   "a": 300,
+   "c": "Elections"
+  },
+  {
+   "n": "Election Programs",
+   "a": 78150.82,
+   "c": "Elections"
+  },
+  {
+   "n": "Printing",
+   "a": 4599.49,
+   "c": "Elections"
+  },
+  {
+   "n": "Courthouse Pest Control",
+   "a": 330,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Elevator Maintenance",
+   "a": 2529.36,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Building Maintenance Supply",
+   "a": 792.97,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Custodial Supply",
+   "a": 831.1,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Courthouse, Renewal",
+   "a": 84159.09,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Courthouse, Utilities",
+   "a": 28843.32,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Building Pest",
+   "a": 428,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Custodial Staff",
+   "a": 36736.04,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Building, Other",
+   "a": 91002.88,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Building, Renewal",
+   "a": 62232.25,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Judicial Building, Utilities",
+   "a": 42865.77,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "Property Facility Development",
+   "a": 28725,
+   "c": "County Buildings & Facilities"
+  },
+  {
+   "n": "CC Fire Rescue",
+   "a": 12000,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Office of EM Salary",
+   "a": 54836.92,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "OEM Phone, Internet, Data",
+   "a": 3621.66,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "OEM Vehicle",
+   "a": 2765.05,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "OEM Registration & Conference",
+   "a": 958.27,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "OEM CCFR Program Support",
+   "a": 8005.9,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Emergency Mgmt Office Supply",
+   "a": 582.18,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Emergency Disaster Relief",
+   "a": 802.41,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Homeland Security Grant",
+   "a": 21948.32,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Forestry Tax Payment",
+   "a": 1146,
+   "c": "Emergency Management & Fire"
+  },
+  {
+   "n": "Public Defender",
+   "a": 4637.88,
+   "c": "Elected Offices & Courts"
+  },
+  {
+   "n": "Animal Shelter Pest Control",
+   "a": 480,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Director Salary",
+   "a": 48545.04,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Staff Salary",
+   "a": 144977.96,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Disposal",
+   "a": 174.53,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Warden, Promotional Support",
+   "a": 10521.28,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Office Supplies",
+   "a": 2665.04,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter, Building",
+   "a": 2471.5,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Vehicle",
+   "a": 8643.85,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter Staff Uniforms",
+   "a": 1332.99,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter, Medical",
+   "a": 21351.6,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter, Training",
+   "a": 594.14,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter IT Repairs",
+   "a": 647.95,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Animal Shelter, Utilities",
+   "a": 8817.81,
+   "c": "Animal Shelter"
+  },
+  {
+   "n": "Environment Staff Salary",
+   "a": 39597.03,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Litter Abatement",
+   "a": 67912.8,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Tire Grant",
+   "a": 1335,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Environment, Supplies",
+   "a": 322.14,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Environmental Vehicle",
+   "a": 2548.8,
+   "c": "Environment & Solid Waste"
+  },
+  {
+   "n": "Ambulance",
+   "a": 10000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Mental Health Watch",
+   "a": 5000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "East Fork Clarks River",
+   "a": 5000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Flood Control Project",
+   "a": 8.48,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Indigent Order",
+   "a": 3506,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Needline",
+   "a": 8000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Senior Center",
+   "a": 6000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Pauper Burials",
+   "a": 250,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Gentry House / Hope Calloway",
+   "a": 6000,
+   "c": "Health & Human Services"
+  },
+  {
+   "n": "Murray-Calloway Park, General Budget",
+   "a": 90000,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Calloway County Tourism",
+   "a": 323901.59,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Special Event, 200th Year",
+   "a": 3010.31,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Murray Art Guild Pass-Through Grant",
+   "a": 619367.15,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Murray-Calloway Airport",
+   "a": 7500,
+   "c": "Parks, Tourism & Culture"
+  },
+  {
+   "n": "Audit",
+   "a": 49819.08,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Health Insurance",
+   "a": 118071.3,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Drug Testing",
+   "a": 782.25,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Bank Charges",
+   "a": 21.52,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Insurance, Buildings",
+   "a": 64677.23,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Insurance, Fidelity Bonds",
+   "a": 7685.9,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Membership, ADD",
+   "a": 4081.33,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Social Security Contribution",
+   "a": 69492.06,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Retirement Contribution",
+   "a": 209679.8,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Unemployment Insurance",
+   "a": 1821.63,
+   "c": "Insurance, Benefits & Overhead"
+  },
+  {
+   "n": "Workers Compensation",
+   "a": 36792.99,
+   "c": "Insurance, Benefits & Overhead"
+  }
+ ],
+ "category_colors": {
+  "Sheriff & Law Enforcement": "#1A2744",
+  "Parks, Tourism & Culture": "#C9A84C",
+  "Elected Offices & Courts": "#C0272D",
+  "Insurance, Benefits & Overhead": "#6B6860",
+  "County Buildings & Facilities": "#5B7A9E",
+  "Judge-Executive & Administration": "#3A7D44",
+  "Fiscal Court & Magistrates": "#D4752A",
+  "Animal Shelter": "#8C6BA0",
+  "Environment & Solid Waste": "#6E8B5A",
+  "Emergency Management & Fire": "#B5483E",
+  "Elections": "#3E7C8C",
+  "Health & Human Services": "#C98B3C"
+ },
+ "source": "Calloway County FY2024-25 year-end General Fund expenditure report."
+}

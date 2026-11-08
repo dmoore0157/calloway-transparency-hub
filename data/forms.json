@@ -1,0 +1,66 @@
+{
+ "forms": [
+  {
+   "name": "Calloway County Road Concern",
+   "label": "Report a road issue",
+   "url": "https://callowaycountyky.gov/calloway-county-road-concern/"
+  },
+  {
+   "name": "Public Solid Waste Complaint",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2021/12/abatement-of-nuisance.pdf"
+  },
+  {
+   "name": "Board Application",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2021/12/board-application.pdf"
+  },
+  {
+   "name": "Solid Waste Hauler Permit Info",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2022/01/Solid-Waste-Letter.docx-2.pdf"
+  },
+  {
+   "name": "Petition for County Road",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2024/05/petition-for-county-road.pdf"
+  },
+  {
+   "name": "Petition to Close County Road",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2024/05/petition-to-close-road-private-drive.pdf"
+  },
+  {
+   "name": "Petition to Rename County Road",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2025/02/road-name-change-petition.pdf"
+  },
+  {
+   "name": "Solar Farm Application",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2024/07/solar-app.pdf"
+  },
+  {
+   "name": "Tobacco Barn Registration",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2024/09/tobacco-barn-registration-form.pdf"
+  },
+  {
+   "name": "911 Service Fee Form",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2021/12/911-service-fee-form.pdf"
+  },
+  {
+   "name": "911 Address Form",
+   "label": null,
+   "url": "https://callowaycountyky.gov/wp-content/uploads/2024/03/911-address-form.xlsx"
+  }
+ ],
+ "links": {
+  "ordinances": "https://callowaycountyky.gov/ordinances/",
+  "forms": "https://callowaycountyky.gov/forms/",
+  "officials": "https://callowaycountyky.gov/elected-officials/",
+  "districts": "https://callowaycountyky.gov/magistrate-districts-map/",
+  "budget": "https://callowaycountyky.gov/budget-admin-code/"
+ }
+}

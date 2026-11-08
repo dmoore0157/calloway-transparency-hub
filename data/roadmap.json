@@ -1,0 +1,38 @@
+{
+ "checkbook": {
+  "see": "Every payment the county makes — the vendor, the amount, the date, the check or claim number, the department, and what it was for.",
+  "how": "Search a vendor and see every payment to them across years; filter by department, fund, or any dollar threshold; download the whole thing as a spreadsheet.",
+  "why": "This is the clearest possible answer to \"where did my tax dollars actually go?\" It turns a budget category into the real checks behind it — the difference between a number and an explanation.",
+  "needs": "The county's claims register / check register. It isn't in the state's summary reports; it comes from Fiscal Court records via an open-records request, and every figure gets verified before it's published."
+ },
+ "vendors": {
+  "see": "The county's top vendors, multi-year totals, which vendors are recurring vs. new this year, and any payments above a threshold you choose.",
+  "how": "Built on the same claims data as the Checkbook, summarized so patterns are visible at a glance instead of buried across hundreds of line items.",
+  "why": "Spending concentration and long-running vendor relationships are exactly what residents can't see today — and exactly what sound oversight keeps an eye on. Visibility isn't an accusation; it's just good practice.",
+  "needs": "The same claims register as the Checkbook."
+ },
+ "votes": {
+  "see": "Each Fiscal Court decision as a searchable record — the motion, who made and seconded it, the roll-call, and the dollars it moved.",
+  "how": "Built from the official minutes, which are already public (see Meetings & Records), structured and linked back to each source PDF so every entry is checkable.",
+  "why": "Decisions and dollars belong together. A resident should be able to follow what was decided and what it cost without opening and reading every monthly PDF.",
+  "needs": "Structuring the minutes the county already publishes — nothing private, nothing new from the county."
+ },
+ "grants": {
+  "see": "Each grant the county wins — the agency, the amount, any required local match, the deadline, and how much was actually spent.",
+  "how": "Combines the grant revenue already visible under \"Where it comes from\" with award and spending detail in one place.",
+  "why": "Outside funding only helps taxpayers if it's pursued actively and used well — and that case can only be made if every grant is tracked end to end.",
+  "needs": "Grant award letters and reporting. Some is already in the audits and revenue filings; the rest assembled into a single view."
+ },
+ "projects": {
+  "see": "Capital projects — roads, buildings, equipment — by district, with budgeted vs. actual cost, funding source, contractor, status, and final outcome.",
+  "how": "A simple status board (proposed → funded → in progress → complete → over budget) with an optional county map showing where the work is happening.",
+  "why": "District-level road accountability is what residents feel most directly. \"What's actually happening in my district?\" should have a clear, current answer — not a rumor.",
+  "needs": "Project records and capital tracking, best wired in from inside the county accounting system — a standing dashboard rather than a one-time pull."
+ },
+ "openrec": {
+  "see": "A running log of open-records requests — the category, the status, and how many days the county took to respond. No private requester information.",
+  "how": "The county maintains the log and publishes the turnaround stats; the hub simply displays them.",
+  "why": "It measures whether government answers the public promptly — transparency about transparency itself. It holds the Judge-Executive's office to the same transparency standard as every other office.",
+  "needs": "The county to keep and publish the log on an ongoing basis."
+ }
+}

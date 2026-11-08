@@ -1,0 +1,50 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */3 * * *'   # rebuild so new tickets get link previews; also keeps the Supabase project awake
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Typecheck and build (prerenders every route, writes 404.html and data/)
+        run: npm run build
+        env:
+          # Project site lives under /<repo>/ unless public/CNAME exists (then vite.config.ts uses /)
+          VITE_BASE: ${{ vars.VITE_BASE }}
+      - name: Keep the Supabase project awake
+        run: curl -sS -o /dev/null -w 'supabase health %{http_code}\n' "https://ccvfdtgjwwjfrzcvocom.supabase.co/rest/v1/hub_status?select=tickets" -H "apikey: ${{ secrets.SUPABASE_ANON_KEY || env.ANON }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY || env.ANON }}" || true
+        env:
+          ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNjdmZkdGdqd3dqZnJ6Y3ZvY29tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQxMTYzNzIsImV4cCI6MjEwOTY5MjM3Mn0.Vn47fsGgB8Xgz8VaHEDTdPS6Um19k32l1iwalvvK0hA
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

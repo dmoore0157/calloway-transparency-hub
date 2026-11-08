@@ -1,0 +1,45 @@
+{
+ "members": [
+  {
+   "id": "imes",
+   "full_name": "Kenny Imes",
+   "short_name": "Imes",
+   "title": "Judge-Executive",
+   "role": "judge_executive",
+   "district": null
+  },
+  {
+   "id": "stewart",
+   "full_name": "Ricky Stewart",
+   "short_name": "Stewart",
+   "title": "Magistrate, District 1",
+   "role": "magistrate",
+   "district": 1
+  },
+  {
+   "id": "crutcher",
+   "full_name": "Larry Crutcher",
+   "short_name": "Crutcher",
+   "title": "Magistrate, District 2",
+   "role": "magistrate",
+   "district": 2
+  },
+  {
+   "id": "cherry",
+   "full_name": "Don Cherry",
+   "short_name": "Cherry",
+   "title": "Magistrate, District 3",
+   "role": "magistrate",
+   "district": 3
+  },
+  {
+   "id": "rister",
+   "full_name": "Paul Rister",
+   "short_name": "Rister",
+   "title": "Magistrate, District 4",
+   "role": "magistrate",
+   "district": 4
+  }
+ ],
+ "note": "Magistrate Johnny Gingles was memorialized by the Fiscal Court on Jan 21, 2026. Names verified against callowaycountyky.gov/elected-officials, Nov 2026."
+}

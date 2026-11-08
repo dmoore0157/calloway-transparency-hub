@@ -1,0 +1,49 @@
+{
+ "asOf": "June 30, 2021",
+ "total": 616460,
+ "beginning": 869542,
+ "paid": 253082,
+ "dueWithin": 210823,
+ "annualService": 278238,
+ "items": [
+  {
+   "n": "Two motor graders",
+   "purpose": "Road department equipment",
+   "orig": 498234,
+   "bal": 403386,
+   "rate": "2.66%",
+   "matures": "June 2025"
+  },
+  {
+   "n": "Four tractors",
+   "purpose": "Road department equipment",
+   "orig": 370000,
+   "bal": 170016,
+   "rate": "4.30%",
+   "matures": "Aug 2023"
+  },
+  {
+   "n": "Two dump trucks",
+   "purpose": "Road department equipment",
+   "orig": 175308,
+   "bal": 43058,
+   "rate": "3.25%",
+   "matures": "Aug 2022"
+  }
+ ],
+ "retired": {
+  "n": "Excavator",
+  "orig": 250000,
+  "year": 2015,
+  "note": "Financed 2015; all payments made and debt retired by August 2021."
+ },
+ "current": {
+  "orig": 365400,
+  "rate": "4.53%",
+  "term": "4-year",
+  "lender": "FNB Bank",
+  "date": "April 2026",
+  "purpose": "two dump trucks (road department)",
+  "u": "https://callowaycountyky.gov/wp-content/uploads/2026/05/minutes-26-04-22.pdf"
+ }
+}

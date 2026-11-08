@@ -1,0 +1,472 @@
+{
+ "terms": {
+  "County Road Aid": {
+   "badge": "item",
+   "what": "Your county's share of the state gas tax, sent back to build and maintain county roads. Kentucky sets aside 18.3% of the motor-fuels tax and splits it among counties using a 'formula of fifths' that gives extra weight to rural road miles, land area, and population.",
+   "why": "It's the single biggest source of road money for most Kentucky counties, and it rises and falls with gas-tax revenue. (KRS 177.320)"
+  },
+  "LARP (Local Assistance Road Program)": {
+   "badge": "item",
+   "what": "A state program that helps counties and cities pay to resurface and rehabilitate existing roads — no new lanes. The county applies to the Kentucky Transportation Cabinet, projects are scored for priority, and the legislature approves which ones get funded, up to $500,000 each with a local match.",
+   "why": "The General Assembly created it in 2025 (House Bill 546) to give local governments a more structured way to get state help with road repairs."
+  },
+  "Transportation Cabinet Flex Funds": {
+   "badge": "item",
+   "what": "Extra state resurfacing money, set aside from the Rural Secondary road program, to help counties keep up existing asphalt.",
+   "why": "Unlike formula road aid, it's discretionary — the Kentucky Transportation Cabinet decides each county's amount based on rural-road needs. (KYTC Office of Rural & Secondary Roads)"
+  },
+  "80/20 Bridge Program": {
+   "badge": "item",
+   "what": "State help to repair or replace an existing bridge or drainage structure: the state pays 80% and the county pays the other 20%.",
+   "why": "It comes out of the state's Rural Secondary road funds and can't be used to build a brand-new structure. (KYTC Office of Rural & Secondary Roads)"
+  },
+  "Vehicle & license fee refunds": {
+   "badge": "item",
+   "what": "A portion of state vehicle and license fees (truck licenses, driver's licenses) returned to the county.",
+   "why": "These dollars flow into the Road Fund to help pay for road work."
+  },
+  "LGEA (Local Government Economic Assistance)": {
+   "badge": "item",
+   "what": "A state program that shares certain revenues — largely coal and mineral-severance taxes — with local governments for priority needs.",
+   "why": "Calloway's small LGEA fund is dedicated here to road maintenance."
+  },
+  "Ad valorem tax": {
+   "badge": "item",
+   "what": "Latin for 'according to value.' A tax based on the assessed value of property — real estate, vehicles, and similar.",
+   "why": "Most local property taxes are ad valorem taxes."
+  },
+  "Transient room tax": {
+   "badge": "item",
+   "what": "A tax on short-term lodging, like hotel and motel stays.",
+   "why": "It is commonly used to support tourism activity."
+  },
+  "In-lieu-of-tax payment": {
+   "badge": "item",
+   "what": "A payment made instead of regular property taxes by an entity that's exempt from them — for example, TVA or public housing makes 'in-lieu' payments to the county.",
+   "why": "It stands in for tax revenue the county otherwise couldn't collect on those properties."
+  },
+  "Deed transfer tax": {
+   "badge": "item",
+   "what": "A tax collected when a piece of real estate changes hands and the deed is recorded.",
+   "why": "It rises and falls with local real-estate sales."
+  },
+  "Franchise tax": {
+   "badge": "item",
+   "what": "A tax on certain businesses — here, mainly banks — for operating in the county.",
+   "why": ""
+  },
+  "Surplus from prior year": {
+   "badge": "item",
+   "what": "Money left unspent at the end of last year and carried into this budget. It is not new income — it's the county's carryover.",
+   "why": "Counties list carryover as a 'revenue' line so the books balance, but it represents money already collected in past years."
+  },
+  "Transfers between funds": {
+   "badge": "item",
+   "what": "Money moved between the county's own funds — for example, the General Fund sending money to help cover the Jail or Road funds.",
+   "why": "These are internal movements, not new outside money; they're why some funds show large 'transfer' lines."
+  },
+  "Reserve for transfer": {
+   "badge": "item",
+   "what": "Money a fund sets aside to move to another county fund, rather than to spend directly on services.",
+   "why": "It's a balancing/transfer line, not spending."
+  },
+  "Contingency": {
+   "badge": "item",
+   "what": "Money set aside for unexpected needs during the year, not yet assigned to a specific purpose.",
+   "why": "It gives the Fiscal Court room to handle surprises without reopening the budget."
+  },
+  "Fringe benefits": {
+   "badge": "item",
+   "what": "The employer's share of employee costs — Social Security, retirement, and health insurance.",
+   "why": "It's a normal cost of having employees, shown separately from salaries."
+  },
+  "AOC (Administrative Office of the Courts)": {
+   "badge": "item",
+   "what": "Kentucky's statewide court system administration.",
+   "why": "The county leases courthouse space to AOC and receives payments, which show up as revenue."
+  },
+  "CDBG (Community Development Block Grant)": {
+   "badge": "item",
+   "what": "Federal money, passed through the state, for community and economic-development projects.",
+   "why": "Here it funds a building grant (the CCFR CDBG building grant)."
+  },
+  "ARPA (American Rescue Plan Act)": {
+   "badge": "item",
+   "what": "Federal pandemic-relief money sent to local governments in 2021–2022.",
+   "why": "Calloway's ARPA fund shows no new activity budgeted this year, meaning those funds have been spent or committed."
+  },
+  "Opioid settlement funds": {
+   "badge": "item",
+   "what": "Money the county receives from national legal settlements with opioid manufacturers and distributors.",
+   "why": "These funds are restricted to addressing the opioid crisis — prevention, treatment, and related needs."
+  },
+  "General Fund": {
+   "badge": "fund",
+   "what": "The county's main checking account. It pays for most day-to-day government — the Judge-Executive's office, the courthouse, elections, the animal shelter, and the county's required support for elected offices like the Sheriff and Clerk.",
+   "why": "Most of its money comes from local property and other taxes, so it's the part of the budget where county leaders have the most say."
+  },
+  "Road Fund": {
+   "badge": "fund",
+   "what": "A separate, restricted account for building and maintaining county roads and bridges.",
+   "why": "It's funded mostly by the state gas-tax 'road aid' the county receives, which by law can generally only be spent on roads — not shifted to other uses."
+  },
+  "Jail Fund": {
+   "badge": "fund",
+   "what": "Pays to operate the county jail — staffing, inmate care, and the facility.",
+   "why": "Funded by a mix of state and local money, fees for housing prisoners, and transfers from the General Fund."
+  },
+  "Property & other taxes": {
+   "badge": "in",
+   "what": "Local taxes the county sets — mainly real-estate (property) taxes, plus motor-vehicle and tangible-property taxes.",
+   "why": "The county's largest and steadiest source of its own money."
+  },
+  "Intergovernmental (state/federal)": {
+   "badge": "in",
+   "what": "Money passed to the county from the state and federal governments for specific programs and grants.",
+   "why": "This line can swing dramatically when one-time programs — like pandemic relief — arrive and then end."
+  },
+  "Excess fees (from fee offices)": {
+   "badge": "in",
+   "what": "Kentucky's elected fee officers (Clerk, Sheriff) collect fees for their services. After covering allowed salaries and office costs, any surplus is turned back over to the county.",
+   "why": "The public's money returning to the county budget rather than staying in one office."
+  },
+  "In-lieu-of-tax payments": {
+   "badge": "in",
+   "what": "Payments by certain tax-exempt entities in place of the property taxes they don't pay.",
+   "why": "Lets exempt organizations still contribute toward local services."
+  },
+  "Licenses & permits": {
+   "badge": "in",
+   "what": "Fees residents and businesses pay for county licenses and permits.",
+   "why": "A small, steady source tied to local activity."
+  },
+  "Miscellaneous": {
+   "badge": "in",
+   "what": "Smaller and one-time receipts that don't fit the main categories.",
+   "why": "Refunds, reimbursements, and odd items."
+  },
+  "Charges for services": {
+   "badge": "in",
+   "what": "Money the county collects when it provides a specific service to whoever uses it.",
+   "why": "The user of a service helps pay for it."
+  },
+  "Interest": {
+   "badge": "in",
+   "what": "Interest earned on the county's bank balances.",
+   "why": "Idle public funds earn a little while they sit."
+  },
+  "General Government": {
+   "badge": "out",
+   "what": "The core cost of running the county — the Judge-Executive and Fiscal Court, the courthouse and offices, elections, and required support for separately elected offices (Sheriff, Clerk, County Attorney, PVA).",
+   "why": "The largest slice — it's the basic machinery of county government."
+  },
+  "General Health & Sanitation": {
+   "badge": "out",
+   "what": "Public-health and environmental services — the animal shelter, litter and solid-waste programs, and related contributions.",
+   "why": "Keeps the county clean, healthy, and safe day to day."
+  },
+  "Administration": {
+   "badge": "out",
+   "what": "Cross-cutting costs that keep the whole operation running — insurance, the annual audit, employee benefits, and overhead.",
+   "why": "Shared costs not tied to any single department."
+  },
+  "Capital Projects": {
+   "badge": "out",
+   "what": "Larger one-time investments in buildings, equipment, and property — not everyday operating costs.",
+   "why": "These rise and fall depending on what the county is building or buying that year."
+  },
+  "Recreation & Culture": {
+   "badge": "out",
+   "what": "Support for parks, tourism, and cultural programs.",
+   "why": "Quality-of-life spending; some is restricted or passes through to other organizations."
+  },
+  "Protection of Persons & Property": {
+   "badge": "out",
+   "what": "Public-safety spending that runs through the General Fund.",
+   "why": "Much of law enforcement and the jail are funded through separate accounts, so this line is modest."
+  },
+  "Social Services": {
+   "badge": "out",
+   "what": "Modest county support for local human-services needs.",
+   "why": "A small but recurring commitment to residents in need."
+  },
+  "Sheriff & Law Enforcement": {
+   "badge": "cat",
+   "what": "The county's required financial support to the separately elected Sheriff's office, plus related insurance and state-grant pass-throughs.",
+   "why": "This is the county's contribution, not the Sheriff office's entire payroll — that office also funds itself through the fees it collects."
+  },
+  "Parks, Tourism & Culture": {
+   "badge": "cat",
+   "what": "Support for the Murray-Calloway park, the county tourism commission, the airport, and cultural grants.",
+   "why": "Some is restricted money (tourism is funded by a room tax) or grants that pass through the county to another organization."
+  },
+  "Elected Offices & Courts": {
+   "badge": "cat",
+   "what": "The county's required contributions to other independently elected offices — County Clerk, County Attorney, Coroner, PVA, Treasurer — plus court costs like the Public Defender.",
+   "why": "State law sets much of what the county must pay toward these offices."
+  },
+  "Insurance, Benefits & Overhead": {
+   "badge": "cat",
+   "what": "County-wide costs not tied to one department — employee benefits and payroll taxes, liability and building insurance, the annual audit, software, and bank fees.",
+   "why": "The shared 'keeping-the-lights-on' costs of any organization."
+  },
+  "County Buildings & Facilities": {
+   "badge": "cat",
+   "what": "Keeping the courthouse, judicial building, and county annex running — utilities, maintenance, custodial work, and renewals.",
+   "why": "The county owns and must maintain public buildings."
+  },
+  "Judge-Executive & Administration": {
+   "badge": "cat",
+   "what": "The office of the County Judge-Executive — the county's chief elected executive — including salaries and office costs.",
+   "why": "This is the office on this November's ballot."
+  },
+  "Fiscal Court & Magistrates": {
+   "badge": "cat",
+   "what": "The county's legislative body — the magistrates who, with the Judge-Executive, set the budget and policy — plus allowances and required public notices.",
+   "why": "These are the elected officials who vote on the budget."
+  },
+  "Animal Shelter": {
+   "badge": "cat",
+   "what": "Operating the county animal shelter — staff, medical care, the building, vehicles, and supplies.",
+   "why": "A standalone county service with its own staff and facility."
+  },
+  "Environment & Solid Waste": {
+   "badge": "cat",
+   "what": "Litter cleanup, waste-tire programs, and related environmental staff and equipment.",
+   "why": "Keeps roadsides and public spaces clean."
+  },
+  "Emergency Management & Fire": {
+   "badge": "cat",
+   "what": "The county Office of Emergency Management and support for fire/rescue — preparedness, equipment, and grants.",
+   "why": "Coordinates the county's response to storms, floods, and emergencies."
+  },
+  "Elections": {
+   "badge": "cat",
+   "what": "Running county elections — poll workers, the election commission, ballot programming, polling places, and printing.",
+   "why": "The cost of administering local democracy; it rises in election years."
+  },
+  "Health & Human Services": {
+   "badge": "cat",
+   "what": "Modest county support for local health and assistance needs — the ambulance service, a senior center, food and housing assistance nonprofits, and indigent and pauper costs.",
+   "why": "Small contributions, but a direct safety net for residents."
+  },
+  "Sheriff Deputies Salary Support": {
+   "badge": "item",
+   "what": "The county's budgeted contribution toward the Sheriff's deputies.",
+   "why": "The Sheriff's office also funds itself through the fees it collects, so this is a support payment — not the office's full payroll."
+  },
+  "LATCF Funding": {
+   "badge": "item",
+   "what": "The federal Local Assistance and Tribal Consistency Fund — a one-time, no-strings payment from the U.S. Treasury (under the 2021 American Rescue Plan) to eligible counties.",
+   "why": "It can be used for almost any government purpose, so it shows up as a flexible general resource rather than a tax."
+  },
+  "PVA, Statutory Contribution": {
+   "badge": "item",
+   "what": "The county's required payment to the Property Valuation Administrator — the office that assesses property values used to set tax bills.",
+   "why": "State law sets the county's share of funding this office."
+  },
+  "Murray Art Guild Pass-Through Grant": {
+   "badge": "item",
+   "what": "Grant money that passed through the county to the Murray Art Guild.",
+   "why": "The county acted as the conduit, so these dollars went out to the Guild — they did not fund county operations. That's why this single line is unusually large."
+  },
+  "Calloway County Tourism": {
+   "badge": "item",
+   "what": "Funding for the county tourism commission, which promotes local attractions and events.",
+   "why": "Tourism is funded largely by a restricted 'transient room tax' on lodging, which by law is meant for tourism — not general county use."
+  },
+  "Special Event, 200th Year": {
+   "badge": "item",
+   "what": "Costs tied to Calloway County's bicentennial — the county was established in 1822, making 2022 its 200th year.",
+   "why": "A one-time commemorative expense."
+  },
+  "East Fork Clarks River": {
+   "badge": "item",
+   "what": "The county's contribution to the East Fork Clarks River watershed and flood-control effort — a multi-county project run through local conservation districts (under Kentucky's watershed conservancy district law) to manage flooding and erosion along the East Fork of the Clarks River, which runs through Calloway County.",
+   "why": "Flood prevention for low-lying farmland and property along the river."
+  },
+  "Forestry Tax Payment": {
+   "badge": "item",
+   "what": "The county's timberland fire-protection assessment, paid to the Kentucky Division of Forestry — set by state law at a few cents per acre of timberland.",
+   "why": "It helps fund the state's wildland fire detection and suppression that protects rural forest and farm property."
+  },
+  "Needline": {
+   "badge": "item",
+   "what": "The county's contribution to Murray-Calloway County Need Line, a local nonprofit (serving the area since 1974) that runs a food pantry, USDA commodities, and a weekend backpack program for kids, plus emergency help with rent, utilities, and medication.",
+   "why": "A direct county contribution to the local safety net."
+  },
+  "Gentry House / Hope Calloway": {
+   "badge": "item",
+   "what": "The county's contribution to a local nonprofit providing transitional housing for homeless families with children. The Gentry House merged with the Murray-Calloway County Homeless Coalition in 2020 to form HOPE Calloway.",
+   "why": "Helps families move from homelessness toward stable housing."
+  },
+  "Membership, ADD": {
+   "badge": "item",
+   "what": "The county's membership dues to the Purchase Area Development District (PADD) — the regional planning agency serving the eight far-western Kentucky counties, including Calloway, since 1969.",
+   "why": "Membership gives the county access to regional planning help and a pipeline for state and federal grants."
+  },
+  "Tire Grant": {
+   "badge": "item",
+   "what": "The county's waste-tire program, supported by an annual state Direct Grant from Kentucky's Waste Tire Trust Fund (funded by a fee on new tire sales).",
+   "why": "Pays to collect and recycle scrap tires and run periodic free tire drop-off events — keeping illegal tire dumps down."
+  }
+ },
+ "aliases": [
+  [
+   "county road aid",
+   "County Road Aid"
+  ],
+  [
+   "larp",
+   "LARP (Local Assistance Road Program)"
+  ],
+  [
+   "flex",
+   "Transportation Cabinet Flex Funds"
+  ],
+  [
+   "80/20",
+   "80/20 Bridge Program"
+  ],
+  [
+   "80-20",
+   "80/20 Bridge Program"
+  ],
+  [
+   "truck license refund",
+   "Vehicle & license fee refunds"
+  ],
+  [
+   "driver's license refund",
+   "Vehicle & license fee refunds"
+  ],
+  [
+   "drivers license refund",
+   "Vehicle & license fee refunds"
+  ],
+  [
+   "lgea",
+   "LGEA (Local Government Economic Assistance)"
+  ],
+  [
+   "l.g.e.a",
+   "LGEA (Local Government Economic Assistance)"
+  ],
+  [
+   "mineral severance",
+   "LGEA (Local Government Economic Assistance)"
+  ],
+  [
+   "ad valorem",
+   "Ad valorem tax"
+  ],
+  [
+   "advalorem",
+   "Ad valorem tax"
+  ],
+  [
+   "transient room",
+   "Transient room tax"
+  ],
+  [
+   "in lieu",
+   "In-lieu-of-tax payment"
+  ],
+  [
+   "deed transfer",
+   "Deed transfer tax"
+  ],
+  [
+   "franchise",
+   "Franchise tax"
+  ],
+  [
+   "surplus from prior year",
+   "Surplus from prior year"
+  ],
+  [
+   "prior year carryover",
+   "Surplus from prior year"
+  ],
+  [
+   "prior yr adjustment",
+   "Surplus from prior year"
+  ],
+  [
+   "prior year surplus",
+   "Surplus from prior year"
+  ],
+  [
+   "surplus, borrowing",
+   "Surplus from prior year"
+  ],
+  [
+   "reserve for transfer",
+   "Reserve for transfer"
+  ],
+  [
+   "transfers to other funds",
+   "Transfers between funds"
+  ],
+  [
+   "transfers from other funds",
+   "Transfers between funds"
+  ],
+  [
+   "transfers in from other funds",
+   "Transfers between funds"
+  ],
+  [
+   "transfer out",
+   "Transfers between funds"
+  ],
+  [
+   "transfer from other funds",
+   "Transfers between funds"
+  ],
+  [
+   "contingency",
+   "Contingency"
+  ],
+  [
+   "contingent",
+   "Contingency"
+  ],
+  [
+   "fringe benefit",
+   "Fringe benefits"
+  ],
+  [
+   "capital project",
+   "Capital Projects"
+  ],
+  [
+   "p.v.a",
+   "PVA, Statutory Contribution"
+  ],
+  [
+   "pva",
+   "PVA, Statutory Contribution"
+  ],
+  [
+   "aoc ",
+   "AOC (Administrative Office of the Courts)"
+  ],
+  [
+   "cdbg",
+   "CDBG (Community Development Block Grant)"
+  ],
+  [
+   "arpa",
+   "ARPA (American Rescue Plan Act)"
+  ],
+  [
+   "opioid",
+   "Opioid settlement funds"
+  ],
+  [
+   "excess fees",
+   "Excess fees (from fee offices)"
+  ]
+ ]
+}

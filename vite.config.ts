@@ -6,9 +6,14 @@ import fs from 'node:fs';
 // An empty VITE_BASE (unset repository variable in CI) must mean "default", not "relative paths".
 const base = process.env.VITE_BASE || (fs.existsSync('public/CNAME') ? '/' : '/calloway-transparency-hub/');
 
+// Each build gets an id. It is compiled into the app and written to dist/version.json, so a tab left open across
+// a deploy can notice the newer build and reload itself (src/lib/version.ts).
+const buildId = Date.now().toString(36);
+
 export default defineConfig({
   base,
-  plugins: [react()],
+  define: { __BUILD_ID__: JSON.stringify(buildId) },
+  plugins: [react(), { name: 'hub-version-file', closeBundle() { fs.mkdirSync('dist', { recursive: true }); fs.writeFileSync('dist/version.json', JSON.stringify({ id: buildId, built: new Date().toISOString() })); } }],
   build: {
     outDir: 'dist',
     sourcemap: false,

@@ -4,6 +4,7 @@ import { Landmark, Gavel, Construction, FolderOpen, MessageSquarePlus, Search, M
 import { SearchBox } from './Search';
 import { recall, remember } from '../lib/device';
 import { trackView } from '../lib/track';
+import { checkForNewVersion } from '../lib/version';
 
 export const DOORS = [
   { to: '/money', label: 'Money', chapter: 'The Money', icon: Landmark, blurb: 'Budget, spending, revenue, grants, debt' },
@@ -28,7 +29,7 @@ export function Shell() {
   const [search, setSearch] = useState(false);
   const loc = useLocation();
   const [theme, setTheme] = useState<string>(() => (recall<string>('theme', 'reel') === 'light' ? 'light' : 'reel'));
-  useEffect(() => { setMenu(false); setSearch(false); window.scrollTo({ top: 0 }); trackView(loc.pathname); }, [loc.pathname]);
+  useEffect(() => { setMenu(false); setSearch(false); window.scrollTo({ top: 0 }); trackView(loc.pathname); checkForNewVersion(loc.pathname); }, [loc.pathname]);
   useEffect(() => { if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light'); else document.documentElement.removeAttribute('data-theme'); remember('theme', theme); }, [theme]);
   const chapter = DOORS.findIndex((d) => loc.pathname === d.to || loc.pathname.startsWith(d.to + '/'));
   return (

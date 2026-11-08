@@ -15,6 +15,7 @@ const PAGES: SearchDoc[] = [
   { id: 'p-votes', type: 'Page', title: 'Vote tracker', body: 'motions seconds roll call', href: '/decisions/votes' },
   { id: 'p-members', type: 'Page', title: 'Fiscal Court members and scorecards', body: 'judge executive magistrates district', href: '/decisions/members' },
   { id: 'p-leaders', type: 'Page', title: 'Leaders: profiles of every elected official', body: 'judge executive magistrate sheriff clerk jailer attorney coroner PVA profile', href: '/leaders' },
+  { id: 'p-ask', type: 'Page', title: 'Ask the records (AI assistant)', body: 'ask question assistant AI chat report answer sources', href: '/ask' },
   { id: 'p-elections', type: 'Page', title: 'Elections and candidates', body: 'election results candidates 2026 primary general vote totals campaign', href: '/leaders/elections' },
   { id: 'p-roads', type: 'Page', title: 'Report a road problem', body: 'pothole washout drainage ticket', href: '/roads/report' },
   { id: 'p-tickets', type: 'Page', title: 'Road tickets map', body: 'open road requests map', href: '/roads' },

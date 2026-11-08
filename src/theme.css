@@ -124,3 +124,10 @@ table.data tr:last-child td { border-bottom: none; }
 .map.tall { height: min(70vh, 640px); }
 .maplibregl-popup-content { font-family: var(--sans); color: #2C2C2C; border-radius: 8px; }
 .skip { position: absolute; left: -999px; top: 8px; background: var(--accent); color: #000; padding: 8px 12px; border-radius: 6px; z-index: 100; } .skip:focus { left: 8px; }
+
+.ask-btn { display: inline-flex; align-items: center; gap: 5px; background: var(--accent); color: #1A2744 !important; font-weight: 700; font-size: 13.5px; padding: 6px 11px; border-radius: 999px; margin-right: 4px; white-space: nowrap; }
+.ask-btn:hover { text-decoration: none; filter: brightness(1.05); }
+.spin { animation: spin 1s linear infinite; vertical-align: -2px; } @keyframes spin { to { transform: rotate(360deg); } }
+sup.cite { font-size: 11px; margin-left: 1px; } sup.cite a { text-decoration: none; font-weight: 700; padding: 0 1px; }
+.md h2, .md h3, .md h4 { font-family: var(--serif); }
+@media (prefers-reduced-motion: reduce) { .spin { animation: none; } }

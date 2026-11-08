@@ -123,7 +123,7 @@ export function LeaderPage() {
     <Crumb items={[{ to: '/leaders', label: 'Leaders' }, { label: m.full_name }]} />
     <div className="row between" style={{ alignItems: 'flex-start' }}>
       <div><div className="eyebrow">{roleNow(m)}{m.party ? ` · ${m.party}` : ''}{m.active === false ? ' · Former' : ''}</div><h2 style={{ margin: '2px 0 4px' }}>{m.full_name}</h2>{m.status_note && <p className="small muted" style={{ margin: 0, maxWidth: 720 }}>{m.status_note}</p>}</div>
-      <div className="row"><ShareButton title={m.full_name} /><FlagButton table="members" id={m.id} /></div>
+      <div className="row"><Link className="btn small" to={`/ask?q=${encodeURIComponent(`Summarize ${m.full_name}'s record on the Fiscal Court: votes, motions, statements checked against the minutes, and audits during their term.`)}&mode=report`}>Ask for a report</Link><ShareButton title={m.full_name} /><FlagButton table="members" id={m.id} /></div>
     </div>
     {m.next_role && <div className="notice" style={{ marginTop: 10, borderColor: p.accent }}><strong>Takes office as {m.next_role.title} on {dateLong(m.next_role.from_date)}.</strong> The record below is from {m.full_name.split(' ')[0]}'s years as a magistrate; the Judge/Executive record starts in 2027.</div>}
     {m.incoming && <div className="notice" style={{ marginTop: 10 }}><strong>Takes office {dateLong(m.term_start ?? TURNOVER)}.</strong> Campaign promises are logged now so they can be checked once {m.full_name.split(' ')[0]} is voting.</div>}

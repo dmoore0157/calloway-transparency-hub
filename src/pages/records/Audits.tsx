@@ -103,7 +103,7 @@ export function AuditPage() {
     <Crumb items={[{ to: '/records', label: 'Records' }, { to: '/records/audits', label: 'Audits' }]} />
     <div className="row between" style={{ alignItems: 'flex-start' }}>
       <div><h2 style={{ margin: 0 }}>FY{a.fy} audit of the Calloway County Fiscal Court</h2><p className="small muted" style={{ margin: '4px 0 0' }}>Year ended {dateLong(a.year_end)} · report dated {dateLong(a.report_date)}{a.released ? ` · released ${dateLong(a.released)}` : ''} · {a.auditor}, Auditor of Public Accounts</p></div>
-      <div className="row"><ShareButton title={`FY${a.fy} audit`} /><FlagButton table="audits" id={String(a.fy)} /></div>
+      <div className="row"><Link className="btn small" to={`/ask?q=${encodeURIComponent(`Explain the FY${a.fy} state audit of the Fiscal Court: what the auditors found, whether it repeated earlier findings, and what the county said it would do.`)}`}>Ask about this audit</Link><ShareButton title={`FY${a.fy} audit`} /><FlagButton table="audits" id={String(a.fy)} /></div>
     </div>
     <div className="row" style={{ margin: '12px 0' }}>
       <a className="btn primary small" href={a.report_url} target="_blank" rel="noopener noreferrer"><FileText size={14} /> Full report (PDF) <ExternalLink size={12} /></a>

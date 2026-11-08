@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Sparkles } from 'lucide-react';
 import { Meta } from '../components/Meta';
 import { SearchBox } from '../components/Search';
 import { DOORS } from '../components/Shell';
@@ -32,6 +32,7 @@ export default function Home() {
         <h1 style={{ marginTop: 6 }}>See where the money goes and how your leaders vote.</h1>
         <p className="lede" style={{ maxWidth: 680 }}>An independent, nonpartisan hub built from the county's own records: budgets, audits, and Fiscal Court minutes. Every number links to its source. Nothing is published that can't be checked.</p>
         <SearchBox big />
+        <Link to="/ask" className="card" style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 10, padding: '12px 14px', color: 'inherit', borderLeft: '4px solid var(--accent)' }}><Sparkles size={20} color="var(--accent-ink)" /><span><strong>Ask the records</strong><br /><span className="small muted">Ask a question in plain English. Answers come only from the public record, with every source linked.</span></span><ChevronRight size={18} style={{ marginLeft: 'auto' }} /></Link>
       </div>
 
       <Section title="Start with a question" />

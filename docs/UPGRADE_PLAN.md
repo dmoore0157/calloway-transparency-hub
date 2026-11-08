@@ -84,6 +84,19 @@ no campaign statements. Fee-office holders (sheriff, clerk, jailer, PVA, attorne
 separate audits of their offices; those findings are linked but not yet transcribed because the Auditor's site blocks
 non-browser downloads and the browser-fetch allowance was exhausted.
 
+### Ask the records assistant (November 2026)
+
+`/ask` lets residents ask plain-English questions and get answers drawn only from the hub's records, with every
+fact cited to a hub page and, where one exists, the original public document. Answers can be expanded into a full
+report and downloaded as Markdown, a document (opens in Word) or printed to PDF, and shared by link to Facebook, X,
+Reddit, LinkedIn, email or text. Shared links show the question, answer and sources, never who asked.
+
+The `ask` edge function (Supabase) runs Claude over the corpus with exact-count and arithmetic tools, then checks the
+answer in code: citations must resolve to records retrieved in that request and every figure must appear in them.
+Out-of-scope and opinion questions get fixed neutral text. See `supabase/functions/README.md` for the full list.
+The function is deployed; it answers once `ANTHROPIC_API_KEY` is set as an Edge Function secret in the Supabase
+dashboard. Run `node scripts/ask-eval.mjs` after setting it (23 scope, neutrality and fact cases).
+
 ### Decisions so far
 
 | Topic | Decision (Nov 2026) |

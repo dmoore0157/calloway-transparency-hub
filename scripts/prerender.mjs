@@ -37,6 +37,7 @@ const routes = [
   ['records/audits', 'State audits of the Fiscal Court', 'Every state audit finding, the county response and whether it came back.'],
   ...audits.map((a) => [`records/audits/${a.fy}`, `FY${a.fy} state audit of the Fiscal Court`, `${a.findings.length} finding${a.findings.length === 1 ? '' : 's'}: ${a.findings.map((f) => f.title).join('; ') || 'none'}.`]),
   ['records/sources', 'Sources', 'Where each figure comes from.'], ['records/glossary', 'Glossary', 'Plain-English definitions.'], ['records/data', 'Data downloads', 'Every dataset as JSON and CSV.'], ['records/corrections', 'Corrections log', 'Every correction made to the hub.'], ['records/about', 'About and methodology', 'Who runs the hub and how it is built.'],
+  ['ask', 'Ask the records', 'Ask questions about Calloway County budgets, audits, votes, officials and elections. Every answer is cited and checked against the public record.'],
   ['feedback', 'Feedback', 'Suggest improvements and vote on ideas.'], ['admin', 'Admin', 'Editor sign-in.'],
   ...meetings.map((m) => [`decisions/meetings/${m.id}`, `Fiscal Court meeting, ${m.date_label}`, m.summary[0]]),
   ...motions.map((m) => [`decisions/motions/${m.id}`, `Motion ${m.date}: ${m.text.slice(0, 80)}`, `${m.result_label}. Moved by ${m.mover ?? 'unknown'}${m.seconder ? `, seconded by ${m.seconder}` : ''}.`]),

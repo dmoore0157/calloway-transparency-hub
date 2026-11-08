@@ -14,3 +14,5 @@ jobs:
       - run: npm run build
       - name: Data contract checks
         run: node scripts/check-data.mjs
+      - name: Assistant tests (offline, no API key)
+        run: node scripts/test-ask.mjs dist/data/ai-corpus.json

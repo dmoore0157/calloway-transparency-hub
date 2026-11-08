@@ -22,6 +22,7 @@ import Ordinances from './pages/decisions/Ordinances';
 import WhoRepresentsMe from './pages/decisions/WhoRepresentsMe';
 import { RecordsLayout, Reports, Sources as RecordSources, Glossary, DataDownloads, Corrections, About } from './pages/records/Records';
 import { Audits, AuditPage } from './pages/records/Audits';
+import { AskPage, SharedAnswerPage } from './pages/ask/Ask';
 import { LeadersLayout, Profiles, LeaderPage, OfficePage, Elections, ElectionPage } from './pages/leaders/Leaders';
 import Feedback, { IdeaPage } from './pages/feedback/Feedback';
 import { Scoreboard, AllCommitments, CommitmentPage, Methodology } from './pages/accountability/Accountability';
@@ -72,6 +73,7 @@ export default function App() {
               <Route path="records" element={<RecordsLayout />}>
                 <Route index element={<Reports />} /><Route path="audits" element={<Audits />} /><Route path="audits/:fy" element={<AuditPage />} /><Route path="sources" element={<RecordSources />} /><Route path="glossary" element={<Glossary />} /><Route path="data" element={<DataDownloads />} /><Route path="corrections" element={<Corrections />} /><Route path="about" element={<About />} />
               </Route>
+              <Route path="ask" element={<AskPage />} /><Route path="ask/a/:id" element={<SharedAnswerPage />} />
               <Route path="feedback" element={<Feedback />} /><Route path="feedback/ideas/:id" element={<IdeaPage />} />
               <Route path="admin" element={<Admin />}>
                 <Route index element={<AdminOverview />} /><Route path="photos" element={<AdminPhotos />} /><Route path="tickets" element={<AdminTickets />} /><Route path="ideas" element={<AdminIdeas />} /><Route path="flags" element={<AdminFlags />} /><Route path="commitments" element={<AdminCommitments />} />

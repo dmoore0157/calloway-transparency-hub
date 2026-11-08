@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { Landmark, Gavel, Construction, FolderOpen, MessageSquarePlus, Search, Menu, X, Users } from 'lucide-react';
+import { Landmark, Gavel, Construction, FolderOpen, MessageSquarePlus, Search, Menu, X, Users, Sparkles } from 'lucide-react';
 import { SearchBox } from './Search';
 import { recall, remember } from '../lib/device';
 
@@ -33,6 +33,7 @@ export function Shell() {
             <NavLink to="/feedback" className={({ isActive }) => (isActive ? 'active' : '')}>Feedback</NavLink>
           </nav>
           <div className="row" style={{ flexWrap: 'nowrap' }}>
+            <Link to="/ask" className="ask-btn" aria-label="Ask the records"><Sparkles size={16} /> <span className="hide-sm">Ask</span></Link>
             <button className="iconbtn" aria-label="Search" onClick={() => { setSearch(!search); setMenu(false); }}><Search size={20} /></button>
             <button className="iconbtn mobile-only" aria-label="Menu" aria-expanded={menu} onClick={() => { setMenu(!menu); setSearch(false); }}>{menu ? <X size={20} /> : <Menu size={20} />}</button>
           </div>
@@ -41,6 +42,7 @@ export function Shell() {
         {menu && (
           <div className="container mobile-menu">
             {DOORS.map((d) => <Link key={d.to} to={d.to}><d.icon size={18} /> <span><strong>{d.label}</strong><br /><span className="small" style={{ opacity: .8 }}>{d.blurb}</span></span></Link>)}
+            <Link to="/ask"><Sparkles size={18} /> <span><strong>Ask the records</strong><br /><span className="small" style={{ opacity: .8 }}>Questions answered from the public record, with sources</span></span></Link>
             <Link to="/feedback"><MessageSquarePlus size={18} /> <span><strong>Feedback</strong><br /><span className="small" style={{ opacity: .8 }}>Suggest an improvement or report an error</span></span></Link>
             <Link to="/records/about">About this hub</Link>
             <div className="row small" style={{ padding: '8px 0' }}>Theme: {['auto', 'light', 'dark'].map((t) => <button key={t} className={`chip ${theme === t ? 'active' : ''}`} onClick={() => setTheme(t)}>{t}</button>)}</div>

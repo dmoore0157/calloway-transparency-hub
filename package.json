@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit -p tsconfig.json && vite build && node scripts/prerender.mjs",
+    "build": "tsc --noEmit -p tsconfig.json && vite build && node scripts/prerender.mjs && node scripts/build-ai-corpus.mjs",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test:ask": "node scripts/test-ask.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",

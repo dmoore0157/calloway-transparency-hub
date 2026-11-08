@@ -7,7 +7,7 @@ const html = fs.readFileSync(path.join(dist, 'app.html'), 'utf8');
 fs.rmSync(path.join(dist, 'app.html'));
 const base = (html.match(/<script type="module" crossorigin src="([^"]+)\/assets\//) || [, ''])[1] + '/';
 const read = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
-const audits = read('data/audits.json').audits, meetings = read('data/meetings.json').meetings, motions = read('data/motions.json').motions, members = read('data/members.json').members, lines = read('data/budget/fy2027.json').lines;
+const audits = read('data/audits.json').audits, elections = read('data/elections.json').elections, offices = read('data/officials.json').offices, meetings = read('data/meetings.json').meetings, motions = read('data/motions.json').motions, members = read('data/members.json').members, lines = read('data/budget/fy2027.json').lines;
 const routes = [
   ['money', 'County Budget', 'Where Calloway County money comes from and where it goes, FY2018 to FY2027.'],
   ['money/sources', 'Where the money comes from', 'Calloway County General Fund revenue by source.'],
@@ -26,9 +26,13 @@ const routes = [
   ['roads/report', 'Report a road problem', 'Report a pothole, washout, or drainage problem and get the county form pre-filled.'],
   ['roads/list', 'All road requests', 'Searchable list of resident road requests.'],
   ['roads/districts', 'Road requests by district', 'Open requests and response times by magistrate district.'],
-  ['accountability', 'Promises and commitments', 'What Calloway County officials promised and what happened.'],
-  ['accountability/all', 'All commitments', 'Every logged commitment.'],
-  ['accountability/methodology', 'How ratings work', 'The published rulebook for rating promises.'],
+  ['leaders', 'Leaders', 'Profiles of every elected official: votes, promises, audits and elections.'],
+  ['leaders/promises', 'Promise scoreboard', 'What Calloway County officials promised and what happened.'],
+  ['leaders/promises/all', 'All commitments', 'Every logged commitment.'],
+  ['leaders/methodology', 'How ratings work', 'The published rulebook for rating promises.'],
+  ['leaders/elections', 'Elections', 'Every county race, candidate and result.'],
+  ...elections.map((e) => [`leaders/elections/${e.id}`, `Calloway County ${e.label}`, `Every county race, candidate, vote total and result.`]),
+  ...offices.filter((o) => !o.current.member_id).map((o) => [`leaders/office/${o.id}`, `${o.current.name}, ${o.office}`, `Who holds the office, how they were elected, and the state audits of the office.`]),
   ['records', 'Reports and audits', 'The documents behind every number.'],
   ['records/audits', 'State audits of the Fiscal Court', 'Every state audit finding, the county response and whether it came back.'],
   ...audits.map((a) => [`records/audits/${a.fy}`, `FY${a.fy} state audit of the Fiscal Court`, `${a.findings.length} finding${a.findings.length === 1 ? '' : 's'}: ${a.findings.map((f) => f.title).join('; ') || 'none'}.`]),
@@ -36,8 +40,7 @@ const routes = [
   ['feedback', 'Feedback', 'Suggest improvements and vote on ideas.'], ['admin', 'Admin', 'Editor sign-in.'],
   ...meetings.map((m) => [`decisions/meetings/${m.id}`, `Fiscal Court meeting, ${m.date_label}`, m.summary[0]]),
   ...motions.map((m) => [`decisions/motions/${m.id}`, `Motion ${m.date}: ${m.text.slice(0, 80)}`, `${m.result_label}. Moved by ${m.mover ?? 'unknown'}${m.seconder ? `, seconded by ${m.seconder}` : ''}.`]),
-  ...members.map((m) => [`decisions/members/${m.id}`, `${m.full_name}, ${m.title}`, `Attendance, motions, seconds and recorded votes for ${m.full_name}.`]),
-  ...members.map((m) => [`accountability/${m.id}`, `${m.full_name}: promises and commitments`, `Commitments made by ${m.full_name} and what happened.`]),
+  ...members.map((m) => [`leaders/${m.id}`, `${m.full_name}, ${m.title}`, `Voting record, promises, audits and election results for ${m.full_name}.`]),
   ...lines.map((l) => [`money/lines/${encodeURIComponent(l.account)}`, `${l.name} (${l.fund})`, `Budget line ${l.account}: $${l.amount.toLocaleString()} in FY2026-27.`]),
 ];
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');

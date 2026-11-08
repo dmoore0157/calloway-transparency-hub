@@ -1,12 +1,11 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, Navigate } from 'react-router-dom';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 import { members, memberById, motions, meetings, links, CATEGORY_ORDER, rosterOn } from '../../lib/data';
 import { memberStats, moverSeconderMatrix } from '../../lib/analytics';
-import { Section, SourceNote, Empty, Crumb, ShareButton, Stat, Ext, ChartFrame } from '../../components/ui';
+import { Section, SourceNote, Empty, Stat, Ext, ChartFrame } from '../../components/ui';
 import { MotionRow } from '../../components/VoteBits';
 import { usd, dateShort } from '../../lib/format';
 import { palette, tooltipStyle } from '../../lib/palette';
-import { CommitmentSummary } from '../accountability/CommitmentSummary';
 
 export default function Members() {
   const stats = memberStats(); const matrix = moverSeconderMatrix(); const p = palette();
@@ -17,7 +16,7 @@ export default function Members() {
       <p className="lede">The members of the Fiscal Court since November 2021, with what the minutes record for each: attendance, motions made and seconded, and every nay or abstention. Counts sit side by side and are never ranked, because more motions is neither better nor worse.</p>
       <div className="grid cols-3">
         {stats.map((s) => { const m = memberById[s.id]; return (
-          <Link key={s.id} to={`/decisions/members/${s.id}`} className="linkcard" style={m.active === false ? { opacity: .85, borderTopColor: 'var(--line)' } : undefined}>
+          <Link key={s.id} to={`/leaders/${s.id}`} className="linkcard" style={m.active === false ? { opacity: .85, borderTopColor: 'var(--line)' } : undefined}>
             <div className="eyebrow">{m.title}{m.active === false && <span className="badge" style={{ marginLeft: 6 }}>Former</span>}</div><h3>{m.full_name}</h3>
             <div className="grid cols-2" style={{ gap: 6 }}>
               <div><div className="small muted">Motions made</div><strong style={{ fontSize: 20, fontFamily: 'var(--serif)' }}>{s.made}</strong></div>
@@ -56,9 +55,13 @@ export default function Members() {
 }
 import { Fragment as Fragment2 } from 'react';
 
-export function MemberPage() {
-  const { id = '' } = useParams(); const m = memberById[id];
-  if (!m) return <Empty>No member found. <Link to="/decisions/members">All members</Link></Empty>;
+/** The old member scorecard URL now lives inside the leader profile. */
+export function MemberPage() { const { id = '' } = useParams(); return <Navigate to={`/leaders/${id}`} replace />; }
+
+/** Voting record for one member: attendance, nays and abstentions, motions made and seconded. Rendered inside the leader profile. */
+export function VotingRecord({ id }: { id: string }) {
+  const m = memberById[id];
+  if (!m || m.incoming) return <Empty>No votes yet. {m?.full_name ?? 'This official'} has not sat on the Fiscal Court during the period the hub tracks (November 2021 onward).</Empty>;
   const s = memberStats().find((x) => x.id === id)!;
   const made = motions.filter((x) => x.mover === id && !x.is_routine); const seconded = motions.filter((x) => x.seconder === id && !x.is_routine);
   const dissent = motions.filter((x) => ['nay', 'abstain'].includes(x.votes[id]));
@@ -66,14 +69,11 @@ export function MemberPage() {
   const topics = Object.entries(s.byCategory).sort((a, b) => b[1] - a[1]);
   return (
     <>
-      <Crumb items={[{ to: '/decisions', label: 'Decisions' }, { to: '/decisions/members', label: 'Members' }, { label: m.full_name }]} />
-      <div className="row between"><div><div className="eyebrow">{m.title}{m.district ? ` · District ${m.district}` : ''}</div><h2>{m.full_name}</h2></div><ShareButton /></div>
       <div className="grid cols-4">
         <Stat label="Attendance" value={`${s.attended}/${s.total}`} sub={missed.length ? `Missed: ${missed.map((x) => dateShort(x.date)).join(', ')}` : 'Present at every tracked meeting'} />
         <Stat label="Motions made" value={s.made} sub="substantive only" /><Stat label="Motions seconded" value={s.seconded} />
         <Stat label="Nays and abstentions" value={`${s.nays} · ${s.abstentions}`} sub="the only individually recorded votes" color={dissent.length ? 'var(--accent)' : undefined} />
       </div>
-      <CommitmentSummary memberId={id} />
       <Section title="Recorded nays and abstentions" />
       {dissent.length === 0 ? <Empty>The minutes record no nay or abstention by {m.short_name} in the tracked period. Every other vote was a voice vote with all ayes.</Empty> : <ul className="list-reset grid">{dissent.map((x) => <MotionRow key={x.id} m={x} />)}</ul>}
       <Section title="Topics of motions made" />

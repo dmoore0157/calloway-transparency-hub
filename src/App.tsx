@@ -1,5 +1,7 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
+
+function RedirectWithParam({ to, param = 'id' }: { to: string; param?: string }) { const params = useParams(); return <Navigate to={to + (params[param] ?? '')} replace />; }
 import { Shell } from './components/Shell';
 import { ExplainProvider } from './components/Explain';
 import Home from './pages/Home';
@@ -20,8 +22,9 @@ import Ordinances from './pages/decisions/Ordinances';
 import WhoRepresentsMe from './pages/decisions/WhoRepresentsMe';
 import { RecordsLayout, Reports, Sources as RecordSources, Glossary, DataDownloads, Corrections, About } from './pages/records/Records';
 import { Audits, AuditPage } from './pages/records/Audits';
+import { LeadersLayout, Profiles, LeaderPage, OfficePage, Elections, ElectionPage } from './pages/leaders/Leaders';
 import Feedback, { IdeaPage } from './pages/feedback/Feedback';
-import { AccountabilityLayout, Scoreboard, AllCommitments, MemberCommitments, CommitmentPage, Methodology } from './pages/accountability/Accountability';
+import { Scoreboard, AllCommitments, CommitmentPage, Methodology } from './pages/accountability/Accountability';
 
 const RoadsLayout = lazy(() => import('./pages/roads/RoadsLayout'));
 const TicketMap = lazy(() => import('./pages/roads/TicketMap'));
@@ -60,9 +63,12 @@ export default function App() {
               <Route path="roads" element={<RoadsLayout />}>
                 <Route index element={<TicketMap />} /><Route path="report" element={<Report />} /><Route path="list" element={<TicketList />} /><Route path="districts" element={<Districts />} /><Route path="tickets/:id" element={<TicketPage />} />
               </Route>
-              <Route path="accountability" element={<AccountabilityLayout />}>
-                <Route index element={<Scoreboard />} /><Route path="all" element={<AllCommitments />} /><Route path="methodology" element={<Methodology />} /><Route path="commitments/:id" element={<CommitmentPage />} /><Route path=":memberId" element={<MemberCommitments />} />
+              <Route path="leaders" element={<LeadersLayout />}>
+                <Route index element={<Profiles />} /><Route path="promises" element={<Scoreboard />} /><Route path="promises/all" element={<AllCommitments />} /><Route path="methodology" element={<Methodology />} /><Route path="commitments/:id" element={<CommitmentPage />} />
+                <Route path="elections" element={<Elections />} /><Route path="elections/:id" element={<ElectionPage />} /><Route path="office/:id" element={<OfficePage />} /><Route path=":id" element={<LeaderPage />} />
               </Route>
+              <Route path="accountability" element={<Navigate to="/leaders/promises" replace />} /><Route path="accountability/all" element={<Navigate to="/leaders/promises/all" replace />} /><Route path="accountability/methodology" element={<Navigate to="/leaders/methodology" replace />} />
+              <Route path="accountability/commitments/:id" element={<RedirectWithParam to="/leaders/commitments/" />} /><Route path="accountability/:memberId" element={<RedirectWithParam to="/leaders/" param="memberId" />} />
               <Route path="records" element={<RecordsLayout />}>
                 <Route index element={<Reports />} /><Route path="audits" element={<Audits />} /><Route path="audits/:fy" element={<AuditPage />} /><Route path="sources" element={<RecordSources />} /><Route path="glossary" element={<Glossary />} /><Route path="data" element={<DataDownloads />} /><Route path="corrections" element={<Corrections />} /><Route path="about" element={<About />} />
               </Route>

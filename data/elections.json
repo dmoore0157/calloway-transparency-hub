@@ -1,0 +1,1019 @@
+{
+ "compiled": "2026-11-08",
+ "how_compiled": "Candidates, parties and filing dates come from the County Clerk’s filing lists. 2026 general-election counts are the Secretary of State’s unofficial county results, cross-checked against WKMS. 2026 primary percentages are as reported by the Murray Ledger & Times. 2022 totals are summed from the State Board of Elections’ official precinct report. Campaign links are listed for every candidate for whom one was found, and the hub links to each candidate’s published statements equally.",
+ "elections": [
+  {
+   "id": "2026-general",
+   "date": "2026-11-03",
+   "kind": "general",
+   "label": "General election, November 3, 2026",
+   "status": "Unofficial until the State Board of Elections certifies the results (due November 23, 2026)",
+   "ballots": null,
+   "sources": [
+    {
+     "label": "Kentucky Secretary of State, Calloway County unofficial results",
+     "url": "https://vrsws.sos.ky.gov/liveresults/County?id=20",
+     "kind": "official"
+    },
+    {
+     "label": "WKMS results page",
+     "url": "https://www.wkms.org/interactives-tools/2026-11-03/2026-general-election-results-calloway-county",
+     "kind": "news"
+    },
+    {
+     "label": "County Clerk, certified general election candidates",
+     "url": "https://callowaycoclerkky.gov/?page_id=2711",
+     "kind": "official"
+    },
+    {
+     "label": "Sample ballot (PDF)",
+     "url": "https://web.sos.ky.gov/ballots/Calloway%202026G.pdf",
+     "kind": "official"
+    }
+   ],
+   "notes": [
+    "County offices in Kentucky are elected every four years in the even year between presidential elections. Winners take office the first Monday of January 2027 and serve through 2030.",
+    "Unopposed candidates still appear on Kentucky ballots. Eight of the eleven county offices had one name on the ballot."
+   ],
+   "races": [
+    {
+     "office": "County Judge/Executive",
+     "district": null,
+     "open_seat": true,
+     "note": "Open seat: incumbent Kenny Imes lost the May Republican primary.",
+     "candidates": [
+      {
+       "name": "Paul W. Rister",
+       "party": "Republican",
+       "votes": 5822,
+       "pct": 51.65,
+       "result": "won",
+       "member_id": "rister",
+       "incumbent": false,
+       "filed": "2025-11-05",
+       "links": [
+        {
+         "label": "Campaign website",
+         "url": "https://paulrister.com/",
+         "kind": "campaign"
+        },
+        {
+         "label": "WKMS voter guide (general)",
+         "url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
+         "kind": "news"
+        },
+        {
+         "label": "WKMS voter guide (primary)",
+         "url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
+         "kind": "news"
+        },
+        {
+         "label": "Murray Sentinel candidate statement",
+         "url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
+         "kind": "news"
+        },
+        {
+         "label": "Murray State News questionnaire",
+         "url": "https://murraystatenews.org/206901/news/murray-and-calloway-county-candidate-questionnaire/",
+         "kind": "news"
+        }
+       ],
+       "note": "Sitting District 4 magistrate (since 2019); becomes Judge/Executive in January 2027.",
+       "statement": null
+      },
+      {
+       "name": "Boone F. Chambers",
+       "party": "Independent",
+       "votes": 4554,
+       "pct": 40.4,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": "2026-04-16",
+       "links": [
+        {
+         "label": "Campaign Facebook page",
+         "url": "https://www.facebook.com/BooneChambers2026/",
+         "kind": "campaign"
+        },
+        {
+         "label": "WKMS voter guide (general)",
+         "url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
+         "kind": "news"
+        },
+        {
+         "label": "Murray Sentinel candidate statement",
+         "url": "https://themurraysentinel.org/stories/boone-chambers-candidate-for-calloway-county-judge-executive,24508",
+         "kind": "news"
+        },
+        {
+         "label": "Murray State News questionnaire",
+         "url": "https://murraystatenews.org/206901/news/murray-and-calloway-county-candidate-questionnaire/",
+         "kind": "news"
+        }
+       ],
+       "note": "Local business owner and livestock farmer; qualified by petition.",
+       "statement": null
+      },
+      {
+       "name": "Gidget Manning",
+       "party": "Independent",
+       "votes": 896,
+       "pct": 7.95,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": "2026-03-26",
+       "links": [
+        {
+         "label": "WKMS voter guide (general)",
+         "url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
+         "kind": "news"
+        },
+        {
+         "label": "Murray Sentinel candidate statement",
+         "url": "https://themurraysentinel.org/stories/gidget-manning-candidate-for-calloway-county-judge-executive,24529",
+         "kind": "news"
+        },
+        {
+         "label": "Murray State News questionnaire",
+         "url": "https://murraystatenews.org/206901/news/murray-and-calloway-county-candidate-questionnaire/",
+         "kind": "news"
+        }
+       ],
+       "note": "Former county grant administrator and human-resources manager; qualified by petition.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Magistrate",
+     "district": 1,
+     "candidates": [
+      {
+       "name": "Ricky Stewart",
+       "party": "Republican",
+       "votes": 1856,
+       "pct": 100,
+       "result": "won",
+       "member_id": "stewart",
+       "incumbent": true,
+       "filed": "2025-11-07",
+       "links": [],
+       "note": "Unopposed.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Magistrate",
+     "district": 2,
+     "candidates": [
+      {
+       "name": "Larry G. Crutcher",
+       "party": "Republican",
+       "votes": 1759,
+       "pct": 100,
+       "result": "won",
+       "member_id": "crutcher",
+       "incumbent": true,
+       "filed": "2025-11-05",
+       "links": [],
+       "note": "Unopposed after winning the Republican primary.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Magistrate",
+     "district": 3,
+     "open_seat": true,
+     "note": "Incumbent Don Cherry lost the May Republican primary.",
+     "candidates": [
+      {
+       "name": "Cole Houston",
+       "party": "Republican",
+       "votes": 2773,
+       "pct": 100,
+       "result": "won",
+       "member_id": "houston",
+       "incumbent": false,
+       "filed": "2025-11-07",
+       "links": [],
+       "note": "Unopposed after defeating the incumbent in the primary.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Magistrate",
+     "district": 4,
+     "open_seat": true,
+     "note": "Open seat: Paul Rister ran for Judge/Executive instead of re-election.",
+     "candidates": [
+      {
+       "name": "Darrell Beane",
+       "party": "Republican",
+       "votes": 1798,
+       "pct": 68.65,
+       "result": "won",
+       "member_id": "beane",
+       "incumbent": false,
+       "filed": "2025-11-05",
+       "links": [
+        {
+         "label": "Murray State News questionnaire (did not respond)",
+         "url": "https://murraystatenews.org/206901/news/murray-and-calloway-county-candidate-questionnaire/",
+         "kind": "news"
+        }
+       ],
+       "note": "Did not submit answers to the Murray State News questionnaire; no campaign website found.",
+       "statement": null
+      },
+      {
+       "name": "Davin S. Tabers",
+       "party": "Democratic",
+       "votes": 821,
+       "pct": 31.35,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": "2025-12-31",
+       "links": [
+        {
+         "label": "Murray Sentinel candidate statement",
+         "url": "https://themurraysentinel.org/stories/davin-tabers-candidate-for-district-4-magistrate,24359",
+         "kind": "news"
+        },
+        {
+         "label": "Murray State News questionnaire",
+         "url": "https://murraystatenews.org/206901/news/murray-and-calloway-county-candidate-questionnaire/",
+         "kind": "news"
+        }
+       ],
+       "note": "Veteran and small-business owner.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "County Clerk",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Antonia D. Faulkner",
+       "party": "Democratic",
+       "votes": 8329,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": "2025-12-01",
+       "links": [],
+       "note": "Unopposed.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "County Attorney",
+     "district": null,
+     "candidates": [
+      {
+       "name": "K. Bryan Ernstberger",
+       "party": "Republican",
+       "votes": 8637,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": "2026-01-05",
+       "links": [],
+       "note": "Unopposed.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Sheriff",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Nicky J. Knight",
+       "party": "Republican",
+       "votes": 8807,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": "2025-11-05",
+       "links": [],
+       "note": "Unopposed.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Jailer",
+     "district": null,
+     "open_seat": true,
+     "note": "Incumbent Kenneth Claud (D) did not seek a fourth term; he ran for Murray City Council instead.",
+     "candidates": [
+      {
+       "name": "Bradley Wayne Rowland",
+       "party": "Republican",
+       "votes": 8527,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": false,
+       "filed": "2025-11-05",
+       "links": [
+        {
+         "label": "Campaign email domain: electrowlandforjailer.com",
+         "url": "https://electrowlandforjailer.com/",
+         "kind": "campaign"
+        }
+       ],
+       "note": "Deputy jailer; unopposed after a three-way Republican primary.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Coroner",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Ricky Garland",
+       "party": "Republican",
+       "votes": 8735,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": "2025-11-05",
+       "links": [],
+       "note": "Unopposed. Ran as a Democrat in 2022.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Property Valuation Administrator",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Nikki McMillen-Crouch",
+       "party": "Republican",
+       "votes": 8598,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": "2025-11-10",
+       "links": [],
+       "note": "Unopposed. Ran as a Democrat in 2022.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Constable",
+     "district": 1,
+     "candidates": [
+      {
+       "name": "Jedediah \"Levi\" Lamb",
+       "party": "Republican",
+       "votes": 1756,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": "2025-12-12",
+       "links": [],
+       "note": "Unopposed.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Constable",
+     "district": 2,
+     "candidates": [],
+     "note": "No candidate filed. Nine write-in votes were cast."
+    },
+    {
+     "office": "Constable",
+     "district": 3,
+     "candidates": [
+      {
+       "name": "Tim Stone",
+       "party": "Democratic",
+       "votes": 2221,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": "2026-01-05",
+       "links": [],
+       "note": "Unopposed.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Constable",
+     "district": 4,
+     "candidates": [
+      {
+       "name": "Chesley Thomas",
+       "party": "Republican",
+       "votes": 1622,
+       "pct": 64.98,
+       "result": "won",
+       "member_id": null,
+       "incumbent": false,
+       "filed": "2026-01-09",
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Brandon Jay Eldridge",
+       "party": "Democratic",
+       "votes": 874,
+       "pct": 35.02,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": true,
+       "filed": "2026-01-07",
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "District Judge, 42nd Judicial District",
+     "district": null,
+     "nonpartisan": true,
+     "candidates": [
+      {
+       "name": "Chris Hendricks",
+       "party": "Nonpartisan",
+       "votes": 6652,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": false,
+       "filed": null,
+       "links": [
+        {
+         "label": "Campaign website",
+         "url": "https://votechrishendricks.com/",
+         "kind": "campaign"
+        }
+       ],
+       "note": "Unopposed; succeeds Randall Hutchens.",
+       "statement": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2026-primary",
+   "date": "2026-05-19",
+   "kind": "primary",
+   "label": "Primary election, May 19, 2026",
+   "status": "Results certified by the Calloway County Board of Elections",
+   "ballots": 5041,
+   "ballots_note": "About 5,041 ballots were cast, roughly 18% of registered Republicans and Democrats (County Clerk estimate reported by the Murray Ledger & Times).",
+   "sources": [
+    {
+     "label": "Murray Ledger & Times results story",
+     "url": "https://www.murrayledger.com/news/rister-wins-republican-primary-for-judge-executive/article_589268de-7463-48e5-aeec-5f4132b89fe9.html",
+     "kind": "news"
+    },
+    {
+     "label": "West Kentucky Star",
+     "url": "http://westkentuckystar.com/News/Local-Regional/Rister-wins-Judge-Executive-nomination-in-Calloway",
+     "kind": "news"
+    },
+    {
+     "label": "County Clerk, 2026 candidate filings",
+     "url": "https://callowaycoclerkky.gov/?page_id=2176",
+     "kind": "official"
+    },
+    {
+     "label": "Sample ballot (PDF)",
+     "url": "https://web.sos.ky.gov/ballots/Calloway%202026P.pdf",
+     "kind": "official"
+    }
+   ],
+   "notes": [
+    "Only Republican primaries were contested for county offices; Democratic and independent candidates had no primary. Kentucky primaries are closed, so only registered Republicans could vote in these races.",
+    "Vote counts for the county races were not posted on the Secretary of State results site; percentages are from the Murray Ledger & Times, which reported the West Kentucky Star’s figure of a margin of nearly 700 votes in the Judge/Executive race."
+   ],
+   "races": [
+    {
+     "office": "County Judge/Executive (Republican primary)",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Paul W. Rister",
+       "party": "Republican",
+       "votes": null,
+       "pct": 61.49,
+       "result": "won",
+       "member_id": "rister",
+       "incumbent": false,
+       "filed": "2025-11-05",
+       "links": [
+        {
+         "label": "Campaign website",
+         "url": "https://paulrister.com/",
+         "kind": "campaign"
+        },
+        {
+         "label": "WKMS voter guide (general)",
+         "url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
+         "kind": "news"
+        },
+        {
+         "label": "WKMS voter guide (primary)",
+         "url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
+         "kind": "news"
+        },
+        {
+         "label": "Murray Sentinel candidate statement",
+         "url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
+         "kind": "news"
+        },
+        {
+         "label": "Murray State News questionnaire",
+         "url": "https://murraystatenews.org/206901/news/murray-and-calloway-county-candidate-questionnaire/",
+         "kind": "news"
+        }
+       ],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Kenny Imes",
+       "party": "Republican",
+       "votes": null,
+       "pct": 38.51,
+       "result": "lost",
+       "member_id": "imes",
+       "incumbent": true,
+       "filed": "2025-11-13",
+       "links": [
+        {
+         "label": "WKMS voter guide (primary)",
+         "url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
+         "kind": "news"
+        }
+       ],
+       "note": "Judge/Executive since 2018, seeking a third term.",
+       "statement": null
+      },
+      {
+       "name": "Valerie \"Dr. Val\" Fredrick",
+       "party": "Republican",
+       "votes": null,
+       "pct": null,
+       "result": "withdrew",
+       "member_id": null,
+       "incumbent": false,
+       "filed": null,
+       "links": [],
+       "note": "Withdrew before the primary.",
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Jailer (Republican primary)",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Bradley Wayne Rowland",
+       "party": "Republican",
+       "votes": null,
+       "pct": 42.48,
+       "result": "won",
+       "member_id": null,
+       "incumbent": false,
+       "filed": "2025-11-05",
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Mark A. McCuiston",
+       "party": "Republican",
+       "votes": null,
+       "pct": 32.49,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": "2025-11-07",
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Shane M. Henley",
+       "party": "Republican",
+       "votes": null,
+       "pct": 25.03,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": "2025-11-05",
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ],
+     "note": "All three candidates were deputy jailers."
+    },
+    {
+     "office": "Magistrate (Republican primary)",
+     "district": 2,
+     "candidates": [
+      {
+       "name": "Larry G. Crutcher",
+       "party": "Republican",
+       "votes": null,
+       "pct": 58.08,
+       "result": "won",
+       "member_id": "crutcher",
+       "incumbent": true,
+       "filed": "2025-11-05",
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Kenneth Reynolds",
+       "party": "Republican",
+       "votes": null,
+       "pct": 41.92,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": "2025-11-05",
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Magistrate (Republican primary)",
+     "district": 3,
+     "candidates": [
+      {
+       "name": "Cole Houston",
+       "party": "Republican",
+       "votes": null,
+       "pct": 55.78,
+       "result": "won",
+       "member_id": "houston",
+       "incumbent": false,
+       "filed": "2025-11-07",
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Donald N. \"Don\" Cherry",
+       "party": "Republican",
+       "votes": null,
+       "pct": 44.22,
+       "result": "lost",
+       "member_id": "cherry",
+       "incumbent": true,
+       "filed": "2025-11-17",
+       "links": [],
+       "note": "Incumbent since 2015.",
+       "statement": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2022-general",
+   "date": "2022-11-08",
+   "kind": "general",
+   "label": "General election, November 8, 2022",
+   "status": "Official (State Board of Elections)",
+   "ballots": 11960,
+   "sources": [
+    {
+     "label": "Kentucky State Board of Elections, official precinct results report (PDF)",
+     "url": "https://elect.ky.gov/results/2020-2029/2022ElectionReports/GeneralRecaps/Calloway%20County.pdf",
+     "kind": "official"
+    }
+   ],
+   "notes": [
+    "Countywide totals were summed by the hub from the 23 precinct pages of the official report; the ballots-cast total matches the report’s 11,960."
+   ],
+   "races": [
+    {
+     "office": "County Judge/Executive",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Kenny Imes",
+       "party": "Republican",
+       "votes": 8889,
+       "pct": 100,
+       "result": "won",
+       "member_id": "imes",
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Magistrate",
+     "district": 1,
+     "open_seat": true,
+     "note": "Eddie Clyde Hale did not run again.",
+     "candidates": [
+      {
+       "name": "Ricky Stewart",
+       "party": "Republican",
+       "votes": 1625,
+       "pct": 64.3,
+       "result": "won",
+       "member_id": "stewart",
+       "incumbent": false,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Phillip Lynn Rogers",
+       "party": "Democratic",
+       "votes": 901,
+       "pct": 35.7,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Magistrate",
+     "district": 2,
+     "candidates": [
+      {
+       "name": "Larry Crutcher",
+       "party": "Republican",
+       "votes": 1472,
+       "pct": 62.0,
+       "result": "won",
+       "member_id": "crutcher",
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Mark A. Mallory",
+       "party": "Democratic",
+       "votes": 902,
+       "pct": 38.0,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Magistrate",
+     "district": 3,
+     "candidates": [
+      {
+       "name": "Don Cherry",
+       "party": "Republican",
+       "votes": 3029,
+       "pct": 100,
+       "result": "won",
+       "member_id": "cherry",
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Magistrate",
+     "district": 4,
+     "candidates": [
+      {
+       "name": "Paul W. Rister",
+       "party": "Republican",
+       "votes": 2085,
+       "pct": 100,
+       "result": "won",
+       "member_id": "rister",
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "County Clerk",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Antonia Dunn Faulkner",
+       "party": "Democratic",
+       "votes": 7563,
+       "pct": 64.5,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "James M. \"Mike\" Tinsley",
+       "party": "Republican",
+       "votes": 4170,
+       "pct": 35.5,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "County Attorney",
+     "district": null,
+     "candidates": [
+      {
+       "name": "K. Bryan Ernstberger",
+       "party": "Republican",
+       "votes": 8581,
+       "pct": 73.1,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Madison Leach",
+       "party": "Democratic",
+       "votes": 3156,
+       "pct": 26.9,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Sheriff",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Nicky J. Knight",
+       "party": "Republican",
+       "votes": 8083,
+       "pct": 68.5,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "Danny Williams",
+       "party": "Democratic",
+       "votes": 3715,
+       "pct": 31.5,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Jailer",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Kenneth L. Claud",
+       "party": "Democratic",
+       "votes": 5944,
+       "pct": 51.7,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      },
+      {
+       "name": "William Zachary Lamb",
+       "party": "Republican",
+       "votes": 5544,
+       "pct": 48.3,
+       "result": "lost",
+       "member_id": null,
+       "incumbent": false,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Coroner",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Ricky Garland",
+       "party": "Democratic",
+       "votes": 8391,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    },
+    {
+     "office": "Property Valuation Administrator",
+     "district": null,
+     "candidates": [
+      {
+       "name": "Nikki McMillen-Crouch",
+       "party": "Democratic",
+       "votes": 8003,
+       "pct": 100,
+       "result": "won",
+       "member_id": null,
+       "incumbent": true,
+       "filed": null,
+       "links": [],
+       "note": null,
+       "statement": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

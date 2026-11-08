@@ -26,5 +26,13 @@ for (const a of auditsDoc.audits) {
 }
 for (const a of auditsDoc.audits) for (const f of a.findings) if (f.repeat_of && !findingIds.has(f.repeat_of)) errors.push(`finding ${f.id} repeats unknown ${f.repeat_of}`);
 for (const c of auditsDoc.chains) for (const id of c.ids) if (!findingIds.has(id)) errors.push(`chain ${c.key} references unknown finding ${id}`);
+const el = read('data/elections.json'); const off = read('data/officials.json'); const allIds = new Set(members.map((m) => m.id));
+for (const e of el.elections) for (const r of e.races) {
+  if (r.candidates.filter((c) => c.result === 'won').length > 1) errors.push(`${e.id} ${r.office} ${r.district ?? ''}: more than one winner`);
+  for (const c of r.candidates) { if (c.member_id && !allIds.has(c.member_id)) errors.push(`${e.id}: candidate ${c.name} references unknown member ${c.member_id}`); if (c.votes != null && c.pct == null) errors.push(`${e.id}: ${c.name} has votes but no percentage`); for (const l of c.links) if (!l.url.startsWith('http')) errors.push(`${e.id}: bad link for ${c.name}`); }
+  const tot = r.candidates.reduce((s, c) => s + (c.votes ?? 0), 0); for (const c of r.candidates) if (c.votes != null && tot && Math.abs(c.votes / tot * 100 - c.pct) > 0.6) errors.push(`${e.id}: ${c.name} percentage does not match votes`);
+}
+for (const o of off.offices) { for (const h of [o.current, o.incoming].filter(Boolean)) if (h.member_id && !allIds.has(h.member_id)) errors.push(`office ${o.id} references unknown member ${h.member_id}`); }
+for (const m of members) if (m.incoming && (!m.term_start || m.term_start <= '2026-11-08')) errors.push(`incoming member ${m.id} needs a future term_start`);
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
-console.log(`data ok: ${meetings.length} meetings, ${motions.length} motions, ${fy.lines.length} budget lines, ${auditsDoc.audits.length} audits with ${findingIds.size} findings`);
+console.log(`data ok: ${meetings.length} meetings, ${motions.length} motions, ${fy.lines.length} budget lines, ${auditsDoc.audits.length} audits with ${findingIds.size} findings, ${el.elections.length} elections, ${off.offices.length} offices`);

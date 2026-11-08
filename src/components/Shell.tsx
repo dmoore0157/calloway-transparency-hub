@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { Landmark, Gavel, Construction, FolderOpen, MessageSquarePlus, Search, Menu, X, Scale } from 'lucide-react';
+import { Landmark, Gavel, Construction, FolderOpen, MessageSquarePlus, Search, Menu, X, Users } from 'lucide-react';
 import { SearchBox } from './Search';
 import { recall, remember } from '../lib/device';
 
@@ -8,7 +8,7 @@ export const DOORS = [
   { to: '/money', label: 'Money', icon: Landmark, blurb: 'Budget, spending, revenue, grants, debt' },
   { to: '/decisions', label: 'Decisions', icon: Gavel, blurb: 'Meetings, votes, who represents you' },
   { to: '/roads', label: 'Roads', icon: Construction, blurb: 'Report a road problem and track it' },
-  { to: '/accountability', label: 'Promises', icon: Scale, blurb: 'Commitments made, kept, or broken' },
+  { to: '/leaders', label: 'Leaders', icon: Users, blurb: 'Profiles, promises, elections' },
   { to: '/records', label: 'Records', icon: FolderOpen, blurb: 'Audits, sources, glossary, downloads' },
 ];
 

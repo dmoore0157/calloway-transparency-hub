@@ -8,6 +8,7 @@ import { overview, meetings, motions, memberById } from '../lib/data';
 import { usd, dateLong } from '../lib/format';
 import { recordedVotes } from '../lib/analytics';
 import { LiveTicketsStrip } from './roads/LiveTicketsStrip';
+import { ElectionStrip } from './leaders/Leaders';
 
 const QUESTIONS: [string, string][] = [
   ['How much did the county spend last year?', '/money'],
@@ -15,7 +16,8 @@ const QUESTIONS: [string, string][] = [
   ['How did my magistrate vote?', '/decisions/members'],
   ['Where does my property tax go?', '/money/where-it-goes'],
   ['How do I report a pothole or washout?', '/roads/report'],
-  ['Which promises have officials kept?', '/accountability'],
+  ['Who won the 2026 county elections?', '/leaders/elections'],
+  ['Which promises have officials kept?', '/leaders/promises'],
 ];
 
 export default function Home() {
@@ -56,6 +58,9 @@ export default function Home() {
         <ul style={{ margin: 0, paddingLeft: 18, display: 'grid', gap: 6, fontSize: 14 }}>{last.summary.slice(0, 5).map((b, i) => <li key={i}>{b}</li>)}</ul>
         <p className="small muted" style={{ margin: '10px 0 0' }}>{lastMotions.length} substantive motions{lastMotions.length ? `, moved most often by ${topMover(lastMotions.map((m) => m.mover))}` : ''}. <a href={last.minutes_url} target="_blank" rel="noopener noreferrer">Official minutes (PDF)</a></p>
       </div>
+
+      <Section title="Leadership is changing" action={<Link to="/leaders" className="small">All leaders ›</Link>} />
+      <ElectionStrip />
 
       <LiveTicketsStrip />
 

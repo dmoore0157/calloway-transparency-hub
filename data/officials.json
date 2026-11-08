@@ -1,0 +1,360 @@
+{
+ "source": "Calloway County elected officials page (callowaycountyky.gov), County Clerk filings, 2022 and 2026 election results, Kentucky Auditor of Public Accounts released-audits list.",
+ "officials_url": "https://callowaycountyky.gov/elected-officials/",
+ "compiled": "2026-11-08",
+ "term_note": "Kentucky county officers elected in November 2026 take office on the first Monday in January 2027 and serve four years.",
+ "offices": [
+  {
+   "id": "judge-executive",
+   "office": "County Judge/Executive",
+   "body": "Fiscal Court",
+   "what": "Chief executive of county government: prepares the budget, runs day-to-day operations, presides over the Fiscal Court, signs contracts and appoints board members (subject to court approval).",
+   "current": {
+    "member_id": "imes",
+    "name": "Kenny Imes",
+    "party": "Republican",
+    "since": "2018",
+    "term_end": "2027-01-03",
+    "phone": "270-753-2920",
+    "address": "201 South 4th Street, Murray, KY 42071",
+    "note": "Lost the May 2026 Republican primary; term ends in January 2027."
+   },
+   "incoming": {
+    "member_id": "rister",
+    "name": "Paul W. Rister",
+    "party": "Republican",
+    "takes_office": "2027-01-04",
+    "term_end": "2030-12-31"
+   },
+   "audits": [
+    {
+     "label": "Fiscal Court audits",
+     "href": "/records/audits"
+    }
+   ]
+  },
+  {
+   "id": "magistrate-1",
+   "office": "Magistrate, District 1",
+   "body": "Fiscal Court",
+   "what": "One of four magistrates who, with the Judge/Executive, make up the Fiscal Court: adopt the budget and tax rates, approve claims, pass ordinances and set county policy.",
+   "current": {
+    "member_id": "stewart",
+    "name": "Ricky Stewart",
+    "party": "Republican",
+    "since": "2023",
+    "term_end": "2030-12-31",
+    "phone": "270-293-1195",
+    "address": "201 South 4th Street, Murray, KY 42071",
+    "note": "Re-elected unopposed in 2026."
+   },
+   "incoming": null
+  },
+  {
+   "id": "magistrate-2",
+   "office": "Magistrate, District 2",
+   "body": "Fiscal Court",
+   "what": "One of four magistrates who, with the Judge/Executive, make up the Fiscal Court: adopt the budget and tax rates, approve claims, pass ordinances and set county policy.",
+   "current": {
+    "member_id": "crutcher",
+    "name": "Larry Crutcher",
+    "party": "Republican",
+    "since": "2015",
+    "term_end": "2030-12-31",
+    "phone": "270-436-2645",
+    "address": "201 South 4th Street, Murray, KY 42071",
+    "note": "Re-elected in 2026 after a contested primary."
+   },
+   "incoming": null
+  },
+  {
+   "id": "magistrate-3",
+   "office": "Magistrate, District 3",
+   "body": "Fiscal Court",
+   "what": "One of four magistrates who, with the Judge/Executive, make up the Fiscal Court: adopt the budget and tax rates, approve claims, pass ordinances and set county policy.",
+   "current": {
+    "member_id": "cherry",
+    "name": "Don Cherry",
+    "party": "Republican",
+    "since": "2015",
+    "term_end": "2027-01-03",
+    "phone": "270-293-0445",
+    "address": "201 South 4th Street, Murray, KY 42071",
+    "note": "Lost the May 2026 Republican primary; term ends in January 2027."
+   },
+   "incoming": {
+    "member_id": "houston",
+    "name": "Cole Houston",
+    "party": "Republican",
+    "takes_office": "2027-01-04",
+    "term_end": "2030-12-31"
+   }
+  },
+  {
+   "id": "magistrate-4",
+   "office": "Magistrate, District 4",
+   "body": "Fiscal Court",
+   "what": "One of four magistrates who, with the Judge/Executive, make up the Fiscal Court: adopt the budget and tax rates, approve claims, pass ordinances and set county policy.",
+   "current": {
+    "member_id": "rister",
+    "name": "Paul Rister",
+    "party": "Republican",
+    "since": "2019",
+    "term_end": "2027-01-03",
+    "phone": "270-293-5455",
+    "address": "201 South 4th Street, Murray, KY 42071",
+    "note": "Elected Judge/Executive in November 2026; leaves this seat in January 2027."
+   },
+   "incoming": {
+    "member_id": "beane",
+    "name": "Darrell Beane",
+    "party": "Republican",
+    "takes_office": "2027-01-04",
+    "term_end": "2030-12-31"
+   }
+  },
+  {
+   "id": "county-clerk",
+   "office": "County Clerk",
+   "body": "Fee office",
+   "what": "Runs elections, vehicle registration and titles, land records, marriage licenses and the Fiscal Court’s minutes. Funded by fees; audited separately by the state each year.",
+   "current": {
+    "member_id": null,
+    "name": "Antonia Faulkner",
+    "party": "Democratic",
+    "since": "2015",
+    "term_end": "2030-12-31",
+    "phone": "270-753-3923",
+    "address": "101 South 5th Street (Old Courthouse, 2nd floor), Murray, KY 42071",
+    "url": "https://callowaycoclerkky.gov/",
+    "note": "Re-elected unopposed in 2026."
+   },
+   "incoming": null,
+   "audits": [
+    {
+     "year": 2024,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2024CallowayFEC-audit.pdf",
+     "label": "County Clerk fee audit, 2024"
+    },
+    {
+     "year": 2023,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2023CallowayFEC-audit.pdf",
+     "label": "County Clerk fee audit, 2023"
+    },
+    {
+     "year": 2022,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2022CallowayFEC-audit.pdf",
+     "label": "County Clerk fee audit, 2022"
+    },
+    {
+     "year": 2021,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2021CallowayFEC-audit.pdf",
+     "label": "County Clerk fee audit, 2021"
+    },
+    {
+     "year": 2020,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2020CallowayFEC-audit.pdf",
+     "label": "County Clerk fee audit, 2020"
+    },
+    {
+     "year": 2019,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2019CallowayFEC-audit.pdf",
+     "label": "County Clerk fee audit, 2019"
+    },
+    {
+     "year": 2018,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2018CallowayFEC-audit.pdf",
+     "label": "County Clerk fee audit, 2018"
+    }
+   ]
+  },
+  {
+   "id": "county-attorney",
+   "office": "County Attorney",
+   "body": "Fee office",
+   "what": "Legal adviser to the Fiscal Court and county officials; prosecutes misdemeanors in District Court; collects delinquent taxes and child support.",
+   "current": {
+    "member_id": null,
+    "name": "K. Bryan Ernstberger",
+    "party": "Republican",
+    "since": "2019",
+    "term_end": "2030-12-31",
+    "phone": "270-753-3312",
+    "address": "204 South 6th Street, Murray, KY 42071",
+    "note": "Re-elected unopposed in 2026."
+   },
+   "incoming": null
+  },
+  {
+   "id": "sheriff",
+   "office": "Sheriff",
+   "body": "Fee office",
+   "what": "Law enforcement, court security and collection of property taxes. Funded by fees and a Fiscal Court contribution; the state audits the fee account and the tax settlement every year.",
+   "current": {
+    "member_id": null,
+    "name": "Nicky J. Knight",
+    "party": "Republican",
+    "since": "2019",
+    "term_end": "2030-12-31",
+    "phone": "270-753-3151",
+    "address": "701 Olive Street, Murray, KY 42071",
+    "note": "Re-elected unopposed in 2026."
+   },
+   "incoming": null,
+   "audits": [
+    {
+     "year": 2024,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2024CallowayFES-audit.pdf",
+     "label": "Sheriff fee audit, 2024"
+    },
+    {
+     "year": 2023,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2023CallowayFES-audit.pdf",
+     "label": "Sheriff fee audit, 2023"
+    },
+    {
+     "year": 2022,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2022CallowayFES-audit.pdf",
+     "label": "Sheriff fee audit, 2022"
+    },
+    {
+     "year": 2021,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2021CallowayFES-audit.pdf",
+     "label": "Sheriff fee audit, 2021"
+    },
+    {
+     "year": 2024,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2024CallowaySTS-audit.pdf",
+     "label": "Sheriff tax settlement audit, 2024"
+    },
+    {
+     "year": 2023,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2023CallowaySTS-audit.pdf",
+     "label": "Sheriff tax settlement audit, 2023"
+    },
+    {
+     "year": 2022,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2022CallowaySTS-audit.pdf",
+     "label": "Sheriff tax settlement audit, 2022"
+    },
+    {
+     "year": 2021,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2021CallowaySTS-audit.pdf",
+     "label": "Sheriff tax settlement audit, 2021"
+    },
+    {
+     "year": 2020,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2020CallowaySTS-audit.pdf",
+     "label": "Sheriff tax settlement audit, 2020"
+    }
+   ]
+  },
+  {
+   "id": "jailer",
+   "office": "Jailer",
+   "body": "County office",
+   "what": "Runs the Calloway County Jail. The jail is the county’s largest cost center after roads and is funded mainly by transfers from the General Fund.",
+   "current": {
+    "member_id": null,
+    "name": "Kenneth Claud",
+    "party": "Democratic",
+    "since": "2015",
+    "term_end": "2027-01-03",
+    "phone": "270-753-6150",
+    "address": "310 North 4th Street, Murray, KY 42071",
+    "note": "Did not seek re-election; elected to Murray City Council in November 2026."
+   },
+   "incoming": {
+    "member_id": null,
+    "name": "Bradley Wayne Rowland",
+    "party": "Republican",
+    "takes_office": "2027-01-04",
+    "term_end": "2030-12-31"
+   }
+  },
+  {
+   "id": "coroner",
+   "office": "Coroner",
+   "body": "County office",
+   "what": "Investigates deaths that are sudden, unexplained or outside medical care.",
+   "current": {
+    "member_id": null,
+    "name": "Ricky Garland",
+    "party": "Republican",
+    "since": "2015",
+    "term_end": "2030-12-31",
+    "phone": "270-759-9770",
+    "address": "116 North 7th Street, PO Box 525, Murray, KY 42071",
+    "note": "Re-elected unopposed in 2026; ran as a Democrat in 2022."
+   },
+   "incoming": null
+  },
+  {
+   "id": "pva",
+   "office": "Property Valuation Administrator",
+   "body": "State-county office",
+   "what": "Assesses the value of every property in the county for tax purposes. The Fiscal Court sets the rate; the PVA sets the value.",
+   "current": {
+    "member_id": null,
+    "name": "Nikki McMillen-Crouch",
+    "party": "Republican",
+    "since": "2019",
+    "term_end": "2030-12-31",
+    "phone": "270-753-3482",
+    "address": "101 South 5th Street (Old Courthouse, 1st floor), Murray, KY 42071",
+    "note": "Re-elected unopposed in 2026; ran as a Democrat in 2022."
+   },
+   "incoming": null,
+   "audits": [
+    {
+     "year": 2023,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2023CallowayPVA.pdf",
+     "label": "PVA audit, 2023"
+    },
+    {
+     "year": 2019,
+     "report": "https://www.auditor.ky.gov/Auditreports/Calloway/2019CallowayPVA-audit.pdf",
+     "label": "PVA agreed-upon procedures, 2019"
+    }
+   ]
+  },
+  {
+   "id": "circuit-clerk",
+   "office": "Circuit Court Clerk",
+   "body": "Court system",
+   "what": "Keeps the records of Circuit and District Court and issues driver’s licenses. A state court office, elected for six years; not on the 2026 ballot.",
+   "current": {
+    "member_id": null,
+    "name": "Melinda Starks",
+    "party": null,
+    "since": null,
+    "term_end": null,
+    "phone": "270-753-2714",
+    "address": "312 North 4th Street, Murray, KY 42071"
+   },
+   "incoming": null
+  },
+  {
+   "id": "district-judge",
+   "office": "District Judge, 42nd Judicial District",
+   "body": "Court system",
+   "what": "Hears misdemeanors, traffic, small claims, juvenile and probate cases. Nonpartisan.",
+   "current": {
+    "member_id": null,
+    "name": "Randall Hutchens",
+    "party": "Nonpartisan",
+    "since": null,
+    "term_end": "2027-01-03",
+    "phone": "270-753-0060",
+    "address": "312 North 4th Street, Murray, KY 42071"
+   },
+   "incoming": {
+    "member_id": null,
+    "name": "Chris Hendricks",
+    "party": "Nonpartisan",
+    "takes_office": "2027-01-04",
+    "term_end": "2034-12-31"
+   }
+  }
+ ]
+}

@@ -42,6 +42,26 @@ Fund line detail those pages use. The county and Auditor sites block non-browser
 browser-based fetch and transcribed by hand; `scripts/check-data.mjs` checks the totals reconcile and every repeat and chain
 reference resolves.
 
+### Leaders, elections and the 2027 turnover (November 2026)
+
+The Promises door became **Leaders** (`/leaders`): one profile per elected official that joins the voting record, the
+commitments tracker, the state audits covering the years they served, and their election history. The old
+`/accountability/*` and `/decisions/members/:id` URLs redirect. `data/officials.json` lists every county office with the
+current holder, contact details from the county site, the incoming officeholder where the 2026 election changed it, and
+links to the state's fee-office audits (clerk, sheriff, PVA). `data/elections.json` holds the 2022 general, 2026 primary and
+2026 general county races with candidates, parties, filing dates, votes, percentages, statuses and links to each candidate's
+published statements (WKMS and Murray Sentinel voter guides, Murray State News questionnaire, campaign sites). Sources:
+Secretary of State unofficial results, WKMS, the County Clerk's filing lists, the Murray Ledger & Times (primary
+percentages) and the State Board of Elections 2022 precinct report (summed; ballots reconcile to 11,960).
+
+Roster: `data/members.json` adds Cole Houston (District 3) and Darrell Beane (District 4) as members-elect with
+`incoming: true` and a 2027-01-04 term start, so they are excluded from vote analytics until they take office; Imes and
+Cherry carry a 2027-01-03 term end; Rister carries `next_role` (Judge-Executive). The same changes were applied to
+`hub.members`, with `hub.candidacies` for 2022 and 2026 and eight published commitments (seven campaign promises of the
+incoming Judge/Executive from the WKMS and Sentinel voter guides, one in-office commitment of the outgoing Judge/Executive),
+each with the measure written at intake. Neutrality: every candidate in every race is listed with the same fields and links,
+winners and losers alike; nothing on the hub recommends a candidate.
+
 ### Decisions so far
 
 | Topic | Decision (Nov 2026) |

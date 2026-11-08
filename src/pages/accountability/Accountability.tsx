@@ -1,5 +1,4 @@
-import { Link, NavLink, Outlet, useParams } from 'react-router-dom';
-import { Meta } from '../../components/Meta';
+import { Link, useParams } from 'react-router-dom';
 import { Section, Empty, Crumb, ShareButton, StatusBadge, Ext, SourceNote } from '../../components/ui';
 import { api, type Commitment } from '../../lib/api';
 import { useAsync } from '../../lib/useAsync';
@@ -7,15 +6,6 @@ import { backendReady } from '../../lib/supabase';
 import { members, memberById, meetingById } from '../../lib/data';
 import { dateLong, dateShort } from '../../lib/format';
 import { FlagButton } from '../../components/FlagButton';
-
-export function AccountabilityLayout() {
-  return (<>
-    <Meta title="Promises" description="Commitments Calloway County officials made, on the campaign trail and in office, and what happened to each one." />
-    <div className="eyebrow">Promises and commitments</div><h1 style={{ marginTop: 4 }}>What officials said, and what happened</h1>
-    <nav className="subnav" aria-label="Promises sections">{[['/accountability', 'Scoreboard'], ['/accountability/all', 'All commitments'], ['/accountability/methodology', 'How ratings work']].map(([to, l]) => <NavLink key={to} to={to} end={to === '/accountability'} className={({ isActive }) => (isActive ? 'active' : '')}>{l}</NavLink>)}</nav>
-    <Outlet />
-  </>);
-}
 
 export function Scoreboard() {
   const { data: scores, loading } = useAsync(() => api.scores(), [], []);
@@ -30,12 +20,12 @@ export function Scoreboard() {
         <div className="card"><p style={{ margin: 0 }}><strong>No official is ranked yet.</strong> An official appears in the ranking only after five of their scoreable commitments have been resolved as Kept, Compromise, or Broken, so a single early result can't top the table. Commitments are being gathered from the 2026 campaign and from Fiscal Court minutes; each appears below as it is logged.</p></div>
       ) : (
         <div className="table-wrap"><table className="data"><thead><tr><th>#</th><th>Official</th><th className="num">Score</th><th className="num">Kept</th><th className="num">Compromise</th><th className="num">Broken</th><th className="num">Pending</th></tr></thead>
-          <tbody>{ranked.map((s, i) => <tr key={s.member_id}><td>{i + 1}</td><td><Link to={`/accountability/${s.member_id}`}>{s.full_name}</Link> <span className="small muted">{memberById[s.member_id]?.title}</span></td><td className="num"><strong>{Math.round((s.score ?? 0) * 100)}%</strong> <span className="tiny muted">of {s.resolved}</span></td><td className="num">{s.kept}</td><td className="num">{s.compromise}</td><td className="num">{s.broken}</td><td className="num">{s.pending}</td></tr>)}</tbody></table></div>
+          <tbody>{ranked.map((s, i) => <tr key={s.member_id}><td>{i + 1}</td><td><Link to={`/leaders/${s.member_id}`}>{s.full_name}</Link> <span className="small muted">{memberById[s.member_id]?.title}</span></td><td className="num"><strong>{Math.round((s.score ?? 0) * 100)}%</strong> <span className="tiny muted">of {s.resolved}</span></td><td className="num">{s.kept}</td><td className="num">{s.compromise}</td><td className="num">{s.broken}</td><td className="num">{s.pending}</td></tr>)}</tbody></table></div>
       )}
-      <p className="tiny muted">Score = (kept + ½ × compromise) ÷ resolved. Counts always appear beside the score. <Link to="/accountability/methodology">Full rules ›</Link></p>
+      <p className="tiny muted">Score = (kept + ½ × compromise) ÷ resolved. Counts always appear beside the score. <Link to="/leaders/methodology">Full rules ›</Link></p>
       <Section title="Every official" />
-      <div className="grid cols-3">{[...ranked, ...unranked].map((s) => <Link key={s.member_id} to={`/accountability/${s.member_id}`} className="linkcard"><div className="eyebrow">{memberById[s.member_id]?.title}</div><h3>{s.full_name}</h3><p>{s.scoreable_total === 0 ? 'No scoreable commitments logged yet' : `${s.scoreable_total} scoreable · ${s.kept} kept · ${s.compromise} compromise · ${s.broken} broken · ${s.pending} pending`}</p>{!s.ranked && s.scoreable_total > 0 && <p className="tiny">Not ranked until 5 are resolved ({s.resolved} so far)</p>}</Link>)}</div>
-      <Section title="Recently logged" action={<Link to="/accountability/all" className="small">All commitments ›</Link>} />
+      <div className="grid cols-3">{[...ranked, ...unranked].map((s) => <Link key={s.member_id} to={`/leaders/${s.member_id}`} className="linkcard"><div className="eyebrow">{memberById[s.member_id]?.title}</div><h3>{s.full_name}</h3><p>{s.scoreable_total === 0 ? 'No scoreable commitments logged yet' : `${s.scoreable_total} scoreable · ${s.kept} kept · ${s.compromise} compromise · ${s.broken} broken · ${s.pending} pending`}</p>{!s.ranked && s.scoreable_total > 0 && <p className="tiny">Not ranked until 5 are resolved ({s.resolved} so far)</p>}</Link>)}</div>
+      <Section title="Recently logged" action={<Link to="/leaders/promises/all" className="small">All commitments ›</Link>} />
       {recent.length === 0 ? <Empty>No commitments published yet.</Empty> : <ul className="list-reset grid">{recent.slice(0, 6).map((c) => <CommitmentRow key={c.id} c={c} />)}</ul>}
     </>)}
   </>);
@@ -44,8 +34,8 @@ export function Scoreboard() {
 export function CommitmentRow({ c }: { c: Commitment }) {
   return (
     <li className="card" style={{ padding: '12px 14px' }}>
-      <div className="row between"><Link to={`/accountability/commitments/${c.id}`} style={{ fontWeight: 700, color: 'inherit' }}>{c.summary}</Link><StatusBadge status={c.current_rating ?? 'not_rated'} /></div>
-      <div className="small muted" style={{ marginTop: 4 }}><Link to={`/accountability/${c.member_id}`}>{memberById[c.member_id]?.full_name ?? c.member_id}</Link> · {c.origin === 'campaign' ? 'campaign promise' : 'commitment in office'} · {dateShort(c.made_on)}{!c.scoreable && ' · statement, not scored'}{c.proposed_rating && <> · <span className="badge warn">proposed: {c.proposed_rating.replace('_', ' ')}</span></>}</div>
+      <div className="row between"><Link to={`/leaders/commitments/${c.id}`} style={{ fontWeight: 700, color: 'inherit' }}>{c.summary}</Link><StatusBadge status={c.current_rating ?? 'not_rated'} /></div>
+      <div className="small muted" style={{ marginTop: 4 }}><Link to={`/leaders/${c.member_id}`}>{memberById[c.member_id]?.full_name ?? c.member_id}</Link> · {c.origin === 'campaign' ? 'campaign promise' : 'commitment in office'} · {dateShort(c.made_on)}{!c.scoreable && ' · statement, not scored'}{c.proposed_rating && <> · <span className="badge warn">proposed: {c.proposed_rating.replace('_', ' ')}</span></>}</div>
     </li>
   );
 }
@@ -55,33 +45,15 @@ export function AllCommitments() {
   return (<>{loading ? <p className="muted">Loading…</p> : data.length === 0 ? <Empty>No commitments published yet.</Empty> : <ul className="list-reset grid">{data.map((c) => <CommitmentRow key={c.id} c={c} />)}</ul>}</>);
 }
 
-export function MemberCommitments() {
-  const { memberId = '' } = useParams(); const m = memberById[memberId];
-  const { data, loading } = useAsync(() => api.commitments(memberId), [memberId], []);
-  const { data: scores } = useAsync(() => api.scores(), [memberId], []);
-  if (!m) return <Empty>Unknown official. <Link to="/accountability">Scoreboard</Link></Empty>;
-  const s = scores.find((x) => x.member_id === memberId);
-  const campaign = data.filter((c) => c.origin === 'campaign'); const office = data.filter((c) => c.origin === 'in_office');
-  return (<>
-    <Crumb items={[{ to: '/accountability', label: 'Promises' }, { label: m.full_name }]} />
-    <div className="row between"><div><div className="eyebrow">{m.title}</div><h2>{m.full_name}</h2></div><div className="row"><Link to={`/decisions/members/${m.id}`} className="btn small">Voting record</Link><ShareButton /></div></div>
-    {s && s.scoreable_total > 0 && <div className="grid cols-4"><div className="stat"><div className="label">Kept</div><div className="value" style={{ color: 'var(--ok)' }}>{s.kept}</div></div><div className="stat"><div className="label">Compromise</div><div className="value">{s.compromise}</div></div><div className="stat"><div className="label">Broken</div><div className="value" style={{ color: 'var(--bad)' }}>{s.broken}</div></div><div className="stat"><div className="label">Score</div><div className="value">{s.ranked && s.score != null ? `${Math.round(s.score * 100)}%` : '—'}</div><div className="sub">{s.ranked ? `${s.resolved} resolved` : `ranked after 5 resolved (${s.resolved} so far)`}</div></div></div>}
-    {loading ? <p className="muted">Loading…</p> : data.length === 0 ? <Empty>No commitments logged for {m.full_name} yet. Have a source? <Link to="/feedback">Send it through Feedback</Link> with the quote and a link.</Empty> : (<>
-      {campaign.length > 0 && <><Section title={`Campaign promises (${campaign.length})`} /><ul className="list-reset grid">{campaign.map((c) => <CommitmentRow key={c.id} c={c} />)}</ul></>}
-      {office.length > 0 && <><Section title={`Commitments made in office (${office.length})`} /><ul className="list-reset grid">{office.map((c) => <CommitmentRow key={c.id} c={c} />)}</ul></>}
-    </>)}
-  </>);
-}
-
 export function CommitmentPage() {
   const { id = '0' } = useParams(); const n = Number(id);
   const { data: c, loading } = useAsync(() => api.commitment(n), [n], null);
   const { data: d } = useAsync(() => api.commitmentDetail(n), [n], { ratings: [], sources: [], evidence: [], responses: [] });
   if (loading) return <p className="muted">Loading…</p>;
-  if (!c) return <Empty>Commitment not found. <Link to="/accountability">Scoreboard</Link></Empty>;
+  if (!c) return <Empty>Commitment not found. <Link to="/leaders/promises">Scoreboard</Link></Empty>;
   const m = memberById[c.member_id]; const mt = c.meeting_id ? meetingById[c.meeting_id] : null;
   return (<>
-    <Crumb items={[{ to: '/accountability', label: 'Promises' }, { to: `/accountability/${c.member_id}`, label: m?.full_name ?? c.member_id }, { label: `Commitment #${c.id}` }]} />
+    <Crumb items={[{ to: '/leaders/promises', label: 'Promises' }, { to: `/leaders/${c.member_id}`, label: m?.full_name ?? c.member_id }, { label: `Commitment #${c.id}` }]} />
     <div className="card" style={{ borderLeft: `4px solid ${c.current_rating === 'kept' ? 'var(--ok)' : c.current_rating === 'broken' ? 'var(--bad)' : 'var(--accent)'}` }}>
       <div className="row between"><span className="eyebrow">{c.origin === 'campaign' ? 'Campaign promise' : 'Commitment in office'} · {dateLong(c.made_on)}</span><ShareButton /></div>
       <h2>{c.summary}</h2>

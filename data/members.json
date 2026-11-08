@@ -8,8 +8,10 @@
    "role": "judge_executive",
    "district": null,
    "term_start": null,
-   "term_end": null,
-   "active": true
+   "term_end": "2027-01-03",
+   "active": true,
+   "status_note": "Judge/Executive since 2018 (appointed, then elected in November 2018 and re-elected in 2022). Lost the May 2026 Republican primary; term ends January 3, 2027.",
+   "party": "Republican"
   },
   {
    "id": "stewart",
@@ -20,7 +22,9 @@
    "district": 1,
    "term_start": "2023-01-01",
    "term_end": null,
-   "active": true
+   "active": true,
+   "status_note": "Magistrate since January 2023; re-elected unopposed in November 2026 for a term through 2030.",
+   "party": "Republican"
   },
   {
    "id": "crutcher",
@@ -31,7 +35,9 @@
    "district": 2,
    "term_start": null,
    "term_end": null,
-   "active": true
+   "active": true,
+   "status_note": "Magistrate since January 2015; re-elected in November 2026 for a term through 2030.",
+   "party": "Republican"
   },
   {
    "id": "cherry",
@@ -41,8 +47,10 @@
    "role": "magistrate",
    "district": 3,
    "term_start": null,
-   "term_end": null,
-   "active": true
+   "term_end": "2027-01-03",
+   "active": true,
+   "status_note": "Magistrate since January 2015. Lost the May 2026 Republican primary to Cole Houston; term ends January 3, 2027.",
+   "party": "Republican"
   },
   {
    "id": "rister",
@@ -53,7 +61,13 @@
    "district": 4,
    "term_start": null,
    "term_end": null,
-   "active": true
+   "active": true,
+   "status_note": "Magistrate since January 2019. Won the Republican primary over Judge/Executive Kenny Imes in May 2026 and the general election on November 3, 2026; becomes Judge/Executive on January 4, 2027.",
+   "next_role": {
+    "title": "Judge-Executive",
+    "from_date": "2027-01-04"
+   },
+   "party": "Republican"
   },
   {
    "id": "hale",
@@ -64,7 +78,37 @@
    "district": 1,
    "term_start": null,
    "term_end": "2022-12-31",
-   "active": false
+   "active": false,
+   "status_note": "Magistrate, District 1, January 2019 to December 2022. Did not seek re-election in 2022.",
+   "party": null
+  },
+  {
+   "id": "houston",
+   "full_name": "Cole Houston",
+   "short_name": "Houston",
+   "title": "Magistrate-elect, District 3",
+   "role": "magistrate",
+   "district": 3,
+   "term_start": "2027-01-04",
+   "term_end": null,
+   "active": true,
+   "incoming": true,
+   "party": "Republican",
+   "status_note": "Won the May 2026 Republican primary over incumbent Don Cherry and was unopposed in November 2026. Takes office January 4, 2027."
+  },
+  {
+   "id": "beane",
+   "full_name": "Darrell Beane",
+   "short_name": "Beane",
+   "title": "Magistrate-elect, District 4",
+   "role": "magistrate",
+   "district": 4,
+   "term_start": "2027-01-04",
+   "term_end": null,
+   "active": true,
+   "incoming": true,
+   "party": "Republican",
+   "status_note": "Won the open District 4 seat on November 3, 2026 over Davin Tabers. Takes office January 4, 2027."
   }
  ],
  "note": "Eddie Clyde Hale served as District 1 magistrate through December 2022; Ricky Stewart took the seat in January 2023. The late Magistrate Johnny Gingles was memorialized by the Court on January 21, 2026. Names verified against the county's elected-officials page and the minutes."

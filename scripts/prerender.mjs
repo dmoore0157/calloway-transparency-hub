@@ -46,16 +46,20 @@ const routes = [
 ];
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 const seen = new Set();
+// share cards (public/og/*.png, made by scripts/make-brand.cjs); og:image must be an absolute URL for social sites
+const OG_CARDS = new Set(['money', 'decisions', 'roads', 'leaders', 'records', 'ask']);
+const ORIGIN = process.env.SITE_ORIGIN ?? 'https://dmoore0157.github.io';
 for (const [route, title, desc] of routes) {
   if (seen.has(route)) continue; seen.add(route);
   const t = `${title} · Calloway County Transparency Hub`;
   let out = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(t)}</title>`).replace(/(<meta name="description" content=")[^"]*(")/, `$1${esc(desc)}$2`).replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${esc(t)}$2`).replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${esc(desc)}$2`);
-  out = out.replace(/__BASE__/g, base);
+  const seg = route.split('/')[0]; const card = OG_CARDS.has(seg) ? seg : 'home';
+  out = out.replace('og/home.png', `og/${card}.png`).replace(/__ORIGIN__/g, ORIGIN).replace(/__BASE__/g, base);
   const dir = path.join(dist, route); fs.mkdirSync(dir, { recursive: true }); fs.writeFileSync(path.join(dir, 'index.html'), out);
 }
-fs.writeFileSync(path.join(dist, 'index.html'), html.replace(/__BASE__/g, base));
+fs.writeFileSync(path.join(dist, 'index.html'), html.replace(/__ORIGIN__/g, ORIGIN).replace(/__BASE__/g, base));
 // 404 fallback: remember the requested path, load the app from the base, and restore it (see index.html).
-const notFound = html.replace(/__BASE__/g, base).replace('<script>', `<script>try{sessionStorage.setItem('hub:redirect',location.pathname+location.search+location.hash);}catch(e){}location.replace('${base}');</script><script>`);
+const notFound = html.replace(/__ORIGIN__/g, ORIGIN).replace(/__BASE__/g, base).replace('<script>', `<script>try{sessionStorage.setItem('hub:redirect',location.pathname+location.search+location.hash);}catch(e){}location.replace('${base}');</script><script>`);
 fs.writeFileSync(path.join(dist, '404.html'), notFound);
 fs.writeFileSync(path.join(dist, '.nojekyll'), '');
 // copy data for downloads

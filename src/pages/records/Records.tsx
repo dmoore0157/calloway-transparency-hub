@@ -1,6 +1,6 @@
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { Meta } from '../../components/Meta';
-import { Section, SourceNote, Ext, Empty } from '../../components/ui';
+import { Section, SourceNote, Ext, Empty, SectionHero, Stat } from '../../components/ui';
 import { links, law, glossary, meetingsMeta, audits, auditsMeta } from '../../lib/data';
 import { useAsync } from '../../lib/useAsync';
 import { api } from '../../lib/api';
@@ -11,8 +11,10 @@ const TABS = [['/records', 'Reports'], ['/records/audits', 'State audits'], ['/r
 export function RecordsLayout() {
   return (<>
     <Meta title="Records" description="Calloway County audits, state filings, sources, glossary, data downloads and the hub's methodology." />
-    <div className="eyebrow">Records</div><h1 style={{ marginTop: 4 }}>The documents behind every number</h1>
-    <nav className="subnav" aria-label="Records sections">{TABS.map(([to, l]) => <NavLink key={to} to={to} end={to === '/records'} className={({ isActive }) => (isActive ? 'active' : '')}>{l}</NavLink>)}</nav>
+    <SectionHero n={5} name="The Records" tone="amber" base="/records" tabs={TABS} label="Records sections"
+      title={<>Sourced. Checkable. <span className="hl">Public.</span></>}
+      lede="The documents behind every number: state audits, the county's own filings, adopted budgets and the official minutes."
+      aside={<><Stat label="State audits" value={audits.length} sub={`FY${audits.at(-1)?.fy} to FY${audits[0].fy}`} /><Stat label="Audit findings" value={audits.reduce((n, a) => n + a.findings.length, 0)} sub="With the county's response to each" /></>} />
     <Outlet />
   </>);
 }

@@ -18,7 +18,7 @@ export default function TicketPage() {
   const { data: events, reload: reloadEvents } = useAsync(() => api.ticketEvents(id), [id], []);
   const { data: photos } = useAsync(() => api.ticketPhotos(id), [id], []);
   const mapEl = useRef<HTMLDivElement>(null);
-  useMap(mapEl, { center: t ? [t.lng, t.lat] : undefined, zoom: 14, interactive: false, onReady: (m) => { if (t) new maplibregl.Marker({ color: '#B3232A' }).setLngLat([t.lng, t.lat]).addTo(m); } });
+  useMap(mapEl, { center: t ? [t.lng, t.lat] : undefined, zoom: 14, interactive: false, onReady: (m) => { if (t) new maplibregl.Marker({ color: '#FCBA45' }).setLngLat([t.lng, t.lat]).addTo(m); } });
   const [note, setNote] = useState(''); const [busy, setBusy] = useState(false); const [msg, setMsg] = useState('');
   const confirm = async (kind: 'still_issue' | 'fixed') => { setBusy(true); try { await callFn('ticket-action', { action: 'confirm', ticket_id: id, kind, note: note || undefined, device_token: deviceToken() }); setMsg(kind === 'fixed' ? 'Thanks. Two independent "fixed" confirmations (or one from the reporter) mark it fixed.' : 'Thanks. Noted as still an issue.'); setNote(''); reload(); reloadEvents(); } catch (e) { setMsg((e as Error).message); } finally { setBusy(false); } };
   const secret = recall<Record<string, string>>('secrets', {})[id];

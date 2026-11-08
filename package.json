@@ -8,9 +8,12 @@
     "build": "tsc --noEmit -p tsconfig.json && vite build && node scripts/prerender.mjs && node scripts/build-ai-corpus.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "test:ask": "node scripts/test-ask.mjs"
+    "test:ask": "node scripts/test-ask.mjs",
+    "check:theme": "node scripts/check-theme.mjs",
+    "brand": "node scripts/make-brand.cjs"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.2.5",
     "@supabase/supabase-js": "^2.49.4",
     "exifr": "^7.1.3",
     "lucide-react": "^0.487.0",

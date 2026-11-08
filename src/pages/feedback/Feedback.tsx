@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ThumbsUp, Download } from 'lucide-react';
 import { Meta } from '../../components/Meta';
-import { Section, Empty, Crumb, ShareButton, StatusBadge } from '../../components/ui';
+import { Section, Empty, Hero, Crumb, ShareButton, StatusBadge } from '../../components/ui';
 import { api, type Idea } from '../../lib/api';
 import { useAsync } from '../../lib/useAsync';
 import { backendReady, callFn } from '../../lib/supabase';
@@ -25,7 +25,7 @@ export default function Feedback() {
   return (
     <>
       <Meta title="Feedback" description="Suggest improvements to the Calloway County Transparency Hub, vote on ideas, and see what is planned." />
-      <div className="eyebrow">Feedback</div><h1 style={{ marginTop: 4 }}>Shape the hub</h1>
+      <Hero pill="Feedback" compact title={<>Shape the <span className="hl">hub.</span></>} />
       <p className="lede">Suggest a feature, request a dataset, or report something broken. Ideas are public. Votes decide what gets built next, and every idea gets a status and a reason.</p>
       {!backendReady && <Empty>The feedback board needs the hub's backend, which is not configured in this build.</Empty>}
       {backendReady && (<>

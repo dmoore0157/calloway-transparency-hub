@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink, Outlet, useParams, Navigate } from 'react-router-dom';
 import { ExternalLink, Phone, MapPin, ArrowRight, Vote } from 'lucide-react';
 import { Meta } from '../../components/Meta';
-import { Section, SourceNote, Stat, Ext, Crumb, ShareButton, Empty } from '../../components/ui';
+import { Section, SourceNote, Stat, Ext, Crumb, ShareButton, Empty, SectionHero } from '../../components/ui';
 import { FlagButton } from '../../components/FlagButton';
 import { CommitmentSummary } from '../accountability/CommitmentSummary';
 import { VotingRecord } from '../decisions/Members';
@@ -21,8 +21,10 @@ const TURNOVER = '2027-01-04';
 export function LeadersLayout() {
   return (<>
     <Meta title="Leaders" description="Profiles of Calloway County's elected officials: voting records, promises kept or broken, audits on their watch, and election results." />
-    <div className="eyebrow">Leaders</div><h1 style={{ marginTop: 4 }}>Who leads Calloway County, and what the record shows</h1>
-    <nav className="subnav" aria-label="Leaders sections">{TABS.map(([to, l]) => <NavLink key={to} to={to} end={to === '/leaders'} className={({ isActive }) => (isActive ? 'active' : '')}>{l}</NavLink>)}</nav>
+    <SectionHero n={4} name="The Leaders" tone="mint" base="/leaders" tabs={TABS} label="Leaders sections"
+      title={<>Beyond the <span className="hl">slogans.</span></>}
+      lede="Who leads Calloway County and what the record shows: votes, promises, audits on their watch and election results. Every official is measured by the same rules."
+      aside={<><Stat label="Offices tracked" value={offices.length} sub="Fiscal Court and countywide offices" /><Stat label="Record checks" value={recordChecks.length} sub="Past statements tested against the minutes" /></>} />
     <Outlet />
   </>);
 }
@@ -127,7 +129,7 @@ export function LeaderPage() {
     </div>
     {m.next_role && <div className="notice" style={{ marginTop: 10, borderColor: p.accent }}><strong>Takes office as {m.next_role.title} on {dateLong(m.next_role.from_date)}.</strong> The record below is from {m.full_name.split(' ')[0]}'s years as a magistrate; the Judge/Executive record starts in 2027.</div>}
     {m.incoming && <div className="notice" style={{ marginTop: 10 }}><strong>Takes office {dateLong(m.term_start ?? TURNOVER)}.</strong> Campaign promises are logged now so they can be checked once {m.full_name.split(' ')[0]} is voting.</div>}
-    {holder && <div className="card small" style={{ marginTop: 10 }}><Contact h={holder} /></div>}
+    {holder && (holder.phone || holder.address || holder.url) && <div className="card small" style={{ marginTop: 10 }}><Contact h={holder} /></div>}
 
     <CommitmentSummary memberId={id} />
 

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { Sparkles, ShieldCheck, FileText, Download, Printer, Share2, Copy, Check, ThumbsUp, ThumbsDown, ExternalLink, AlertTriangle, Loader2, Mail, Link2, X as Close } from 'lucide-react';
 import { Meta } from '../../components/Meta';
-import { Section, Empty } from '../../components/ui';
+import { Section, Empty, Hero } from '../../components/ui';
 import { Markdown, toPlain } from '../../components/Markdown';
 import { askQuestion, askStatus, shareAnswer, rateAnswer, sharedAnswer, AskError, type AskAnswer } from '../../lib/ask';
 import { backendReady } from '../../lib/supabase';
@@ -59,9 +59,8 @@ export function AskPage() {
 
   return (<>
     <Meta title="Ask the records" description="Ask questions about Calloway County's budgets, audits, votes, officials and elections. Every answer is drawn from the hub's public records, cited, and checked before it is shown." />
-    <div className="eyebrow">Ask the records</div>
-    <h1 style={{ marginTop: 4 }}>Ask a question. Get an answer from the public record, with sources.</h1>
-    <p className="lede">The assistant searches only the hub's records: Fiscal Court minutes and votes, state audits, budgets, grants, debt, ordinances, officials, elections and the promise tracker. It cites every fact. Answers with figures it cannot match to a record are withheld instead of shown.</p>
+    <Hero pill="Ask the records" tone="mint" compact title={<>Ask the <span className="hl">records.</span></>} />
+    <p className="lede">Ask a question and get an answer from the public record, with sources. The assistant searches only the hub's records: Fiscal Court minutes and votes, state audits, budgets, grants, debt, ordinances, officials, elections and the promise tracker. It cites every fact. Answers with figures it cannot match to a record are withheld instead of shown.</p>
 
     <div className="card" style={{ marginTop: 12 }}>
       {!backendReady ? <Empty>The assistant needs the hub's backend, which is not configured in this build.</Empty> : (<>

@@ -34,7 +34,7 @@ export default function Members() {
             <div className="small muted" style={{ textAlign: 'left' }}>moved by ↓ / seconded by →</div>{members.map((b) => <div key={b.id} className="small" style={{ fontWeight: 700 }}>{b.short_name}</div>)}
             {members.map((a) => (<Fragment2 key={a.id}>
               <div className="small" style={{ textAlign: 'left', fontWeight: 700 }}>{a.short_name}</div>
-              {members.map((b) => { const n = matrix[a.id][b.id]; const t = n / max; return <div key={b.id} style={{ background: a.id === b.id ? 'var(--surface-2)' : `rgba(201,168,76,${0.12 + t * 0.85})`, color: t > 0.55 ? '#1A2744' : 'var(--ink)', fontWeight: 700 }}>{a.id === b.id ? '—' : n}</div>; })}
+              {members.map((b) => { const n = matrix[a.id][b.id]; const t = n / max; return <div key={b.id} style={{ background: a.id === b.id ? 'var(--surface-2)' : `color-mix(in srgb, #0B7A6B ${Math.round(8 + t * 92)}%, #EAF6F3)`, color: t > 0.5 ? '#FFFFFF' : 'var(--ink)', fontWeight: 700 }}>{a.id === b.id ? '—' : n}</div>; })}
             </Fragment2>))}
           </div>
         </div>

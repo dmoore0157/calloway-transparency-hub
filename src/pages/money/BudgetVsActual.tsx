@@ -20,8 +20,8 @@ export default function BudgetVsActual() {
       <div className="row" style={{ marginBottom: 12 }}>{years.map((y) => <button key={y} className={`chip ${year === y ? 'active' : ''}`} onClick={() => setYear(y)}>{y}</button>)}</div>
       <div className="grid cols-3">
         <div className="stat"><div className="label">Budgeted, {year}</div><div className="value">{usd(totals.b, { compact: true })}</div><div className="sub">final budget after amendments</div></div>
-        <div className="stat" style={{ borderTopColor: p.src[src] }}><div className="label">Actually spent</div><div className="value">{usd(totals.a, { compact: true })}</div><div className="sub">{overview.source_labels[src as keyof typeof overview.source_labels]}</div></div>
-        <div className="stat" style={{ borderTopColor: p.ok }}><div className="label">Share of plan used</div><div className="value">{Math.round((totals.a / totals.b) * 100)}%</div><div className="sub">{usd(totals.b - totals.a, { compact: true })} left unspent</div></div>
+        <div className="stat" style={{ ['--stat-bar' as string]: p.src[src] }}><div className="label">Actually spent</div><div className="value">{usd(totals.a, { compact: true })}</div><div className="sub">{overview.source_labels[src as keyof typeof overview.source_labels]}</div></div>
+        <div className="stat" style={{ ['--stat-bar' as string]: p.ok }}><div className="label">Share of plan used</div><div className="value">{Math.round((totals.a / totals.b) * 100)}%</div><div className="sub">{usd(totals.b - totals.a, { compact: true })} left unspent</div></div>
       </div>
       <Section title={`${year}: plan vs. actual by category`} />
       <ChartFrame title="Budgeted vs. actually spent" intro={year === 'FY2021' ? 'FY2021 was the pandemic year, with large one-time federal funds and transfers between accounts.' : 'Tap a category name below the chart for what it covers.'} rows={data} filename={`budget-vs-actual-${year}.csv`}
@@ -32,7 +32,7 @@ export default function BudgetVsActual() {
             <CartesianGrid stroke={p.line} strokeDasharray="3 3" horizontal={false} />
             <XAxis type="number" tickFormatter={(v) => usd(v, { compact: true })} tick={{ fill: p.muted, fontSize: 12 }} /><YAxis type="category" dataKey="category" width={150} tick={{ fill: p.ink, fontSize: 12 }} />
             <Tooltip {...tooltipStyle()} formatter={(v) => usd(Number(v))} /><Legend wrapperStyle={{ fontSize: 12 }} />
-            <Bar dataKey="budgeted" name="Budgeted" fill={p.accent} radius={[0, 3, 3, 0]} /><Bar dataKey="actual" name="Actually spent" fill={p.series[0]} radius={[0, 3, 3, 0]} />
+            <Bar dataKey="budgeted" name="Budgeted" fill={p.series[1]} radius={[0, 3, 3, 0]} /><Bar dataKey="actual" name="Actually spent" fill={p.series[0]} radius={[0, 3, 3, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </ChartFrame>
@@ -47,7 +47,7 @@ export default function BudgetVsActual() {
           <BarChart data={trend} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
             <CartesianGrid stroke={p.line} strokeDasharray="3 3" vertical={false} /><XAxis dataKey="year" tick={{ fill: p.muted, fontSize: 12 }} /><YAxis tickFormatter={(v) => usd(v, { compact: true })} tick={{ fill: p.muted, fontSize: 12 }} width={56} />
             <Tooltip {...tooltipStyle()} formatter={(v) => usd(Number(v))} /><Legend wrapperStyle={{ fontSize: 12 }} />
-            <Bar dataKey="budgeted" name="Budgeted" fill={p.accent} /><Bar dataKey="actual" name="Actually spent" fill={p.series[0]} />
+            <Bar dataKey="budgeted" name="Budgeted" fill={p.series[1]} /><Bar dataKey="actual" name="Actually spent" fill={p.series[0]} />
           </BarChart>
         </ResponsiveContainer>
       </ChartFrame>

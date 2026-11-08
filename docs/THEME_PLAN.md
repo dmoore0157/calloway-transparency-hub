@@ -1,5 +1,7 @@
 # Reel theme: plan to restyle the whole hub
 
+> **Status (Nov 8, 2026): shipped.** Built with the recommended defaults: dark canvas with light cards, reel headlines and chapter pills 01 to 05, strong grid behind page openers only, and a "Light" option in the theme switch (footer and mobile menu). Contrast is checked in CI by `scripts/check-theme.mjs`; social cards and app icons are regenerated with `npm run brand`.
+
 Goal: make the site look and feel like the "Calloway County Transparency Hub" reel (`docs/design/reel-reference-frames.png`),
 keeping every page as readable and accessible as it is today. Preview of the proposed system:
 `docs/design/reel-style-tile.png` (source `docs/design/reel-style-tile.html`).

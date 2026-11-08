@@ -1,5 +1,5 @@
-import { type ReactNode, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { type CSSProperties, type ReactNode, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Download, Table2, BarChart3, Share2, Check, ExternalLink } from 'lucide-react';
 import { downloadCsv } from '../lib/csv';
 
@@ -8,8 +8,37 @@ export const Section = ({ title, children, action }: { title: string; children?:
 );
 
 export const Stat = ({ label, value, sub, color }: { label: string; value: ReactNode; sub?: ReactNode; color?: string }) => (
-  <div className="stat" style={color ? { borderTopColor: color } : undefined}><div className="label">{label}</div><div className="value">{value}</div>{sub && <div className="sub">{sub}</div>}</div>
+  <div className="stat" style={color ? ({ '--stat-bar': color } as CSSProperties) : undefined}><div className="label">{label}</div><div className="value">{value}</div>{sub && <div className="sub">{sub}</div>}</div>
 );
+
+/** Reel-style page opener: chapter pill, heavy all-caps headline with a colored last word, lede, optional stat cards,
+ *  and the slanted grid with amber and mint arcs behind it (decorative, hidden from assistive tech and print). */
+export function Hero({ pill, tone = 'amber', title, lede, aside, children, compact }: { pill?: ReactNode; tone?: 'amber' | 'mint'; title: ReactNode; lede?: ReactNode; aside?: ReactNode; children?: ReactNode; compact?: boolean }) {
+  return (
+    <section className={`hero ${compact ? 'compact' : ''}`}>
+      <div className="hero-bg" aria-hidden="true"><span className="arc a1" /><span className="arc a2" /></div>
+      <div className={`hero-grid ${aside ? 'with-stats' : ''}`}>
+        <div>
+          {pill && <div style={{ marginBottom: compact ? 10 : 16 }}><span className={`pill ${tone === 'mint' ? 'mint' : ''}`}>{pill}</span></div>}
+          <h1 className={`display ${compact ? 'compact' : ''} ${tone === 'mint' ? 'tone-mint' : ''}`}>{title}</h1>
+          {lede && <p className="lede">{lede}</p>}
+          {children}
+        </div>
+        {aside && <div className="hero-stats">{aside}</div>}
+      </div>
+    </section>
+  );
+}
+
+/** Section landing hero plus the section's tab bar. Full size on the section's front page, compact deeper in. */
+export function SectionHero({ n, name, tone, title, lede, tabs, base, aside, label }: { n: number; name: string; tone: 'amber' | 'mint'; title: ReactNode; lede: ReactNode; tabs: string[][]; base: string; aside?: ReactNode; label: string }) {
+  const { pathname } = useLocation();
+  const front = pathname.replace(/\/$/, '') === base;
+  return (<>
+    <Hero pill={<><span className="num">{String(n).padStart(2, '0')}</span> {name}</>} tone={tone} title={title} lede={front ? lede : undefined} aside={front ? aside : undefined} compact={!front} />
+    <nav className="subnav" aria-label={label}>{tabs.map(([to, l]) => <NavLink key={to} to={to} end={to === base} className={({ isActive }) => (isActive ? 'active' : '')}>{l}</NavLink>)}</nav>
+  </>);
+}
 
 export const SourceNote = ({ children }: { children: ReactNode }) => <p className="src"><strong>Source:</strong> {children}</p>;
 

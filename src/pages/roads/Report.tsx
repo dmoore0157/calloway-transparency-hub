@@ -31,7 +31,7 @@ export default function Report() {
   const place = (ll: [number, number]) => {
     setPos(ll);
     const m = map.current; if (!m) return;
-    if (!marker.current) marker.current = new maplibregl.Marker({ color: '#B3232A', draggable: true }).setLngLat(ll).addTo(m); else marker.current.setLngLat(ll);
+    if (!marker.current) marker.current = new maplibregl.Marker({ color: '#FCBA45', draggable: true }).setLngLat(ll).addTo(m); else marker.current.setLngLat(ll);
     marker.current.on('dragend', () => { const p = marker.current!.getLngLat(); setPos([p.lng, p.lat]); });
     if (m.getZoom() < 14) m.easeTo({ center: ll, zoom: 15 });
   };
@@ -79,7 +79,7 @@ export default function Report() {
     {step === 1 && <>
       <h2>2. What's wrong?</h2>
       <div className="row" style={{ marginBottom: 10 }}>{Object.entries(CATEGORY_LABEL).map(([k, l]) => <button key={k} type="button" className={`chip ${category === k ? 'active' : ''}`} onClick={() => setCategory(k)}>{l}</button>)}</div>
-      <div className="grid cols-4" style={{ marginBottom: 10 }}>{SEVERITY.map((s) => <button key={s.key} type="button" className="stat" style={{ textAlign: 'left', cursor: 'pointer', borderTopColor: severity === s.key ? 'var(--action)' : undefined }} onClick={() => setSeverity(s.key)} aria-pressed={severity === s.key}><div className="label">{s.label}</div><div className="small">{s.hint}</div></button>)}</div>
+      <div className="grid cols-4" style={{ marginBottom: 10 }}>{SEVERITY.map((s) => <button key={s.key} type="button" className="stat" style={{ textAlign: 'left', cursor: 'pointer', ['--stat-bar' as string]: severity === s.key ? 'var(--amber)' : '#C9D5E3', outline: severity === s.key ? '3px solid var(--amber)' : undefined, outlineOffset: 1 }} onClick={() => setSeverity(s.key)} aria-pressed={severity === s.key}><div className="label">{s.label}</div><div className="small">{s.hint}</div></button>)}</div>
       <label className="field"><span>Describe it <span className="hint">size, how long it's been there, what happens when it rains, anything that helps a crew find and fix it. Please don't include personal information; this is public.</span></span><textarea className="input" value={description} onChange={(e) => setDescription(e.target.value)} maxLength={2000} style={{ minHeight: 120 }} /></label>
       <div className="row between"><span className="small"><Camera size={14} /> Photos ({photos.length}/4) <span className="muted">reviewed before they appear publicly; location data is removed</span></span><label className="btn small">Add photos<input type="file" accept="image/*" multiple capture="environment" style={{ display: 'none' }} onChange={(e) => addPhotos(e.target.files)} disabled={photos.length >= 4} /></label></div>
       {photos.length > 0 && <div className="photo-grid" style={{ marginTop: 8 }}>{photos.map((p) => <div key={p.url} style={{ position: 'relative' }}><img src={p.url} alt="" style={{ opacity: p.uploading ? .5 : 1 }} />{p.error && <span className="badge bad" style={{ position: 'absolute', bottom: 4, left: 4 }}>failed</span>}{p.uploading && <span className="badge" style={{ position: 'absolute', bottom: 4, left: 4 }}>uploading</span>}<button type="button" className="btn small" style={{ position: 'absolute', top: 4, right: 4, padding: '2px 6px' }} onClick={() => setPhotos((ps) => ps.filter((x) => x !== p))} aria-label="Remove photo">×</button></div>)}</div>}

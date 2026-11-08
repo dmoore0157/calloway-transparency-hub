@@ -16,3 +16,5 @@ jobs:
         run: node scripts/check-data.mjs
       - name: Assistant tests (offline, no API key)
         run: node scripts/test-ask.mjs dist/data/ai-corpus.json
+      - name: Theme contrast check
+        run: node scripts/check-theme.mjs

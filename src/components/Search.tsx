@@ -12,7 +12,7 @@ export function SearchBox({ autoFocus, onDone, big }: { autoFocus?: boolean; onD
   const grouped = useMemo(() => { const g: Record<string, SearchDoc[]> = {}; for (const r of results) (g[r.type] ??= []).push(r); return g; }, [results]);
   return (
     <div>
-      <div className="row" style={{ background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 10, padding: big ? '4px 12px' : '0 10px' }}>
+      <div className="searchbar" style={{ padding: big ? '4px 8px 4px 18px' : '0 6px 0 14px' }}>
         <SearchIcon size={18} color="var(--ink-muted)" />
         <input ref={ref} value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search motions, budget lines, meetings, ordinances…" aria-label="Search the hub" style={{ flex: 1, border: 'none', outline: 'none', background: 'transparent', padding: big ? '12px 0' : '10px 0', fontSize: big ? 16 : 14, color: 'inherit' }} />
         {q && <button className="btn small" onClick={() => setQ('')} aria-label="Clear"><X size={14} /></button>}

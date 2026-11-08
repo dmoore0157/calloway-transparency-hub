@@ -12,7 +12,9 @@ export default function WhereItGoes() {
   const [sel, setSel] = useState<string | null>(null);
   const [bill, setBill] = useState(1000);
   const selected = cats.find((c) => c.name === sel);
-  const colors = yearend.category_colors as Record<string, string>;
+  // largest six categories take the chart series, the rest step through navy-to-slate; names and dollars are always labeled below
+  const fills = [...p.series.slice(0, 6), '#13304E', '#304860', '#4D5D73', '#6B7C93', '#8796AA', '#A3B1C2'];
+  const colors = Object.fromEntries([...cats].sort((x, y) => y.size - x.size).map((c, i) => [c.name, fills[i % fills.length]])) as Record<string, string>;
   const treeData = cats.map((c) => ({ name: c.name, size: c.size, fill: colors[c.name] ?? p.series[0] }));
   const sankey = useMemo(() => buildSankey(), []);
   return (
@@ -61,7 +63,7 @@ function Cell(props: Record<string, unknown> & { onPick?: (n: string) => void })
   return (
     <g onClick={() => onPick?.(name)} style={{ cursor: 'pointer' }}>
       <rect x={x} y={y} width={width} height={height} fill={fill} stroke="#fff" rx={3} />
-      {width > 70 && height > 30 && <text x={x + 6} y={y + 16} fill="#fff" fontSize={11} fontWeight={700}>{name.length > width / 6.5 ? name.slice(0, Math.max(3, width / 6.5 - 1)) + '…' : name}</text>}
+      {width > 70 && height > 30 && <text x={x + 6} y={y + 16} fill={labelInk(fill)} fontSize={11} fontWeight={700}>{name.length > width / 6.5 ? name.slice(0, Math.max(3, width / 6.5 - 1)) + '…' : name}</text>}
     </g>
   );
 }
@@ -93,4 +95,11 @@ function buildSankey() {
     if (otherOut) { links.push({ source: id(fund), target: id('Other spending '), value: otherOut }); rows.push({ from: fund, to: 'Other spending', amount: otherOut }); }
   }
   return { data: { nodes, links }, rows };
+}
+
+/** Navy or white label, whichever reads better on the box color. */
+function labelInk(hex: string) {
+  const n = parseInt(hex.slice(1), 16); const ch = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => { const c = v / 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; });
+  const L = 0.2126 * ch[0] + 0.7152 * ch[1] + 0.0722 * ch[2];
+  return (1.05 / (L + 0.05)) >= ((L + 0.05) / (0.0332 + 0.05)) ? '#FFFFFF' : '#13304E';
 }

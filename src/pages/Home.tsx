@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { ChevronRight, Sparkles } from 'lucide-react';
+import { ArrowRight, ChevronRight, Sparkles } from 'lucide-react';
 import { Meta } from '../components/Meta';
 import { SearchBox } from '../components/Search';
 import { DOORS } from '../components/Shell';
-import { Section, Stat } from '../components/ui';
+import { Hero, Section, Stat } from '../components/ui';
 import { overview, meetings, motions, memberById } from '../lib/data';
 import { usd, dateLong } from '../lib/format';
 import { recordedVotes } from '../lib/analytics';
@@ -27,31 +27,30 @@ export default function Home() {
   return (
     <>
       <Meta title="" description="Calloway County, Kentucky's budget, spending, Fiscal Court votes, road requests, and public records in plain English." />
-      <div style={{ padding: '8px 0 4px' }}>
-        <div className="eyebrow">Calloway County, Kentucky · Public records in plain English</div>
-        <h1 style={{ marginTop: 6 }}>See where the money goes and how your leaders vote.</h1>
-        <p className="lede" style={{ maxWidth: 680 }}>An independent, nonpartisan hub built from the county's own records: budgets, audits, and Fiscal Court minutes. Every number links to its source. Nothing is published that can't be checked.</p>
-        <SearchBox big />
-        <Link to="/ask" className="card" style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 10, padding: '12px 14px', color: 'inherit', borderLeft: '4px solid var(--accent)' }}><Sparkles size={20} color="var(--accent-ink)" /><span><strong>Ask the records</strong><br /><span className="small muted">Ask a question in plain English. Answers come only from the public record, with every source linked.</span></span><ChevronRight size={18} style={{ marginLeft: 'auto' }} /></Link>
+      <Hero pill="Calloway County, Kentucky" title={<>No spin.<br />Just the <span className="hl">records.</span></>}
+        lede="An independent, nonpartisan hub built from the county's own records: budgets, audits and Fiscal Court minutes. Every number links to its source. Nothing is published that can't be checked."
+        aside={<div className="hero-stats two">
+          <Stat label={`General Fund spending, FY${overview.stats.latestFY}`} value={usd(overview.stats.latestSpend, { compact: true })} sub={`${overview.stats.latestYoY > 0 ? '+' : ''}${overview.stats.latestYoY}% vs. the year before`} />
+          <Stat label="Per resident" value={usd(overview.stats.latestPerRes)} sub={`General Fund ÷ ${overview.population.toLocaleString()} residents`} />
+          <Stat label="Motions tracked" value={motions.length.toLocaleString()} sub={`${meetings.length} meetings since Nov 2021`} />
+          <Stat label="Recorded or split votes" value={split} sub="Every other motion passed by voice, all ayes" />
+        </div>}>
+        <div style={{ maxWidth: 620, marginTop: 14 }}><SearchBox big /></div>
+        <div className="row" style={{ marginTop: 12 }}>
+          <Link to="/ask" className="btn primary"><Sparkles size={16} /> Ask the records</Link>
+          <Link to="/roads/report" className="btn secondary">Report a road problem</Link>
+        </div>
+      </Hero>
+
+      <Section title="The chapters" />
+      <div className="doors">
+        {DOORS.map((d, i) => <Link key={d.to} to={d.to} className="door"><span className="dot" /><span className="num">{String(i + 1).padStart(2, '0')}</span><span><span className="label">{d.chapter}</span><span className="blurb">{d.blurb}</span></span><ArrowRight size={18} className="arrow" /></Link>)}
+        <Link to="/feedback" className="door"><span className="dot" /><span className="num">→</span><span><span className="label">Feedback</span><span className="blurb">Suggest a feature, request a dataset or report an error</span></span><ArrowRight size={18} className="arrow" /></Link>
       </div>
 
       <Section title="Start with a question" />
       <div className="grid cols-2">
-        {QUESTIONS.map(([q, to]) => <Link key={q} to={to} className="question"><span>{q}</span><ChevronRight size={18} color="var(--accent-ink)" /></Link>)}
-      </div>
-
-      <Section title="At a glance" />
-      <div className="grid cols-4">
-        <Stat label={`General Fund spending, FY${overview.stats.latestFY}`} value={usd(overview.stats.latestSpend, { compact: true })} sub={`${overview.stats.latestYoY > 0 ? '+' : ''}${overview.stats.latestYoY}% vs. the year before`} />
-        <Stat label="Per resident" value={usd(overview.stats.latestPerRes)} sub={`General Fund ÷ ${overview.population.toLocaleString()} residents`} />
-        <Stat label="Motions tracked" value={motions.length} sub={`${meetings.length} meetings since Nov 2021`} />
-        <Stat label="Recorded or split votes" value={split} sub="Every other motion passed by voice, all ayes" />
-      </div>
-
-      <Section title="Explore the hub" />
-      <div className="grid cols-3">
-        {DOORS.map((d) => <Link key={d.to} to={d.to} className="linkcard"><div className="row" style={{ marginBottom: 6 }}><d.icon size={20} color="var(--accent-ink)" /><h3 style={{ margin: 0 }}>{d.label}</h3></div><p>{d.blurb}</p></Link>)}
-        <Link to="/feedback" className="linkcard" style={{ borderTopColor: 'var(--accent)' }}><h3>Feedback</h3><p>Suggest a feature, request a dataset, or report an error. Votes decide what gets built next.</p></Link>
+        {QUESTIONS.map(([q, to]) => <Link key={q} to={to} className="question"><span>{q}</span><ChevronRight size={18} /></Link>)}
       </div>
 
       <Section title={`Last Fiscal Court meeting · ${dateLong(last.date)}`} action={<Link to={`/decisions/meetings/${last.id}`} className="small">Full meeting ›</Link>} />

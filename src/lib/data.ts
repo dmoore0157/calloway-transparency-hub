@@ -15,6 +15,7 @@ import auditsJson from '../../data/audits.json';
 import electionsJson from '../../data/elections.json';
 import officialsJson from '../../data/officials.json';
 import recordChecksJson from '../../data/record_checks.json';
+import issuesJson from '../../data/issues.json';
 
 export type Member = { id: string; full_name: string; short_name: string; title: string; role: 'judge_executive' | 'magistrate'; district: number | null; term_start?: string | null; term_end?: string | null; active?: boolean; incoming?: boolean; party?: string | null; status_note?: string; next_role?: { title: string; from_date: string } };
 export type CandidateLink = { label: string; url: string; kind: string };
@@ -73,6 +74,9 @@ export const electionsMeta = { compiled: electionsJson.compiled, how_compiled: e
 export const electionById = Object.fromEntries(elections.map((e) => [e.id, e])) as Record<string, Election>;
 export const offices = officialsJson.offices as unknown as Office[];
 export const officialsMeta = { source: officialsJson.source, officials_url: officialsJson.officials_url, compiled: officialsJson.compiled, term_note: officialsJson.term_note };
+export type Issue = { id: string; label: string; why: string; pattern?: string; category?: string };
+export const issues = issuesJson.issues as Issue[];
+export const issuesMeta = { compiled: issuesJson.compiled, method: issuesJson.method };
 export const recordChecks = recordChecksJson.checks as unknown as RecordCheck[];
 export const recordChecksMeta = { compiled: recordChecksJson.compiled, period: recordChecksJson.period, method: recordChecksJson.method, labels: recordChecksJson.labels as Record<string, string> };
 export const roadmap = roadmapJson as Record<string, { see: string; how: string; why: string; needs: string }>;

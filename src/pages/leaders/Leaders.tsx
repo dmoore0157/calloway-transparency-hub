@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, NavLink, Outlet, useParams, Navigate } from 'react-router-dom';
 import { ExternalLink, Phone, MapPin, ArrowRight, Vote } from 'lucide-react';
 import { Meta } from '../../components/Meta';
@@ -6,8 +7,8 @@ import { FlagButton } from '../../components/FlagButton';
 import { CommitmentSummary } from '../accountability/CommitmentSummary';
 import { VotingRecord } from '../decisions/Members';
 import { MotionRow } from '../../components/VoteBits';
-import { people, members, memberById, offices, officialsMeta, elections, electionById, electionsMeta, audits, recordChecks, recordChecksMeta, motionById, type RecordCheck, type Member, type Officeholder, type Election, type Race, type Candidate } from '../../lib/data';
-import { memberStats } from '../../lib/analytics';
+import { people, members, memberById, offices, officialsMeta, elections, electionById, electionsMeta, audits, recordChecks, recordChecksMeta, motionById, issues, issuesMeta, type RecordCheck, type Member, type Officeholder, type Election, type Race, type Candidate } from '../../lib/data';
+import { memberStats, issueRecord, namedInMinutes } from '../../lib/analytics';
 import { api } from '../../lib/api';
 import { useAsync } from '../../lib/useAsync';
 import { backendReady } from '../../lib/supabase';
@@ -57,6 +58,7 @@ export function Profiles() {
     <div className="grid cols-3">{others.map((o) => <Link key={o.id} to={`/leaders/office/${o.id}`} className="linkcard"><div className="row between" style={{ alignItems: 'flex-start' }}><div className="eyebrow">{o.office}</div>{o.incoming && <span className="badge accent">Changes Jan 2027</span>}</div><h3 style={{ margin: '4px 0 6px' }}>{o.current.name}</h3><p>{o.incoming ? `${o.incoming.name} takes office ${dateShort(o.incoming.takes_office ?? TURNOVER)}.` : o.current.note ?? o.body}</p></Link>)}</div>
     <Section title="Former members" />
     <div className="grid cols-3">{former.map((m) => <PersonCard key={m.id} m={m} tag="Former" />)}</div>
+    <CompareRecord />
     <SourceNote>Roster and contact details from the <Ext href={officialsMeta.officials_url}>county's elected officials page</Ext>; terms from the 2022 and 2026 election results. {officialsMeta.term_note}</SourceNote>
   </>);
 }
@@ -131,6 +133,10 @@ export function LeaderPage() {
 
     <RecordChecks memberId={id} />
 
+    <IssueRecordTable memberId={id} />
+
+    <NamedInMinutes m={m} />
+
     <Section title="Fiscal Court record" action={<Link to={`/decisions/votes?member=${id}`} className="small">Vote tracker ›</Link>} />
     <VotingRecord id={id} />
 
@@ -190,6 +196,58 @@ function RecordChecks({ memberId }: { memberId: string }) {
       <div className="row small" style={{ marginTop: 8, gap: 12 }}>{c.commitment_id && backendReady && <Link to={`/leaders/commitments/${c.commitment_id}`}>Tracked as commitment #{c.commitment_id} ›</Link>}{c.caveat && <span className="muted">{c.caveat}</span>}<span style={{ marginLeft: 'auto' }}><FlagButton table="record_checks" id={c.id} /></span></div>
     </div>)}</div>
     <SourceNote>{recordChecksMeta.method} Compiled {dateShort(recordChecksMeta.compiled)}.</SourceNote>
+  </>;
+}
+
+/** The same list of recurring issues, applied to every member who has sat on the court. */
+function IssueRecordTable({ memberId }: { memberId: string }) {
+  const m = memberById[memberId];
+  if (!m || m.incoming) return null;
+  const rows = issueRecord(memberId);
+  const first = m.short_name;
+  return <>
+    <Section title="Record on the county's recurring issues" action={<Link to="/leaders#compare" className="small">Compare all members ›</Link>} />
+    <p className="small muted" style={{ marginTop: -6 }}>The same twelve issues are checked for every member. "Moved" and "seconded" count motions {first} brought or backed; "for" and "against" are recorded votes; "missed" counts meetings {first} was absent when the issue came up. Open a row to see the motions.</p>
+    <div className="table-wrap"><table className="data"><thead><tr><th>Issue</th><th className="num">Motions</th><th className="num">Moved</th><th className="num">Seconded</th><th className="num">For</th><th className="num">Against</th><th className="num">Abstained</th><th className="num">Missed</th><th>Last action</th></tr></thead><tbody>
+      {rows.map((r) => <IssueRow key={r.issue.id} r={r} />)}
+    </tbody></table></div>
+    <SourceNote>{issuesMeta.method} Fiscal Court minutes, November 2021 to September 2026.</SourceNote>
+  </>;
+}
+function IssueRow({ r }: { r: ReturnType<typeof issueRecord>[number] }) {
+  const [open, setOpen] = useState(false);
+  return <>
+    <tr style={{ cursor: r.total ? 'pointer' : undefined }} onClick={() => r.total && setOpen(!open)}>
+      <td><strong>{r.issue.label}</strong><div className="tiny muted">{r.issue.why}</div></td>
+      <td className="num">{r.total}</td><td className="num">{r.moved}</td><td className="num">{r.seconded}</td><td className="num">{r.aye}</td><td className="num" style={{ color: r.nay ? 'var(--bad)' : undefined }}>{r.nay}</td><td className="num" style={{ color: r.abstain ? 'var(--warn)' : undefined }}>{r.abstain}</td><td className="num">{r.absent}</td>
+      <td className="small">{r.last ? <Link to={`/decisions/motions/${r.last.id}`} onClick={(e) => e.stopPropagation()}>{dateShort(r.last.date)}</Link> : <span className="muted">none in tracked minutes</span>}{r.total > 0 && <span className="tiny muted"> · {open ? 'hide' : 'show'} motions</span>}</td>
+    </tr>
+    {open && <tr><td colSpan={9} style={{ background: 'var(--surface-2)' }}><ul className="list-reset grid" style={{ gap: 6 }}>{r.motions.slice(0, 12).map((x) => <MotionRow key={x.id} m={x} />)}</ul>{r.motions.length > 12 && <p className="small muted" style={{ margin: '6px 0 0' }}>{r.motions.length - 12} more in the <Link to="/decisions/votes">vote tracker</Link>.</p>}</td></tr>}
+  </>;
+}
+
+/** Every line of the minutes that names the member outside routine motions. */
+function NamedInMinutes({ m }: { m: Member }) {
+  if (m.incoming) return null;
+  const rows = namedInMinutes(m.short_name);
+  return <>
+    <Section title="Named in the minutes" />
+    {rows.length === 0 ? <Empty>The meeting summaries do not single out {m.short_name} by name; every recorded action was a motion, second or vote listed above.</Empty> : <ul className="timeline">{rows.map((r, i) => <li key={i}><Link to={`/decisions/meetings/${r.meeting.id}`} className="small" style={{ fontWeight: 700 }}>{dateShort(r.meeting.date)}</Link><div className="small">{r.text}</div></li>)}</ul>}
+  </>;
+}
+
+/** Side-by-side matrix for the profiles page: moved + seconded over motions on each issue, per member. */
+export function CompareRecord() {
+  const cols = people.filter((x) => !x.incoming);
+  const recs = Object.fromEntries(cols.map((x) => [x.id, issueRecord(x.id)]));
+  return <>
+    <Section title="Compare the record on the recurring issues" />
+    <span id="compare" />
+    <p className="small muted" style={{ marginTop: -6 }}>For each issue: motions the member moved or seconded, over the motions on that issue while they sat on the court. Recorded votes against are in red. The Judge/Executive presents most items, so his "moved" count is naturally high; the question for a magistrate is whether they ever brought anything themselves. Open any profile for the motions.</p>
+    <div className="table-wrap"><table className="data"><thead><tr><th>Issue</th>{cols.map((x) => <th key={x.id} className="num"><Link to={`/leaders/${x.id}`}>{x.short_name}</Link>{x.active === false && <div className="tiny muted">former</div>}</th>)}</tr></thead><tbody>
+      {issues.map((iss, i) => <tr key={iss.id}><td><strong>{iss.label}</strong></td>{cols.map((x) => { const r = recs[x.id][i]; return <td key={x.id} className="num">{r.total ? <>{r.moved + r.seconded}<span className="muted">/{r.total}</span>{r.nay ? <span style={{ color: 'var(--bad)' }}> ({r.nay} no)</span> : null}</> : <span className="muted">–</span>}</td>; })}</tr>)}
+    </tbody></table></div>
+    <SourceNote>{issuesMeta.method}</SourceNote>
   </>;
 }
 

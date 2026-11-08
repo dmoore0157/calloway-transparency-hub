@@ -1,0 +1,18 @@
+{
+ "compiled": "2026-11-08",
+ "method": "The same list of recurring county issues is applied to every member who has sat on the court. For each issue the hub counts, from the minutes, the motions that member made, seconded, voted for, voted against or abstained on, and the meetings they missed when it came up. A motion matches an issue by its wording or its topic tag. Counts describe participation, not merit: a member who seconds every item the Judge/Executive presents and a member who brings their own proposals both appear here, and the motions are linked so readers can tell the difference.",
+ "issues": [
+  { "id": "shelter", "label": "Animal shelter", "why": "Promised since the 2022 construction resolution; still not built.", "pattern": "animal|shelter" },
+  { "id": "roads", "label": "Roads, paving and bridges", "why": "The county's largest program; paving lists and state road-aid agreements come to the court every year.", "category": "Roads & bridges" },
+  { "id": "taxes", "label": "Tax rates", "why": "The court sets the real property, personal property and motor vehicle rates each summer and adopted the auto insurance premium tax in 2023.", "pattern": "tax rate|per \\$100|compensating|insurance premium tax|rates? (?:the same|at|of) " },
+  { "id": "budget", "label": "Budgets and budget amendments", "why": "The budget is the court's main policy document; amendments move money during the year.", "pattern": "budget", "category": "Budget & finance" },
+  { "id": "jail", "label": "Jail funding", "why": "The jail runs a structural deficit covered by transfers from the General Fund.", "pattern": "jail" },
+  { "id": "land641", "label": "The Highway 641 property", "why": "About 20 acres bought with ARPA money in 2022 and 2023; no use decided.", "pattern": "641|acres? on hwy|hwy 641" },
+  { "id": "bids", "label": "Contracts, bids and purchases", "why": "State auditors found unbid purchases and purchase orders written after the expense in FY2023, FY2024 and FY2025.", "category": "Contracts & bids" },
+  { "id": "claims", "label": "Monthly bills and financial statements", "why": "Approving the treasurer's statement and the bills is the court's routine check on spending; the auditors test these disbursements.", "pattern": "\\bbills\\b|claims|financial (?:statement|report)|treasurer'?s report" },
+  { "id": "appointments", "label": "Board and commission appointments", "why": "Dozens of boards spend tax money; the court confirms the Judge/Executive's appointments.", "category": "Appointments & boards" },
+  { "id": "schedule", "label": "Meeting schedule", "why": "The court sets its own meeting times each December.", "pattern": "meeting schedule|holiday" },
+  { "id": "transparency", "label": "Transparency and records", "why": "Digitizing the minutes, repealing the marketing-transparency ordinance, open records.", "pattern": "digitiz|transparen|open records|minutes (?:back|from)" },
+  { "id": "grants", "label": "Grants and outside funding", "why": "Every candidate for Judge/Executive said the county should pursue more.", "category": "Grants & outside funding" }
+ ]
+}

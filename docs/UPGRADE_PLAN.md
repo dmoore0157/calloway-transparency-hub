@@ -73,6 +73,17 @@ acted, partial, no recorded action, claim supported, claim contradicted. The sam
 `hub.commitment_evidence` so the commitment pages show them. The rule is written into the methodology page. Minutes before
 November 2021 are not posted, so the first 35 months of Rister's term cannot be checked and the page says so.
 
+### Uniform issue record for every member (November 2026)
+
+`data/issues.json` defines twelve recurring county issues (animal shelter, roads and paving, tax rates, budgets, jail funding,
+the Highway 641 land, contracts and bids, monthly bills, appointments, meeting schedule, transparency, grants). For every
+member who has sat on the court, current or former, the profile counts from the minutes what they moved, seconded, voted
+for or against, abstained on, or missed on each issue, with the motions linked, plus every meeting-summary line that names
+them. The profiles page carries a side-by-side matrix of all six members. This applies the same measure to members who made
+no campaign statements. Fee-office holders (sheriff, clerk, jailer, PVA, attorney, coroner) are measured through the state's
+separate audits of their offices; those findings are linked but not yet transcribed because the Auditor's site blocks
+non-browser downloads and the browser-fetch allowance was exhausted.
+
 ### Decisions so far
 
 | Topic | Decision (Nov 2026) |

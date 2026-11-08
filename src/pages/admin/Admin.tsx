@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react';
+import { type ReactNode, useEffect, useState } from 'react';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { palette, tooltipStyle } from '../../lib/palette';
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import type { Session } from '@supabase/supabase-js';
 import { Meta } from '../../components/Meta';
 import { supabase, backendReady, callFn } from '../../lib/supabase';
-import { Empty, Section, StatusBadge } from '../../components/ui';
+import { Empty, Section, StatusBadge, Stat } from '../../components/ui';
 import { useAsync } from '../../lib/useAsync';
 import { members, meetings, memberById } from '../../lib/data';
 import { relTime, dateShort } from '../../lib/format';
@@ -27,7 +29,7 @@ export function AdminLayout() {
   return (<>
     <Meta title="Admin" />
     <div className="row between"><div><div className="eyebrow">Admin</div><h1 style={{ marginTop: 4 }}>Review queues</h1></div><div className="small muted">{session.user.email} · <button className="btn small" onClick={() => supabase().auth.signOut()}>Sign out</button></div></div>
-    <nav className="subnav">{[['/admin', 'Overview'], ['/admin/photos', 'Photos'], ['/admin/tickets', 'Tickets'], ['/admin/ideas', 'Ideas'], ['/admin/flags', 'Flags'], ['/admin/commitments', 'Commitments']].map(([to, l]) => <NavLink key={to} to={to} end={to === '/admin'} className={({ isActive }) => (isActive ? 'active' : '')}>{l}</NavLink>)}</nav>
+    <nav className="subnav">{[['/admin', 'Overview'], ['/admin/photos', 'Photos'], ['/admin/tickets', 'Tickets'], ['/admin/ideas', 'Ideas'], ['/admin/flags', 'Flags'], ['/admin/commitments', 'Commitments'], ['/admin/traffic', 'Traffic']].map(([to, l]) => <NavLink key={to} to={to} end={to === '/admin'} className={({ isActive }) => (isActive ? 'active' : '')}>{l}</NavLink>)}</nav>
     <Outlet />
   </>);
 }
@@ -127,4 +129,61 @@ export function AdminCommitments() {
         {c.scoreable && <div className="row" style={{ marginTop: 6 }}><select className="input" style={{ width: 'auto' }} value={r.rating} onChange={(e) => setRating({ ...rating, [String(c.id)]: { ...r, rating: e.target.value } })}>{['not_rated', 'in_the_works', 'stalled', 'kept', 'compromise', 'broken'].map((s) => <option key={s}>{s}</option>)}</select><input className="input" style={{ flex: 1 }} placeholder="Reason, with evidence (public)" value={r.reason} onChange={(e) => setRating({ ...rating, [String(c.id)]: { ...r, reason: e.target.value } })} /><button className="btn small" onClick={() => propose(Number(c.id))} disabled={!r.reason}>Propose rating (7-day review)</button></div>}
       </div>); })}</div>}
   </>);
+}
+
+type Summary = {
+  since: string; totals: { views: number; visitors: number; visits: number }; today: { views: number; visitors: number };
+  daily: { day: string; views: number; visitors: number }[]; pages: { path: string; views: number; visitors: number }[];
+  sections: { section: string; views: number; visitors: number }[]; referrers: { referrer: string; visits: number }[];
+  devices: { device: string; visitors: number }[]; searches: { term: string; times: number; results: number }[];
+  no_result_searches: { term: string; times: number }[]; questions: { question: string; status: string; created_at: string }[];
+};
+
+/** Cookieless traffic counts from public.analytics_summary (editors only). */
+export function AdminTraffic() {
+  const [days, setDays] = useState(30);
+  const { data: res, loading } = useAsync(async () => { const { data, error } = await supabase().rpc('analytics_summary', { p_days: days }); return error ? { error: error.message } : { summary: data as Summary }; }, [days], null as null | { error?: string; summary?: Summary });
+  const data = res?.summary ?? null; const error = res?.error;
+  const p = palette();
+  const n = (v: number) => v.toLocaleString();
+  const label = (path: string) => (path === '/' ? 'Home' : path);
+  return (<>
+    <div className="row" style={{ marginBottom: 12 }}>{[[7, '7 days'], [30, '30 days'], [90, '90 days'], [365, '12 months']].map(([d, l]) => <button key={d} className={`chip ${days === d ? 'active' : ''}`} aria-pressed={days === d} onClick={() => setDays(d as number)}>{l}</button>)}</div>
+    {error ? <Empty>Couldn't load traffic: {error}</Empty> : loading || !data ? <p className="muted">Loading…</p> : (<>
+      <div className="grid cols-4">
+        <Stat label="Visitors today" value={n(data.today.visitors)} sub={`${n(data.today.views)} page views today`} />
+        <Stat label={`Daily visitors, ${days} days`} value={n(data.totals.visitors)} sub="each person counted once per day" />
+        <Stat label="Visits" value={n(data.totals.visits)} sub="a new visit after 30 minutes away" />
+        <Stat label="Page views" value={n(data.totals.views)} sub={data.totals.visits ? `${(data.totals.views / data.totals.visits).toFixed(1)} pages per visit` : '—'} />
+      </div>
+      {data.daily.length > 1 && <div className="card" style={{ marginTop: 12 }}>
+        <h3>Visitors and page views by day</h3>
+        <div style={{ width: '100%', height: 240 }}><ResponsiveContainer><LineChart data={data.daily} margin={{ top: 8, right: 12, bottom: 0, left: -12 }}>
+          <CartesianGrid stroke={p.line} vertical={false} /><XAxis dataKey="day" tick={{ fontSize: 11, fill: p.muted }} tickFormatter={(d: string) => d.slice(5)} /><YAxis tick={{ fontSize: 11, fill: p.muted }} allowDecimals={false} />
+          <Tooltip {...tooltipStyle()} /><Legend wrapperStyle={{ fontSize: 12 }} />
+          <Line type="monotone" dataKey="visitors" name="Visitors" stroke={p.series[0]} strokeWidth={2.5} dot={false} /><Line type="monotone" dataKey="views" name="Page views" stroke={p.series[2]} strokeWidth={2} dot={false} />
+        </LineChart></ResponsiveContainer></div>
+      </div>}
+      <div className="grid cols-2" style={{ marginTop: 12 }}>
+        <TrafficTable title="Most viewed pages" head={['Page', 'Views', 'Visitors']} rows={data.pages.map((r) => [<a key="l" href={import.meta.env.BASE_URL.replace(/\/$/, '') + r.path} target="_blank" rel="noopener noreferrer">{label(r.path)}</a>, n(r.views), n(r.visitors)])} empty="No page views yet." />
+        <div className="grid" style={{ alignContent: 'start' }}>
+          <TrafficTable title="Sections" head={['Section', 'Views', 'Visitors']} rows={data.sections.map((r) => [r.section, n(r.views), n(r.visitors)])} empty="No page views yet." />
+          <TrafficTable title="Where visits came from" head={['Site', 'Visits']} rows={data.referrers.map((r) => [r.referrer, n(r.visits)])} empty="No referring sites yet. Visits typed in directly or from apps that hide the referrer aren't listed." />
+          <TrafficTable title="Devices" head={['Device', 'Visitors']} rows={data.devices.map((r) => [r.device, n(r.visitors)])} empty="No visitors yet." />
+        </div>
+        <TrafficTable title="What people searched for" head={['Search', 'Times', 'Results']} rows={data.searches.map((r) => [r.term, n(r.times), r.results === 0 ? <span key="z" className="badge warn">none</span> : n(r.results)])} empty="No searches yet." />
+        <TrafficTable title="Searches with no results" head={['Search', 'Times']} rows={data.no_result_searches.map((r) => [r.term, n(r.times)])} empty="Every search found something." note="These show what residents look for that the hub doesn't cover yet." />
+      </div>
+      <TrafficTable title="Questions asked through Ask the records" head={['Question', 'Outcome', 'When']} rows={data.questions.map((r) => [r.question, r.status.replace(/_/g, ' '), relTime(r.created_at)])} empty="No questions asked yet." />
+      <p className="tiny muted" style={{ marginTop: 10 }}>Counted without cookies. Visitors are a daily one-way code, so the same person on two days counts twice. Bots, link previews and readers with Do Not Track are not counted. Page counts are kept 400 days, searches 90 days, questions 30 days.</p>
+    </>)}
+  </>);
+}
+
+function TrafficTable({ title, head, rows, empty, note }: { title: string; head: string[]; rows: ReactNode[][]; empty: string; note?: string }) {
+  return <div className="card" style={{ margin: 0 }}>
+    <h3 style={{ marginBottom: 6 }}>{title}</h3>{note && <p className="small muted" style={{ marginTop: -2 }}>{note}</p>}
+    {rows.length === 0 ? <p className="small muted" style={{ margin: 0 }}>{empty}</p> : <div className="table-wrap"><table className="data"><thead><tr>{head.map((h, i) => <th key={h} className={i ? 'num' : ''}>{h}</th>)}</tr></thead>
+      <tbody>{rows.map((r, i) => <tr key={i}>{r.map((c, j) => <td key={j} className={j ? 'num' : ''} style={j ? undefined : { wordBreak: 'break-word' }}>{c}</td>)}</tr>)}</tbody></table></div>}
+  </div>;
 }

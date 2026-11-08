@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search as SearchIcon, X } from 'lucide-react';
 import { getIndex, type SearchDoc } from '../lib/search';
+import { trackSearch } from '../lib/track';
 
 export function SearchBox({ autoFocus, onDone, big }: { autoFocus?: boolean; onDone?: () => void; big?: boolean }) {
   const [q, setQ] = useState('');
@@ -9,6 +10,8 @@ export function SearchBox({ autoFocus, onDone, big }: { autoFocus?: boolean; onD
   const ref = useRef<HTMLInputElement>(null);
   useEffect(() => { if (autoFocus) ref.current?.focus(); }, [autoFocus]);
   const results = useMemo(() => (q.trim().length < 2 ? [] : (getIndex().search(q).slice(0, 24) as unknown as (SearchDoc & { score: number })[])), [q]);
+  // count a search once the reader stops typing for a moment
+  useEffect(() => { const t = q.trim(); if (t.length < 2) return; const id = setTimeout(() => trackSearch(t, results.length), 1500); return () => clearTimeout(id); }, [q, results.length]);
   const grouped = useMemo(() => { const g: Record<string, SearchDoc[]> = {}; for (const r of results) (g[r.type] ??= []).push(r); return g; }, [results]);
   return (
     <div>

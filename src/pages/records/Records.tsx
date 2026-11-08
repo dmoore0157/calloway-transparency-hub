@@ -92,6 +92,12 @@ export function About() {
       <p><strong>Resident submissions.</strong> Road tickets and ideas are posted by residents. Contact details required by the county are stored privately and never shown. Photos are reviewed before they appear. Anyone can flag any item.</p>
       <p><strong>Corrections.</strong> Flags go to a review queue; corrections are logged publicly. If we can't source it, we don't publish it.</p>
     </div>
+    <Section title="What this site counts" />
+    <div className="card small">
+      <p>To learn which records residents use, the hub counts page views and searches. It uses no cookies, stores nothing in your browser and uses no advertising or tracking company. For each page view it records the page, the site you came from (for example facebook.com), and whether you're on a phone, tablet or computer.</p>
+      <p>To count visitors without identifying them, your internet address and browser type are combined with a random code that changes every day and turned into a one-way code. The address itself is never stored, and each day's random code is deleted, so no one, including the hub's editors, can link your visits across days or trace them back to you. Searches typed into the site's search box are counted the same way and deleted after 90 days; page counts are deleted after 400 days.</p>
+      <p style={{ margin: 0 }}>Nothing is counted if your browser sends Do Not Track or Global Privacy Control. Only the hub's editors can see the totals. Questions asked through <Link to="/ask">Ask the records</Link> are stored for 30 days, as that page explains.</p>
+    </div>
     <Section title="Who runs it" />
     <div className="card"><p>The hub is published by David Moore. If anyone involved with the hub becomes a candidate for county office, that will be disclosed here and that person's own commitments will be tracked under the same rules as everyone else's.</p><p className="small muted" style={{ margin: 0 }}>Contact: use the <Link to="/feedback">Feedback</Link> page. Press and public-records questions are welcome.</p></div>
     <Section title="Status" />

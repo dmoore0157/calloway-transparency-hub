@@ -40,6 +40,7 @@ const AdminTickets = lazy(() => import('./pages/admin/Admin').then((m) => ({ def
 const AdminIdeas = lazy(() => import('./pages/admin/Admin').then((m) => ({ default: m.AdminIdeas })));
 const AdminFlags = lazy(() => import('./pages/admin/Admin').then((m) => ({ default: m.AdminFlags })));
 const AdminCommitments = lazy(() => import('./pages/admin/Admin').then((m) => ({ default: m.AdminCommitments })));
+const AdminTraffic = lazy(() => import('./pages/admin/Admin').then((m) => ({ default: m.AdminTraffic })));
 
 const Loading = () => <p className="muted" style={{ padding: 24 }}>Loading…</p>;
 
@@ -76,7 +77,7 @@ export default function App() {
               <Route path="ask" element={<AskPage />} /><Route path="ask/a/:id" element={<SharedAnswerPage />} />
               <Route path="feedback" element={<Feedback />} /><Route path="feedback/ideas/:id" element={<IdeaPage />} />
               <Route path="admin" element={<Admin />}>
-                <Route index element={<AdminOverview />} /><Route path="photos" element={<AdminPhotos />} /><Route path="tickets" element={<AdminTickets />} /><Route path="ideas" element={<AdminIdeas />} /><Route path="flags" element={<AdminFlags />} /><Route path="commitments" element={<AdminCommitments />} />
+                <Route index element={<AdminOverview />} /><Route path="photos" element={<AdminPhotos />} /><Route path="tickets" element={<AdminTickets />} /><Route path="ideas" element={<AdminIdeas />} /><Route path="flags" element={<AdminFlags />} /><Route path="commitments" element={<AdminCommitments />} /><Route path="traffic" element={<AdminTraffic />} />
               </Route>
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>

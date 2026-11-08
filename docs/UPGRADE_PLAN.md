@@ -7,6 +7,16 @@ Companion documents:
 - `docs/backend/schema.sql` : the full Postgres schema (Supabase) for every feature below
 - `docs/backend/API.md` : public and admin API contract, edge functions, jobs, and moderation flow
 
+### Decisions so far
+
+| Topic | Decision (Nov 2026) |
+|---|---|
+| Navigation | Five-door structure approved (section 3) |
+| Theme | Token and contrast changes approved (section 4) |
+| Hosting | Stay on GitHub Pages (section 7.5) |
+| Backend | A dedicated Supabase project in its own Supabase organization, fully separate from Cited Digital (section 7.6) |
+| Neutrality | No candidate promotion anywhere. Officials are held to their own decisions, commitments, and campaign promises, and ranked on promise-keeping by published rules (section 10) |
+
 ---
 
 ## 1. Where the hub stands today
@@ -37,7 +47,7 @@ Companion documents:
 2. **No URLs.** Navigation is React state. You cannot link someone to a specific motion, budget line, or meeting, search engines index one page, and the browser back button does nothing.
 3. **Fourteen top-level tabs.** On a phone the header is 487 px tall and the nav wraps to four rows before any content appears.
 4. **Votes are not structured.** Roll calls, nays, and abstentions are prose strings in `splits[]`. The Vote Tracker filters on "result starts with Unanimous". No per-member analytics are possible with the current shape.
-5. **Campaign framing inside a neutrality claim.** Status badges read "AS JUDGE-EXECUTIVE" and a category note says "This is the office on this November's ballot." The footer says "not affiliated with Calloway County government". For a hub you will share as *the* public transparency resource, those two messages collide. Recommendation in section 4.
+5. **Campaign framing inside a neutrality claim.** Status badges read "AS JUDGE-EXECUTIVE" and a category note says "This is the office on this November's ballot." The footer says "not affiliated with Calloway County government". For a hub you will share as *the* public transparency resource, those two messages collide. **Decided:** remove all campaign framing. Accountability moves to the commitments tracker in section 10, which applies the same rules to every official.
 6. **"Compiled by AI from the official minutes."** Honest, but there is no visible verification trail. Section 6 makes verification a first-class, visible step.
 
 ---
@@ -48,7 +58,7 @@ Companion documents:
 2. **Every number has a receipt.** Source document, page, and quote one tap away. Unchanged from today, extended to votes and tickets.
 3. **Five doors, not fourteen.** Money, Decisions, Roads, Records, Feedback.
 4. **Mobile is the default device.** Residents will open this from a Facebook link on a phone.
-5. **Neutral by construction.** The hub states facts and lets people draw conclusions. No candidate framing, no editorializing in copy.
+5. **Neutral, and accountable.** The hub endorses no one and editorializes nowhere. Every official is measured against the public record and against their own commitments, by the same published rules.
 6. **Nothing goes public unverified.** Extracted data is reviewed by a human before publish. Resident submissions are moderated before photos appear.
 
 ---
@@ -221,7 +231,7 @@ Rule for voice votes, stated on the page: when minutes record "all voted aye," e
 ### 6.3 Honesty rules for vote analytics
 
 - Routine motions (approve minutes, pay bills, adjourn) are excluded from scorecards by default with a visible toggle, so counts reflect substantive activity.
-- Never rank members. Show counts side by side and let readers compare.
+- Activity counts such as motions made or seconded are shown side by side but never ranked, because more motions is neither better nor worse. Ranking is reserved for promise-keeping (section 10), where the standard is the official's own words.
 - Every scorecard page states: "Kentucky fiscal courts vote by voice. Unless the minutes record a roll call, nay, or abstention, a member's vote is recorded here as 'aye' because the minutes say 'all voted aye.'"
 
 ### 6.4 Extraction and verification pipeline
@@ -242,33 +252,41 @@ The hub stays a static site for reading. A small backend is added for everything
 
 | Layer | Choice | Why |
 |---|---|---|
-| Frontend | Vite + React + TypeScript, source committed, CI build | Reproducible builds; today's bundle cannot be edited. |
-| Hosting | Cloudflare Pages (or keep GitHub Pages) | Free, fast, SPA fallback, custom domain, built-in Turnstile for anti-spam. |
-| Database, auth, storage, functions | Supabase (Postgres + Row Level Security + Storage + Edge Functions + cron) | One managed stack, generous free tier, Postgres is the right tool for the relational data here, and PostGIS covers the map features. |
-| Maps | MapLibre GL JS with OpenStreetMap raster tiles (or Protomaps PMTiles self-hosted on R2 for zero per-tile cost) | No API key, no per-load billing. |
+| Frontend | Vite + React + TypeScript, source committed, built by GitHub Actions | Reproducible builds; today's bundle cannot be edited. |
+| Hosting | **GitHub Pages** (kept), with a hub-owned custom domain | Free, already in place, HTTPS included. Everything Cloudflare Pages would add is covered another way (section 7.5). |
+| Database, auth, storage, functions | A **dedicated Supabase project in its own Supabase organization** (Postgres + Row Level Security + Storage + Edge Functions + cron) | One managed stack, Postgres fits the relational data, PostGIS covers maps. Kept fully separate from Cited Digital (section 7.6). |
+| Maps | MapLibre GL JS with a Protomaps PMTiles extract of Calloway County, hosted in the site or in Supabase Storage | No API key, no per-tile billing, no reliance on the volunteer-run OSM tile servers. |
 | Geocoding | Nominatim (OSM) with caching, rate-limited through an edge function; fallback to Census Geocoder for addresses | Free; cached results stored in `geocode_cache`. |
-| Email | Resend or Postmark via edge function | Ticket confirmations, status changes, admin alerts. |
+| Anti-spam | Cloudflare Turnstile under a hub-only Cloudflare account, or hCaptcha | Turnstile works on any host and needs no Cloudflare hosting. Swapping to hCaptcha is a configuration change. |
+| Email | Resend or Postmark on a hub-owned sending domain | Ticket confirmations, status changes, admin alerts. |
 | Errors and analytics | Sentry (errors), Plausible or Umami (privacy-friendly, no cookies) | A transparency site should not run ad-tech trackers. |
 
 ### 7.2 Architecture
 
 ```
-Residents ──► Static site (Cloudflare Pages)
-                 │  reads
-                 ├──► /data/*.json (built from Postgres at deploy, cached at edge)
-                 │  writes (tickets, photos, ideas, flags)
+Residents ──► Static site (GitHub Pages, custom domain)
+                 │  published data
+                 ├──► /data/*.json (committed to the repo by the publish workflow)
+                 │  live data (tickets, ideas)
+                 ├──► Supabase REST over public views (anon key)
+                 │  writes (tickets, photos, ideas, flags, official responses)
                  └──► Supabase Edge Functions ──► Postgres (RLS) + Storage
                                               └──► Email, geocoder, image processing
 
 Admin ──► /admin route (Supabase Auth, email magic link, allow-listed)
-            ├── verification queue (motions, votes)
-            ├── moderation queue (photos, tickets, ideas)
-            └── publish button → triggers rebuild (Pages deploy hook)
+            ├── verification queue (motions, votes, commitments, ratings)
+            ├── moderation queue (photos, tickets, ideas, responses)
+            └── Publish → edge function calls GitHub workflow_dispatch
 
-Scheduled jobs (pg_cron / Supabase cron)
-            ├── nightly: fetch new minutes PDFs → extraction queue
-            ├── hourly: recompute ticket and vote stats (materialized views)
-            ├── daily: expire stale ticket "still an issue?" prompts, send digests
+GitHub Actions (hub's GitHub organization)
+            ├── publish.yml: read public views → write data/*.json → commit → build → deploy to Pages
+            ├── scheduled.yml (every 3 h): rebuild so new tickets get link previews; Supabase keep-alive ping
+            └── ci.yml: tests, Lighthouse, schema and RLS checks on every pull request
+
+Supabase cron
+            ├── nightly: fetch new minutes PDFs → extraction queue; check county form
+            ├── hourly: recompute ticket, vote, and commitment stats
+            ├── daily: finalize ratings past their pending window; stale-ticket prompts; digests
             └── weekly: export public datasets to Storage (CSV/JSON)
 ```
 
@@ -280,13 +298,43 @@ Scheduled jobs (pg_cron / Supabase cron)
 - Photos: client-side resize to 1600 px max, server-side EXIF strip (GPS is read once to suggest the pin, then removed), content-type sniffing, size cap 5 MB, held in a private bucket until approved, then copied to the public bucket.
 - Audit log on every admin action.
 - Signed URLs for admin-only files; public bucket for approved photos with immutable cache headers.
-- Backups: Supabase daily backups plus a weekly `pg_dump` to R2. Public datasets are themselves a backup of the compiled data.
+- Backups: Supabase daily backups (Pro plan) plus a weekly `pg_dump`, encrypted with a key only the hub owner holds, stored with a second provider. Never store an unencrypted dump as a GitHub Actions artifact: the repo is public and the database holds resident contact details. The `data/` folder in git is itself a full backup of all published data.
 
 ### 7.4 Observability and operations
 
 - Health page at `/records/status`: last minutes ingest, last publish, ticket queue depth, moderation backlog. Transparency about the hub itself.
 - Error tracking on both client and edge functions.
 - Admin daily digest email: new tickets, new ideas, items awaiting verification.
+
+### 7.5 Hosting on GitHub Pages
+
+GitHub Pages only serves static files. That is fine, because everything dynamic runs in Supabase and the browser talks to Supabase directly. This table covers each thing Cloudflare Pages would have added.
+
+| Need | How it works on GitHub Pages |
+|---|---|
+| Clean URLs and deep links | The build prerenders every known route into its own folder with an `index.html`, so `/decisions/meetings/2026-04-22` returns a normal page. Anything not prerendered falls back to `404.html`, which boots the app (the trick the site already uses). |
+| Facebook and text-message link previews | Link-preview crawlers do not run JavaScript, so each prerendered page carries its own title, description, and Open Graph image generated at build time. Tickets created between builds show immediately on the site; their link preview appears after the next scheduled rebuild, every 3 hours. |
+| Deploy when data is published | The admin Publish button calls an edge function, which triggers the `publish.yml` workflow through the GitHub API. The token used is fine-grained, limited to this one repository, with only Actions write access. |
+| Server-side code | Lives in Supabase Edge Functions. CORS allows only the hub's domain. |
+| Anti-spam | Turnstile or hCaptcha run in the browser and are verified by the edge function, so the host does not matter. |
+| Limits | Pages allows a 1 GB site and about 100 GB of traffic a month. Photos and PDFs live in Supabase Storage, so the site itself stays a few megabytes. |
+
+Two benefits come from staying on GitHub:
+
+- **A public audit trail of every data change.** The publish workflow commits `data/*.json`, so anyone can see exactly what changed, when, in the repository history.
+- **No sensitive secrets in GitHub.** The build reads only the public views with the anon key, which is public by design. The service key never leaves Supabase.
+
+### 7.6 Keeping the hub separate from Cited Digital
+
+1. **Hub-owned email account.** Create one mailbox for the hub and make it the owner of every service below. The hub can then be handed to a successor without touching any Cited Digital account.
+2. **GitHub organization.** Move the repository from the personal account into a dedicated organization. Point a custom domain at Pages first, so the public address does not change when the repository moves.
+3. **Supabase organization.** Create a new Supabase organization, not just a new project inside an existing one, because billing, members, and access are set at the organization level.
+4. **Domain.** Register it under the hub account. DNS can live anywhere.
+5. **Supporting services.** Turnstile, Resend, Sentry, and Plausible each get hub-owned accounts.
+6. **Secrets.** They live only in the hub's Supabase project and GitHub organization. Nothing is shared with other projects.
+7. **Footer credit.** The footer currently reads "Built from the county's public records by Cited Digital." Decide whether it stays. Either way, the About page names the publisher with a disclosure statement.
+
+**Supabase plan note.** Free projects pause after about a week without activity, and because most reads come from static files, the database can look idle. The scheduled workflow pings a health endpoint to keep it awake. Moving to the Pro plan, about $25 a month, when Roads launches removes that risk and adds daily backups. Supabase limits how many free projects one person can own, so check that before creating the project.
 
 ---
 
@@ -351,13 +399,73 @@ Offer the Road Department a free weekly CSV or email digest of tickets in their 
 
 ---
 
-## 10. Phased delivery
+## 10. Commitments tracker: holding officials to their own words
+
+Neutrality and accountability fit together when every official is measured by the same rules against what they themselves said. The hub never judges whether a promise was a good idea. It records what was promised, where, and what happened.
+
+### 10.1 What counts as a commitment
+
+- **Campaign promises** from candidate websites, mailers, questionnaires, forum and debate recordings, social posts, and news interviews.
+- **Commitments made in office** found in the minutes, such as "bring it back next meeting" or "hold the bids until the next meeting", plus adopted plans and grant timelines with dates.
+- **Only specific, checkable commitments are scored.** "Pave 20 miles of county road a year" or "no increase in the county tax rate" can be checked against the record. "Support our roads" cannot, so it is archived and shown as a statement but never scored.
+- **Each entry records the evidence up front:** the exact quote, the source link, an archived copy stored by the hub plus a Wayback Machine snapshot, the date, and the measure that will decide it. The measure is written when the commitment is logged, before any rating, so the goalposts cannot move later.
+
+### 10.2 Ratings
+
+The scale follows the promise trackers PolitiFact has run for years, which many voters already recognize.
+
+| Rating | Meaning |
+|---|---|
+| Not yet rated | Logged, with no relevant action yet |
+| In the works | Action started, such as a motion made, an agenda item, or a new budget line |
+| Stalled | No action for six months, or blocked |
+| Kept | The measure written at intake is met |
+| Compromise | Partly met, or met in a reduced form |
+| Broken | The deadline passed without it, or the official acted against it |
+
+Rules that keep ratings fair to how a Fiscal Court works:
+
+- **The wording decides the test.** "I will push for X" is kept by moving or voting for X, even if the court declines. "X will happen" is kept only when X happens. Every commitment page shows the official's own motions and votes on the topic, so effort is visible either way.
+- **Authority is labeled.** A promise the office cannot deliver alone, such as work on a state road, is marked "outside their authority" and judged on whether the official took the steps the office allows.
+- **Every rating cites evidence.** Each rating links the motions, votes, budget lines, or minutes pages behind it. When a newly verified motion matches an open commitment's topic, the review queue suggests it as evidence.
+
+### 10.3 Ranking
+
+Officials are ranked on promise-keeping, never on activity volume.
+
+```
+score = (kept + 0.5 × compromise) ÷ resolved
+resolved = kept + compromise + broken
+```
+
+- **Counts always appear beside the score**, for example "72% · 9 kept, 3 compromise, 3 broken of 15 resolved · 6 pending".
+- **A minimum of five resolved commitments** is required before an official appears in the ranked list. Below that, the page says there are too few resolved commitments to rank, so one early result cannot top the table.
+- **One table covers current officeholders:** the Judge-Executive and all four magistrates. Ties sort alphabetically.
+- **Candidates who did not win** keep their archived commitments on the record but are not scored, because they had no power to act.
+- **A "says and votes" view** on each official's page puts stated positions next to their recorded motions and votes on that topic, with no commentary.
+
+### 10.4 Fairness safeguards
+
+- **One rulebook.** The same template, rating definitions, and thresholds apply to every official, and a methodology page publishes them.
+- **Right to respond.** Each official gets a private link by letter and email to respond to any commitment or rating. Responses are published unedited beside the rating, up to 2,500 characters. They may be withheld only for defined reasons, such as naming a private individual.
+- **Pending period.** A proposed change to Kept, Compromise, or Broken is shown as "proposed" with its evidence for seven days before it counts in the score. Officials and readers can flag it during that window, and an open flag holds it.
+- **Second reviewer.** A Broken rating needs a second reviewer whenever the hub has more than one editor. Every rating change appears in a public change log with its date and reason.
+- **Disclosure.** The About page names the publisher. If anyone involved with the hub is or becomes a candidate, the page says so, and that person's own commitments go in the tracker under the same rules.
+- **Plain labels.** Rating names are defined terms on the methodology page. Page copy uses no adjectives about officials.
+
+### 10.5 Timing
+
+The general election was November 3, 2026, and new county terms begin in January 2027. Campaign sites and posts disappear quickly after an election, so capturing and archiving every Judge-Executive and magistrate candidate's commitments should start now. Those become the baseline for the incoming Fiscal Court's term. In-office commitments for current officials can be extracted from the 31 meetings already in the hub.
+
+---
+
+## 11. Phased delivery
 
 | Phase | Scope | Outcome |
 |---|---|---|
-| **0. Foundation** (2 to 3 weeks) | Recreate source from the bundle (React components, data to JSON). Vite + TypeScript. Routing and permalinks. Five-door IA, compact mobile header, bottom tab bar. Theme tokens and contrast fixes. Neutral badge wording. Favicon, OG image, manifest. Global search. CI build and deploy. | Same content, dramatically easier to use and share. Unblocks everything else. |
-| **1. Analytics on existing data** (3 to 4 weeks) | Re-key motions and votes into the structured model (one-time manual pass over 349 motions plus the split-vote prose). Member scorecards, mover × seconder matrix, split votes view, topic timeline, appointments tracker. Budget treemap, Sankey, variance ranking, line pages with sparklines, trends, follow the dollar. Table view and CSV on every chart. | The two features residents asked for, built from data you already have. |
-| **2. Backend and feedback** (2 to 3 weeks) | Supabase project, schema, RLS, edge functions, Turnstile, admin login. Idea board, votes, status pipeline, data-error flags, corrections log. Minutes ingest and verification queue. Publish-to-static pipeline. | Residents can shape the hub; new meetings flow in with a human check. |
+| **0. Foundation** (2 to 3 weeks) | Recreate source from the bundle (React components, data to JSON). Vite + TypeScript. Routing and permalinks. Five-door IA, compact mobile header, bottom tab bar. Theme tokens and contrast fixes. Neutral badge wording. Favicon, OG image, manifest. Global search. GitHub Actions build with prerendered routes, deployed to GitHub Pages. | Same content, dramatically easier to use and share. Unblocks everything else. |
+| **1. Analytics on existing data** (3 to 4 weeks) | Re-key motions and votes into the structured model (one-time manual pass over 349 motions plus the split-vote prose). Member scorecards, mover × seconder matrix, split votes view, topic timeline, appointments tracker. Budget treemap, Sankey, variance ranking, line pages with sparklines, trends, follow the dollar. Table view and CSV on every chart. Capture and archive 2026 campaign commitments; extract in-office commitments from the existing minutes. | The two features residents asked for, built from data you already have. |
+| **2. Backend, feedback, and commitments** (3 to 4 weeks) | Hub-owned Supabase organization and project, schema, RLS, edge functions, Turnstile, admin login. Idea board, votes, status pipeline, data-error flags, corrections log. Minutes ingest and verification queue. Publish workflow. Commitments tracker: ratings with pending period, evidence links, official responses, ranking. | Residents can shape the hub; new meetings flow in with a human check; officials are measured against their own commitments. |
 | **3. Roads** (4 to 5 weeks) | PostGIS tables, map, ticket flow, photo pipeline and moderation, county hand-off panel, tracking pages, duplicates, confirmations, district stats, digests. Maintainer check from road layers. | The public road-request record the county does not provide. |
 | **4. Expand** (ongoing) | Checkbook and vendor views when the claims register arrives through open records. Peer county comparison. Who-represents-me with district boundaries. Email alerts ("tell me when the Fiscal Court votes on roads"). County login for ticket status. Dark mode. | The "fully transparent county" roadmap becomes real features. |
 
@@ -365,10 +473,12 @@ Each phase ships on its own; phase 0 alone is a visible improvement.
 
 ---
 
-## 11. Risks and how the plan handles them
+## 12. Risks and how the plan handles them
 
 | Risk | Mitigation |
 |---|---|
+| Ranking seen as partisan | One published rulebook, measures written before rating, five-commitment minimum, seven-day pending period, second reviewer for Broken, unedited official responses, publisher disclosure. |
+| Supabase free project pauses when idle | Scheduled keep-alive ping; move to Pro when Roads launches. |
 | Credibility attacks ("this is a campaign site") | Neutral wording, published methodology, corrections log, raw data downloads, the publisher clearly named on an About page and nowhere in the analysis copy. |
 | Extraction errors in votes | Human verification before publish, source quote on every row, public flagging, visible verified-by date. |
 | PII leakage from road tickets | Separate PII table, no public view includes it, EXIF stripped, moderation before photos go public, privacy policy in plain English. |
@@ -380,9 +490,10 @@ Each phase ships on its own; phase 0 alone is a visible improvement.
 
 ---
 
-## 12. Immediate next steps
+## 13. Immediate next steps
 
-1. Approve the five-door IA and the theme token changes in sections 3 and 4.
-2. Confirm the backend platform (Supabase + Cloudflare Pages) so phase 2 and 3 schema work can proceed as written in `schema.sql`.
-3. Decide the neutrality stance in section 1, item 5, since it changes copy throughout phase 0.
-4. Start phase 0 by reconstructing the source tree from the bundle's data arrays into `data/*.json`.
+1. Create the hub-owned email account and the separate accounts listed in section 7.6.
+2. Register a custom domain and point GitHub Pages at it, then move the repository into a dedicated GitHub organization.
+3. Create the hub's own Supabase organization and project.
+4. Start capturing and archiving 2026 campaign commitments from every Judge-Executive and magistrate candidate (section 10.5).
+5. Start phase 0 by reconstructing the source tree from the bundle's data arrays into `data/*.json`, with neutral copy throughout.

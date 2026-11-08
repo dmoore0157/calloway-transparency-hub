@@ -1,5 +1,6 @@
 -- Calloway County Transparency Hub
 -- Backend schema for Supabase (Postgres 15+, PostGIS, pg_cron)
+-- Runs in the hub's own Supabase organization and project, separate from any other business.
 --
 -- Conventions
 --   * All tables in schema `hub`. Public read access goes through views in `public`
@@ -21,7 +22,10 @@ create schema if not exists hub;
 -- ---------------------------------------------------------------------------
 create type hub.source_kind as enum ('audited', 'county_reported', 'year_end', 'adopted_budget', 'minutes', 'ordinance', 'resolution', 'other');
 create type hub.verification_status as enum ('extracted', 'verified', 'disputed', 'rejected');
-create type hub.member_role as enum ('judge_executive', 'magistrate', 'county_attorney', 'clerk', 'treasurer', 'other');
+create type hub.member_role as enum ('judge_executive', 'magistrate', 'county_attorney', 'clerk', 'treasurer', 'candidate', 'other');
+create type hub.commitment_origin as enum ('campaign', 'in_office');
+create type hub.commitment_rating as enum ('not_rated', 'in_the_works', 'stalled', 'kept', 'compromise', 'broken');
+create type hub.rating_state as enum ('proposed', 'final', 'withdrawn');
 create type hub.motion_outcome as enum ('passed', 'failed', 'no_second', 'tabled', 'withdrawn', 'consensus', 'no_vote');
 create type hub.vote_method as enum ('voice_unanimous', 'voice_with_nays', 'roll_call', 'consensus', 'no_vote');
 create type hub.vote_value as enum ('aye', 'nay', 'abstain', 'absent', 'not_recorded');
@@ -64,6 +68,7 @@ create table hub.districts (
 );
 create index districts_boundary_gix on hub.districts using gist (boundary);
 
+-- People: current officials, former officials, and candidates (role = 'candidate' until they take office)
 create table hub.members (
   id           text primary key,                         -- 'imes', 'cherry'
   full_name    text not null,
@@ -432,6 +437,106 @@ create table hub.data_flags (
 create index data_flags_record_idx on hub.data_flags (record_table, record_id);
 
 -- ---------------------------------------------------------------------------
+-- Accountability: elections, commitments, ratings, evidence, responses
+-- ---------------------------------------------------------------------------
+create table hub.elections (
+  id             text primary key,                       -- '2026-general'
+  election_date  date not null,
+  kind           text not null                           -- primary | general | special
+);
+
+create table hub.candidacies (
+  election_id  text references hub.elections(id),
+  member_id    text references hub.members(id),
+  office       text not null,                            -- 'Judge-Executive' | 'Magistrate'
+  district_id  smallint references hub.districts(id),
+  party        text,
+  result       text not null default 'pending',          -- won | lost | withdrew | pending
+  primary key (election_id, member_id, office)
+);
+
+create table hub.commitments (
+  id               bigserial primary key,
+  member_id        text not null references hub.members(id),
+  origin           hub.commitment_origin not null,
+  election_id      text references hub.elections(id),    -- campaign promises
+  meeting_id       text references hub.meetings(id),     -- in-office commitments
+  made_on          date not null,
+  quote            text not null,                        -- verbatim
+  summary          text not null,                        -- plain English, no adjectives
+  category         text[],
+  scoreable        boolean not null,                     -- specific and checkable
+  wording_type     text not null check (wording_type in ('effort', 'outcome')),
+  measure          text,                                 -- what decides it, written before any rating
+  deadline         date,
+  within_authority boolean not null default true,
+  authority_note   text,
+  published        boolean not null default false,
+  created_by       uuid,
+  created_at       timestamptz not null default now(),
+  check (not scoreable or measure is not null),
+  check ((origin = 'campaign' and election_id is not null) or origin = 'in_office')
+);
+create index commitments_member_idx on hub.commitments (member_id);
+
+create table hub.commitment_sources (
+  id              bigserial primary key,
+  commitment_id   bigint not null references hub.commitments(id) on delete cascade,
+  kind            text not null,                         -- website | mailer | forum_video | debate | social_post | news | questionnaire | minutes
+  url             text,
+  archive_url     text,                                  -- Wayback Machine snapshot
+  snapshot_path   text,                                  -- hub-stored screenshot/PDF in bucket 'commitment-archive'
+  media_timestamp text,                                  -- e.g. '00:41:12' in a forum recording
+  captured_at     timestamptz not null default now()
+);
+
+create table hub.commitment_ratings (
+  id               bigserial primary key,
+  commitment_id    bigint not null references hub.commitments(id) on delete cascade,
+  rating           hub.commitment_rating not null,
+  state            hub.rating_state not null default 'proposed',
+  reason           text not null,
+  proposed_by      uuid,
+  second_reviewer  uuid,
+  proposed_at      timestamptz not null default now(),
+  effective_at     timestamptz not null default (now() + interval '7 days'),  -- pending period
+  check (second_reviewer is null or second_reviewer <> proposed_by)
+);
+create index commitment_ratings_idx on hub.commitment_ratings (commitment_id, state, effective_at desc);
+
+create table hub.commitment_evidence (
+  id              bigserial primary key,
+  commitment_id   bigint not null references hub.commitments(id) on delete cascade,
+  rating_id       bigint references hub.commitment_ratings(id),
+  motion_id       text references hub.motions(id),
+  budget_line_id  text references hub.budget_lines(id),
+  document_id     text references hub.documents(id),
+  source_page     int,
+  note            text,
+  suggested       boolean not null default false,        -- auto-suggested by topic match
+  accepted        boolean                                -- null until reviewed
+);
+
+create table hub.response_invites (
+  token_hash   text primary key,
+  member_id    text not null references hub.members(id),
+  sent_to      text not null,                            -- official's public office address
+  expires_at   timestamptz not null,
+  used_at      timestamptz
+);
+
+create table hub.official_responses (
+  id             bigserial primary key,
+  commitment_id  bigint not null references hub.commitments(id) on delete cascade,
+  member_id      text not null references hub.members(id),
+  body           text not null check (char_length(body) <= 2500),  -- published unedited
+  received_via   text not null,                          -- invite_link | email | letter
+  published      boolean not null default false,
+  withheld_reason text,                                  -- only defined reasons, e.g. names a private individual
+  created_at     timestamptz not null default now()
+);
+
+-- ---------------------------------------------------------------------------
 -- Platform: admins, rate limits, audit, ingest queue, publish log
 -- ---------------------------------------------------------------------------
 create table hub.admins (
@@ -474,7 +579,8 @@ create table hub.publishes (
   id          bigserial primary key,
   triggered_by uuid,
   datasets    text[],
-  deploy_url  text,
+  workflow_run_url text,                                -- GitHub Actions run that built and deployed Pages
+  commit_sha  text,                                      -- commit that holds the published data/*.json
   created_at  timestamptz not null default now()
 );
 
@@ -551,6 +657,64 @@ create or replace view public.corrections_log as
 select id, record_table, record_id, message, resolution, resolved_at
 from hub.data_flags where status = 'confirmed_corrected';
 
+-- Accountability views
+create or replace view public.commitments_public as
+select c.id, c.member_id, c.origin, c.election_id, c.meeting_id, c.made_on, c.quote, c.summary, c.category,
+       c.scoreable, c.wording_type, c.measure, c.deadline, c.within_authority, c.authority_note,
+       (select r.rating from hub.commitment_ratings r
+         where r.commitment_id = c.id and r.state = 'final' order by r.effective_at desc limit 1) as current_rating,
+       (select r.rating from hub.commitment_ratings r
+         where r.commitment_id = c.id and r.state = 'proposed' order by r.proposed_at desc limit 1) as proposed_rating
+from hub.commitments c where c.published;
+
+create or replace view public.commitment_ratings_public as
+select r.id, r.commitment_id, r.rating, r.state, r.reason, r.proposed_at, r.effective_at,
+       (r.second_reviewer is not null) as second_reviewed
+from hub.commitment_ratings r join hub.commitments c on c.id = r.commitment_id
+where c.published and r.state <> 'withdrawn';
+
+create or replace view public.commitment_sources_public as
+select s.id, s.commitment_id, s.kind, s.url, s.archive_url, s.snapshot_path, s.media_timestamp, s.captured_at
+from hub.commitment_sources s join hub.commitments c on c.id = s.commitment_id where c.published;
+
+create or replace view public.commitment_evidence_public as
+select e.id, e.commitment_id, e.rating_id, e.motion_id, e.budget_line_id, e.document_id, e.source_page, e.note
+from hub.commitment_evidence e join hub.commitments c on c.id = e.commitment_id
+where c.published and e.accepted;
+
+create or replace view public.official_responses_public as
+select id, commitment_id, member_id, body, received_via, created_at
+from hub.official_responses where published;
+
+-- Ranking: promise-keeping score for current officeholders.
+-- score = (kept + 0.5 * compromise) / resolved, shown only when resolved >= 5.
+create or replace view public.commitment_scores as
+with current_rating as (
+  select distinct on (commitment_id) commitment_id, rating
+  from hub.commitment_ratings
+  where state = 'final'
+  order by commitment_id, effective_at desc
+), tallies as (
+  select m.id as member_id, m.full_name, m.role, m.district_id,
+         count(c.id)                                                   as scoreable_total,
+         count(*) filter (where cr.rating = 'kept')                    as kept,
+         count(*) filter (where cr.rating = 'compromise')              as compromise,
+         count(*) filter (where cr.rating = 'broken')                  as broken,
+         count(c.id) filter (where cr.rating is null or cr.rating in ('in_the_works','stalled','not_rated')) as pending
+  from hub.members m
+  left join hub.commitments c on c.member_id = m.id and c.scoreable and c.published
+  left join current_rating cr on cr.commitment_id = c.id
+  where m.active and m.role in ('judge_executive', 'magistrate')
+  group by m.id, m.full_name, m.role, m.district_id
+)
+select t.*,
+       (t.kept + t.compromise + t.broken) as resolved,
+       case when (t.kept + t.compromise + t.broken) >= 5
+            then round((t.kept + 0.5 * t.compromise)::numeric / (t.kept + t.compromise + t.broken), 3)
+       end as score,
+       ((t.kept + t.compromise + t.broken) >= 5) as ranked
+from tallies t;
+
 -- ---------------------------------------------------------------------------
 -- Row Level Security
 -- ---------------------------------------------------------------------------
@@ -567,6 +731,12 @@ alter table hub.votes            enable row level security;
 alter table hub.meetings         enable row level security;
 alter table hub.admins           enable row level security;
 alter table hub.audit_log        enable row level security;
+alter table hub.commitments          enable row level security;
+alter table hub.commitment_sources   enable row level security;
+alter table hub.commitment_ratings   enable row level security;
+alter table hub.commitment_evidence  enable row level security;
+alter table hub.official_responses   enable row level security;
+alter table hub.response_invites     enable row level security;
 
 -- No policies for anon on hub.* tables: anon reads only the public.* views above
 -- (views are created with security_invoker = false and owned by a role that can read hub.*).
@@ -578,7 +748,8 @@ $$;
 do $$
 declare t text;
 begin
-  for t in select unnest(array['tickets','ticket_contacts','ticket_events','ticket_photos','ideas','idea_votes','idea_comments','data_flags','motions','votes','meetings','audit_log'])
+  for t in select unnest(array['tickets','ticket_contacts','ticket_events','ticket_photos','ideas','idea_votes','idea_comments','data_flags','motions','votes','meetings','audit_log',
+                             'commitments','commitment_sources','commitment_ratings','commitment_evidence','official_responses','response_invites'])
   loop
     execute format('create policy admin_all on hub.%I for all to authenticated using (hub.is_admin()) with check (hub.is_admin());', t);
   end loop;
@@ -591,7 +762,9 @@ create policy county_update_status on hub.tickets for update to authenticated
 
 grant usage on schema public to anon, authenticated;
 grant select on public.motions_public, public.votes_public, public.tickets_public, public.ticket_photos_public,
-                public.ticket_events_public, public.ideas_public, public.corrections_log to anon, authenticated;
+                public.ticket_events_public, public.ideas_public, public.corrections_log,
+                public.commitments_public, public.commitment_ratings_public, public.commitment_sources_public,
+                public.commitment_evidence_public, public.official_responses_public, public.commitment_scores to anon, authenticated;
 
 -- ---------------------------------------------------------------------------
 -- Triggers
@@ -649,6 +822,17 @@ select cron.schedule('refresh-stats', '15 * * * *', $$
   refresh materialized view hub.district_ticket_stats;
 $$);
 
+-- Proposed ratings become final after the 7-day pending period, unless a flag is open on them.
+-- A 'broken' rating also needs a second reviewer whenever the hub has more than one editor.
+select cron.schedule('finalize-ratings', '30 6 * * *', $$
+  update hub.commitment_ratings r set state = 'final'
+  where r.state = 'proposed' and r.effective_at <= now()
+    and not exists (select 1 from hub.data_flags f
+                    where f.record_table = 'commitment_ratings' and f.record_id = r.id::text and f.status = 'open')
+    and (r.rating <> 'broken' or r.second_reviewer is not null
+         or (select count(*) from hub.admins a where a.role in ('owner','editor')) < 2);
+$$);
+
 select cron.schedule('purge-rate-limits', '0 * * * *', $$
   delete from hub.rate_limits where window_start < now() - interval '2 days';
 $$);
@@ -662,6 +846,7 @@ $$);
 --   ticket-photos-private   private   uploads awaiting moderation
 --   ticket-photos           public    approved photos, immutable cache
 --   exports                 public    weekly CSV/JSON datasets
+--   commitment-archive      public    screenshots/PDFs of campaign and in-office commitment sources
 -- ---------------------------------------------------------------------------
 
 -- Seed: members and districts as of the FY2026 minutes
@@ -673,3 +858,5 @@ insert into hub.members (id, full_name, short_name, role, district_id) values
   ('cherry',   'Don Cherry',     'Cherry',   'magistrate', 3),
   ('rister',   'Paul Rister',    'Rister',   'magistrate', 4);
 -- Names verified against callowaycountyky.gov/elected-officials and kcjea.org (Nov 2026). Re-check after the Nov 2026 election.
+insert into hub.elections (id, election_date, kind) values ('2026-primary', '2026-05-19', 'primary'), ('2026-general', '2026-11-03', 'general');
+-- Candidacies and results are entered from the County Clerk's certified results, not from news reports.

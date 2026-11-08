@@ -29,6 +29,19 @@ All 76 sets of minutes the county has published online (November 17, 2021 to Sep
 the PDFs by the hub and are labeled on their pages as not yet independently reviewed. Two special meetings the minutes
 refer to (March 3, 2022 and November 8, 2022) have no minutes posted on the county site and are not in the hub.
 
+### State audit coverage (November 2026)
+
+`data/audits.json` holds every Fiscal Court audit the Kentucky Auditor of Public Accounts has published for FY2018 to FY2025
+(seven reports; no FY2022 report exists on the Auditor's released-audits list or at the standard report address). For each
+audit: opinions, report and release dates, the responsible officials named in the report, all-funds receipts and
+disbursements, long-term debt, and every finding with its details, dollar amounts, cause, recommendation, the county's
+written response and what the next audit said about it. Findings are grouped into repeat chains. The site shows this under
+Records, State audits (`/records/audits` and `/records/audits/:fy`); the Debt page and Money overview link to it. The
+FY2022 to FY2025 budget series stay labeled county-reported because the audits publish all-funds totals, not the General
+Fund line detail those pages use. The county and Auditor sites block non-browser downloads, so the PDFs were read through a
+browser-based fetch and transcribed by hand; `scripts/check-data.mjs` checks the totals reconcile and every repeat and chain
+reference resolves.
+
 ### Decisions so far
 
 | Topic | Decision (Nov 2026) |

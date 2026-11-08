@@ -61,7 +61,7 @@ export default function Home() {
 
       <div className="card brand" style={{ marginTop: 24 }}>
         <h3>How this is built</h3>
-        <p className="small" style={{ margin: 0 }}>Figures come from independent state audits (FY2018 to FY2021) and the county's own filings to the Kentucky Department for Local Government (FY2022 to FY2025), always labeled and never blended. Motions and votes are compiled from the official minutes and link to each PDF. Road tickets and ideas are submitted by residents and moderated before photos appear. <Link to="/records/about">Read the methodology</Link>.</p>
+        <p className="small" style={{ margin: 0 }}>Figures come from independent state audits (FY2018 to FY2021) and the county's own filings to the Kentucky Department for Local Government (FY2022 to FY2025), always labeled and never blended. The <Link to="/records/audits">state audits</Link> of FY2018 to FY2025 and every finding are summarized on their own page. Motions and votes are compiled from the official minutes and link to each PDF. Road tickets and ideas are submitted by residents and moderated before photos appear. <Link to="/records/about">Read the methodology</Link>.</p>
       </div>
     </>
   );

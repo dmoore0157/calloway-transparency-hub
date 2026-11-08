@@ -1,13 +1,13 @@
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import { Meta } from '../../components/Meta';
 import { Section, SourceNote, Ext, Empty } from '../../components/ui';
-import { links, law, glossary, meetingsMeta } from '../../lib/data';
+import { links, law, glossary, meetingsMeta, audits, auditsMeta } from '../../lib/data';
 import { useAsync } from '../../lib/useAsync';
 import { api } from '../../lib/api';
 import { backendReady } from '../../lib/supabase';
 import { dateShort } from '../../lib/format';
 
-const TABS = [['/records', 'Reports & audits'], ['/records/sources', 'Sources'], ['/records/glossary', 'Glossary'], ['/records/data', 'Data downloads'], ['/records/corrections', 'Corrections log'], ['/records/about', 'About & methodology']];
+const TABS = [['/records', 'Reports'], ['/records/audits', 'State audits'], ['/records/sources', 'Sources'], ['/records/glossary', 'Glossary'], ['/records/data', 'Data downloads'], ['/records/corrections', 'Corrections log'], ['/records/about', 'About & methodology']];
 export function RecordsLayout() {
   return (<>
     <Meta title="Records" description="Calloway County audits, state filings, sources, glossary, data downloads and the hub's methodology." />
@@ -17,12 +17,11 @@ export function RecordsLayout() {
   </>);
 }
 
-const AUDITS = [2021, 2020, 2019, 2018].map((y) => ({ year: y, label: `Fiscal Court audit, FY${y}`, url: 'https://auditor.ky.gov/Auditreports/Pages/default.aspx' }));
 export function Reports() {
   return (<>
     <p className="lede">Independent audits from the Kentucky Auditor of Public Accounts, the county's own filings to the Department for Local Government (DLG), and the adopted budgets. Audited and self-reported figures are labeled everywhere they appear and are never blended.</p>
     <Section title="Independent audits (KY Auditor of Public Accounts)" />
-    <div className="card"><p className="small">The most recent published Fiscal Court audit covers FY2021. Audits are searchable on the Auditor's site by county and year.</p><ul style={{ margin: 0, paddingLeft: 18 }}>{AUDITS.map((a) => <li key={a.year}><Ext href={a.url}>{a.label}</Ext></li>)}</ul></div>
+    <div className="card"><p className="small">The most recent published Fiscal Court audit covers FY{audits[0].fy}. The <Link to="/records/audits">State audits</Link> page lists every finding, the county's response and whether the problem came back. No audit was published for FY2022.</p><ul style={{ margin: 0, paddingLeft: 18 }}>{audits.map((a) => <li key={a.fy}><Link to={`/records/audits/${a.fy}`}>Fiscal Court audit, FY{a.fy}</Link> ({a.findings.length} finding{a.findings.length === 1 ? '' : 's'}) · <Ext href={a.report_url}>PDF</Ext></li>)}<li><Ext href={auditsMeta.index_url}>All released local government audits</Ext> (Auditor of Public Accounts)</li></ul></div>
     <Section title="County filings to the state (unaudited)" />
     <div className="card"><p className="small">Quarterly financial reports and adopted budgets are filed with DLG on the state's uniform form. They are the county's own numbers and are labeled "county-reported" on this site.</p><ul style={{ margin: 0, paddingLeft: 18 }}><li><Ext href="https://kydlgweb.ky.gov/Counties/16_CountyHome.cfm">Calloway County on the DLG portal</Ext> (budgets, quarterly reports, FY2022 to FY2025)</li><li><Ext href={links.budget}>Adopted budgets and administrative code</Ext> (county site)</li><li><Ext href={meetingsMeta.minutes_index_url}>Fiscal Court minutes</Ext> (county site)</li><li><Ext href={links.ordinances}>Ordinances</Ext> · <Ext href={links.forms}>Forms</Ext> · <Ext href={links.officials}>Elected officials</Ext></li></ul></div>
     <Section title="What law governs county money" />
@@ -33,6 +32,7 @@ export function Reports() {
 export function Sources() {
   const rows = [
     ['FY2018–FY2021 revenue, spending, budget vs. actual, debt', 'KY Auditor of Public Accounts, Calloway County Fiscal Court audits', 'Independently audited'],
+    ['Audit findings, opinions and all-funds totals, FY2018–FY2025 (no FY2022 audit)', 'KY Auditor of Public Accounts, Fiscal Court audit reports and press releases', 'Independently audited'],
     ['FY2022–FY2025 revenue, spending, budget vs. actual', 'County quarterly financial reports filed with KY DLG', 'County-reported, unaudited'],
     ['FY2024-25 General Fund line items', 'County year-end General Fund expenditure report', 'County year-end report'],
     ['FY2026-27 budget lines, all funds', 'Adopted budget, uniform DLG form', 'Adopted budget'],
@@ -59,7 +59,7 @@ export function Glossary() {
 
 export function DataDownloads() {
   const base = import.meta.env.BASE_URL;
-  const files = [['data/budget/overview.json', 'Budget overview: revenue by source, funds, budget vs. actual, FY2018–FY2025'], ['data/budget/fy2027.json', 'FY2026-27 adopted budget, every line across all funds'], ['data/budget/yearend_fy2025.json', 'FY2024-25 General Fund year-end lines'], ['data/meetings.json', 'Meetings with summaries, attendance and vote notes'], ['data/motions.json', 'Every motion with mover, seconder, result and per-member votes'], ['data/grants.json', 'Grants and outside funding'], ['data/debt.json', 'Debt and obligations'], ['data/enactments.json', 'Ordinances index'], ['data/glossary.json', 'Glossary terms'], ['data/members.json', 'Fiscal Court members']];
+  const files = [['data/budget/overview.json', 'Budget overview: revenue by source, funds, budget vs. actual, FY2018–FY2025'], ['data/budget/fy2027.json', 'FY2026-27 adopted budget, every line across all funds'], ['data/budget/yearend_fy2025.json', 'FY2024-25 General Fund year-end lines'], ['data/meetings.json', 'Meetings with summaries, attendance and vote notes'], ['data/motions.json', 'Every motion with mover, seconder, result and per-member votes'], ['data/grants.json', 'Grants and outside funding'], ['data/debt.json', 'Debt and obligations'], ['data/audits.json', 'State audits: findings, responses, repeat chains and audited totals'], ['data/enactments.json', 'Ordinances index'], ['data/glossary.json', 'Glossary terms'], ['data/members.json', 'Fiscal Court members']];
   return (<>
     <p className="lede">Every dataset the site uses, as JSON. CSV downloads are on each chart and table. Live data (road tickets, ideas, commitments) is available read-only from the hub's public API views listed in the project documentation.</p>
     <div className="card"><ul style={{ margin: 0, paddingLeft: 18, display: 'grid', gap: 6 }}>{files.map(([f, d]) => <li key={f}><a href={base + f} download>{f}</a> <span className="small muted">{d}</span></li>)}</ul></div>
@@ -84,6 +84,7 @@ export function About() {
     <Section title="What we publish, and how" />
     <div className="card">
       <p><strong>Figures.</strong> Revenue, spending, and budget figures come from independent state audits and the county's own filings to the Department for Local Government, always labeled as audited or county-reported and never blended. Budget lines come from the adopted budget.</p>
+      <p><strong>Audits.</strong> Findings are transcribed from each state audit's Schedule of Findings. The one-line summaries are ours; the details, dollar figures, recommendations and the county's responses follow the report text, and every finding links to the PDF. "Repeat" means the auditors themselves labeled it a repeat or the prior report's follow-up table says so.</p>
       <p><strong>Decisions.</strong> Meetings, motions, seconds, and votes are compiled from the official Fiscal Court minutes and link to each PDF. Kentucky fiscal courts vote by voice, so when the minutes say "all voted aye" every present member is recorded as aye; nays, abstentions, roll calls, and failed seconds are recorded from the minutes text. Topic tags are assigned by keyword and reviewed.</p>
       <p><strong>Commitments.</strong> The promises tracker records what officials said, where, and what happened, under one published rulebook that applies to every official. See the <Link to="/accountability/methodology">commitments methodology</Link>.</p>
       <p><strong>Resident submissions.</strong> Road tickets and ideas are posted by residents. Contact details required by the county are stored privately and never shown. Photos are reviewed before they appear. Anyone can flag any item.</p>

@@ -42,7 +42,7 @@ export default function Overview() {
 
       <Section title="General Fund spending over time" />
       <ChartFrame title="FY2018 to FY2025, actual spending" intro="The solid line is what the county's main fund actually spent. The dashed line is the 8-year average. Dot color shows the record behind each figure; audited and self-reported numbers are never blended." rows={gf} columns={[{ key: 'year', label: 'Year' }, { key: 'spending', label: 'Spending', num: true, format: (v) => usd(v as number) }, { key: 'source', label: 'Record' }]} filename="general-fund-spending.csv"
-        footer={<><div className="row small" style={{ marginTop: 8 }}>{Object.entries(overview.source_labels).map(([k, l]) => <span key={k}><span className="vote-dot" style={{ background: p.src[k] }} />{l}</span>)}</div><SourceNote>FY2018–21 KY Auditor of Public Accounts; FY2022–25 county quarterly filings to the Dept. for Local Government. FY2026 financials are not yet in the state system.</SourceNote></>}>
+        footer={<><div className="row small" style={{ marginTop: 8 }}>{Object.entries(overview.source_labels).map(([k, l]) => <span key={k}><span className="vote-dot" style={{ background: p.src[k] }} />{l}</span>)}</div><SourceNote>FY2018–21 KY Auditor of Public Accounts; FY2022–25 county quarterly filings to the Dept. for Local Government. State audits for FY2023–25 were released in 2026 and are summarized under <Link to="/records/audits">State audits</Link>. FY2026 financials are not yet in the state system.</SourceNote></>}>
         <ResponsiveContainer width="100%" height={280}>
           <LineChart data={gf} margin={{ top: 10, right: 16, left: 0, bottom: 0 }}>
             <CartesianGrid stroke={p.line} strokeDasharray="3 3" vertical={false} />

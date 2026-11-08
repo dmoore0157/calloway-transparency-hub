@@ -1,0 +1,799 @@
+{
+ "source": "Kentucky Auditor of Public Accounts, Reports of the Audit of the Calloway County Fiscal Court",
+ "index_url": "https://www.auditor.ky.gov/Auditreports/Pages/LocalGovernmentAuditsReleased.aspx",
+ "compiled": "2026-11-08",
+ "how_compiled": "Findings were transcribed from the Schedule of Findings and Responses (or Schedule of Findings and Questioned Costs) in each report. Summaries are the hub’s plain-English condensation; the bullet details, dollar amounts, recommendations and county responses follow the report text. Receipts and disbursements are the all-funds totals from each audited Statement of Receipts, Disbursements and Changes in Fund Balances (regulatory basis).",
+ "gaps": [
+  {
+   "fy": 2022,
+   "note": "No Fiscal Court audit for the year ended June 30, 2022 appears on the State Auditor’s released-audits list or at the standard report address (checked November 2026). The FY2023 report restates the beginning fund balance, so FY2022 figures on this site remain county-reported."
+  },
+  {
+   "fy": 2026,
+   "note": "The FY2026 audit (year ended June 30, 2026) had not been released as of November 2026."
+  }
+ ],
+ "chains": [
+  {
+   "key": "receipts",
+   "label": "Off-site cash collections",
+   "ids": [
+    "2018-001",
+    "2019-001",
+    "2020-001"
+   ],
+   "outcome": "Partially resolved by FY2021: the county no longer owned the Dexter Community Center and the Animal Shelter was to keep a ledger and deposit daily."
+  },
+  {
+   "key": "capital",
+   "label": "Capital asset records",
+   "ids": [
+    "2018-002",
+    "2020-002"
+   ],
+   "outcome": "Partially resolved by FY2021 after the treasurer’s office took over the asset list."
+  },
+  {
+   "key": "sefa",
+   "label": "Federal spending schedule (COVID relief)",
+   "ids": [
+    "2020-005",
+    "2021-001"
+   ],
+   "outcome": "Status after FY2021 unknown because no FY2022 audit was published; not raised in FY2023."
+  },
+  {
+   "key": "debt",
+   "label": "Budgeting and reporting equipment loans",
+   "ids": [
+    "2019-002",
+    "2020-003",
+    "2020-004"
+   ],
+   "outcome": "Resolved by FY2021."
+  },
+  {
+   "key": "disbursements",
+   "label": "Purchase orders, bidding and late payments",
+   "ids": [
+    "2023-002",
+    "2024-001",
+    "2025-001"
+   ],
+   "outcome": "Open. Raised in each of the three most recent audits; the county has answered each time that it will strengthen internal controls."
+  }
+ ],
+ "audits": [
+  {
+   "fy": 2018,
+   "year_end": "2018-06-30",
+   "report_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2018CallowayFC-audit.pdf",
+   "totals": {
+    "receipts": 8638173,
+    "disbursements": 10466621,
+    "financing": 175308,
+    "net_change": -1653140,
+    "balance_begin": 10195729,
+    "balance_end": 8542589
+   },
+   "debt_end": 295993,
+   "report_date": "2019-06-13",
+   "released": "2019-09-04",
+   "press_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2018CallowayFC-PR.pdf",
+   "auditor": "Mike Harmon",
+   "judge_executive": "Kenneth C. Imes",
+   "judge_executive_note": "Larry Elkins was Judge/Executive for the audited year (July 2017 to June 2018) and is addressed as the former Judge/Executive; the responses to the findings are his.",
+   "treasurer": null,
+   "opinions": {
+    "regulatory": "unmodified",
+    "gaap": "adverse"
+   },
+   "single_audit": false,
+   "material_weakness": true,
+   "noncompliance": true,
+   "findings": [
+    {
+     "id": "2018-001",
+     "title": "Internal control deficiencies and non-compliances exist over the collection of receipts at off-site locations",
+     "area": "receipts",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": null,
+     "summary": "Money collected at the Road Department, Animal Shelter and Dexter Community Center was not turned over to the treasurer daily, receipts were not always issued and no receipts ledger was kept.",
+     "details": [
+      "Receipts collected at the Road Department, Animal Shelter and for the Dexter Community Center were not turned over to the county treasurer daily, as KRS 68.210 requires.",
+      "One copy of the triplicate receipts was not turned over with the money, so the treasurer could not compare amounts collected to the receipts issued (KRS 64.840).",
+      "No receipts ledger was kept at the Animal Shelter or the Dexter Community Center.",
+      "The Animal Shelter disposed of its office copies of receipts for calendar year 2017.",
+      "Triplicate receipts were not always issued to customers."
+     ],
+     "dollars": [],
+     "cause": "A lack of effective internal controls. Receipts were left vulnerable to misappropriation and loss, and amounts due to the fiscal court could not be verified.",
+     "recommendation": "Turn all off-site collections over to the treasurer daily with the receipts issued; keep a receipts ledger at each location; keep all receipts records; issue pre-numbered triplicate receipts for every applicable transaction.",
+     "response": "We will comply by having departments turn in copies of receipts to Treasurer’s office.",
+     "response_by": "Former County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Repeated as 2019-001"
+    },
+    {
+     "id": "2018-002",
+     "title": "Weak internal controls resulted in the misstatement of capital assets on the county’s schedule of capital assets",
+     "area": "capital assets",
+     "kind": [
+      "material weakness"
+     ],
+     "repeat_of": null,
+     "summary": "The county did not physically inspect or keep its capital asset list current. The year-end schedule was misstated by $87,861, additions by $83,653 and deletions by $226,879.",
+     "details": [
+      "No periodic physical inspection of assets to compare against the capital asset list.",
+      "Beginning balances had to be restated because of errors in prior-year deletions.",
+      "Some additions were left off while items below the capitalization threshold, and assets owned by another entity, were included.",
+      "Prior-year deletions were shown as current-year deletions.",
+      "Equipment installed on two new dump trucks had not been added to the county’s insurance policy."
+     ],
+     "dollars": [
+      {
+       "label": "Ending schedule misstated by",
+       "amount": 87861
+      },
+      {
+       "label": "Additions misstated by",
+       "amount": 83653
+      },
+      {
+       "label": "Deletions misstated by",
+       "amount": 226879
+      }
+     ],
+     "cause": "The fiscal court relied on a single employee without sufficient supervision and did not emphasize strong controls over capital asset reporting.",
+     "recommendation": "Maintain a detailed inventory of capital assets, update it through the year, and physically inspect county assets at year end against the list.",
+     "response": "County will more diligent on keeping records of capital assets purchased and surplused.",
+     "response_by": "Former County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Not repeated in FY2019; a capital assets finding returned as 2020-002"
+    },
+    {
+     "id": "2018-003",
+     "title": "The fiscal court lacked adequate segregation of duties over the collection of receipts",
+     "area": "receipts",
+     "kind": [
+      "material weakness"
+     ],
+     "repeat_of": null,
+     "summary": "The former assistant treasurer collected receipts, prepared the deposit and posted the ledger, with no documented review by anyone else.",
+     "details": [
+      "One person had custody, recordkeeping and authorization over receipts.",
+      "No documentation that the former treasurer or anyone else reviewed the collection and recording of receipts."
+     ],
+     "dollars": [],
+     "cause": "Duties were not segregated, which increases the risk of undetected errors or fraud.",
+     "recommendation": "Designate someone independent of the cash receipts process to review the daily receipts listing against the deposit slip and initial it.",
+     "response": "We do not agree with this finding. The county treasurer reviewed all receipts, ledgers and deposits. We will comply by Treasurer initialing all receipts and deposits.",
+     "response_by": "Former County Judge/Executive",
+     "auditor_reply": "While the former treasurer may have reviewed the former assistant county treasurer’s postings and deposits, there was a single individual performing the duties.",
+     "questioned_costs": null,
+     "next_status": "Not repeated in FY2019"
+    }
+   ]
+  },
+  {
+   "fy": 2019,
+   "year_end": "2019-06-30",
+   "report_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2019CallowayFC-audit.pdf",
+   "totals": {
+    "receipts": 9071528,
+    "disbursements": 12222087,
+    "financing": 370000,
+    "net_change": -2780559,
+    "balance_begin": 8542589,
+    "balance_end": 5762030
+   },
+   "debt_end": 518845,
+   "report_date": "2020-10-06",
+   "released": null,
+   "press_url": null,
+   "auditor": "Mike Harmon",
+   "judge_executive": "Kenneth Imes",
+   "treasurer": null,
+   "opinions": {
+    "regulatory": "unmodified",
+    "gaap": "adverse"
+   },
+   "single_audit": false,
+   "material_weakness": true,
+   "noncompliance": true,
+   "findings": [
+    {
+     "id": "2019-001",
+     "title": "Internal control deficiencies and non-compliances exist over the collection of receipts at off-site locations",
+     "area": "receipts",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": "2018-001",
+     "summary": "Collections at the Road Department, Animal Shelter and Dexter Community Center were still not turned over daily, and no receipts ledger was kept.",
+     "details": [
+      "Receipts collected at the Road Department, Animal Shelter and for the Dexter Community Center were not turned over to the treasurer daily (KRS 68.210).",
+      "No receipts ledger was kept at the Animal Shelter or the Dexter Community Center."
+     ],
+     "dollars": [],
+     "cause": "A lack of effective internal controls. Receipts were left vulnerable to misappropriation and loss, and amounts due could not be verified.",
+     "recommendation": "Turn off-site collections over to the treasurer daily; keep a receipts ledger showing date, payer, amount and purpose; keep all receipts records under the state retention schedule.",
+     "response": "Effective 10-8-2020 all receipts will be collected daily in the treasurer’s office. If money was not collected that day, then an email will be sent to the treasurer’s office stating that no cash was taken in.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Repeated as 2020-001"
+    },
+    {
+     "id": "2019-002",
+     "title": "The fiscal court overspent the budget in a Road Fund category",
+     "area": "budget",
+     "kind": [
+      "material noncompliance"
+     ],
+     "repeat_of": null,
+     "summary": "A $370,000 loan for four Kubota tractors was never added to the budget, so one Road Fund category was overspent by $367,738.",
+     "details": [
+      "The county borrowed $370,000 for four Kubota tractors through a third-party lender.",
+      "Because the county never actually received the cash, the budget amendment was overlooked and the transaction was never budgeted.",
+      "One Road Fund category was overspent by $367,738, contrary to KRS 68.300 and KRS 68.280."
+     ],
+     "dollars": [
+      {
+       "label": "Overspent in one Road Fund category",
+       "amount": 367738
+      },
+      {
+       "label": "Tractor financing not budgeted",
+       "amount": 370000
+      }
+     ],
+     "cause": "The loan proceeds went straight to the vendor, so staff overlooked the required budget amendment.",
+     "recommendation": "Budget every county transaction, including those handled by a third-party lender; monitor the budget through the year and amend it when necessary.",
+     "response": "The county will comply with the KRS 68.300 along with making budget amendments for all transactions not budgeted into the county budget.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Corrected (per FY2020 review of prior findings); a similar debt-budgeting finding appeared as 2020-004"
+    }
+   ]
+  },
+  {
+   "fy": 2020,
+   "year_end": "2020-06-30",
+   "report_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2020CallowayFC-audit.pdf",
+   "totals": {
+    "receipts": 9928234,
+    "disbursements": 11267412,
+    "financing": 498234,
+    "net_change": -840944,
+    "balance_begin": 5759926,
+    "balance_end": 4918982
+   },
+   "debt_end": 869542,
+   "report_date": "2022-01-25",
+   "released": null,
+   "press_url": null,
+   "auditor": "Mike Harmon",
+   "judge_executive": "Kenneth Imes",
+   "treasurer": "Tonya Robinson",
+   "opinions": {
+    "regulatory": "unmodified",
+    "gaap": "adverse",
+    "federal_compliance": "qualified"
+   },
+   "single_audit": true,
+   "major_program": "Coronavirus Relief Fund (CFDA 21.019)",
+   "material_weakness": true,
+   "noncompliance": true,
+   "findings": [
+    {
+     "id": "2020-001",
+     "title": "Internal control deficiencies and non-compliances exist over the collection of receipts at off-site locations",
+     "area": "receipts",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": "2019-001",
+     "summary": "Third year in a row: off-site collections were not turned over daily and no receipts ledger was kept at the Animal Shelter or the Dexter Community Center.",
+     "details": [
+      "Receipts collected at the Road Department, Animal Shelter and for the Dexter Community Center were not turned over to the treasurer daily (KRS 68.210).",
+      "No receipts ledger was kept at the Animal Shelter nor for the Dexter Community Center."
+     ],
+     "dollars": [],
+     "cause": "A lack of effective internal controls; receipts were left vulnerable to misappropriation and loss, and the county was out of compliance with state statute.",
+     "recommendation": "Turn Road Department and Animal Shelter collections over to the treasurer daily; keep a receipts ledger at the Animal Shelter; retain all receipts records.",
+     "response": "Calloway County Fiscal Court no longer owns the Dexter Community Center, nor has regular off-site sales through the Calloway County Road Department. The Animal Shelter will start keeping a ledger of all transactions along with bringing daily deposits.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Partially resolved (per FY2021 summary of prior findings); not repeated in FY2021"
+    },
+    {
+     "id": "2020-002",
+     "title": "Weak internal controls resulted in the misstatement of capital assets on the county’s schedule of capital assets",
+     "area": "capital assets",
+     "kind": [
+      "material weakness"
+     ],
+     "repeat_of": "2018-002",
+     "summary": "Purchases were not added and sold or salvaged items were not removed, so the capital asset schedule was misstated by $255,847.",
+     "details": [
+      "Several items purchased during the year were not recorded as capital assets.",
+      "Several items sold or salvaged were not removed from the schedule.",
+      "The schedule was misstated by $255,847."
+     ],
+     "dollars": [
+      {
+       "label": "Capital asset schedule misstated by",
+       "amount": 255847
+      }
+     ],
+     "cause": "The fiscal court had not adequately monitored and tracked capital assets as the Department for Local Government requires.",
+     "recommendation": "Reconcile asset purchases and disposals with the general ledger, and reconcile the schedule to a year-end physical inspection and the insurance policy.",
+     "response": "The Treasurer’s office has taken over the Capital Assets List and will be reconciled as advised.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Partially resolved (per FY2021 summary of prior findings); not repeated in FY2021"
+    },
+    {
+     "id": "2020-003",
+     "title": "The fiscal court did not notify the State Local Debt Officer regarding long-term debt obligations",
+     "area": "debt",
+     "kind": [
+      "material noncompliance"
+     ],
+     "repeat_of": null,
+     "summary": "The county financed two John Deere graders for $498,234 without the written notice to the State Local Debt Officer that KRS 65.117 requires for obligations over $200,000.",
+     "details": [
+      "The financing obligation was for two John Deere graders totaling $498,234; each grader individually exceeded the $200,000 reporting threshold.",
+      "No written notification was made to the State Local Debt Officer."
+     ],
+     "dollars": [
+      {
+       "label": "Grader financing",
+       "amount": 498234
+      }
+     ],
+     "cause": "The fiscal court was unaware that the notification was required.",
+     "recommendation": "Notify the State Local Debt Officer in writing before issuing any debt instrument, as KRS 65.117 requires.",
+     "response": "The Fiscal Court will comply in the future regarding KRS 68.280 & KRS 68.300 by amending the budget for unanticipated receipts and disbursements handled by a third-party lender.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Resolved (per FY2021 summary of prior findings)"
+    },
+    {
+     "id": "2020-004",
+     "title": "The fiscal court did not properly budget for and record all debt-related disbursements",
+     "area": "budget",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": null,
+     "summary": "A $498,234 note with PNC Bank for two graders (total price $538,234) was never budgeted or recorded, so the Road Fund understated both borrowed money and road appropriations by $498,234.",
+     "details": [
+      "Note agreement with PNC Bank dated June 25, 2020 for $498,234; the county paid $40,000 and financed the rest.",
+      "The financing transaction was not recorded or budgeted, and the related debt service was not in the budget or the financial statements.",
+      "Road Fund line item Borrowed Money was not budgeted for $498,234; Road Fund line item Road Appropriations was not budgeted for $498,234."
+     ],
+     "dollars": [
+      {
+       "label": "Unbudgeted borrowing and appropriation",
+       "amount": 498234
+      }
+     ],
+     "cause": "The transactions were arranged through the Department for Local Government, so the county did not realize they had to be reported as Road Fund activity. The budget was not amended as KRS 68.280 requires.",
+     "recommendation": "Budget all fiscal court disbursements and amend the budget to reflect unanticipated receipts and disbursements, including those handled by a third-party lender.",
+     "response": "The Fiscal Court will make proper notification to the Department For Local Government in the future regarding purchases over the set threshold of $200,000.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Resolved (per FY2021 summary of prior findings)"
+    },
+    {
+     "id": "2020-005",
+     "title": "The fiscal court’s Schedule of Expenditures of Federal Awards was materially misstated",
+     "area": "federal awards",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": null,
+     "summary": "The county reported $77,397 of federal spending; it left out $5,334 of emergency management grant and understated Coronavirus Relief Fund spending by $453,892, so the schedule was understated by $750,533 in total.",
+     "details": [
+      "Federal program: Coronavirus Relief Fund, CFDA 21.019, passed through the Kentucky Department for Local Government.",
+      "The treasurer’s submitted schedule totaled $77,397.",
+      "The Emergency Management Performance Grant ($5,334) was omitted and the Coronavirus Relief Fund was understated by $453,892.",
+      "Because of the omissions the county did not realize it met the federal single-audit threshold."
+     ],
+     "dollars": [
+      {
+       "label": "Schedule understated by",
+       "amount": 750533
+      },
+      {
+       "label": "Coronavirus Relief Fund understated by",
+       "amount": 453892
+      }
+     ],
+     "cause": "Turnover in the treasurer’s office near the end of the prior year and unfamiliarity with the reporting rules; the schedule was built from departments’ grant awards rather than from federal funds actually spent.",
+     "recommendation": "Provide knowledgeable, independent oversight of the schedule, reconcile the federal assistance reported, and set written reporting guidance for the treasurer.",
+     "response": "The Fiscal Court will establish a reporting guidance to assist the treasurer with accurate information regarding federal assistance grants.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": 0,
+     "next_status": "Repeated as 2021-001"
+    },
+    {
+     "id": "2020-006",
+     "title": "The fiscal court failed to implement adequate internal controls over period of performance",
+     "area": "federal awards",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": null,
+     "summary": "Coronavirus Relief Fund money was spent without checking the allowed dates: $56,312 of payroll fell before the eligible period, while $510,205 of eligible payroll was left out.",
+     "details": [
+      "Federal program: Coronavirus Relief Fund, CFDA 21.019.",
+      "$56,312 of eligible payroll expenses was charged before the period of performance began and should not have been included.",
+      "$510,205 of eligible payroll expenses during the period of performance was not included.",
+      "Questioned costs: $56,312."
+     ],
+     "dollars": [
+      {
+       "label": "Questioned costs",
+       "amount": 56312
+      },
+      {
+       "label": "Eligible payroll left out",
+       "amount": 510205
+      }
+     ],
+     "cause": "The fiscal court did not monitor or set controls over the period of performance (March 1 to December 30, 2020) for the Coronavirus Relief Fund.",
+     "recommendation": "Implement internal controls over period of performance to determine whether expenses comply with laws, regulations and grant agreements.",
+     "response": "The Fiscal Court will implement internal controls to determine if expenses are in compliance with laws, regulations, and provisions of grant agreements.",
+     "response_by": "County Judge/Executive (prepared by Tonya Robinson, Treasurer)",
+     "auditor_reply": null,
+     "questioned_costs": 56312,
+     "next_status": "Resolved (per FY2021 summary of prior findings)"
+    }
+   ]
+  },
+  {
+   "fy": 2021,
+   "year_end": "2021-06-30",
+   "report_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2021CallowayFC-audit.pdf",
+   "totals": {
+    "receipts": 16788204,
+    "disbursements": 12548590,
+    "financing": 0,
+    "net_change": 4239614,
+    "balance_begin": 4920291,
+    "balance_end": 9159905
+   },
+   "debt_end": 616460,
+   "report_date": "2022-05-18",
+   "released": "2022-07-06",
+   "press_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2021CallowayFC-PR.pdf",
+   "auditor": "Mike Harmon",
+   "judge_executive": "Kenny Imes",
+   "treasurer": "Tonya Robinson",
+   "opinions": {
+    "regulatory": "unmodified",
+    "gaap": "adverse",
+    "federal_compliance": "unmodified"
+   },
+   "single_audit": true,
+   "major_program": "Coronavirus Relief Fund (Assistance Listing 21.019)",
+   "material_weakness": true,
+   "noncompliance": true,
+   "findings": [
+    {
+     "id": "2021-001",
+     "title": "The fiscal court’s Schedule of Expenditures of Federal Awards was materially overstated",
+     "area": "federal awards",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": "2020-005",
+     "summary": "The federal spending schedule was overstated by $1,002,208: Coronavirus Relief Fund money spent in FY2020 was counted again, two state grants were listed as federal, and a federal salary reimbursement was left out.",
+     "details": [
+      "$878,909 of Coronavirus Relief Fund spending that occurred in fiscal year 2020 was included again.",
+      "Two state grants were listed as federal: a $10,000 Kentucky Ambulance Block Grant and a $103,912 Kentucky 911 Services Grant ($113,912 in total).",
+      "$9,387 of federal reimbursement for the emergency management director’s salary was omitted."
+     ],
+     "dollars": [
+      {
+       "label": "Schedule overstated by",
+       "amount": 1002208
+      }
+     ],
+     "cause": "The treasurer recorded Coronavirus Relief Fund money when it was received rather than when it was spent, believed the ambulance and 911 grants were federal, and did not know the salary reimbursement had to be reported.",
+     "recommendation": "Implement or strengthen controls over federal award reporting so amounts reported represent federal expenditures during the year.",
+     "response": "Calloway County will strengthen its controls over the federal expenditure reporting by verifying what branch the grant is received from. [Name redacted] will keep a list of all expenditures throughout the year that should be listed on the federal expenditure report.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": 0,
+     "next_status": "No FY2022 audit was published, so the next status is unknown; not among the FY2023 findings"
+    }
+   ],
+   "prior_findings": [
+    {
+     "id": "2020-001",
+     "status": "Partially resolved"
+    },
+    {
+     "id": "2020-002",
+     "status": "Partially resolved"
+    },
+    {
+     "id": "2020-003",
+     "status": "Resolved"
+    },
+    {
+     "id": "2020-004",
+     "status": "Resolved"
+    },
+    {
+     "id": "2020-005",
+     "status": "Repeated"
+    },
+    {
+     "id": "2020-006",
+     "status": "Resolved"
+    }
+   ]
+  },
+  {
+   "fy": 2023,
+   "year_end": "2023-06-30",
+   "report_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2023CallowayFC-audit.pdf",
+   "totals": {
+    "receipts": 13611588,
+    "disbursements": 16635887,
+    "financing": 0,
+    "net_change": -3024299,
+    "balance_begin": 12774459,
+    "balance_end": 9750160
+   },
+   "debt_end": 220041,
+   "report_date": "2026-04-22",
+   "released": "2026-07-20",
+   "press_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2023CallowayFC-pr.pdf",
+   "auditor": "Allison Ball",
+   "judge_executive": "Kenneth C. Imes",
+   "treasurer": "Tonya Robinson",
+   "opinions": {
+    "regulatory": "unmodified",
+    "gaap": "adverse"
+   },
+   "single_audit": false,
+   "material_weakness": true,
+   "noncompliance": true,
+   "findings": [
+    {
+     "id": "2023-001",
+     "title": "General Fund transfers in and out were materially overstated",
+     "area": "financial reporting",
+     "kind": [
+      "material weakness"
+     ],
+     "repeat_of": null,
+     "summary": "A $450,000 move between the General Fund’s own operating and money-market accounts was booked as an interfund transfer, so transfers in and out were each overstated by $450,000 and the fiscal court did not catch it.",
+     "details": [
+      "In July 2022 the county moved $450,000 from the General Fund money market account to its operating account.",
+      "The treasurer recorded it as an interfund transfer rather than an inter-account transfer.",
+      "The fiscal court reviewed and approved the treasurer’s monthly report without identifying the error.",
+      "Interfund transfers in and out of the General Fund were each overstated by $450,000 on the fourth-quarter financial statement."
+     ],
+     "dollars": [
+      {
+       "label": "Transfers in and out each overstated by",
+       "amount": 450000
+      }
+     ],
+     "cause": "The treasurer’s office switched accounting software in October 2022 and re-entered July to October transactions by hand; the transfer was entered incorrectly in the new system.",
+     "recommendation": "Strengthen internal controls over financial reporting, including a thorough review of the receipts and disbursements ledgers and financial reports.",
+     "response": "The treasurer’s office switched from [software name redacted] to [software name redacted] in October 2022. Since the switch was mid FY the treasurer and assistant treasurer had to go back and enter everything from July to October manually. The original transaction of $450,000 was in [software name redacted] correctly but was manually entered into the [software name redacted] incorrectly which is what the auditors were looking at. During this transition, the treasurer’s office had been advised by a representative from [software name redacted] on how to enter transfers.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Not repeated in FY2024"
+    },
+    {
+     "id": "2023-002",
+     "title": "The fiscal court failed to implement effective internal controls over disbursements",
+     "area": "disbursements",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": null,
+     "summary": "Of 73 disbursements tested ($5,760,495), 5 had no purchase order ($492,699) and 28 had purchase orders written after the expense ($2,831,800). Paving over $30,000 was not bid, two invoices ($148,958) were paid late, a $91 payment skipped court approval, a credit card incurred finance charges, and encumbrances were left off the year-end statement.",
+     "details": [
+      "Five disbursements totaling $492,699 had no purchase orders.",
+      "Twenty-eight disbursements totaling $2,831,800 had purchase orders issued after the expense had already been incurred.",
+      "Road paving was not bid even though payments to the vendor exceeded $30,000 (KRS 424.260).",
+      "Two invoices totaling $148,958 were not paid within 30 working days (KRS 65.140).",
+      "One $91 disbursement was paid before the fiscal court approved it.",
+      "Finance charges were incurred because a credit card payment was late.",
+      "Encumbrances were not reported on the fourth-quarter financial statement (KRS 68.360)."
+     ],
+     "dollars": [
+      {
+       "label": "Disbursements tested",
+       "amount": 5760495
+      },
+      {
+       "label": "No purchase order",
+       "amount": 492699
+      },
+      {
+       "label": "Purchase order after the expense",
+       "amount": 2831800
+      },
+      {
+       "label": "Invoices paid late",
+       "amount": 148958
+      }
+     ],
+     "cause": "Department heads issue purchase orders and typically date them when invoices arrive; bids were not sought for paving due to oversight; invoices were paid late due to oversight; encumbrances were left off because staff did not yet understand the new accounting software.",
+     "recommendation": "Issue purchase orders before purchases are made; follow bidding requirements in KRS 424.260; pay invoices within 30 days; pay credit cards on time; report open purchase orders as encumbrances at year end.",
+     "response": "The Calloway County Fiscal Court will strengthen internal controls in all areas that were recommended.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Repeated as 2024-001"
+    }
+   ]
+  },
+  {
+   "fy": 2024,
+   "year_end": "2024-06-30",
+   "report_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2024CallowayFC-audit.pdf",
+   "totals": {
+    "receipts": 13153568,
+    "disbursements": 15580344,
+    "financing": 5676,
+    "net_change": -2421100,
+    "balance_begin": 9750975,
+    "balance_end": 7329875
+   },
+   "debt_end": 105529,
+   "report_date": "2026-04-22",
+   "released": "2026-07-20",
+   "press_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2024CallowayFC-pr.pdf",
+   "auditor": "Allison Ball",
+   "judge_executive": "Kenneth C. Imes",
+   "treasurer": "Tonya Robinson",
+   "opinions": {
+    "regulatory": "unmodified",
+    "gaap": "adverse"
+   },
+   "single_audit": false,
+   "material_weakness": true,
+   "noncompliance": true,
+   "findings": [
+    {
+     "id": "2024-001",
+     "title": "The fiscal court failed to implement effective internal controls over disbursements",
+     "area": "disbursements",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": "2023-002",
+     "summary": "Repeat of 2023-002. Fifty-eight disbursements totaling $4,292,099 had purchase orders written after the expense, a vehicle over $40,000 was bought without bids, a $44,019 invoice was paid late, a credit card incurred finance charges, and encumbrances were again left off the year-end statement.",
+     "details": [
+      "Fifty-eight disbursements totaling $4,292,099 had purchase orders issued after the expense had already been incurred.",
+      "A vehicle costing more than $40,000 was purchased without advertising for bids (KRS 424.260).",
+      "One invoice totaling $44,019 was not paid within 30 working days (KRS 65.140).",
+      "Finance charges were incurred because a credit card payment was late.",
+      "Encumbrances were not reported on the fourth-quarter financial statement (KRS 68.360)."
+     ],
+     "dollars": [
+      {
+       "label": "Purchase order after the expense",
+       "amount": 4292099
+      },
+      {
+       "label": "Invoice paid late",
+       "amount": 44019
+      }
+     ],
+     "cause": "Purchase orders are still dated when invoices arrive; staff believed the vehicle was bought at the state contract price so no bids were sought; one invoice was paid late through oversight; encumbrances were left off because staff did not yet understand the new accounting software.",
+     "recommendation": "Issue purchase orders before purchases; follow KRS 424.260 bidding rules; pay invoices within 30 days; pay credit cards on time; report open purchase orders as encumbrances at year end.",
+     "response": "The Calloway County Fiscal Court will strengthen internal controls in all areas that were recommended.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Repeated as 2025-001"
+    }
+   ]
+  },
+  {
+   "fy": 2025,
+   "year_end": "2025-06-30",
+   "report_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2025CallowayFC-audit.pdf",
+   "totals": {
+    "receipts": 14134744,
+    "disbursements": 15424444,
+    "financing": 0,
+    "net_change": -1289700,
+    "balance_begin": 7329875,
+    "balance_end": 6040175
+   },
+   "debt_end": 0,
+   "report_date": "2026-07-08",
+   "released": "2026-10-23",
+   "press_url": "https://www.auditor.ky.gov/Auditreports/Calloway/2025CallowayFC-pr.pdf",
+   "auditor": "Allison Ball",
+   "judge_executive": "Kenneth C. Imes",
+   "treasurer": "Tonya Robinson",
+   "opinions": {
+    "regulatory": "unmodified",
+    "gaap": "adverse"
+   },
+   "single_audit": false,
+   "material_weakness": true,
+   "noncompliance": true,
+   "findings": [
+    {
+     "id": "2025-001",
+     "title": "The fiscal court failed to implement effective internal controls over disbursements",
+     "area": "disbursements",
+     "kind": [
+      "material weakness",
+      "material noncompliance"
+     ],
+     "repeat_of": "2024-001",
+     "summary": "Third year in a row. Thirty-seven of 70 disbursements tested ($2,996,752) had purchase orders written after the expense, two ($126,749) had none, a dump truck over $40,000 was bought without bids, two invoices ($7,464) were paid late, and encumbrances were again left off the year-end statement.",
+     "details": [
+      "Thirty-seven of 70 disbursements tested, totaling $2,996,752, had purchase orders issued after the expense had already been incurred.",
+      "Two disbursements totaling $126,749 had no purchase order.",
+      "A dump truck costing more than $40,000 was purchased without advertising for bids (KRS 424.260).",
+      "Two invoices totaling $7,464 were not paid within 30 working days (KRS 65.140).",
+      "Encumbrances were not reported on the fourth-quarter financial statement (KRS 68.360)."
+     ],
+     "dollars": [
+      {
+       "label": "Disbursements tested (70)",
+       "amount": null
+      },
+      {
+       "label": "Purchase order after the expense (37 of 70)",
+       "amount": 2996752
+      },
+      {
+       "label": "No purchase order (2)",
+       "amount": 126749
+      },
+      {
+       "label": "Invoices paid late (2)",
+       "amount": 7464
+      }
+     ],
+     "cause": "Department heads issue purchase orders and typically date them when invoices arrive; a lack of oversight led to the missing purchase orders, the unbid truck and the late invoices; the county was still not fully proficient with its accounting software.",
+     "recommendation": "Issue purchase orders before purchases; follow KRS 424.260 and KRS 65.140; pay credit cards on time; report open purchase orders as encumbrances at year end.",
+     "response": "The Calloway County Fiscal Court will strengthen internal controls as recommended by the auditors with purchase orders and bidding requirements.",
+     "response_by": "County Judge/Executive",
+     "auditor_reply": null,
+     "questioned_costs": null,
+     "next_status": "Open; the FY2026 audit has not been published"
+    }
+   ]
+  }
+ ]
+}

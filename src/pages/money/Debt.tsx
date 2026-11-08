@@ -1,4 +1,5 @@
-import { debt } from '../../lib/data';
+import { Link } from 'react-router-dom';
+import { debt, audits } from '../../lib/data';
 import { usd } from '../../lib/format';
 import { Section, SourceNote, Stat, Ext } from '../../components/ui';
 
@@ -20,7 +21,12 @@ export default function Debt() {
         <div className="table-wrap" style={{ marginTop: 12 }}><table className="data"><thead><tr><th>Loan</th><th>Purpose</th><th className="num">Original</th><th className="num">Balance {debt.asOf}</th><th className="num">Rate</th><th>Payoff</th></tr></thead>
           <tbody>{debt.items.map((d) => <tr key={d.n}><td>{d.n}</td><td className="small">{d.purpose}</td><td className="num">{usd(d.orig)}</td><td className="num">{usd(d.bal)}</td><td className="num">{d.rate}</td><td>{d.matures} <span className="badge">past</span></td></tr>)}</tbody></table></div>
         <p className="small muted" style={{ marginTop: 8 }}>All of these payoff dates have since passed, so these balances are no longer outstanding. They are shown for history, not as today's debt. {debt.retired.note}</p>
-        <SourceNote>Calloway County Fiscal Court audit, Kentucky Auditor of Public Accounts, fiscal year ended June 30, 2021 (notes to the financial statements). Newer audits had not been published when this page was built.</SourceNote>
+        <SourceNote>Calloway County Fiscal Court audit, Kentucky Auditor of Public Accounts, fiscal year ended June 30, 2021 (notes to the financial statements).</SourceNote>
+      </div>
+      <Section title="Long-term debt at each state audit" />
+      <div className="card">
+        <div className="table-wrap"><table className="data"><thead><tr><th>June 30</th><th className="num">Long-term debt owed</th><th>Audit</th></tr></thead><tbody>{audits.slice().reverse().map((a) => <tr key={a.fy}><td>{a.fy}</td><td className="num">{usd(a.debt_end)}</td><td><Link to={`/records/audits/${a.fy}`}>FY{a.fy} audit</Link></td></tr>)}</tbody></table></div>
+        <p className="small muted" style={{ marginTop: 8 }}>The FY2025 audit shows the county had paid off all long-term debt by June 30, 2025, before the April 2026 loan above. No FY2022 audit was published. The FY2020 audit flagged that the grader loan was taken without the required notice to the State Local Debt Officer and was never budgeted (findings 2020-003 and 2020-004).</p>
       </div>
     </>
   );

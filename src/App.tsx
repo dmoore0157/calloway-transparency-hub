@@ -19,6 +19,7 @@ import Members, { MemberPage } from './pages/decisions/Members';
 import Ordinances from './pages/decisions/Ordinances';
 import WhoRepresentsMe from './pages/decisions/WhoRepresentsMe';
 import { RecordsLayout, Reports, Sources as RecordSources, Glossary, DataDownloads, Corrections, About } from './pages/records/Records';
+import { Audits, AuditPage } from './pages/records/Audits';
 import Feedback, { IdeaPage } from './pages/feedback/Feedback';
 import { AccountabilityLayout, Scoreboard, AllCommitments, MemberCommitments, CommitmentPage, Methodology } from './pages/accountability/Accountability';
 
@@ -63,7 +64,7 @@ export default function App() {
                 <Route index element={<Scoreboard />} /><Route path="all" element={<AllCommitments />} /><Route path="methodology" element={<Methodology />} /><Route path="commitments/:id" element={<CommitmentPage />} /><Route path=":memberId" element={<MemberCommitments />} />
               </Route>
               <Route path="records" element={<RecordsLayout />}>
-                <Route index element={<Reports />} /><Route path="sources" element={<RecordSources />} /><Route path="glossary" element={<Glossary />} /><Route path="data" element={<DataDownloads />} /><Route path="corrections" element={<Corrections />} /><Route path="about" element={<About />} />
+                <Route index element={<Reports />} /><Route path="audits" element={<Audits />} /><Route path="audits/:fy" element={<AuditPage />} /><Route path="sources" element={<RecordSources />} /><Route path="glossary" element={<Glossary />} /><Route path="data" element={<DataDownloads />} /><Route path="corrections" element={<Corrections />} /><Route path="about" element={<About />} />
               </Route>
               <Route path="feedback" element={<Feedback />} /><Route path="feedback/ideas/:id" element={<IdeaPage />} />
               <Route path="admin" element={<Admin />}>

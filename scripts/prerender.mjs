@@ -7,7 +7,7 @@ const html = fs.readFileSync(path.join(dist, 'app.html'), 'utf8');
 fs.rmSync(path.join(dist, 'app.html'));
 const base = (html.match(/<script type="module" crossorigin src="([^"]+)\/assets\//) || [, ''])[1] + '/';
 const read = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
-const meetings = read('data/meetings.json').meetings, motions = read('data/motions.json').motions, members = read('data/members.json').members, lines = read('data/budget/fy2027.json').lines;
+const audits = read('data/audits.json').audits, meetings = read('data/meetings.json').meetings, motions = read('data/motions.json').motions, members = read('data/members.json').members, lines = read('data/budget/fy2027.json').lines;
 const routes = [
   ['money', 'County Budget', 'Where Calloway County money comes from and where it goes, FY2018 to FY2027.'],
   ['money/sources', 'Where the money comes from', 'Calloway County General Fund revenue by source.'],
@@ -30,6 +30,8 @@ const routes = [
   ['accountability/all', 'All commitments', 'Every logged commitment.'],
   ['accountability/methodology', 'How ratings work', 'The published rulebook for rating promises.'],
   ['records', 'Reports and audits', 'The documents behind every number.'],
+  ['records/audits', 'State audits of the Fiscal Court', 'Every state audit finding, the county response and whether it came back.'],
+  ...audits.map((a) => [`records/audits/${a.fy}`, `FY${a.fy} state audit of the Fiscal Court`, `${a.findings.length} finding${a.findings.length === 1 ? '' : 's'}: ${a.findings.map((f) => f.title).join('; ') || 'none'}.`]),
   ['records/sources', 'Sources', 'Where each figure comes from.'], ['records/glossary', 'Glossary', 'Plain-English definitions.'], ['records/data', 'Data downloads', 'Every dataset as JSON and CSV.'], ['records/corrections', 'Corrections log', 'Every correction made to the hub.'], ['records/about', 'About and methodology', 'Who runs the hub and how it is built.'],
   ['feedback', 'Feedback', 'Suggest improvements and vote on ideas.'], ['admin', 'Admin', 'Editor sign-in.'],
   ...meetings.map((m) => [`decisions/meetings/${m.id}`, `Fiscal Court meeting, ${m.date_label}`, m.summary[0]]),

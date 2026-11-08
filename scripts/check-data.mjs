@@ -17,5 +17,14 @@ for (const m of motions) {
 }
 const fy = read('data/budget/fy2027.json'); const total = fy.lines.filter((l) => l.kind === 'appropriation').reduce((s, l) => s + l.amount, 0);
 if (Math.abs(total - fy.summary.total) > fy.summary.total * 0.02) errors.push(`FY2027 appropriation lines (${total}) differ from the stated total (${fy.summary.total}) by more than 2%`);
+const auditsDoc = read('data/audits.json'); const findingIds = new Set();
+for (const a of auditsDoc.audits) {
+  const t = a.totals; if (t.receipts - t.disbursements + t.financing !== t.net_change) errors.push(`audit FY${a.fy}: receipts - disbursements + financing != net change`);
+  if (t.balance_begin + t.net_change !== t.balance_end) errors.push(`audit FY${a.fy}: fund balance arithmetic does not reconcile`);
+  if (!a.report_url?.startsWith('https://')) errors.push(`audit FY${a.fy} has no report URL`);
+  for (const f of a.findings) { if (findingIds.has(f.id)) errors.push(`duplicate finding ${f.id}`); findingIds.add(f.id); if (!f.response || !f.recommendation || !f.summary) errors.push(`finding ${f.id} is missing text`); }
+}
+for (const a of auditsDoc.audits) for (const f of a.findings) if (f.repeat_of && !findingIds.has(f.repeat_of)) errors.push(`finding ${f.id} repeats unknown ${f.repeat_of}`);
+for (const c of auditsDoc.chains) for (const id of c.ids) if (!findingIds.has(id)) errors.push(`chain ${c.key} references unknown finding ${id}`);
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
-console.log(`data ok: ${meetings.length} meetings, ${motions.length} motions, ${fy.lines.length} budget lines`);
+console.log(`data ok: ${meetings.length} meetings, ${motions.length} motions, ${fy.lines.length} budget lines, ${auditsDoc.audits.length} audits with ${findingIds.size} findings`);

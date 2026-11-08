@@ -1,3 +1,4 @@
+import { RecordScoreTable } from '../leaders/Leaders';
 import { Link, useParams } from 'react-router-dom';
 import { Section, Empty, Crumb, ShareButton, StatusBadge, Ext, SourceNote } from '../../components/ui';
 import { api, type Commitment } from '../../lib/api';
@@ -15,6 +16,9 @@ export function Scoreboard() {
   return (<>
     <p className="lede">Every current official is held to the same test: what they promised, in their own words, against what the public record shows happened. The hub endorses no one. It records the promise, the source, the measure, and the outcome.</p>
     {!backendReady ? <Empty>The commitments tracker needs the hub's backend, which is not configured in this build.</Empty> : loading ? <p className="muted">Loading…</p> : (<>
+      <Section title="Record in office: what they said against what they did" />
+      <p className="small muted" style={{ marginTop: -4 }}>Promises from the 2026 campaign can't be graded until their deadlines arrive. Officials who already served are scored now on their record: each public statement they made is set beside what the Fiscal Court minutes show.</p>
+      <RecordScoreTable />
       <Section title="Promise-keeping ranking" />
       {ranked.length === 0 ? (
         <div className="card"><p style={{ margin: 0 }}><strong>No official is ranked yet.</strong> An official appears in the ranking only after five of their scoreable commitments have been resolved as Kept, Compromise, or Broken, so a single early result can't top the table. Commitments are being gathered from the 2026 campaign and from Fiscal Court minutes; each appears below as it is logged.</p></div>
@@ -97,11 +101,14 @@ export function Methodology() {
       <li>Counts always appear beside the score.</li><li>An official needs at least five resolved commitments before appearing in the ranked list.</li><li>Only current officeholders are ranked. Candidates who did not win keep their archived commitments on the record but are not scored, because they had no power to act.</li><li>Activity counts (motions made, seconded) are never ranked; more motions is neither better nor worse.</li>
     </ul></div>
     <Section title="Record checks: statements against the minutes" />
+    <span id="record-score" />
     <div className="card"><ul style={{ paddingLeft: 18, margin: 0, display: 'grid', gap: 6 }} className="small">
       <li><strong>Sitting officials are judged on their record, not only their promises.</strong> When an official who already holds office makes a campaign statement, the hub sets it beside what the Fiscal Court minutes record on that subject during their time in office: motions they made or seconded, votes for action others brought, or no action at all.</li>
       <li><strong>Claims about the record are checked against the documents.</strong> A statement such as "every audit came back clean" is compared with the published audits and labeled supported or contradicted, with the documents linked.</li>
       <li><strong>Labels describe the record only.</strong> "No recorded action" means no motion appears in the posted minutes; it does not say whether the idea was good or whether the official argued for it off the record. Minutes before November 2021 are not posted, so earlier years cannot be checked.</li>
       <li><strong>Every member is measured the same way even without a statement.</strong> The same twelve recurring county issues are applied to every member who has sat on the court, counting what each moved, seconded, voted for or against, abstained on, or missed, with the motions linked. Members-elect have no record yet and are shown that way.</li>
+      <li><strong>Record check score.</strong> <code>score = (acted + supported + ½ × partial) ÷ scored checks</code>, where scored checks are every check labeled acted, partial, no recorded action, supported or contradicted. Context items are shown but not scored. A percentage appears once an official has at least three scored checks; the points and counts always appear beside it, and officials with fewer checks are listed with the reason. The score measures how far the minutes back up what the official said. It is not a grade of their whole service, and it is separate from the promise-keeping score, which grades campaign promises once their deadlines pass.</li>
+      <li><strong>Where statements come from.</strong> Only direct quotes from published voter guides, candidate questionnaires and interviews (WKMS, the Murray Ledger & Times, Murray State News, the Murray Sentinel), 2018 to 2026. Every incumbent is searched the same way; if none is found, the profile says so and invites readers to send one.</li>
       <li><strong>Same test for everyone.</strong> Record checks exist for every official who made a checkable public statement; where an official made none, there is nothing to check. Officials can respond through the same private link as for commitments.</li>
     </ul></div>
     <Section title="Fairness safeguards" />

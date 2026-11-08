@@ -97,6 +97,21 @@ for (const c of checks.checks) {
   });
 }
 
+// Record check scores (same rule as src/lib/analytics.ts recordScore)
+for (const mem of members.filter((x) => !x.incoming)) {
+  const cs = checks.checks.filter((c) => c.member_id === mem.id); const n = (r) => cs.filter((c) => c.record === r).length;
+  const scored = cs.length - n('context'); const points = n('acted') + n('supported') + n('partial') / 2;
+  const pct = scored >= 3 ? `${Math.round((points / scored) * 100)}%` : null;
+  add({
+    id: `record-score:${mem.id}`, type: 'record_score', date: checks.compiled,
+    title: `${mem.full_name}: record check score`,
+    text: cs.length === 0
+      ? `No checkable public statement by ${mem.full_name} was found, so there is no record check score. ${checks.sources_searched ?? ''}`
+      : `${mem.full_name}'s record check score is ${pct ?? 'not shown (fewer than 3 scored checks)'}: ${points} of ${scored} points from ${cs.length} statements checked against the Fiscal Court minutes (acted ${n('acted')}, partial ${n('partial')}, no recorded action ${n('none')}, claims supported ${n('supported')}, contradicted ${n('contradicted')}, context ${n('context')}). Rule: acted or supported = 1, partial = 1/2, no recorded action or contradicted = 0; context not scored; a percentage needs at least 3 scored checks. It measures how far the minutes back up what the official said, not their whole service.`,
+    url: `/leaders/${mem.id}#record`, source_url: null, source_label: 'Hub record checks', members: [mem.id],
+  });
+}
+
 // Audits
 for (const a of audits.audits) {
   add({

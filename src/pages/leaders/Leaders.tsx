@@ -8,7 +8,7 @@ import { CommitmentSummary } from '../accountability/CommitmentSummary';
 import { VotingRecord } from '../decisions/Members';
 import { MotionRow } from '../../components/VoteBits';
 import { people, members, memberById, offices, officialsMeta, elections, electionById, electionsMeta, audits, recordChecks, recordChecksMeta, motionById, issues, issuesMeta, type RecordCheck, type Member, type Officeholder, type Election, type Race, type Candidate } from '../../lib/data';
-import { memberStats, issueRecord, namedInMinutes } from '../../lib/analytics';
+import { memberStats, issueRecord, namedInMinutes, recordScore, recordScores, RECORD_SCORE_MIN, type RecordScore } from '../../lib/analytics';
 import { api } from '../../lib/api';
 import { useAsync } from '../../lib/useAsync';
 import { backendReady } from '../../lib/supabase';
@@ -39,6 +39,7 @@ function PersonCard({ m, tag, tagClass }: { m: Member; tag?: string; tagClass?: 
     <div className="row between" style={{ alignItems: 'flex-start' }}><div className="eyebrow">{roleNow(m)}</div>{tag && <span className={`badge ${tagClass ?? ''}`}>{tag}</span>}</div>
     <h3 style={{ margin: '4px 0 6px' }}>{m.full_name}</h3>
     {s ? <p>Attended {s.attended} of {s.total} meetings · {s.made} motions made · {s.nays} nay{s.nays === 1 ? '' : 's'}, {s.abstentions} abstention{s.abstentions === 1 ? '' : 's'}</p> : <p>{m.status_note ?? 'No Fiscal Court record yet.'}</p>}
+    {!m.incoming && (() => { const r = recordScore(m.id); return <p style={{ marginTop: 6 }}><strong>Record check score: {pctText(r)}</strong>{r.scored ? ` (${r.points % 1 ? r.points.toFixed(1) : r.points} of ${r.scored})` : ' · no statement found to check'}</p>; })()}
   </Link>;
 }
 
@@ -60,6 +61,9 @@ export function Profiles() {
     <div className="grid cols-3">{others.map((o) => <Link key={o.id} to={`/leaders/office/${o.id}`} className="linkcard"><div className="row between" style={{ alignItems: 'flex-start' }}><div className="eyebrow">{o.office}</div>{o.incoming && <span className="badge accent">Changes Jan 2027</span>}</div><h3 style={{ margin: '4px 0 6px' }}>{o.current.name}</h3><p>{o.incoming ? `${o.incoming.name} takes office ${dateShort(o.incoming.takes_office ?? TURNOVER)}.` : o.current.note ?? o.body}</p></Link>)}</div>
     <Section title="Former members" />
     <div className="grid cols-3">{former.map((m) => <PersonCard key={m.id} m={m} tag="Former" />)}</div>
+    <Section title="Record check scores: what they said against what they did" />
+    <span id="record-scores" />
+    <RecordScoreTable />
     <CompareRecord />
     <SourceNote>Roster and contact details from the <Ext href={officialsMeta.officials_url}>county's elected officials page</Ext>; terms from the 2022 and 2026 election results. {officialsMeta.term_note}</SourceNote>
   </>);
@@ -180,7 +184,11 @@ export function OfficePage() {
 function RecordChecks({ memberId }: { memberId: string }) {
   const checks = recordChecks.filter((c) => c.member_id === memberId);
   const m = memberById[memberId];
-  if (checks.length === 0) return null;
+  if (checks.length === 0) return m && !m.incoming ? <>
+    <Section title="What they said, against what they did in office" />
+    <span id="record" />
+    <div className="card"><p className="small" style={{ margin: 0 }}><strong>No checkable statement found yet.</strong> The hub searched published voter guides, candidate questionnaires and interviews from 2018 to 2026 and found no direct quote from {m.full_name} about issues or their record to set beside the minutes, so there is no record check score. Their votes are still measured below on the same twelve issues as every member. Know of a published statement? <Link to="/feedback">Send it in</Link>.</p></div>
+  </> : null;
   const p = palette();
   const color = (r: RecordCheck['record']) => (r === 'acted' || r === 'supported' ? p.ok : r === 'none' || r === 'contradicted' ? p.bad : r === 'partial' ? p.accent : p.muted);
   const badge = (r: RecordCheck['record']) => (r === 'acted' || r === 'supported' ? 'ok' : r === 'none' || r === 'contradicted' ? 'bad' : r === 'partial' ? 'accent' : '');
@@ -188,6 +196,7 @@ function RecordChecks({ memberId }: { memberId: string }) {
   return <>
     <Section title="What they said, against what they did in office" />
     <span id="record" />
+    <RecordScoreCard s={recordScore(memberId)} />
     <div className="notice" style={{ marginBottom: 12 }}><strong>How to read this.</strong> {m.full_name.split(' ')[0]} already held office when these statements were made, so each one is set beside the Fiscal Court minutes on the same subject. {recordChecksMeta.period} Of {checks.length} statements checked: {counts.none} with no recorded action, {counts.partial} with partial action or votes for others' proposals, {counts.acted} matching the record{counts.contradicted ? `, ${counts.contradicted} contradicted by the record` : ''}. The labels describe the record, not whether the idea was good.</div>
     <div className="grid">{checks.map((c) => <div key={c.id} id={c.id} className="card" style={{ borderLeft: `4px solid ${color(c.record)}`, scrollMarginTop: 80 }}>
       <div className="row between" style={{ alignItems: 'flex-start' }}><div><span className="eyebrow">{c.topic}</span><h3 style={{ margin: '4px 0 6px' }}>{c.label}</h3></div><span className={`badge ${badge(c.record)}`}>{recordChecksMeta.labels[c.record]}</span></div>
@@ -198,6 +207,36 @@ function RecordChecks({ memberId }: { memberId: string }) {
       <div className="row small" style={{ marginTop: 8, gap: 12 }}>{c.commitment_id && backendReady && <Link to={`/leaders/commitments/${c.commitment_id}`}>Tracked as commitment #{c.commitment_id} ›</Link>}{c.caveat && <span className="muted">{c.caveat}</span>}<span style={{ marginLeft: 'auto' }}><FlagButton table="record_checks" id={c.id} /></span></div>
     </div>)}</div>
     <SourceNote>{recordChecksMeta.method} Compiled {dateShort(recordChecksMeta.compiled)}.</SourceNote>
+  </>;
+}
+
+const pctText = (s: RecordScore) => (s.scored === 0 ? 'No score' : s.pct == null ? 'Not enough checks' : `${Math.round(s.pct * 100)}%`);
+const scoreParts = (s: RecordScore) => [s.acted && `${s.acted} acted on`, s.partial && `${s.partial} partial`, s.none && `${s.none} no recorded action`, s.supported && `${s.supported} claim${s.supported === 1 ? '' : 's'} supported`, s.contradicted && `${s.contradicted} contradicted`].filter(Boolean).join(' · ');
+
+/** The record check score for one official, with every count beside it. */
+function RecordScoreCard({ s }: { s: RecordScore }) {
+  return <div className="grid cols-2" style={{ marginBottom: 12 }}>
+    <div className="stat" style={{ ['--stat-bar' as string]: s.pct == null ? '#A3B1C2' : s.pct >= 0.5 ? '#13A08C' : '#E09A00' }}>
+      <div className="label">Record check score</div>
+      <div className="value">{pctText(s)}</div>
+      <div className="sub">{s.scored ? `${s.points % 1 ? s.points.toFixed(1) : s.points} of ${s.scored} points` : 'No scored checks'}{s.pct == null && s.scored ? ` · needs ${RECORD_SCORE_MIN} scored checks` : ''}</div>
+    </div>
+    <div className="card small" style={{ margin: 0 }}><strong>How it's scored.</strong> Each statement checked against the minutes: acted on it or claim supported = 1 point, partial = ½, no recorded action or claim contradicted = 0. Context items are not scored. {scoreParts(s) || 'Nothing scored yet.'} <Link to="/leaders/methodology#record-score">Rules ›</Link></div>
+  </div>;
+}
+
+/** Every member who has sat on the court, by record check score. Counts always shown; unscored members listed with the reason. */
+export function RecordScoreTable() {
+  const rows = recordScores();
+  return <>
+    <div className="table-wrap"><table className="data"><thead><tr><th>Official</th><th className="num">Score</th><th className="num">Checked</th><th>Breakdown</th></tr></thead>
+      <tbody>{rows.map((s) => { const m = memberById[s.memberId]; return <tr key={s.memberId}>
+        <td><Link to={`/leaders/${s.memberId}#record`}>{m.full_name}</Link><div className="tiny muted">{roleNow(m)}{m.active === false ? ' · former' : m.term_end ? ` · term ends ${dateShort(m.term_end)}` : ''}</div></td>
+        <td className="num"><strong>{pctText(s)}</strong>{s.scored > 0 && <div className="tiny muted">{s.points % 1 ? s.points.toFixed(1) : s.points} of {s.scored} pts</div>}</td>
+        <td className="num">{s.scored + s.context}</td>
+        <td className="small">{s.scored + s.context === 0 ? 'No checkable statement found' : scoreParts(s) || 'Context only'}{s.context ? ` · ${s.context} context` : ''}</td>
+      </tr>; })}</tbody></table></div>
+    <p className="tiny muted" style={{ marginTop: 6 }}>Scores rest only on statements the hub could find and check, so the number of checks differs by person; read the checks behind each score. Most of one official's checks may be claims about past work while another's are plans tested against their own record. Both are scored by the same rule. <Link to="/leaders/methodology#record-score">Rules ›</Link></p>
   </>;
 }
 

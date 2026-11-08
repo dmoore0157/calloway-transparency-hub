@@ -1,336 +1,574 @@
 {
- "compiled": "2026-11-08",
- "period": "Minutes from November 17, 2021 to September 16, 2026 (76 meetings). Minutes before November 2021 are not posted by the county, so the first 35 months of his term cannot be checked.",
- "method": "Each statement an official made in a published voter guide or interview is set beside what the Fiscal Court minutes record on the same subject while that official already held office, with the motions linked. Labels describe the record only: whether the official moved or seconded action on the subject, voted for action others brought, took no recorded action, or whether a claim about the record is supported or contradicted by the documents. The hub does not judge whether a promise was a good idea.",
- "labels": {
-  "acted": "Moved or seconded action on this",
-  "partial": "Voted for action others brought, or acted in part",
-  "none": "No recorded action in the tracked minutes",
-  "supported": "Claim matches the record",
-  "contradicted": "Claim contradicted by the record",
-  "context": "Context"
- },
- "checks": [
-  {
-   "id": "rister-shelter",
-   "member_id": "rister",
-   "topic": "Animal shelter",
-   "statement": {
-    "quote": "My priorities begin with a four-year plan, include … moving forward with a new animal shelter.",
-    "said_on": "2026-10-28",
-    "source_label": "Murray Sentinel candidate statement",
-    "source_url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
-    "context": "Listed among his priorities for the Judge/Executive’s office."
-   },
-   "record": "partial",
-   "label": "Voted for every step brought to the court; never brought one himself",
-   "what_minutes_show": [
-    "August 2022: seconded Judge Imes’s Resolution 22-0817-A on the animal shelter construction project and voted for an escrow account for shelter donations.",
-    "June 2023: voted for an Animal Shelter agency fund at the Community Foundation seeded with up to $10,000 (moved by Crutcher).",
-    "October 2023: the Community Foundation told the court it was searching for a shelter site; no court action followed.",
-    "January 2026: voted for a contract with Shelter Planners of America for a first-step survey (moved by Imes).",
-    "May 2026: moved the second reading of the new animal control ordinance and moved the transfer of the $161,343 shelter fund into an investment account.",
-    "In 59 months of minutes no member, including Rister, moved to select a site, approve a design or fund construction. Four years after the 2022 resolution there is no new shelter."
-   ],
-   "motion_ids": [
-    "2022-08-17-08",
-    "2022-08-17-07",
-    "2023-06-21-21",
-    "2026-01-21-10",
-    "2026-05-20-11",
-    "2026-05-20-18"
-   ],
-   "commitment_id": 6,
-   "caveat": null
+  "compiled": "2026-11-08",
+  "period": "Minutes from November 17, 2021 to September 16, 2026 (76 meetings). Minutes before November 2021 are not posted by the county, so earlier years cannot be checked.",
+  "method": "Each statement an official made in a published voter guide or interview is set beside what the Fiscal Court minutes record on the same subject while that official already held office, with the motions linked. Labels describe the record only: whether the official moved or seconded action on the subject, voted for action others brought, took no recorded action, or whether a claim about the record is supported or contradicted by the documents. The hub does not judge whether a promise was a good idea.",
+  "labels": {
+    "acted": "Moved or seconded action on this",
+    "partial": "Voted for action others brought, or acted in part",
+    "none": "No recorded action in the tracked minutes",
+    "supported": "Claim matches the record",
+    "contradicted": "Claim contradicted by the record",
+    "context": "Context"
   },
-  {
-   "id": "rister-roads-data",
-   "member_id": "rister",
-   "topic": "Roads: using condition data to set priorities",
-   "statement": {
-    "quote": "As Judge-Executive, I would use road condition data to prioritize improvements and work with community partners to address service gaps.",
-    "said_on": "2026-10-28",
-    "source_label": "Murray Sentinel candidate statement",
-    "source_url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
-    "context": "Answering what he would do for underserved parts of the county."
-   },
-   "record": "partial",
-   "label": "The rating tool was adopted in 2024 with his second; the minutes do not show it used to publish priorities",
-   "what_minutes_show": [
-    "August 2024: seconded Resolution 24-0821-B adopting a 14-criteria road surface rating system to update the county’s road ratings (moved by Stewart).",
-    "He moved or seconded the annual County Road Aid, LGEA and FLEX agreements and paving lists in 2023, 2024, 2025 and 2026.",
-    "No motion in the minutes publishes a ranked paving list or ties a paving decision to the 2024 ratings. The paving lists came to the court from the Judge/Executive and road department as presented."
-   ],
-   "motion_ids": [
-    "2024-08-21-08",
-    "2024-07-26-special-02",
-    "2023-08-01-special-01",
-    "2026-05-20-06"
-   ],
-   "commitment_id": null,
-   "caveat": null
-  },
-  {
-   "id": "rister-meeting-time",
-   "member_id": "rister",
-   "topic": "Meeting times and locations",
-   "statement": {
-    "quote": "I would like to move fiscal court meetings to a time when working people can more reasonably attend and explore, occasionally, taking meetings into different parts of the county.",
-    "said_on": "2026-10-13",
-    "source_label": "WKMS voter guide",
-    "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
-    "context": null
-   },
-   "record": "none",
-   "label": "No motion to change the meeting time or place in five years of minutes; he moved the schedule that kept them at 9 a.m.",
-   "what_minutes_show": [
-    "Regular meetings have stayed on the third Wednesday at 9:00 a.m. at the courthouse throughout the tracked period.",
-    "December 2023 and December 2025: Rister moved approval of the next year’s meeting schedule, both keeping the 9 a.m. weekday time.",
-    "Any magistrate can move to change the schedule; none did, and no meeting was held outside the courthouse."
-   ],
-   "motion_ids": [
-    "2023-12-20-11",
-    "2025-12-17-09"
-   ],
-   "commitment_id": 2,
-   "caveat": null
-  },
-  {
-   "id": "rister-plan",
-   "member_id": "rister",
-   "topic": "A measurable four-year plan",
-   "statement": {
-    "quote": "My first priority would be establishing a clear, measurable four-year plan.",
-    "said_on": "2026-10-13",
-    "source_label": "WKMS voter guide",
-    "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
-    "context": null
-   },
-   "record": "none",
-   "label": "No multi-year plan or set of measurable goals appears in the minutes; a long-range committee was created in 2025",
-   "what_minutes_show": [
-    "April 2025: when the court reauthorized its standing committees it added a Long Range Planning & Financing committee. The minutes do not record the committee reporting a plan.",
-    "Each year’s budget was adopted as presented by the Judge/Executive; no motion asked for multi-year projections, priorities or goals.",
-    "He told WKMS in May 2026 that he had tracked financial trends back more than a decade; that work does not appear as a document or motion in the minutes."
-   ],
-   "motion_ids": [
-    "2025-04-16-09",
-    "2026-05-20-06"
-   ],
-   "commitment_id": 1,
-   "caveat": null
-  },
-  {
-   "id": "rister-cashflow",
-   "member_id": "rister",
-   "topic": "Cash-flow planning",
-   "statement": {
-    "quote": "A 12-month cash flow plan would help us anticipate when money will be tight and schedule discretionary spending when funds are available.",
-    "said_on": "2026-10-28",
-    "source_label": "Murray Sentinel candidate statement",
-    "source_url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
-    "context": null
-   },
-   "record": "none",
-   "label": "No cash-flow plan was proposed; he moved several of the emergency transfers such a plan is meant to avoid",
-   "what_minutes_show": [
-    "June 2023: moved a $200,000 transfer from the General Fund to the Jail Fund added to the cash transfers.",
-    "July 2026: moved a $300,000 transfer from the money market account to the General Fund for the jail; August 2026 special meeting approved further transfers for jail and road bills.",
-    "No motion in the tracked period asked for a cash-flow projection or schedule of discretionary spending."
-   ],
-   "motion_ids": [
-    "2023-06-21-05",
-    "2026-07-15-04",
-    "2026-08-28-special-03"
-   ],
-   "commitment_id": 3,
-   "caveat": null
-  },
-  {
-   "id": "rister-boards",
-   "member_id": "rister",
-   "topic": "Board appointments process",
-   "statement": {
-    "quote": "I would improve the process by announcing upcoming vacancies and encouraging people to serve. I would interview prospective appointees …",
-    "said_on": "2026-10-28",
-    "source_label": "Murray Sentinel candidate statement",
-    "source_url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
-    "context": null
-   },
-   "record": "none",
-   "label": "Appointments came to the court as recommended; no motion on announcing vacancies",
-   "what_minutes_show": [
-    "Board and commission appointments were approved as presented by the Judge/Executive throughout the period, usually by voice vote with no discussion recorded.",
-    "Rister abstained on Tourism Commission appointments and budgets in 2022, 2024 (twice) because he sits on that commission, and was himself reappointed by the court in August 2024.",
-    "No motion proposed advertising vacancies or an interview process."
-   ],
-   "motion_ids": [
-    "2022-08-17-09",
-    "2024-08-21-12",
-    "2024-12-18-14",
-    "2022-06-15-07"
-   ],
-   "commitment_id": 4,
-   "caveat": null
-  },
-  {
-   "id": "rister-641",
-   "member_id": "rister",
-   "topic": "The county’s 20 acres on Highway 641",
-   "statement": {
-    "quote": "We also need to determine the best use of the approximately 20 acres the county purchased on Highway 641. We have already made that investment …",
-    "said_on": "2026-10-13",
-    "source_label": "WKMS voter guide",
-    "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
-    "context": null
-   },
-   "record": "partial",
-   "label": "He voted for each purchase; in four years no one proposed a use for the land",
-   "what_minutes_show": [
-    "September 2022: voted aye to buy 8.716 acres on Hwy 641 North for $400,000 (moved by Imes, seconded by Hale).",
-    "December 2022: voted aye to buy about 1.5 more acres for $177,500 with ARPA funds. May 2023: voted aye to acquire 3.6 adjoining acres in exchange for up to $86,400 of cemetery repairs.",
-    "August 2024: moved to spend about $15,000 regrading and seeding the site to close out a state water permit (Imes voted nay). June 2026: voted to let a neighbor cut down a hill on the site at no cost.",
-    "No motion in the tracked period proposed a use, study or marketing of the property."
-   ],
-   "motion_ids": [
-    "2022-09-21-18",
-    "2022-12-21-16",
-    "2023-05-17-19",
-    "2024-08-21-19",
-    "2026-06-19-special-03"
-   ],
-   "commitment_id": 5,
-   "caveat": null
-  },
-  {
-   "id": "rister-taxes",
-   "member_id": "rister",
-   "topic": "Property taxes",
-   "statement": {
-    "quote": "When inflation continues to drive up the cost of asphalt, equipment, and fuel, it’s not realistic to promise lower property taxes while still maintaining services.",
-    "said_on": "2026-05-04",
-    "source_label": "WKMS primary voter guide",
-    "source_url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
-    "context": null
-   },
-   "record": "supported",
-   "label": "Record matches the statement: he moved the revenue-increase rate in 2024 and voted for every rate increase brought",
-   "what_minutes_show": [
-    "February 2023: voted aye (roll call, 5-0) on the first reading of the 7% automobile insurance premium tax that now funds paving and bridges.",
-    "August 2024: moved to set the real property rate at 13.60 cents, the “4% rate” that lowers the rate but raises revenue 4%; the motion died for lack of a second. He then voted nay on keeping rates flat (which passed 3-2) and aye on the $0.14 rate in September.",
-    "July 2025: voted for 14.10 cents, 4% over the compensating rate. July and August 2026: seconded and voted for the 13.90-cent 4% rate."
-   ],
-   "motion_ids": [
-    "2023-02-15-12",
-    "2024-08-21-10",
-    "2024-08-21-11",
-    "2024-09-18-06",
-    "2026-07-30-special-01",
-    "2026-08-19-08"
-   ],
-   "commitment_id": null,
-   "caveat": null
-  },
-  {
-   "id": "rister-transparency",
-   "member_id": "rister",
-   "topic": "Transparency and communication",
-   "statement": {
-    "quote": "I believe we need more planning, communication, transparency and collaboration in county government.",
-    "said_on": "2026-10-13",
-    "source_label": "WKMS voter guide",
-    "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
-    "context": null
-   },
-   "record": "partial",
-   "label": "Backed digitizing the minutes; seconded repeal of a local transparency ordinance",
-   "what_minutes_show": [
-    "November 2022: seconded funding continued digitization of Fiscal Court minutes back to the 1930s from clerk storage fees.",
-    "September 2023: seconded the first reading of the repeal of Ordinance 17-0221-A, which required agencies spending tax proceeds on marketing to report publicly; the court relied on state law instead.",
-    "No motion proposed livestreaming, recording, a public-comment period or publishing agendas earlier."
-   ],
-   "motion_ids": [
-    "2022-11-15-13",
-    "2023-09-20-08"
-   ],
-   "commitment_id": null,
-   "caveat": null
-  },
-  {
-   "id": "rister-initiative",
-   "member_id": "rister",
-   "topic": "What he brought to the court himself",
-   "statement": {
-    "quote": "Voters don’t have to rely solely on campaign promises. They can look at nearly eight years of my service as magistrate …",
-    "said_on": "2026-10-13",
-    "source_label": "WKMS voter guide",
-    "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
-    "context": null
-   },
-   "record": "context",
-   "label": "Of 210 substantive motions he made, nearly all approved items presented by the Judge/Executive; three were his own initiatives",
-   "what_minutes_show": [
-    "Attended all 76 tracked meetings; made 210 substantive motions and seconded 223; recorded nays: the 2024 flat tax rate and the 2024 medical-cannabis ballot question.",
-    "Initiatives recorded in the minutes: asking to remove Tulip Lane from the county road system (October 2023), the 4% tax-rate motion that got no second (August 2024), and presenting a data-center moratorium ordinance for first reading (July 2026) and pressing for it in August 2026.",
-    "He also recused himself on Tourism Commission items because he sits on that commission."
-   ],
-   "motion_ids": [
-    "2024-08-21-10",
-    "2024-07-17-09",
-    "2026-07-15-10"
-   ],
-   "commitment_id": null,
-   "caveat": null
-  },
-  {
-   "id": "imes-shelter",
-   "member_id": "imes",
-   "topic": "Animal shelter",
-   "statement": {
-    "quote": "Our number one priority for the community as a whole is try to get a new animal shelter built within hopefully the next year.",
-    "said_on": "2026-05-04",
-    "source_label": "WKMS primary voter guide",
-    "source_url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
-    "context": null
-   },
-   "record": "none",
-   "label": "Since the statement: an ordinance and a fund transfer, no site, design or construction vote; the court first resolved to build in 2022",
-   "what_minutes_show": [
-    "August 2022: Imes moved Resolution 22-0817-A on the animal shelter construction project and the donation escrow account.",
-    "January 2026: moved the contract with Shelter Planners of America for a first-step survey.",
-    "May 20, 2026 (after the statement): the court adopted a new animal control ordinance and moved the $161,343 shelter fund into an investment account. Through the last posted minutes (September 16, 2026) no site, design or construction item came to the court.",
-    "His term ends January 3, 2027; the commitment will be rated on what the court approved before then."
-   ],
-   "motion_ids": [
-    "2022-08-17-08",
-    "2026-01-21-10",
-    "2026-05-20-11",
-    "2026-05-20-18"
-   ],
-   "commitment_id": 8,
-   "caveat": null
-  },
-  {
-   "id": "imes-audits",
-   "member_id": "imes",
-   "topic": "Claim: “nothing but clean audits”",
-   "statement": {
-    "quote": "All these audits have come back clean – I mean, clean … [without] anything of any substance or consequence. We have had nothing but clean audits in the fiscal audits in this county for the last seven and a half years.",
-    "said_on": "2026-05-04",
-    "source_label": "WKMS primary voter guide",
-    "source_url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
-    "context": "See the audits section for every finding."
-   },
-   "record": "contradicted",
-   "label": "Every published Fiscal Court audit of his tenure contained findings, including material weaknesses; the opinions on the statements were clean",
-   "what_minutes_show": [
-    "The auditors gave an unmodified (“clean”) opinion on the county’s cash-basis financial statement every year, which is the sense in which an audit is commonly called clean.",
-    "Each report also carried a Schedule of Findings: FY2018 three findings, FY2019 two, FY2020 six (including two federal-grant findings), FY2021 one, FY2023 two, FY2024 one, FY2025 one. All but one year reported a material weakness in internal control, and FY2023 to FY2025 reported material noncompliance with state purchasing and bidding law.",
-    "When he spoke, the FY2018 to FY2021 reports were public. The FY2023 and FY2024 reports were released July 20, 2026 and the FY2025 report October 23, 2026; the county’s responses in all three were signed by his office."
-   ],
-   "motion_ids": [],
-   "commitment_id": null,
-   "caveat": null
-  }
- ]
+  "checks": [
+    {
+      "id": "rister-shelter",
+      "member_id": "rister",
+      "topic": "Animal shelter",
+      "statement": {
+        "quote": "My priorities begin with a four-year plan, include … moving forward with a new animal shelter.",
+        "said_on": "2026-10-28",
+        "source_label": "Murray Sentinel candidate statement",
+        "source_url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
+        "context": "Listed among his priorities for the Judge/Executive’s office."
+      },
+      "record": "partial",
+      "label": "Voted for every step brought to the court; never brought one himself",
+      "what_minutes_show": [
+        "August 2022: seconded Judge Imes’s Resolution 22-0817-A on the animal shelter construction project and voted for an escrow account for shelter donations.",
+        "June 2023: voted for an Animal Shelter agency fund at the Community Foundation seeded with up to $10,000 (moved by Crutcher).",
+        "October 2023: the Community Foundation told the court it was searching for a shelter site; no court action followed.",
+        "January 2026: voted for a contract with Shelter Planners of America for a first-step survey (moved by Imes).",
+        "May 2026: moved the second reading of the new animal control ordinance and moved the transfer of the $161,343 shelter fund into an investment account.",
+        "In 59 months of minutes no member, including Rister, moved to select a site, approve a design or fund construction. Four years after the 2022 resolution there is no new shelter."
+      ],
+      "motion_ids": [
+        "2022-08-17-08",
+        "2022-08-17-07",
+        "2023-06-21-21",
+        "2026-01-21-10",
+        "2026-05-20-11",
+        "2026-05-20-18"
+      ],
+      "commitment_id": 6,
+      "caveat": null
+    },
+    {
+      "id": "rister-roads-data",
+      "member_id": "rister",
+      "topic": "Roads: using condition data to set priorities",
+      "statement": {
+        "quote": "As Judge-Executive, I would use road condition data to prioritize improvements and work with community partners to address service gaps.",
+        "said_on": "2026-10-28",
+        "source_label": "Murray Sentinel candidate statement",
+        "source_url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
+        "context": "Answering what he would do for underserved parts of the county."
+      },
+      "record": "partial",
+      "label": "The rating tool was adopted in 2024 with his second; the minutes do not show it used to publish priorities",
+      "what_minutes_show": [
+        "August 2024: seconded Resolution 24-0821-B adopting a 14-criteria road surface rating system to update the county’s road ratings (moved by Stewart).",
+        "He moved or seconded the annual County Road Aid, LGEA and FLEX agreements and paving lists in 2023, 2024, 2025 and 2026.",
+        "No motion in the minutes publishes a ranked paving list or ties a paving decision to the 2024 ratings. The paving lists came to the court from the Judge/Executive and road department as presented."
+      ],
+      "motion_ids": [
+        "2024-08-21-08",
+        "2024-07-26-special-02",
+        "2023-08-01-special-01",
+        "2026-05-20-06"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "rister-meeting-time",
+      "member_id": "rister",
+      "topic": "Meeting times and locations",
+      "statement": {
+        "quote": "I would like to move fiscal court meetings to a time when working people can more reasonably attend and explore, occasionally, taking meetings into different parts of the county.",
+        "said_on": "2026-10-13",
+        "source_label": "WKMS voter guide",
+        "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
+        "context": null
+      },
+      "record": "none",
+      "label": "No motion to change the meeting time or place in five years of minutes; he moved the schedule that kept them at 9 a.m.",
+      "what_minutes_show": [
+        "Regular meetings have stayed on the third Wednesday at 9:00 a.m. at the courthouse throughout the tracked period.",
+        "December 2023 and December 2025: Rister moved approval of the next year’s meeting schedule, both keeping the 9 a.m. weekday time.",
+        "Any magistrate can move to change the schedule; none did, and no meeting was held outside the courthouse."
+      ],
+      "motion_ids": [
+        "2023-12-20-11",
+        "2025-12-17-09"
+      ],
+      "commitment_id": 2,
+      "caveat": null
+    },
+    {
+      "id": "rister-plan",
+      "member_id": "rister",
+      "topic": "A measurable four-year plan",
+      "statement": {
+        "quote": "My first priority would be establishing a clear, measurable four-year plan.",
+        "said_on": "2026-10-13",
+        "source_label": "WKMS voter guide",
+        "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
+        "context": null
+      },
+      "record": "none",
+      "label": "No multi-year plan or set of measurable goals appears in the minutes; a long-range committee was created in 2025",
+      "what_minutes_show": [
+        "April 2025: when the court reauthorized its standing committees it added a Long Range Planning & Financing committee. The minutes do not record the committee reporting a plan.",
+        "Each year’s budget was adopted as presented by the Judge/Executive; no motion asked for multi-year projections, priorities or goals.",
+        "He told WKMS in May 2026 that he had tracked financial trends back more than a decade; that work does not appear as a document or motion in the minutes."
+      ],
+      "motion_ids": [
+        "2025-04-16-09",
+        "2026-05-20-06"
+      ],
+      "commitment_id": 1,
+      "caveat": null
+    },
+    {
+      "id": "rister-cashflow",
+      "member_id": "rister",
+      "topic": "Cash-flow planning",
+      "statement": {
+        "quote": "A 12-month cash flow plan would help us anticipate when money will be tight and schedule discretionary spending when funds are available.",
+        "said_on": "2026-10-28",
+        "source_label": "Murray Sentinel candidate statement",
+        "source_url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
+        "context": null
+      },
+      "record": "none",
+      "label": "No cash-flow plan was proposed; he moved several of the emergency transfers such a plan is meant to avoid",
+      "what_minutes_show": [
+        "June 2023: moved a $200,000 transfer from the General Fund to the Jail Fund added to the cash transfers.",
+        "July 2026: moved a $300,000 transfer from the money market account to the General Fund for the jail; August 2026 special meeting approved further transfers for jail and road bills.",
+        "No motion in the tracked period asked for a cash-flow projection or schedule of discretionary spending."
+      ],
+      "motion_ids": [
+        "2023-06-21-05",
+        "2026-07-15-04",
+        "2026-08-28-special-03"
+      ],
+      "commitment_id": 3,
+      "caveat": null
+    },
+    {
+      "id": "rister-boards",
+      "member_id": "rister",
+      "topic": "Board appointments process",
+      "statement": {
+        "quote": "I would improve the process by announcing upcoming vacancies and encouraging people to serve. I would interview prospective appointees …",
+        "said_on": "2026-10-28",
+        "source_label": "Murray Sentinel candidate statement",
+        "source_url": "https://themurraysentinel.org/stories/paul-rister-candidate-for-calloway-county-judge-executive,24535",
+        "context": null
+      },
+      "record": "none",
+      "label": "Appointments came to the court as recommended; no motion on announcing vacancies",
+      "what_minutes_show": [
+        "Board and commission appointments were approved as presented by the Judge/Executive throughout the period, usually by voice vote with no discussion recorded.",
+        "Rister abstained on Tourism Commission appointments and budgets in 2022, 2024 (twice) because he sits on that commission, and was himself reappointed by the court in August 2024.",
+        "No motion proposed advertising vacancies or an interview process."
+      ],
+      "motion_ids": [
+        "2022-08-17-09",
+        "2024-08-21-12",
+        "2024-12-18-14",
+        "2022-06-15-07"
+      ],
+      "commitment_id": 4,
+      "caveat": null
+    },
+    {
+      "id": "rister-641",
+      "member_id": "rister",
+      "topic": "The county’s 20 acres on Highway 641",
+      "statement": {
+        "quote": "We also need to determine the best use of the approximately 20 acres the county purchased on Highway 641. We have already made that investment …",
+        "said_on": "2026-10-13",
+        "source_label": "WKMS voter guide",
+        "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
+        "context": null
+      },
+      "record": "partial",
+      "label": "He voted for each purchase; in four years no one proposed a use for the land",
+      "what_minutes_show": [
+        "September 2022: voted aye to buy 8.716 acres on Hwy 641 North for $400,000 (moved by Imes, seconded by Hale).",
+        "December 2022: voted aye to buy about 1.5 more acres for $177,500 with ARPA funds. May 2023: voted aye to acquire 3.6 adjoining acres in exchange for up to $86,400 of cemetery repairs.",
+        "August 2024: moved to spend about $15,000 regrading and seeding the site to close out a state water permit (Imes voted nay). June 2026: voted to let a neighbor cut down a hill on the site at no cost.",
+        "No motion in the tracked period proposed a use, study or marketing of the property."
+      ],
+      "motion_ids": [
+        "2022-09-21-18",
+        "2022-12-21-16",
+        "2023-05-17-19",
+        "2024-08-21-19",
+        "2026-06-19-special-03"
+      ],
+      "commitment_id": 5,
+      "caveat": null
+    },
+    {
+      "id": "rister-taxes",
+      "member_id": "rister",
+      "topic": "Property taxes",
+      "statement": {
+        "quote": "When inflation continues to drive up the cost of asphalt, equipment, and fuel, it’s not realistic to promise lower property taxes while still maintaining services.",
+        "said_on": "2026-05-04",
+        "source_label": "WKMS primary voter guide",
+        "source_url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
+        "context": null
+      },
+      "record": "supported",
+      "label": "Record matches the statement: he moved the revenue-increase rate in 2024 and voted for every rate increase brought",
+      "what_minutes_show": [
+        "February 2023: voted aye (roll call, 5-0) on the first reading of the 7% automobile insurance premium tax that now funds paving and bridges.",
+        "August 2024: moved to set the real property rate at 13.60 cents, the “4% rate” that lowers the rate but raises revenue 4%; the motion died for lack of a second. He then voted nay on keeping rates flat (which passed 3-2) and aye on the $0.14 rate in September.",
+        "July 2025: voted for 14.10 cents, 4% over the compensating rate. July and August 2026: seconded and voted for the 13.90-cent 4% rate."
+      ],
+      "motion_ids": [
+        "2023-02-15-12",
+        "2024-08-21-10",
+        "2024-08-21-11",
+        "2024-09-18-06",
+        "2026-07-30-special-01",
+        "2026-08-19-08"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "rister-transparency",
+      "member_id": "rister",
+      "topic": "Transparency and communication",
+      "statement": {
+        "quote": "I believe we need more planning, communication, transparency and collaboration in county government.",
+        "said_on": "2026-10-13",
+        "source_label": "WKMS voter guide",
+        "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
+        "context": null
+      },
+      "record": "partial",
+      "label": "Backed digitizing the minutes; seconded repeal of a local transparency ordinance",
+      "what_minutes_show": [
+        "November 2022: seconded funding continued digitization of Fiscal Court minutes back to the 1930s from clerk storage fees.",
+        "September 2023: seconded the first reading of the repeal of Ordinance 17-0221-A, which required agencies spending tax proceeds on marketing to report publicly; the court relied on state law instead.",
+        "No motion proposed livestreaming, recording, a public-comment period or publishing agendas earlier."
+      ],
+      "motion_ids": [
+        "2022-11-15-13",
+        "2023-09-20-08"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "rister-initiative",
+      "member_id": "rister",
+      "topic": "What he brought to the court himself",
+      "statement": {
+        "quote": "Voters don’t have to rely solely on campaign promises. They can look at nearly eight years of my service as magistrate …",
+        "said_on": "2026-10-13",
+        "source_label": "WKMS voter guide",
+        "source_url": "https://www.wkms.org/government-politics/2026-10-13/2026-calloway-county-judge-executive-general-election",
+        "context": null
+      },
+      "record": "context",
+      "label": "Of 210 substantive motions he made, nearly all approved items presented by the Judge/Executive; three were his own initiatives",
+      "what_minutes_show": [
+        "Attended all 76 tracked meetings; made 210 substantive motions and seconded 223; recorded nays: the 2024 flat tax rate and the 2024 medical-cannabis ballot question.",
+        "Initiatives recorded in the minutes: asking to remove Tulip Lane from the county road system (October 2023), the 4% tax-rate motion that got no second (August 2024), and presenting a data-center moratorium ordinance for first reading (July 2026) and pressing for it in August 2026.",
+        "He also recused himself on Tourism Commission items because he sits on that commission."
+      ],
+      "motion_ids": [
+        "2024-08-21-10",
+        "2024-07-17-09",
+        "2026-07-15-10"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "imes-shelter",
+      "member_id": "imes",
+      "topic": "Animal shelter",
+      "statement": {
+        "quote": "Our number one priority for the community as a whole is try to get a new animal shelter built within hopefully the next year.",
+        "said_on": "2026-05-04",
+        "source_label": "WKMS primary voter guide",
+        "source_url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
+        "context": null
+      },
+      "record": "none",
+      "label": "Since the statement: an ordinance and a fund transfer, no site, design or construction vote; the court first resolved to build in 2022",
+      "what_minutes_show": [
+        "August 2022: Imes moved Resolution 22-0817-A on the animal shelter construction project and the donation escrow account.",
+        "January 2026: moved the contract with Shelter Planners of America for a first-step survey.",
+        "May 20, 2026 (after the statement): the court adopted a new animal control ordinance and moved the $161,343 shelter fund into an investment account. Through the last posted minutes (September 16, 2026) no site, design or construction item came to the court.",
+        "His term ends January 3, 2027; the commitment will be rated on what the court approved before then."
+      ],
+      "motion_ids": [
+        "2022-08-17-08",
+        "2026-01-21-10",
+        "2026-05-20-11",
+        "2026-05-20-18"
+      ],
+      "commitment_id": 8,
+      "caveat": null
+    },
+    {
+      "id": "imes-audits",
+      "member_id": "imes",
+      "topic": "Claim: “nothing but clean audits”",
+      "statement": {
+        "quote": "All these audits have come back clean – I mean, clean … [without] anything of any substance or consequence. We have had nothing but clean audits in the fiscal audits in this county for the last seven and a half years.",
+        "said_on": "2026-05-04",
+        "source_label": "WKMS primary voter guide",
+        "source_url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
+        "context": "See the audits section for every finding."
+      },
+      "record": "contradicted",
+      "label": "Every published Fiscal Court audit of his tenure contained findings, including material weaknesses; the opinions on the statements were clean",
+      "what_minutes_show": [
+        "The auditors gave an unmodified (“clean”) opinion on the county’s cash-basis financial statement every year, which is the sense in which an audit is commonly called clean.",
+        "Each report also carried a Schedule of Findings: FY2018 three findings, FY2019 two, FY2020 six (including two federal-grant findings), FY2021 one, FY2023 two, FY2024 one, FY2025 one. All but one year reported a material weakness in internal control, and FY2023 to FY2025 reported material noncompliance with state purchasing and bidding law.",
+        "When he spoke, the FY2018 to FY2021 reports were public. The FY2023 and FY2024 reports were released July 20, 2026 and the FY2025 report October 23, 2026; the county’s responses in all three were signed by his office."
+      ],
+      "motion_ids": [],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "rister-jail",
+      "member_id": "rister",
+      "topic": "Jail costs",
+      "statement": {
+        "quote": "We need leadership at the jail focused on controlling costs, expanding work release, using education and job training programs, reducing recidivism, and working with the courts to allow ankle monitors for low-risk inmates, while continuing to advocate for better state reimbursement.",
+        "said_on": "2026-05-07",
+        "source_label": "Murray Ledger & Times primary questionnaire",
+        "source_url": "https://www.murrayledger.com/news/local/primary-candidates-answer-questions-from-the-ledger-times/article_00f2a273-9a79-4981-a50d-605750db19ad.html",
+        "context": null
+      },
+      "record": "acted",
+      "label": "He moved jail cost and grant items, including a state grant for jail court-video equipment",
+      "what_minutes_show": [
+        "May 2023: moved Resolution 23-0517-A supporting a grant for jail court-video equipment.",
+        "June 2023: moved adding a $200,000 General Fund transfer to the Jail Fund; July 2026: moved a $300,000 transfer for the jail.",
+        "No motion in the tracked minutes concerns work release, ankle monitors or a jail cost-control plan; those are mostly decisions of the jailer and the courts."
+      ],
+      "motion_ids": [
+        "2023-05-17-20",
+        "2023-06-21-05",
+        "2026-07-15-04"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "imes-roads",
+      "member_id": "imes",
+      "topic": "Claim: roads and bridges as his hallmark",
+      "statement": {
+        "quote": "[My] hallmark is what we have done with roads and bridges and water lines in Calloway County.",
+        "said_on": "2026-05-04",
+        "source_label": "WKMS primary voter guide",
+        "source_url": "https://www.wkms.org/government-politics/2026-05-04/2026-calloway-county-judge-executive-primary-race",
+        "context": null
+      },
+      "record": "supported",
+      "label": "The minutes back the roads and bridges part: he moved the road tax and the major bridge contracts",
+      "what_minutes_show": [
+        "February 2023: moved the 7% insurance premium tax on automobile policies to fund county roads and bridges (roll call, 5-0).",
+        "April 2022: moved the Outland School Road bridge contract; November 2023: moved the Old Salem Road bridge demolition and redesign contract.",
+        "The minutes do not total paving miles (he cited 200 miles) and record no water-line votes, so those parts are not checked here."
+      ],
+      "motion_ids": [
+        "2023-02-15-12",
+        "2022-04-20-10",
+        "2023-11-15-11"
+      ],
+      "commitment_id": null,
+      "caveat": "Paving mileage and water-line work are outside what the Fiscal Court minutes record."
+    },
+    {
+      "id": "cherry-bridges",
+      "member_id": "cherry",
+      "topic": "Claim: a repair plan for the county’s bridges",
+      "statement": {
+        "quote": "These bridges are old, and we have put together a plan of repair on each of these to be completed.",
+        "said_on": "2026-05-07",
+        "source_label": "Murray Ledger & Times primary questionnaire",
+        "source_url": "https://www.murrayledger.com/news/local/primary-candidates-answer-questions-from-the-ledger-times/article_00f2a273-9a79-4981-a50d-605750db19ad.html",
+        "context": null
+      },
+      "record": "supported",
+      "label": "The court adopted a bridge funding list in 2024, seconded by Cherry, and approved bridge agreements after it",
+      "what_minutes_show": [
+        "August 2024: seconded the resolution identifying bridges for Rural and Municipal Aid and CCBIP funding (Howard, Workman, Cherry Corner, Tobacco, Beechy, Furches Trail, Old Shiloh, Van Cleave, Clayton Drive and Clayton Town roads).",
+        "December 2022: moved the budget amendment adding $200,000 in state Outland bridge receipts.",
+        "2025 to 2026: the court approved state agreements for the Charley Miller, Graham, Howard and Wrather road bridges. The minutes do not list the 16 bridges he cited."
+      ],
+      "motion_ids": [
+        "2024-08-21-09",
+        "2022-12-21-14",
+        "2025-06-30-special-03",
+        "2026-07-15-08"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "cherry-old-salem",
+      "member_id": "cherry",
+      "topic": "Claim: the Old Salem Road (“Rattling”) bridge took over two years",
+      "statement": {
+        "quote": "A major bridge was Rattling Bridge which took us over two years to replace at $1.3 million.",
+        "said_on": "2026-05-07",
+        "source_label": "Murray Ledger & Times primary questionnaire",
+        "source_url": "https://www.murrayledger.com/news/local/primary-candidates-answer-questions-from-the-ledger-times/article_00f2a273-9a79-4981-a50d-605750db19ad.html",
+        "context": null
+      },
+      "record": "supported",
+      "label": "The timeline matches: bids in May 2023, final right-of-way and funding items in 2024, the old bridge’s future decided in May 2025",
+      "what_minutes_show": [
+        "May 2023: bids advertised (moved by Crutcher). November 2023: demolition and redesign contract (moved by Imes).",
+        "July 2024: $10,000 right-of-way purchase. December 2024: Resolution 24-1218-B put remaining ARPA funds on the bridge.",
+        "May 2025: moved keeping the old bridge structure under the general concept for community use. No motion states the $1.3 million total, so the cost is not checked."
+      ],
+      "motion_ids": [
+        "2023-05-17-16",
+        "2023-11-15-11",
+        "2024-07-26-special-01",
+        "2025-05-12-special-01"
+      ],
+      "commitment_id": null,
+      "caveat": "The total cost he cited does not appear in a motion."
+    },
+    {
+      "id": "cherry-ordinances",
+      "member_id": "cherry",
+      "topic": "Claim: new ordinances for solar farms and new businesses",
+      "statement": {
+        "quote": "One solution has been a committee which I serve on to check out other counties and cities who have ordinances in place and blend to fit our county needs. This work takes time but has been successful in passing new ordinances.",
+        "said_on": "2026-05-07",
+        "source_label": "Murray Ledger & Times primary questionnaire",
+        "source_url": "https://www.murrayledger.com/news/local/primary-candidates-answer-questions-from-the-ledger-times/article_00f2a273-9a79-4981-a50d-605750db19ad.html",
+        "context": null
+      },
+      "record": "supported",
+      "label": "The solar farm ordinance was adopted in April 2024 and amended that October; a data-center moratorium was pending in September 2026",
+      "what_minutes_show": [
+        "March to April 2024: the solar farm ordinance 24-0417-A passed first and second reading (moved by Imes and seconded by Rister on second reading); Cherry voted aye.",
+        "September to October 2024: amendments to the solar ordinance were read and adopted.",
+        "September 2026: the court tabled the second reading of a data-center moratorium for an added subsection. The committee itself is not recorded in the minutes."
+      ],
+      "motion_ids": [
+        "2024-04-17-09",
+        "2024-04-17-10",
+        "2026-09-16-07"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "cherry-courthouse",
+      "member_id": "cherry",
+      "topic": "A courthouse planning committee",
+      "statement": {
+        "quote": "I would love to see a planning committee formed to study all solutions.",
+        "said_on": "2026-05-07",
+        "source_label": "Murray Ledger & Times primary questionnaire",
+        "source_url": "https://www.murrayledger.com/news/local/primary-candidates-answer-questions-from-the-ledger-times/article_00f2a273-9a79-4981-a50d-605750db19ad.html",
+        "context": "Answering what should be done with the historic courthouse."
+      },
+      "record": "none",
+      "label": "No motion to form a courthouse committee; the courthouse items in the minutes are the clock and bell tower",
+      "what_minutes_show": [
+        "June 2026: moved approving the courthouse clock improvements (bell restoration, sound system, clock face).",
+        "August 2026: the court paid $22,000 for the clock and bell tower project, funded by TVA, Destination Calloway and Historical Society donations.",
+        "No motion in the tracked minutes forms a courthouse planning or study committee."
+      ],
+      "motion_ids": [
+        "2026-06-19-special-01",
+        "2026-08-19-19"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "cherry-jail",
+      "member_id": "cherry",
+      "topic": "Jail costs",
+      "statement": {
+        "quote": "County will have to work with Jailer to offset expenses.",
+        "said_on": "2026-05-07",
+        "source_label": "Murray Ledger & Times primary questionnaire",
+        "source_url": "https://www.murrayledger.com/news/local/primary-candidates-answer-questions-from-the-ledger-times/article_00f2a273-9a79-4981-a50d-605750db19ad.html",
+        "context": null
+      },
+      "record": "acted",
+      "label": "He moved the jail’s state housing contract and a state jail equipment grant",
+      "what_minutes_show": [
+        "March 2022: moved authorizing the two-year contract between the county jail and the state.",
+        "December 2023: moved Resolution 23-1220-B applying for a House Bill 1 jail arraignment equipment grant of up to $44,018.",
+        "August 2026: seconded a $350,000 General Fund transfer to the Jail Fund."
+      ],
+      "motion_ids": [
+        "2022-03-16-06",
+        "2023-12-20-14",
+        "2026-08-28-special-03"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    },
+    {
+      "id": "crutcher-bridges",
+      "member_id": "crutcher",
+      "topic": "Claim: the Outland and Old Salem Road bridges",
+      "statement": {
+        "quote": "In my district alone, about $2 million has been on the bridge on Outland Schoolhouse Road and the “Old Rattin’ Bridge” on Old Salem Road. Those were a big investment, and that was hard to get through, but we’ve kept working at it.",
+        "said_on": "2026-05-07",
+        "source_label": "Murray Ledger & Times primary questionnaire",
+        "source_url": "https://www.murrayledger.com/news/local/primary-candidates-answer-questions-from-the-ledger-times/article_00f2a273-9a79-4981-a50d-605750db19ad.html",
+        "context": null
+      },
+      "record": "supported",
+      "label": "He moved or seconded the key steps on both bridges",
+      "what_minutes_show": [
+        "April 2022: seconded the Outland School Road bridge contract.",
+        "May 2023: moved advertising bids for the Old Salem Road bridge; November 2023: seconded the demolition and redesign contract.",
+        "July 2024: moved the $10,000 right-of-way purchase for the Old Salem Road bridge. No motion states the $2 million total."
+      ],
+      "motion_ids": [
+        "2022-04-20-10",
+        "2023-05-17-16",
+        "2023-11-15-11",
+        "2024-07-26-special-01"
+      ],
+      "commitment_id": null,
+      "caveat": "The total he cited does not appear in a motion."
+    },
+    {
+      "id": "crutcher-jail",
+      "member_id": "crutcher",
+      "topic": "Claim: jail funding keeps being put off",
+      "statement": {
+        "quote": "That is one of the big problems, and we just keep kicking that can down the road.",
+        "said_on": "2026-05-07",
+        "source_label": "Murray Ledger & Times primary questionnaire",
+        "source_url": "https://www.murrayledger.com/news/local/primary-candidates-answer-questions-from-the-ledger-times/article_00f2a273-9a79-4981-a50d-605750db19ad.html",
+        "context": "Speaking about state reimbursement for county jail costs."
+      },
+      "record": "supported",
+      "label": "The record matches: jail shortfalls were covered by General Fund transfers, and no cost plan came to the court",
+      "what_minutes_show": [
+        "November 2022: the court raised the jail housing fee from $30 to $35 a day.",
+        "June 2023: seconded adding a $200,000 General Fund transfer to the Jail Fund; July and August 2026: transfers of $300,000 and $350,000 for the jail.",
+        "No motion in the tracked minutes adopts a jail cost-control or funding plan."
+      ],
+      "motion_ids": [
+        "2022-11-15-06",
+        "2023-06-21-05",
+        "2026-07-15-04",
+        "2026-08-28-special-03"
+      ],
+      "commitment_id": null,
+      "caveat": null
+    }
+  ],
+  "sources_searched": "Statements come from published voter guides, candidate questionnaires and interviews: WKMS (2022 and 2026), the Murray Ledger & Times (2018 to 2026), Murray State News and the Murray Sentinel. Only direct quotes are used. No checkable statement was found for Ricky Stewart, whose 2026 race was uncontested and who was not part of the primary questionnaires, or for former magistrate Eddie Clyde Hale."
 }

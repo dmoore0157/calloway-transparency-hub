@@ -1,4 +1,4 @@
-import { motions, members, meetings, rosterOn, issues, type Motion, type VoteValue, type Issue } from './data';
+import { motions, members, meetings, rosterOn, issues, recordChecks, people, memberById, type Motion, type VoteValue, type Issue } from './data';
 
 export type MemberStats = { id: string; attended: number; total: number; made: number; seconded: number; nays: number; abstentions: number; dollarsMoved: number; byCategory: Record<string, number> };
 
@@ -63,4 +63,24 @@ export function namedInMinutes(shortName: string, title?: string) {
   const rx = new RegExp(`(Squire|Judge|Magistrate)\\s+${shortName}\\b|\\b${shortName}'s\\b|\\b${shortName}\\b(?= (?:abstain|recus|asked|presented|voted|noted|moved|withdrew|attended|spoke))`, 'i');
   void title;
   return meetings.flatMap((mt) => [...mt.summary, ...(mt.vote_notes ?? [])].filter((b) => rx.test(b)).map((b) => ({ meeting: mt, text: b }))).sort((a, b) => b.meeting.date.localeCompare(a.meeting.date));
+}
+
+/** Record check score: how far the Fiscal Court minutes back up what an official has said, using every checked
+ *  statement for that official. Same rule for everyone: acted or supported = 1 point, partial = 1/2,
+ *  no recorded action or contradicted = 0; context items are shown but not scored. A percentage appears only once
+ *  RECORD_SCORE_MIN statements have been scored, and the counts always appear beside it. */
+export const RECORD_SCORE_MIN = 3;
+export type RecordScore = { memberId: string; scored: number; points: number; pct: number | null; acted: number; partial: number; none: number; supported: number; contradicted: number; context: number };
+export function recordScore(memberId: string): RecordScore {
+  const cs = recordChecks.filter((c) => c.member_id === memberId);
+  const n = (r: string) => cs.filter((c) => c.record === r).length;
+  const s = { memberId, acted: n('acted'), partial: n('partial'), none: n('none'), supported: n('supported'), contradicted: n('contradicted'), context: n('context') };
+  const scored = s.acted + s.partial + s.none + s.supported + s.contradicted;
+  const points = s.acted + s.supported + s.partial / 2;
+  return { ...s, scored, points, pct: scored >= RECORD_SCORE_MIN ? points / scored : null };
+}
+/** Everyone who has sat on the court, scored ones first (highest first), then the rest. */
+export function recordScores() {
+  return people.filter((p) => !p.incoming).map((p) => recordScore(p.id))
+    .sort((a, b) => (b.pct ?? -1) - (a.pct ?? -1) || b.scored - a.scored || memberById[a.memberId].full_name.localeCompare(memberById[b.memberId].full_name));
 }

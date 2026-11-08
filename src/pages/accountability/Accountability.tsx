@@ -96,6 +96,13 @@ export function Methodology() {
     <div className="card"><p><code>score = (kept + 0.5 × compromise) ÷ resolved</code>, where resolved = kept + compromise + broken.</p><ul style={{ paddingLeft: 18, margin: 0, display: 'grid', gap: 6 }} className="small">
       <li>Counts always appear beside the score.</li><li>An official needs at least five resolved commitments before appearing in the ranked list.</li><li>Only current officeholders are ranked. Candidates who did not win keep their archived commitments on the record but are not scored, because they had no power to act.</li><li>Activity counts (motions made, seconded) are never ranked; more motions is neither better nor worse.</li>
     </ul></div>
+    <Section title="Record checks: statements against the minutes" />
+    <div className="card"><ul style={{ paddingLeft: 18, margin: 0, display: 'grid', gap: 6 }} className="small">
+      <li><strong>Sitting officials are judged on their record, not only their promises.</strong> When an official who already holds office makes a campaign statement, the hub sets it beside what the Fiscal Court minutes record on that subject during their time in office: motions they made or seconded, votes for action others brought, or no action at all.</li>
+      <li><strong>Claims about the record are checked against the documents.</strong> A statement such as "every audit came back clean" is compared with the published audits and labeled supported or contradicted, with the documents linked.</li>
+      <li><strong>Labels describe the record only.</strong> "No recorded action" means no motion appears in the posted minutes; it does not say whether the idea was good or whether the official argued for it off the record. Minutes before November 2021 are not posted, so earlier years cannot be checked.</li>
+      <li><strong>Same test for everyone.</strong> Record checks exist for every official who made a checkable public statement; where an official made none, there is nothing to check. Officials can respond through the same private link as for commitments.</li>
+    </ul></div>
     <Section title="Fairness safeguards" />
     <div className="card"><ul style={{ paddingLeft: 18, margin: 0, display: 'grid', gap: 6 }} className="small">
       <li><strong>Right to respond.</strong> Each official receives a private link to respond to any commitment or rating. Responses are published unedited, up to 2,500 characters, withheld only for listed reasons such as naming a private individual.</li>

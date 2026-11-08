@@ -34,5 +34,7 @@ for (const e of el.elections) for (const r of e.races) {
 }
 for (const o of off.offices) { for (const h of [o.current, o.incoming].filter(Boolean)) if (h.member_id && !allIds.has(h.member_id)) errors.push(`office ${o.id} references unknown member ${h.member_id}`); }
 for (const m of members) if (m.incoming && (!m.term_start || m.term_start <= '2026-11-08')) errors.push(`incoming member ${m.id} needs a future term_start`);
+const rc = read('data/record_checks.json'); const motionIds = new Set(motions.map((m) => m.id));
+for (const c of rc.checks) { if (!allIds.has(c.member_id)) errors.push(`record check ${c.id} unknown member`); for (const id of c.motion_ids) if (!motionIds.has(id)) errors.push(`record check ${c.id} references unknown motion ${id}`); if (!c.statement.source_url.startsWith('http')) errors.push(`record check ${c.id} has no source`); if (!rc.labels[c.record]) errors.push(`record check ${c.id} has unknown label ${c.record}`); }
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`data ok: ${meetings.length} meetings, ${motions.length} motions, ${fy.lines.length} budget lines, ${auditsDoc.audits.length} audits with ${findingIds.size} findings, ${el.elections.length} elections, ${off.offices.length} offices`);

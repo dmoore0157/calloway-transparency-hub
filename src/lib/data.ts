@@ -14,6 +14,7 @@ import roadmapJson from '../../data/roadmap.json';
 import auditsJson from '../../data/audits.json';
 import electionsJson from '../../data/elections.json';
 import officialsJson from '../../data/officials.json';
+import recordChecksJson from '../../data/record_checks.json';
 
 export type Member = { id: string; full_name: string; short_name: string; title: string; role: 'judge_executive' | 'magistrate'; district: number | null; term_start?: string | null; term_end?: string | null; active?: boolean; incoming?: boolean; party?: string | null; status_note?: string; next_role?: { title: string; from_date: string } };
 export type CandidateLink = { label: string; url: string; kind: string };
@@ -21,6 +22,7 @@ export type Candidate = { name: string; party: string; votes: number | null; pct
 export type Race = { office: string; district: number | null; open_seat?: boolean; nonpartisan?: boolean; note?: string; candidates: Candidate[] };
 export type Election = { id: string; date: string; kind: 'general' | 'primary' | 'special'; label: string; status: string; ballots: number | null; ballots_note?: string; sources: CandidateLink[]; notes: string[]; races: Race[] };
 export type Officeholder = { member_id: string | null; name: string; party: string | null; since?: string | null; term_end?: string | null; takes_office?: string; phone?: string; address?: string; url?: string; note?: string };
+export type RecordCheck = { id: string; member_id: string; topic: string; statement: { quote: string; said_on: string; source_label: string; source_url: string; context: string | null }; record: 'acted' | 'partial' | 'none' | 'supported' | 'contradicted' | 'context'; label: string; what_minutes_show: string[]; motion_ids: string[]; commitment_id: number | null; caveat: string | null };
 export type Office = { id: string; office: string; body: string; what: string; current: Officeholder; incoming: Officeholder | null; audits?: { year?: number; report?: string; label?: string; href?: string }[] };
 export type Meeting = { id: string; date: string; kind: 'regular' | 'special'; date_label: string; minutes_url: string; absent: string[]; absent_other: string[]; summary: string[]; vote_notes: string[]; source_doc_id: string; extraction?: string };
 export type VoteValue = 'aye' | 'nay' | 'abstain' | 'absent' | 'not_recorded';
@@ -49,6 +51,7 @@ export const meetingById = Object.fromEntries(meetings.map((m) => [m.id, m])) as
 export const meetingsMeta = { minutes_index_url: meetingsJson.minutes_index_url, regular_schedule: meetingsJson.regular_schedule };
 export const motions = motionsJson.motions as unknown as Motion[];
 export const motionNotes = motionsJson.notes;
+export const motionById = Object.fromEntries(motions.map((m) => [m.id, m])) as Record<string, Motion>;
 export const overview = overviewJson;
 export const fy2027 = fy2027Json as typeof fy2027Json & { lines: BudgetLine[] };
 export const yearend = yearendJson;
@@ -70,6 +73,8 @@ export const electionsMeta = { compiled: electionsJson.compiled, how_compiled: e
 export const electionById = Object.fromEntries(elections.map((e) => [e.id, e])) as Record<string, Election>;
 export const offices = officialsJson.offices as unknown as Office[];
 export const officialsMeta = { source: officialsJson.source, officials_url: officialsJson.officials_url, compiled: officialsJson.compiled, term_note: officialsJson.term_note };
+export const recordChecks = recordChecksJson.checks as unknown as RecordCheck[];
+export const recordChecksMeta = { compiled: recordChecksJson.compiled, period: recordChecksJson.period, method: recordChecksJson.method, labels: recordChecksJson.labels as Record<string, string> };
 export const roadmap = roadmapJson as Record<string, { see: string; how: string; why: string; needs: string }>;
 
 export const CATEGORY_ORDER = [

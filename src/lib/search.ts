@@ -1,5 +1,5 @@
 import MiniSearch from 'minisearch';
-import { motions, meetings, fy2027, enactments, grants, glossary, memberById, audits, people, elections, offices } from './data';
+import { motions, meetings, fy2027, enactments, grants, glossary, memberById, audits, people, elections, offices, recordChecks } from './data';
 import { dateShort } from './format';
 
 export type SearchDoc = { id: string; type: 'Motion' | 'Meeting' | 'Budget line' | 'Ordinance' | 'Grant' | 'Glossary' | 'Audit finding' | 'Audit' | 'Official' | 'Election' | 'Page'; title: string; body: string; href: string; meta?: string };
@@ -36,6 +36,7 @@ export function getIndex() {
   for (const m of people) docs.push({ id: 'o-' + m.id, type: 'Official', title: `${m.full_name}, ${m.title}`, body: `${m.party ?? ''} ${m.status_note ?? ''} fiscal court`, href: `/leaders/${m.id}`, meta: m.incoming ? 'takes office Jan 2027' : m.active === false ? 'former' : 'current' });
   for (const o of offices) if (!o.current.member_id) docs.push({ id: 'o-' + o.id, type: 'Official', title: `${o.current.name}, ${o.office}`, body: `${o.what} ${o.incoming?.name ?? ''}`, href: `/leaders/office/${o.id}`, meta: o.current.party ?? '' });
   for (const e of elections) { docs.push({ id: 'el-' + e.id, type: 'Election', title: `Calloway County ${e.label}`, body: e.races.flatMap((r) => r.candidates.map((c) => c.name)).join(' '), href: `/leaders/elections/${e.id}`, meta: dateShort(e.date) }); for (const r of e.races) for (const c of r.candidates) docs.push({ id: `cand-${e.id}-${c.name}`, type: 'Election', title: `${c.name} (${c.party}), ${r.office}${r.district ? ` District ${r.district}` : ''}`, body: `${e.label} ${c.result} ${c.note ?? ''}`, href: `/leaders/elections/${e.id}`, meta: c.result === 'won' ? 'won' : c.result }); }
+  for (const c of recordChecks) docs.push({ id: 'rc-' + c.id, type: 'Official', title: `${memberById[c.member_id]?.full_name}: ${c.topic} (record check)`, body: `${c.statement.quote} ${c.label}`, href: `/leaders/${c.member_id}#${c.id}`, meta: c.label });
   for (const a of audits) { docs.push({ id: 'a-' + a.fy, type: 'Audit', title: `FY${a.fy} state audit of the Fiscal Court`, body: `${a.auditor} ${a.judge_executive} ${a.findings.map((f) => f.title).join(' ')}`, href: `/records/audits/${a.fy}`, meta: `${a.findings.length} findings` }); for (const f of a.findings) docs.push({ id: 'af-' + f.id, type: 'Audit finding', title: `${f.id} ${f.title}`, body: `${f.area} ${f.summary} ${f.kind.join(' ')}`, href: `/records/audits/${a.fy}#${f.id}`, meta: `FY${a.fy}` }); }
   for (const [k, t] of Object.entries(glossary)) docs.push({ id: 'gl-' + k, type: 'Glossary', title: k, body: t.what, href: `/records/glossary#${encodeURIComponent(k)}` });
   index = new MiniSearch<SearchDoc>({ fields: ['title', 'body'], storeFields: ['type', 'title', 'href', 'meta'], searchOptions: { prefix: true, fuzzy: 0.2, boost: { title: 2 } } });

@@ -17,7 +17,7 @@ export function MotionRow({ m, showMeeting = true }: { m: Motion; showMeeting?: 
       </div>
       <div className="small muted" style={{ marginTop: 4 }}>
         {showMeeting && <>{dateShort(m.date)} · </>}
-        {m.mover ? <>Moved by <Link to={`/decisions/members/${m.mover}`}>{memberById[m.mover].short_name}</Link></> : 'Mover not named'}{m.seconder && <>, seconded by <Link to={`/decisions/members/${m.seconder}`}>{memberById[m.seconder].short_name}</Link></>}
+        {m.mover ? <>Moved by <Link to={`/leaders/${m.mover}`}>{memberById[m.mover].short_name}</Link></> : 'Mover not named'}{m.seconder && <>, seconded by <Link to={`/leaders/${m.seconder}`}>{memberById[m.seconder].short_name}</Link></>}
         {m.dollar_amount ? <> · {usd(m.dollar_amount)}</> : null}{m.is_routine && <> · routine</>}
       </div>
       {!unanimous && <div style={{ marginTop: 6 }}><VoteDots votes={m.votes} /><div className="small" style={{ marginTop: 4 }}>{methodLabel[m.vote_method]}{m.note ? `: ${m.note}` : ''}</div></div>}

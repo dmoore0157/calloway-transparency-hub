@@ -5,7 +5,8 @@ import { Section, SourceNote, Stat, Ext, Crumb, ShareButton, Empty } from '../..
 import { FlagButton } from '../../components/FlagButton';
 import { CommitmentSummary } from '../accountability/CommitmentSummary';
 import { VotingRecord } from '../decisions/Members';
-import { people, members, memberById, offices, officialsMeta, elections, electionById, electionsMeta, audits, type Member, type Officeholder, type Election, type Race, type Candidate } from '../../lib/data';
+import { MotionRow } from '../../components/VoteBits';
+import { people, members, memberById, offices, officialsMeta, elections, electionById, electionsMeta, audits, recordChecks, recordChecksMeta, motionById, type RecordCheck, type Member, type Officeholder, type Election, type Race, type Candidate } from '../../lib/data';
 import { memberStats } from '../../lib/analytics';
 import { api } from '../../lib/api';
 import { useAsync } from '../../lib/useAsync';
@@ -128,6 +129,8 @@ export function LeaderPage() {
 
     <CommitmentSummary memberId={id} />
 
+    <RecordChecks memberId={id} />
+
     <Section title="Fiscal Court record" action={<Link to={`/decisions/votes?member=${id}`} className="small">Vote tracker ›</Link>} />
     <VotingRecord id={id} />
 
@@ -163,6 +166,31 @@ export function OfficePage() {
     </>}
     <SourceNote>{officialsMeta.source}</SourceNote>
   </>);
+}
+
+/** Statements the official made, set beside what the minutes record on the same subject while they held office. */
+function RecordChecks({ memberId }: { memberId: string }) {
+  const checks = recordChecks.filter((c) => c.member_id === memberId);
+  const m = memberById[memberId];
+  if (checks.length === 0) return null;
+  const p = palette();
+  const color = (r: RecordCheck['record']) => (r === 'acted' || r === 'supported' ? p.ok : r === 'none' || r === 'contradicted' ? p.bad : r === 'partial' ? p.accent : p.muted);
+  const badge = (r: RecordCheck['record']) => (r === 'acted' || r === 'supported' ? 'ok' : r === 'none' || r === 'contradicted' ? 'bad' : r === 'partial' ? 'accent' : '');
+  const counts = { none: checks.filter((c) => c.record === 'none').length, partial: checks.filter((c) => c.record === 'partial').length, acted: checks.filter((c) => c.record === 'acted' || c.record === 'supported').length, contradicted: checks.filter((c) => c.record === 'contradicted').length };
+  return <>
+    <Section title="What they said, against what they did in office" />
+    <span id="record" />
+    <div className="notice" style={{ marginBottom: 12 }}><strong>How to read this.</strong> {m.full_name.split(' ')[0]} already held office when these statements were made, so each one is set beside the Fiscal Court minutes on the same subject. {recordChecksMeta.period} Of {checks.length} statements checked: {counts.none} with no recorded action, {counts.partial} with partial action or votes for others' proposals, {counts.acted} matching the record{counts.contradicted ? `, ${counts.contradicted} contradicted by the record` : ''}. The labels describe the record, not whether the idea was good.</div>
+    <div className="grid">{checks.map((c) => <div key={c.id} id={c.id} className="card" style={{ borderLeft: `4px solid ${color(c.record)}`, scrollMarginTop: 80 }}>
+      <div className="row between" style={{ alignItems: 'flex-start' }}><div><span className="eyebrow">{c.topic}</span><h3 style={{ margin: '4px 0 6px' }}>{c.label}</h3></div><span className={`badge ${badge(c.record)}`}>{recordChecksMeta.labels[c.record]}</span></div>
+      <blockquote style={{ margin: '6px 0 10px', padding: '8px 12px', borderLeft: '3px solid var(--line)', fontFamily: 'var(--serif)', fontSize: 15.5 }}>“{c.statement.quote}”<footer className="small muted" style={{ marginTop: 4 }}>{m.full_name}, {dateLong(c.statement.said_on)}, <Ext href={c.statement.source_url}>{c.statement.source_label}</Ext>{c.statement.context ? ` · ${c.statement.context}` : ''}</footer></blockquote>
+      <p className="small" style={{ margin: '0 0 4px', fontWeight: 700 }}>What the minutes show</p>
+      <ul className="small" style={{ paddingLeft: 18, margin: '0 0 8px', display: 'grid', gap: 4 }}>{c.what_minutes_show.map((b, i) => <li key={i}>{b}</li>)}</ul>
+      {c.motion_ids.length > 0 && <details><summary className="small" style={{ cursor: 'pointer', fontWeight: 600 }}>The motions ({c.motion_ids.length})</summary><ul className="list-reset grid" style={{ marginTop: 8 }}>{c.motion_ids.map((id) => motionById[id] ? <MotionRow key={id} m={motionById[id]} /> : null)}</ul></details>}
+      <div className="row small" style={{ marginTop: 8, gap: 12 }}>{c.commitment_id && backendReady && <Link to={`/leaders/commitments/${c.commitment_id}`}>Tracked as commitment #{c.commitment_id} ›</Link>}{c.caveat && <span className="muted">{c.caveat}</span>}<span style={{ marginLeft: 'auto' }}><FlagButton table="record_checks" id={c.id} /></span></div>
+    </div>)}</div>
+    <SourceNote>{recordChecksMeta.method} Compiled {dateShort(recordChecksMeta.compiled)}.</SourceNote>
+  </>;
 }
 
 /* ---------- Elections ---------- */
@@ -204,7 +232,7 @@ function RaceCard({ r, kind }: { r: Race; kind: string }) {
     {r.note && <p className="small muted" style={{ margin: '4px 0 0' }}>{r.note}</p>}
     <ul className="list-reset" style={{ marginTop: 10, display: 'grid', gap: 8 }}>{r.candidates.map((c) => <li key={c.name}>
       <div className="row between" style={{ alignItems: 'baseline' }}>
-        <span><Vote size={13} style={{ verticalAlign: '-2px', color: c.result === 'won' ? p.ok : p.muted }} /> {c.member_id ? <Link to={`/leaders/${c.member_id}`} style={{ fontWeight: 700 }}>{c.name}</Link> : <strong>{c.name}</strong>} <span className="small muted">{c.party}{c.incumbent ? ' · incumbent' : ''}</span></span>
+        <span><Vote size={13} style={{ verticalAlign: '-2px', color: c.result === 'won' ? p.ok : p.muted }} /> {c.member_id ? <Link to={`/leaders/${c.member_id}`} style={{ fontWeight: 700 }}>{c.name}</Link> : <strong>{c.name}</strong>}{c.member_id && recordChecks.some((x) => x.member_id === c.member_id) && <Link to={`/leaders/${c.member_id}#record`} className="badge accent" style={{ marginLeft: 6 }}>record check</Link>} <span className="small muted">{c.party}{c.incumbent ? ' · incumbent' : ''}</span></span>
         <span className="row" style={{ gap: 8 }}><span className="small" style={{ fontVariantNumeric: 'tabular-nums' }}>{c.votes != null ? `${c.votes.toLocaleString()} votes` : ''}{c.pct != null ? ` · ${c.pct}%` : ''}</span><ResultBadge c={c} race={r} kind={kind} /></span>
       </div>
       {c.pct != null && <div style={{ height: 6, background: 'var(--surface-2)', borderRadius: 3, marginTop: 4 }}><div style={{ width: `${(c.pct / max) * 100}%`, height: 6, borderRadius: 3, background: c.result === 'won' ? p.series[0] : p.series[1] }} /></div>}

@@ -62,6 +62,17 @@ incoming Judge/Executive from the WKMS and Sentinel voter guides, one in-office 
 each with the measure written at intake. Neutrality: every candidate in every race is listed with the same fields and links,
 winners and losers alike; nothing on the hub recommends a candidate.
 
+### Record checks: statements against the minutes (November 2026)
+
+`data/record_checks.json` sets each checkable statement a sitting official made in the 2026 voter guides beside what the
+Fiscal Court minutes record on that subject while they held office, with the motions linked. Twelve checks so far: ten for
+Paul Rister (animal shelter, road condition data, meeting times, four-year plan, cash-flow plan, board appointments, the
+Highway 641 land, taxes, transparency, and what he initiated himself) and two for Kenny Imes (the shelter "within the next
+year" and the "nothing but clean audits" claim, which the published audits contradict). Labels describe the record only:
+acted, partial, no recorded action, claim supported, claim contradicted. The same motions are attached in Supabase as
+`hub.commitment_evidence` so the commitment pages show them. The rule is written into the methodology page. Minutes before
+November 2021 are not posted, so the first 35 months of Rister's term cannot be checked and the page says so.
+
 ### Decisions so far
 
 | Topic | Decision (Nov 2026) |

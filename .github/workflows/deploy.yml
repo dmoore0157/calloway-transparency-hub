@@ -32,9 +32,12 @@ jobs:
           # Project site lives under /<repo>/ unless public/CNAME exists (then vite.config.ts uses /)
           VITE_BASE: ${{ vars.VITE_BASE }}
       - name: Keep the Supabase project awake
-        run: curl -sS -o /dev/null -w 'supabase health %{http_code}\n' "https://ccvfdtgjwwjfrzcvocom.supabase.co/rest/v1/hub_status?select=tickets" -H "apikey: ${{ secrets.SUPABASE_ANON_KEY || env.ANON }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY || env.ANON }}" || true
         env:
-          ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNjdmZkdGdqd3dqZnJ6Y3ZvY29tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQxMTYzNzIsImV4cCI6MjEwOTY5MjM3Mn0.Vn47fsGgB8Xgz8VaHEDTdPS6Um19k32l1iwalvvK0hA
+          ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNjdmZkdGdqd3dqZnJ6Y3ZvY29tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQxMTYzNzIsImV4cCI6MjEwOTY5MjM3Mn0.Vn47fsGgB8Xgz8VaHEDTdPS6Um19k32l1iwalvvK0hA' }}
+        run: |
+          curl -sS -o /dev/null -w 'supabase health %{http_code}\n' \
+            "https://ccvfdtgjwwjfrzcvocom.supabase.co/rest/v1/hub_status?select=tickets" \
+            -H "apikey: $ANON_KEY" -H "Authorization: Bearer $ANON_KEY" || true
       - uses: actions/configure-pages@v5
         with:
           enablement: true   # switch the Pages source from the legacy branch build to GitHub Actions if needed

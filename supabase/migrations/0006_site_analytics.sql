@@ -68,6 +68,7 @@ begin
   if v is null then return; end if;
   clean := left(regexp_replace(coalesce(p_path, '/'), '[?#].*$', ''), 200);
   if clean = '' or clean !~ '^/' then clean := '/' || clean; end if;
+  if clean <> '/' then clean := regexp_replace(clean, '/+$', ''); end if;  -- "/money/" and "/money" are one page
   if clean ~ '^/admin' then return; end if;
   sec := coalesce(nullif(split_part(clean, '/', 2), ''), 'home');
   ref := nullif(left(lower(regexp_replace(coalesce(p_referrer, ''), '^www\.', '')), 120), '');

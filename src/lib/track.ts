@@ -13,7 +13,9 @@ const device = () => { const w = window.innerWidth; return w < 640 ? 'phone' : w
 
 let first = true;
 let last = '';
-export function trackView(path: string) {
+export function trackView(rawPath: string) {
+  // GitHub Pages serves prerendered pages at "/money/" while in-app links go to "/money"; count them as one page
+  const path = rawPath.length > 1 ? rawPath.replace(/\/+$/, '') : '/';
   if (!enabled() || path === last) return;
   last = path;
   let referrer: string | null = null;

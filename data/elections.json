@@ -92,8 +92,18 @@
        "filed": "2026-04-16",
        "links": [
         {
+         "label": "Campaign website",
+         "url": "https://www.boonechambers2026.com/",
+         "kind": "campaign"
+        },
+        {
          "label": "Campaign Facebook page",
          "url": "https://www.facebook.com/BooneChambers2026/",
+         "kind": "campaign"
+        },
+        {
+         "label": "Campaign YouTube channel",
+         "url": "https://www.youtube.com/@BooneChambers2026",
          "kind": "campaign"
         },
         {

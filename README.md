@@ -19,7 +19,7 @@ Every figure links to a public record. Not affiliated with Calloway County gover
 
 ```bash
 npm install
-npm run dev          # http://localhost:5173/calloway-transparency-hub/
+npm run dev          # http://localhost:5173/calloway-transparency-hub/app.html
 npm run build        # typecheck, build, prerender 750+ routes into dist/
 node scripts/check-data.mjs   # data contract checks (also run in CI)
 ```
@@ -29,7 +29,7 @@ Row Level Security, and the anon role can read only the `public.*_public` views.
 
 ### Deploying
 
-Pushes to `main` build and deploy to GitHub Pages (Settings → Pages → Source must be **GitHub Actions**).
+Pushes to `main` build and deploy to GitHub Pages. The workflow asks GitHub to switch the Pages source to **GitHub Actions**; if that is refused, set it once under Settings → Pages → Source. Until then the repo-root `index.html` + `app.js` (the legacy site) keep serving, so nothing breaks during the switch.
 A scheduled rebuild every 3 hours refreshes link previews for new tickets and keeps the Supabase project awake.
 For a custom domain, add `public/CNAME`; `vite.config.ts` then uses `/` as the base path.
 
@@ -48,7 +48,7 @@ The repository history is the public change log for every number on the site.
 
 - `docs/UPGRADE_PLAN.md` — the review and plan this build follows, including the commitments-tracker rulebook
 - `docs/backend/schema.sql`, `docs/backend/API.md` — reference design for the backend
-- `legacy/` — the original single-bundle site and the data extracted from it
+- `index.html`, `app.js`, `404.html` at the repo root — the legacy single-bundle site, kept only until Pages serves from Actions; `legacy/legacy-data-dump.json` is the data extracted from it
 
 ## License
 

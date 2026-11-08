@@ -50,6 +50,7 @@ export function MotionPage() {
       <div className="card" style={{ borderLeft: `4px solid ${m.vote_method === 'voice_unanimous' ? 'var(--line)' : 'var(--accent)'}` }}>
         <div className="row between"><span className="eyebrow">Motion · {dateLong(m.date)}</span><ShareButton /></div>
         <h2>{cap(m.text)}</h2>
+        {m.text_note && <div className={`notice ${m.fragment ? 'warn' : ''}`} style={{ marginBottom: 10 }}>{m.text_note}</div>}
         <div className="row"><span className={`badge ${m.outcome === 'passed' ? 'ok' : 'warn'}`}>{m.result_label}</span>{m.category.map((c) => <span key={c} className="badge">{c}</span>)}{m.is_routine && <span className="badge">Routine</span>}</div>
         <div className="grid cols-3" style={{ marginTop: 12 }}>
           <Stat label="Moved by" value={m.mover ? <Link to={`/decisions/members/${m.mover}`}>{memberById[m.mover].full_name}</Link> : '—'} />

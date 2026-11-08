@@ -18,7 +18,7 @@ export type VoteValue = 'aye' | 'nay' | 'abstain' | 'absent' | 'not_recorded';
 export type Motion = {
   id: string; meeting_id: string; date: string; seq: number; text: string; mover: string | null; seconder: string | null;
   outcome: 'passed' | 'failed' | 'no_second' | 'tabled' | 'withdrawn'; vote_method: string; result_label: string; note: string | null;
-  is_routine: boolean; category: string[]; dollar_amount: number | null; votes: Record<string, VoteValue>; source_doc_id: string; minutes_url: string;
+  is_routine: boolean; category: string[]; dollar_amount: number | null; votes: Record<string, VoteValue>; source_doc_id: string; minutes_url: string; fragment?: boolean; text_note?: string | null;
 };
 export type BudgetLine = { fund: string; kind: 'revenue' | 'appropriation'; account: string; name: string; amount: number };
 export type Grant = { mk: string; cat: string; prog: string; purpose: string; amt: string; match: string; kind: string; stage: string; meeting_id: string | null; minutes_url: string | null };

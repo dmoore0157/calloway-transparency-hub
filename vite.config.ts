@@ -12,6 +12,9 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     rollupOptions: {
+      // app.html is the Vite entry; the repo-root index.html is the legacy site, kept so branch-mode Pages keeps working until
+      // the Pages source is switched to GitHub Actions. scripts/prerender.mjs renames the built app.html to index.html.
+      input: 'app.html',
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],

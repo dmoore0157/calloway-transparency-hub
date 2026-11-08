@@ -12,7 +12,7 @@ export function MotionRow({ m, showMeeting = true }: { m: Motion; showMeeting?: 
   return (
     <li className="card" style={{ padding: '12px 14px', borderLeft: `4px solid ${unanimous ? 'var(--line)' : m.outcome === 'no_second' ? 'var(--warn)' : 'var(--accent)'}` }}>
       <div className="row between" style={{ alignItems: 'flex-start' }}>
-        <Link to={`/decisions/motions/${m.id}`} style={{ color: 'inherit', fontWeight: 600, flex: 1, minWidth: 200 }}>{cap(m.text)}</Link>
+        <Link to={`/decisions/motions/${m.id}`} style={{ color: 'inherit', fontWeight: 600, flex: 1, minWidth: 200 }}>{cap(m.text)}{m.fragment && <span className="small muted" style={{ fontWeight: 400 }}> (motion text incomplete; see minutes)</span>}</Link>
         <span className={`badge ${m.outcome === 'passed' ? (unanimous ? '' : 'accent') : 'warn'}`}>{m.result_label}</span>
       </div>
       <div className="small muted" style={{ marginTop: 4 }}>

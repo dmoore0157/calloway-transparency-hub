@@ -36,6 +36,8 @@ jobs:
         env:
           ANON: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNjdmZkdGdqd3dqZnJ6Y3ZvY29tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQxMTYzNzIsImV4cCI6MjEwOTY5MjM3Mn0.Vn47fsGgB8Xgz8VaHEDTdPS6Um19k32l1iwalvvK0hA
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true   # switch the Pages source from the legacy branch build to GitHub Actions if needed
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

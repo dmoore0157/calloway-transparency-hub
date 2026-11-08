@@ -3,7 +3,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 const dist = 'dist';
-const html = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+const html = fs.readFileSync(path.join(dist, 'app.html'), 'utf8');
+fs.rmSync(path.join(dist, 'app.html'));
 const base = (html.match(/<script type="module" crossorigin src="([^"]+)\/assets\//) || [, ''])[1] + '/';
 const read = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const meetings = read('data/meetings.json').meetings, motions = read('data/motions.json').motions, members = read('data/members.json').members, lines = read('data/budget/fy2027.json').lines;

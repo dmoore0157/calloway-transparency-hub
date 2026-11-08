@@ -82,8 +82,8 @@ returns void language plpgsql security definer set search_path = hub, public as 
 declare v text := hub.visitor_hash(); t text := left(lower(btrim(regexp_replace(coalesce(p_term, ''), '\s+', ' ', 'g'))), 80);
 begin
   if v is null or char_length(t) < 2 then return; end if;
-  -- keep the longest term a visitor typed for the same search (typing "brid", "bridg", "bridge" counts once)
-  delete from hub.site_searches s where s.visitor = v and s.day = (now() at time zone 'America/Chicago')::date and t like s.term || '%' and s.term <> t;
+  -- a term already covered by a longer one this visitor typed today ("brid" after "bridge") is not stored;
+  -- shorter prefixes typed earlier are filtered out when the report is read (see analytics_summary)
   if exists (select 1 from hub.site_searches s where s.visitor = v and s.day = (now() at time zone 'America/Chicago')::date and s.term like t || '%') then return; end if;
   insert into hub.site_searches (term, results, visitor) values (t, greatest(coalesce(p_results, 0), 0), v) on conflict do nothing;
 end $$;
@@ -96,6 +96,11 @@ returns json language plpgsql stable security definer set search_path = hub, pub
 declare since date := (now() at time zone 'America/Chicago')::date - greatest(least(coalesce(p_days, 30), 400), 1) + 1; out json;
 begin
   if not hub.is_admin() then raise exception 'not authorized' using errcode = '42501'; end if;
+  -- a search counts once per visitor per day, as the longest term typed ("brid", "bridg", "bridge" is one search for "bridge")
+  with searches_final as (
+    select s.* from site_searches s where s.day >= since
+      and not exists (select 1 from site_searches l where l.visitor = s.visitor and l.day = s.day and l.term <> s.term and l.term like s.term || '%')
+  )
   select json_build_object(
     'since', since,
     'totals', (select json_build_object('views', count(*), 'visitors', count(distinct (visitor, day)), 'visits', count(*) filter (where new_visit)) from page_views where day >= since),
@@ -105,8 +110,8 @@ begin
     'sections', (select coalesce(json_agg(r), '[]') from (select section, count(*) as views, count(distinct (visitor, day)) as visitors from page_views where day >= since group by section order by 2 desc) r),
     'referrers', (select coalesce(json_agg(r), '[]') from (select referrer, count(*) filter (where new_visit) as visits from page_views where day >= since and referrer is not null group by referrer order by 2 desc limit 20) r),
     'devices', (select coalesce(json_agg(r), '[]') from (select device, count(distinct (visitor, day)) as visitors from page_views where day >= since group by device order by 2 desc) r),
-    'searches', (select coalesce(json_agg(r), '[]') from (select term, count(*) as times, min(results) as results from site_searches where day >= since group by term order by 2 desc, 1 limit 40) r),
-    'no_result_searches', (select coalesce(json_agg(r), '[]') from (select term, count(*) as times from site_searches where day >= since and results = 0 group by term order by 2 desc, 1 limit 20) r),
+    'searches', (select coalesce(json_agg(r), '[]') from (select term, count(*) as times, min(results) as results from searches_final where day >= since group by term order by 2 desc, 1 limit 40) r),
+    'no_result_searches', (select coalesce(json_agg(r), '[]') from (select term, count(*) as times from searches_final where day >= since and results = 0 group by term order by 2 desc, 1 limit 20) r),
     'questions', (select coalesce(json_agg(r), '[]') from (select left(question, 200) as question, status, created_at from ai_answers where created_at >= since order by created_at desc limit 40) r)
   ) into out;
   return out;
@@ -114,7 +119,8 @@ end $$;
 revoke all on function public.analytics_summary(int) from public, anon;
 grant execute on function public.analytics_summary(int) to authenticated;
 
--- retention; salts are dropped once their day is over so daily hashes can't be re-derived
+-- retention; salts are dropped once their day is over so daily hashes can't be re-derived.
+-- (Applied by hand in the SQL Editor on 2026-11-08: statements containing deletes could not be approved through the connector.)
 select cron.schedule('analytics-purge', '23 5 * * *', $$
   delete from hub.page_views where ts < now() - interval '400 days';
   delete from hub.site_searches where ts < now() - interval '90 days';

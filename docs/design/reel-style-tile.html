@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Reel style tile</title>
+<style>
+@font-face { font-family: 'Inter'; src: url('https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.2.5/files/inter-latin-wght-normal.woff2') format('woff2'); font-weight: 100 900; }
+:root {
+  --canvas-1: #22242F; --canvas-2: #18243C; --canvas-blue-1: #1E3C5C; --canvas-blue-2: #243C60;
+  --amber: #FCBA45; --mint: #5ED8C4; --ink-on-dark: #F0F0F6; --muted-on-dark: #A9B6C8;
+  --card: #F4F7FB; --card-2: #EAF0F6; --navy: #13304E; --muted-on-card: #4D5D73; --row: #304860; --line-dark: rgba(240,240,246,.10);
+  --teal-text: #0B7A6B; --amber-text: #9A6400; --critical: #C2353C;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--ink-on-dark); background: linear-gradient(170deg, var(--canvas-1) 0%, var(--canvas-2) 60%); position: relative; }
+.grid-tex { position: absolute; inset: 0; pointer-events: none; opacity: .07;
+  background-image: repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 84px), repeating-linear-gradient(80deg, #fff 0 1px, transparent 1px 88px); }
+.arcs { position: absolute; right: -120px; top: 40px; width: 420px; height: 420px; border-radius: 50%; border: 2px solid var(--amber); opacity: .7; }
+.arcs::after { content: ''; position: absolute; inset: 60px -40px 60px 60px; border-radius: 50%; border: 2px solid var(--mint); }
+.wrap { position: relative; max-width: 1140px; margin: 0 auto; padding: 28px 28px 40px; }
+header { display: flex; align-items: center; gap: 12px; padding: 14px 0 26px; border-bottom: 1px solid var(--line-dark); }
+.mark { width: 38px; height: 38px; border-radius: 50%; background: var(--amber); display: grid; place-items: center; }
+.mark svg { width: 20px; height: 20px; }
+.lock { line-height: 1.05; font-weight: 800; letter-spacing: -.01em; } .lock small { display: block; color: var(--mint); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; font-weight: 800; }
+nav { margin-left: auto; display: flex; gap: 6px; } nav a { color: var(--ink-on-dark); text-decoration: none; font-weight: 700; font-size: 13.5px; padding: 7px 12px; border-radius: 999px; } nav a.on { background: rgba(240,240,246,.10); box-shadow: inset 0 -2px 0 var(--amber); }
+.askbtn { background: var(--amber); color: var(--navy); font-weight: 800; padding: 8px 14px; border-radius: 999px; font-size: 13.5px; margin-left: 8px; }
+.pill { display: inline-block; font-weight: 800; font-size: 12.5px; letter-spacing: .02em; text-transform: uppercase; color: var(--navy); background: var(--amber); padding: 7px 14px; border-radius: 999px; }
+.pill.mint { background: var(--mint); }
+.display { font-weight: 900; text-transform: uppercase; letter-spacing: -.025em; line-height: .98; margin: 18px 0 10px; font-size: 64px; }
+.display .a { color: var(--amber); } .display .m { color: var(--mint); }
+.lede { color: var(--muted-on-dark); font-size: 17px; max-width: 560px; line-height: 1.5; }
+.row2 { display: grid; grid-template-columns: 1.05fr .95fr; gap: 28px; margin-top: 26px; }
+.stat { background: var(--card-2); color: var(--navy); border-radius: 18px; padding: 16px 20px; display: flex; align-items: center; gap: 22px; margin-bottom: 12px; }
+.stat b { font-size: 46px; font-weight: 900; letter-spacing: -.03em; min-width: 140px; }
+.stat span { display: block; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .02em; color: var(--muted-on-card); }
+.stat i { display: block; height: 5px; border-radius: 3px; background: var(--mint); margin-top: 8px; } .stat i.a { background: var(--amber); }
+.door { display: flex; align-items: center; gap: 14px; background: var(--row); border-radius: 12px; padding: 13px 18px; margin-bottom: 9px; font-weight: 800; text-transform: uppercase; font-size: 17px; }
+.door .dot { width: 13px; height: 13px; border-radius: 50%; background: var(--amber); } .door .dot.m { background: var(--mint); } .door .dot.w { background: var(--ink-on-dark); }
+.door .arr { margin-left: auto; color: var(--amber); font-size: 20px; } .door .arr.m { color: var(--mint); }
+.door small { display: block; font-weight: 500; text-transform: none; font-size: 12.5px; color: var(--muted-on-dark); }
+h2.sec { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-weight: 800; color: var(--mint); margin: 34px 0 12px; display: flex; align-items: center; gap: 10px; }
+h2.sec::after { content: ''; flex: 1; height: 1px; background: var(--line-dark); }
+.card { background: var(--card); color: var(--navy); border-radius: 16px; padding: 18px 20px; }
+.card h3 { margin: 0 0 4px; font-weight: 800; font-size: 19px; letter-spacing: -.01em; } .card p { color: var(--muted-on-card); margin: 0 0 10px; font-size: 14px; }
+.card a { color: var(--teal-text); font-weight: 700; text-decoration: none; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; } th { text-align: left; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-on-card); padding: 8px 10px; border-bottom: 2px solid #D5DFEA; } td { padding: 8px 10px; border-bottom: 1px solid #E1E8F0; } td.n { text-align: right; font-variant-numeric: tabular-nums; }
+.badge { display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; }
+.b-ok { background: #DDF3EA; color: #0B6B4F; } .b-warn { background: #FDEBD3; color: #8A4B00; } .b-bad { background: #F9DEDF; color: var(--critical); } .b-n { background: #E3EAF2; color: var(--navy); }
+.btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+.btn { font-weight: 800; font-size: 14px; padding: 10px 18px; border-radius: 999px; border: 0; } .btn.p { background: var(--amber); color: var(--navy); } .btn.s { background: var(--mint); color: var(--navy); } .btn.g { background: transparent; color: var(--ink-on-dark); box-shadow: inset 0 0 0 1.5px rgba(240,240,246,.35); } .btn.c { background: var(--navy); color: #fff; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.sw { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.sw div { border-radius: 12px; height: 74px; padding: 8px 10px; font-size: 11px; font-weight: 700; display: flex; flex-direction: column; justify-content: flex-end; }
+.bars { display: flex; align-items: flex-end; gap: 10px; height: 120px; padding: 8px 4px 0; border-bottom: 1px solid #C9D5E2; }
+.bars div { flex: 1; border-radius: 4px 4px 0 0; }
+.foot { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--line-dark); display: flex; align-items: center; } .foot .dots { margin-left: auto; display: flex; gap: 7px; } .foot .dots span { width: 9px; height: 9px; border-radius: 50%; background: #586A80; } .foot .dots span.on { background: var(--amber); }
+.note { font-size: 12px; color: var(--muted-on-dark); margin-top: 6px; }
+</style></head><body>
+<div class="grid-tex"></div><div class="arcs"></div>
+<div class="wrap">
+  <header>
+    <div class="mark"><svg viewBox="0 0 24 24" fill="#13304E"><rect x="3" y="12" width="3.4" height="8" rx="1"/><rect x="8.2" y="7" width="3.4" height="13" rx="1"/><rect x="13.4" y="9.5" width="3.4" height="10.5" rx="1"/><rect x="18.6" y="4" width="3.4" height="16" rx="1"/></svg></div>
+    <div class="lock">Calloway County<small>Transparency Hub</small></div>
+    <nav><a class="on">Money</a><a>Decisions</a><a>Roads</a><a>Leaders</a><a>Records</a><span class="askbtn">✦ Ask</span></nav>
+  </header>
+
+  <div class="row2">
+    <div>
+      <span class="pill">01 The Money</span>
+      <div class="display">Follow the<br><span class="m">money.</span></div>
+      <p class="lede">Where Calloway County's money comes from and where it goes, from state audits and the county's own filings. Every figure links to its source.</p>
+      <div class="btns"><button class="btn p">Explore the budget</button><button class="btn g">Ask the records</button></div>
+    </div>
+    <div style="padding-top:44px">
+      <div class="stat"><b>$5.77M</b><div style="flex:1"><span>FY2025 General Fund spending</span><i></i></div></div>
+      <div class="stat"><b>949</b><div style="flex:1"><span>Motions tracked</span><i class="a"></i></div></div>
+      <div class="door"><span class="dot"></span><div>Leaders<small>Profiles, promises, elections</small></div><span class="arr">→</span></div>
+      <div class="door"><span class="dot m"></span><div>Promises<small>Kept, broken, pending</small></div><span class="arr m">→</span></div>
+      <div class="door"><span class="dot w"></span><div>Public records<small>Audits, sources, downloads</small></div><span class="arr" style="color:var(--ink-on-dark)">→</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">Content on light cards (readable tables and charts)</h2>
+  <div class="three">
+    <div class="card"><span class="badge b-bad">Repeat finding</span><h3 style="margin-top:8px">FY2025 state audit</h3><p>Purchase orders after the expense for the third year in a row.</p>
+      <table><thead><tr><th>Year</th><th style="text-align:right">Late POs</th></tr></thead><tbody><tr><td>FY2023</td><td class="n">$2,831,800</td></tr><tr><td>FY2024</td><td class="n">$4,292,099</td></tr><tr><td>FY2025</td><td class="n">$2,996,752</td></tr></tbody></table>
+      <p style="margin:10px 0 0"><a href="#">Read the finding →</a></p></div>
+    <div class="card"><h3>Chart palette on cards</h3><p>Reel hues, deepened to pass the color-blind and contrast checks.</p>
+      <div class="bars"><div style="height:62%;background:#13A08C"></div><div style="height:88%;background:#E09A00"></div><div style="height:48%;background:#2F6FD6"></div><div style="height:72%;background:#D9497F"></div><div style="height:38%;background:#7357D9"></div><div style="height:55%;background:#5E8A1F"></div></div>
+      <p style="margin:8px 0 0;font-size:11.5px">Teal · Amber · Blue · Rose · Violet · Olive</p></div>
+    <div class="card"><h3>Status badges</h3><p>Reserved colors, always with a word.</p>
+      <p><span class="badge b-ok">Kept</span> <span class="badge b-warn">Stalled</span> <span class="badge b-bad">Broken</span> <span class="badge b-n">Not rated</span></p>
+      <h3 style="margin-top:14px">Buttons</h3>
+      <div class="btns"><button class="btn p">Primary</button><button class="btn s">Secondary</button><button class="btn c">On card</button></div></div>
+  </div>
+
+  <h2 class="sec">Palette sampled from the reel</h2>
+  <div class="sw">
+    <div style="background:#FCBA45;color:#13304E">Amber<br>#FCBA45</div>
+    <div style="background:#5ED8C4;color:#13304E">Mint<br>#5ED8C4</div>
+    <div style="background:#18243C;box-shadow:inset 0 0 0 1px #3a4a66">Night navy<br>#18243C</div>
+    <div style="background:#22242F;box-shadow:inset 0 0 0 1px #3a4a66">Charcoal<br>#22242F</div>
+    <div style="background:#304860">Slate row<br>#304860</div>
+    <div style="background:#EAF0F6;color:#13304E">Card<br>#EAF0F6 · ink #13304E</div>
+  </div>
+  <p class="note">Text contrast: amber on navy 9.0:1, mint on navy 8.9:1, navy ink on card 11.7:1, navy on amber pill 7.9:1. Mint and amber are never used as text on light cards (1.5:1); links there use deep teal #0B7A6B (4.9:1).</p>
+
+  <div class="foot"><div class="lock" style="font-size:13px"><small style="font-size:12px">Calloway County</small><span style="color:var(--muted-on-dark);font-weight:500;font-size:12px">Transparency Hub</span></div><div class="dots"><span></span><span></span><span class="on"></span><span></span><span></span></div></div>
+</div>
+</body></html>

@@ -29,7 +29,7 @@ export function AdminLayout() {
   return (<>
     <Meta title="Admin" />
     <div className="row between"><div><div className="eyebrow">Admin</div><h1 style={{ marginTop: 4 }}>Review queues</h1></div><div className="small muted">{session.user.email} · <button className="btn small" onClick={() => supabase().auth.signOut()}>Sign out</button></div></div>
-    <nav className="subnav">{[['/admin', 'Overview'], ['/admin/photos', 'Photos'], ['/admin/tickets', 'Tickets'], ['/admin/ideas', 'Ideas'], ['/admin/flags', 'Flags'], ['/admin/commitments', 'Commitments'], ['/admin/traffic', 'Traffic']].map(([to, l]) => <NavLink key={to} to={to} end={to === '/admin'} className={({ isActive }) => (isActive ? 'active' : '')}>{l}</NavLink>)}</nav>
+    <nav className="subnav wrap" aria-label="Admin sections">{[['/admin', 'Overview'], ['/admin/photos', 'Photos'], ['/admin/tickets', 'Tickets'], ['/admin/ideas', 'Ideas'], ['/admin/flags', 'Flags'], ['/admin/commitments', 'Commitments'], ['/admin/traffic', 'Traffic']].map(([to, l]) => <NavLink key={to} to={to} end={to === '/admin'} className={({ isActive }) => (isActive ? 'active' : '')}>{l}</NavLink>)}</nav>
     <Outlet />
   </>);
 }
@@ -45,7 +45,16 @@ export function AdminOverview() {
     const [p, i, f, t, c] = await Promise.all([hub().from('ticket_photos').select('id', { count: 'exact', head: true }).eq('status', 'pending'), hub().from('ideas').select('id', { count: 'exact', head: true }).eq('published', false), hub().from('data_flags').select('id', { count: 'exact', head: true }).eq('status', 'open'), hub().from('tickets').select('id', { count: 'exact', head: true }).in('status', ['reported', 'submitted_to_county']), hub().from('commitment_ratings').select('id', { count: 'exact', head: true }).eq('state', 'proposed')]);
     return { photos: p.count ?? 0, ideas: i.count ?? 0, flags: f.count ?? 0, tickets: t.count ?? 0, ratings: c.count ?? 0 };
   }, [], { photos: 0, ideas: 0, flags: 0, tickets: 0, ratings: 0 });
-  return (<div className="grid cols-4">{[['Photos awaiting review', data.photos, '/admin/photos'], ['Ideas held for review', data.ideas, '/admin/ideas'], ['Open flags', data.flags, '/admin/flags'], ['Open tickets', data.tickets, '/admin/tickets'], ['Proposed ratings', data.ratings, '/admin/commitments']].map(([l, n, to]) => <Link key={String(l)} to={String(to)} className="stat" style={{ textDecoration: 'none' }}><div className="label">{l}</div><div className="value">{n}</div></Link>)}</div>);
+  const { data: traffic } = useAsync(async () => { const { data } = await supabase().rpc('analytics_summary', { p_days: 7 }); return (data ?? null) as Pick<Summary, 'today' | 'totals'> | null; }, [], null);
+  return (<>
+    <Section title="Waiting on you" />
+    <div className="grid cols-4">{[['Photos awaiting review', data.photos, '/admin/photos'], ['Ideas held for review', data.ideas, '/admin/ideas'], ['Open flags', data.flags, '/admin/flags'], ['Open tickets', data.tickets, '/admin/tickets'], ['Proposed ratings', data.ratings, '/admin/commitments']].map(([l, n, to]) => <Link key={String(l)} to={String(to)} className="stat" style={{ textDecoration: 'none' }}><div className="label">{l}</div><div className="value">{n}</div></Link>)}</div>
+    <Section title="Traffic" action={<Link to="/admin/traffic" className="small">Full report ›</Link>} />
+    <div className="grid cols-4">
+      <Link to="/admin/traffic" className="stat" style={{ textDecoration: 'none' }}><div className="label">Visitors today</div><div className="value">{traffic ? traffic.today.visitors.toLocaleString() : '…'}</div><div className="sub">{traffic ? `${traffic.today.views.toLocaleString()} page views` : ''}</div></Link>
+      <Link to="/admin/traffic" className="stat" style={{ textDecoration: 'none' }}><div className="label">Visitors, last 7 days</div><div className="value">{traffic ? traffic.totals.visitors.toLocaleString() : '…'}</div><div className="sub">{traffic ? `${traffic.totals.views.toLocaleString()} page views · ${traffic.totals.visits.toLocaleString()} visits` : ''}</div></Link>
+    </div>
+  </>);
 }
 
 export function AdminPhotos() {

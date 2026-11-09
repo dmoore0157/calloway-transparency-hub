@@ -212,6 +212,7 @@ main.page { padding-top: 12px; padding-bottom: calc(var(--bottom-nav-h) + 28px);
 .subnav::-webkit-scrollbar { display: none; }
 .subnav a { white-space: nowrap; border: 1px solid var(--btn-line); background: var(--surface-2); padding: 8px 14px; border-radius: 999px; font-size: 13.5px; font-weight: 700; color: var(--ink); }
 .subnav a:hover { text-decoration: none; filter: brightness(1.08); }
+.subnav.wrap { flex-wrap: wrap; overflow: visible; }
 .subnav a.active { background: var(--amber); color: var(--navy); border-color: var(--amber); }
 
 /* forms */

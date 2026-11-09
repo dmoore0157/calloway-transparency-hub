@@ -23,7 +23,7 @@ Deno.serve(async (req) => {
   }
   if (action === 'ticket_status') {
     const id = str(b.ticket_id, 40); const to = str(b.to_status, 40); const note = str(b.note, 500) || null;
-    const { error } = await sb.rpc('set_ticket_status', { p_ticket: id, p_status: to, p_actor: admin.role === 'county' ? 'county' : 'admin', p_note: note }); if (error) return fail('db', error.message, 500);
+    const { error } = await hub(sb).rpc('set_ticket_status', { p_ticket: id, p_status: to, p_actor: admin.role === 'county' ? 'county' : 'admin', p_note: note }); if (error) return fail('db', error.message, 500);
     if (to === 'closed_duplicate' && str(b.duplicate_of, 40)) await hub(sb).from('tickets').update({ duplicate_of: str(b.duplicate_of, 40) }).eq('id', id);
     await audit(sb, who, action, id, null, { to, note }); return json({ ok: true });
   }

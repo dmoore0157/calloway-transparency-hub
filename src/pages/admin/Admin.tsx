@@ -70,10 +70,17 @@ export function AdminPhotos() {
 export function AdminTickets() {
   const { data, loading, reload } = useAsync(async () => (await hub().from('tickets').select('id,status,category,severity,location_text,road_name,district_id,created_at').order('created_at', { ascending: false }).limit(200)).data ?? [], [], [] as Record<string, unknown>[]);
   const [note, setNote] = useState('');
-  const set = async (id: string, to_status: string) => { await callFn('admin-action', { action: 'ticket_status', ticket_id: id, to_status, note: note || undefined }); setNote(''); reload(); };
+  const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
+  const set = async (id: string, to_status: string) => {
+    setMsg(null);
+    try { await callFn('admin-action', { action: 'ticket_status', ticket_id: id, to_status, note: note || undefined }); setNote(''); setMsg({ ok: true, text: `${id} set to ${to_status.replace(/_/g, ' ')}.` }); }
+    catch (e) { setMsg({ ok: false, text: `Couldn't change ${id}: ${(e as Error).message}` }); }
+    reload();
+  };
   if (loading) return <p className="muted">Loading…</p>;
   return (<>
     <label className="field"><span>Note to attach to the next status change (public)</span><input className="input" value={note} onChange={(e) => setNote(e.target.value)} /></label>
+    {msg && <div className={`notice ${msg.ok ? 'ok' : 'bad'}`} role="status" style={{ marginBottom: 12 }}>{msg.text}</div>}
     <div className="table-wrap"><table className="data"><thead><tr><th>Ticket</th><th>Where</th><th>Status</th><th>Set status</th></tr></thead><tbody>{data.map((t) => <tr key={String(t.id)}><td><Link to={`/roads/tickets/${t.id}`}>{String(t.id)}</Link><div className="tiny muted">{String(t.category)} · {String(t.severity)} · {dateShort(String(t.created_at).slice(0, 10))}</div></td><td className="small">{String(t.road_name ?? '')} {String(t.location_text)}</td><td><StatusBadge status={String(t.status)} /></td><td><select className="input" value={String(t.status)} onChange={(e) => set(String(t.id), e.target.value)}>{['reported', 'submitted_to_county', 'acknowledged', 'in_progress', 'fixed', 'closed_not_county', 'closed_duplicate', 'closed_invalid'].map((s) => <option key={s} value={s}>{s}</option>)}</select></td></tr>)}</tbody></table></div>
   </>);
 }

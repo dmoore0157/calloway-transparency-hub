@@ -23,7 +23,7 @@ Deno.serve(async (req) => {
     if (kind === 'fixed' && !['fixed', 'closed_not_county', 'closed_duplicate', 'closed_invalid'].includes(t.status)) {
       const { data: fx } = await hub(sb).from('ticket_confirmations').select('device_hash, is_reporter').eq('ticket_id', ticketId).eq('kind', 'fixed');
       const distinct = new Set((fx ?? []).map((x) => x.device_hash)).size; const byReporter = (fx ?? []).some((x) => x.is_reporter);
-      if (distinct >= 2 || byReporter) await sb.rpc('set_ticket_status', { p_ticket: ticketId, p_status: 'fixed', p_actor: byReporter ? 'reporter' : 'resident', p_note: byReporter ? 'Reporter confirmed it is fixed' : 'Two residents confirmed it is fixed' }, { head: false }).then(() => {}, () => {});
+      if (distinct >= 2 || byReporter) await hub(sb).rpc('set_ticket_status', { p_ticket: ticketId, p_status: 'fixed', p_actor: byReporter ? 'reporter' : 'resident', p_note: byReporter ? 'Reporter confirmed it is fixed' : 'Two residents confirmed it is fixed' }, { head: false }).then(() => {}, () => {});
     }
     if (kind === 'still_issue' && t.status === 'fixed') await hub(sb).from('ticket_events').insert({ ticket_id: ticketId, actor: 'system', kind: 'note', note: 'Reported still an issue after being marked fixed; flagged for review' });
     return json({ ok: true, is_reporter: isReporter });
@@ -32,7 +32,7 @@ Deno.serve(async (req) => {
     if (!isReporter) return fail('forbidden', 'Only the reporter can mark this', 403);
     const ref = str(b.county_reference, 80) || null;
     await hub(sb).from('tickets').update({ submitted_to_county_at: new Date().toISOString(), county_reference: ref }).eq('id', ticketId);
-    if (t.status === 'reported') await sb.rpc('set_ticket_status', { p_ticket: ticketId, p_status: 'submitted_to_county', p_actor: 'reporter', p_note: ref ? `County reference ${ref}` : null });
+    if (t.status === 'reported') await hub(sb).rpc('set_ticket_status', { p_ticket: ticketId, p_status: 'submitted_to_county', p_actor: 'reporter', p_note: ref ? `County reference ${ref}` : null });
     await hub(sb).from('ticket_events').insert({ ticket_id: ticketId, actor: 'reporter', kind: 'submitted', note: ref ? `County reference ${ref}` : null });
     return json({ ok: true });
   }

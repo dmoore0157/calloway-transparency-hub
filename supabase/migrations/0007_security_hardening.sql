@@ -17,3 +17,11 @@ grant execute on function hub.set_ticket_status(text, hub.ticket_status, hub.act
 revoke execute on function hub.admin_role() from public, anon;
 
 revoke usage on schema graphql_public from anon, authenticated;
+
+-- The server role (service_role) was never granted the Ask tables created in 0005, so every answer and rating
+-- was silently refused ("permission denied for table ai_answers") and sharing found nothing to share.
+-- Grant them, and make it the default for tables added to the hub schema later.
+grant select, insert, update, delete on hub.ai_answers, hub.ai_feedback to service_role;
+grant usage, select on all sequences in schema hub to service_role;
+alter default privileges for role postgres in schema hub grant select, insert, update, delete on tables to service_role;
+alter default privileges for role postgres in schema hub grant usage, select on sequences to service_role;

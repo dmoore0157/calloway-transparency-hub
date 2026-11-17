@@ -163,7 +163,13 @@ main.page { padding-top: 12px; padding-bottom: calc(var(--bottom-nav-h) + 28px);
 .hero-stats { display: grid; gap: 10px; }
 
 /* layout */
-.grid { display: grid; gap: 12px; }
+.grid { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+/* grid and flex children may shrink below their content's width, so a wide table scrolls inside its own box
+   instead of stretching the page past the edge of a phone screen */
+.grid > *, .row > * { min-width: 0; }
+.card, .md { overflow-wrap: break-word; }
+.md .table-wrap { max-width: 100%; }
+.md table.data th, .md table.data td { white-space: normal; }
 .grid.cols-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .grid.cols-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .grid.cols-4 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
@@ -335,3 +341,13 @@ sup.cite { font-size: 11px; margin-left: 1px; } sup.cite a { text-decoration: no
 @media (max-width: 360px) { .hero-stats.two { grid-template-columns: 1fr; } }
 :root[data-theme="light"] .site-header { background: rgba(19,48,78,.97); }
 @media (max-width: 640px) { .arc { opacity: .5; } }
+
+/* phones: tighter tables and answer cards so a four- or five-column table fits the screen without sideways scrolling */
+@media (max-width: 520px) {
+  table.data { font-size: 12.5px; }
+  table.data th, table.data td { padding: 7px 6px; }
+  table.data th { font-size: 9.5px; letter-spacing: .03em; }
+  table.data th:first-child, table.data td:first-child { padding-left: 10px; }
+  .md table.data td, .md table.data th { white-space: normal; }
+  article.card { padding: 14px 12px; }
+}

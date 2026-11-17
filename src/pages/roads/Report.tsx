@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import maplibregl from 'maplibre-gl';
+import * as maplibregl from 'maplibre-gl';
 import exifr from 'exifr';
 import { Camera, Copy, Check, ExternalLink, MapPin, Phone } from 'lucide-react';
 import { useMap, COUNTY_CENTER } from '../../components/MapView';
@@ -24,10 +24,7 @@ export default function Report() {
   const [nearby, setNearby] = useState<Ticket[]>([]); const [confirmNotDup, setConfirmNotDup] = useState(false);
   const [busy, setBusy] = useState(false); const [err, setErr] = useState(''); const [result, setResult] = useState<Result | null>(null);
   const mapEl = useRef<HTMLDivElement>(null); const marker = useRef<maplibregl.Marker | null>(null);
-  const map = useMap(mapEl, { zoom: 10.5, onReady: (m) => {
-    m.on('click', (e) => place([e.lngLat.lng, e.lngLat.lat]));
-    m.on('geolocate', (e) => { const c = (e as unknown as { coords: GeolocationCoordinates }).coords; place([c.longitude, c.latitude]); });
-  } });
+  const map = useMap(mapEl, { zoom: 10.5, onReady: (m) => { m.on('click', (e) => place([e.lngLat.lng, e.lngLat.lat])); }, onGeolocate: (c) => place([c.longitude, c.latitude]) });
   const place = (ll: [number, number]) => {
     setPos(ll);
     const m = map.current; if (!m) return;

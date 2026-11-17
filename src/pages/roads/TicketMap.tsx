@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import maplibregl from 'maplibre-gl';
+import * as maplibregl from 'maplibre-gl';
 import { useMap, addTicketLayer, MapLegend } from '../../components/MapView';
 import { api } from '../../lib/api';
 import { useAsync } from '../../lib/useAsync';

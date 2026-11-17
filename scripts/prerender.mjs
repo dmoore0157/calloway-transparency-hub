@@ -45,6 +45,34 @@ const routes = [
   ...lines.map((l) => [`money/lines/${encodeURIComponent(l.account)}`, `${l.name} (${l.fund})`, `Budget line ${l.account}: $${l.amount.toLocaleString()} in FY2026-27.`]),
 ];
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
+// Content Security Policy, added to every page as a <meta> tag (GitHub Pages cannot send headers). Scripts may only
+// come from the site itself plus the exact inline snippets in app.html, hashed here; styles allow inline because
+// React sets them as attributes; the map needs blob: workers and its tile host; the API host is the only remote
+// connection. Keep this in step with new third-party hosts.
+import { createHash } from 'node:crypto';
+const SUPABASE_URL = (process.env.VITE_SUPABASE_URL || (fs.readFileSync('.env.production', 'utf8').match(/^VITE_SUPABASE_URL=(\S+)/m) || [])[1] || '').replace(/\/$/, '');
+const TILES = 'https://tiles.openfreemap.org';
+const TURNSTILE = 'https://challenges.cloudflare.com';
+function withCsp(doc) {
+  const hashes = [...doc.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => `'sha256-${createHash('sha256').update(m[1]).digest('base64')}'`);
+  const policy = [
+    `default-src 'self'`,
+    `script-src 'self' ${hashes.join(' ')} ${TURNSTILE}`,
+    `style-src 'self' 'unsafe-inline'`,
+    `img-src 'self' data: blob: ${SUPABASE_URL} ${TILES}`,
+    `font-src 'self' data:`,
+    `connect-src 'self' ${SUPABASE_URL} ${TILES}`,
+    `worker-src 'self' blob:`,
+    `child-src blob: ${TURNSTILE}`,
+    `frame-src ${TURNSTILE}`,
+    `object-src 'none'`,
+    `base-uri 'self'`,
+    `form-action 'self'`,
+    `upgrade-insecure-requests`,
+  ].join('; ');
+  return doc.replace('<meta charset="utf-8" />', `<meta charset="utf-8" />\n<meta http-equiv="Content-Security-Policy" content="${policy}" />`);
+}
 const seen = new Set();
 // share cards (public/og/*.png, made by scripts/make-brand.cjs); og:image must be an absolute URL for social sites
 const OG_CARDS = new Set(['money', 'decisions', 'roads', 'leaders', 'records', 'ask']);
@@ -55,12 +83,12 @@ for (const [route, title, desc] of routes) {
   let out = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(t)}</title>`).replace(/(<meta name="description" content=")[^"]*(")/, `$1${esc(desc)}$2`).replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${esc(t)}$2`).replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${esc(desc)}$2`);
   const seg = route.split('/')[0]; const card = OG_CARDS.has(seg) ? seg : 'home';
   out = out.replace('og/home.png', `og/${card}.png`).replace(/__ORIGIN__/g, ORIGIN).replace(/__BASE__/g, base);
-  const dir = path.join(dist, route); fs.mkdirSync(dir, { recursive: true }); fs.writeFileSync(path.join(dir, 'index.html'), out);
+  const dir = path.join(dist, route); fs.mkdirSync(dir, { recursive: true }); fs.writeFileSync(path.join(dir, 'index.html'), withCsp(out));
 }
-fs.writeFileSync(path.join(dist, 'index.html'), html.replace(/__ORIGIN__/g, ORIGIN).replace(/__BASE__/g, base));
+fs.writeFileSync(path.join(dist, 'index.html'), withCsp(html.replace(/__ORIGIN__/g, ORIGIN).replace(/__BASE__/g, base)));
 // 404 fallback: remember the requested path, load the app from the base, and restore it (see index.html).
 const notFound = html.replace(/__ORIGIN__/g, ORIGIN).replace(/__BASE__/g, base).replace('<script>', `<script>try{sessionStorage.setItem('hub:redirect',location.pathname+location.search+location.hash);}catch(e){}location.replace('${base}');</script><script>`);
-fs.writeFileSync(path.join(dist, '404.html'), notFound);
+fs.writeFileSync(path.join(dist, '404.html'), withCsp(notFound));
 fs.writeFileSync(path.join(dist, '.nojekyll'), '');
 // copy data for downloads
 fs.cpSync('data', path.join(dist, 'data'), { recursive: true });

@@ -36,7 +36,7 @@ export function AdminLayout() {
 
 function Login() {
   const [email, setEmail] = useState(''); const [sent, setSent] = useState(false); const [err, setErr] = useState('');
-  const send = async () => { setErr(''); const { error } = await supabase().auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.origin + import.meta.env.BASE_URL + 'admin' } }); if (error) setErr(error.message); else setSent(true); };
+  const send = async () => { setErr(''); const { error } = await supabase().auth.signInWithOtp({ email, options: { shouldCreateUser: false, emailRedirectTo: window.location.origin + import.meta.env.BASE_URL + 'admin' } }); if (error) setErr(error.message); else setSent(true); };
   return (<div className="card" style={{ maxWidth: 420, margin: '24px auto' }}><h2>Editor sign-in</h2>{sent ? <p>Check your email for a sign-in link.</p> : <><label className="field"><span>Email</span><input className="input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} /></label>{err && <p className="small" style={{ color: 'var(--bad)' }}>{err}</p>}<button className="btn primary" onClick={send} disabled={!email}>Send sign-in link</button></>}<p className="tiny muted" style={{ marginTop: 10 }}>Only allow-listed editor addresses can act. Everything an editor does is logged.</p></div>);
 }
 

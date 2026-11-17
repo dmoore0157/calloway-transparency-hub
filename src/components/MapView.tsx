@@ -1,5 +1,10 @@
 import { useEffect, useRef } from 'react';
-import maplibregl, { type Map as MLMap } from 'maplibre-gl';
+import * as maplibregl from 'maplibre-gl';
+import type { Map as MLMap } from 'maplibre-gl';
+// MapLibre 6 runs its tile parsing in a separate worker file that it expects next to its own module; Vite bundles
+// the module into one chunk, so point the library at a copy of the worker that Vite serves from the site's assets.
+import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
+maplibregl.setWorkerUrl(maplibreWorkerUrl);
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 export const STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
@@ -19,18 +24,23 @@ export const COUNTY_BOUNDS: [[number, number], [number, number]] = [[-88.55, 36.
 // open requests amber, in county hands blue, fixed mint, closed slate (labels always accompany the colors)
 export const STATUS_COLORS: Record<string, string> = { reported: '#FCBA45', submitted_to_county: '#E09A00', acknowledged: '#4A8DEB', in_progress: '#4A8DEB', fixed: '#5ED8C4', closed_not_county: '#9480EC', closed_duplicate: '#8796AA', closed_invalid: '#8796AA' };
 
-export function useMap(container: React.RefObject<HTMLDivElement | null>, opts: { center?: [number, number]; zoom?: number; onReady?: (m: MLMap) => void; interactive?: boolean }) {
+export function useMap(container: React.RefObject<HTMLDivElement | null>, opts: { center?: [number, number]; zoom?: number; onReady?: (m: MLMap) => void; onGeolocate?: (coords: GeolocationCoordinates) => void; interactive?: boolean }) {
   const mapRef = useRef<MLMap | null>(null);
   useEffect(() => {
     if (!container.current || mapRef.current) return;
     let cancelled = false; let m: MLMap | null = null;
     mapStyle().then((style) => {
       if (cancelled || !container.current) return;
-      m = new maplibregl.Map({ container: container.current, style, center: opts.center ?? COUNTY_CENTER, zoom: opts.zoom ?? 10.3, maxBounds: [[-89.2, 36.0], [-87.4, 37.3]], attributionControl: { compact: true }, interactive: opts.interactive ?? true });
-      m.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
-      if (opts.interactive !== false) m.addControl(new maplibregl.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: false }), 'top-right');
-      const ready = m; m.on('load', () => opts.onReady?.(ready));
-      mapRef.current = m;
+      const map = new maplibregl.Map({ container: container.current, style, center: opts.center ?? COUNTY_CENTER, zoom: opts.zoom ?? 10.3, maxBounds: [[-89.2, 36.0], [-87.4, 37.3]], attributionControl: { compact: true }, interactive: opts.interactive ?? true });
+      m = map;
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+      if (opts.interactive !== false) {
+        const geo = new maplibregl.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: false });
+        geo.on('geolocate', (e: { coords: GeolocationCoordinates }) => opts.onGeolocate?.(e.coords));
+        map.addControl(geo, 'top-right');
+      }
+      map.on('load', () => opts.onReady?.(map));
+      mapRef.current = map;
     });
     return () => { cancelled = true; m?.remove(); mapRef.current = null; };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -45,7 +55,7 @@ export function addTicketLayer(m: MLMap, fc: GeoJSON.FeatureCollection, onClick?
   m.addLayer({ id: 'clusters', type: 'circle', source: 'tickets', filter: ['has', 'point_count'], paint: { 'circle-color': '#13304E', 'circle-radius': ['step', ['get', 'point_count'], 16, 10, 22, 50, 28], 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' } });
   m.addLayer({ id: 'cluster-count', type: 'symbol', source: 'tickets', filter: ['has', 'point_count'], layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-size': 12, 'text-font': ['Noto Sans Bold'] }, paint: { 'text-color': '#fff' } });
   m.addLayer({ id: 'points', type: 'circle', source: 'tickets', filter: ['!', ['has', 'point_count']], paint: { 'circle-radius': 8, 'circle-color': (['match', ['get', 'status'], ...Object.entries(STATUS_COLORS).flat(), '#8796AA'] as unknown as maplibregl.DataDrivenPropertyValueSpecification<string>), 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' } });
-  m.on('click', 'clusters', (e) => { const f = m.queryRenderedFeatures(e.point, { layers: ['clusters'] })[0]; const id = f.properties?.cluster_id; (m.getSource('tickets') as maplibregl.GeoJSONSource).getClusterExpansionZoom(id).then((z) => m.easeTo({ center: (f.geometry as GeoJSON.Point).coordinates as [number, number], zoom: z })); });
+  m.on('click', 'clusters', (e) => { const f = m.queryRenderedFeatures(e.point, { layers: ['clusters'] })[0]; const id = f.properties?.cluster_id; (m.getSource('tickets') as maplibregl.GeoJSONSource).getClusterExpansionZoom(id).then((z: number) => m.easeTo({ center: (f.geometry as GeoJSON.Point).coordinates as [number, number], zoom: z })); });
   m.on('click', 'points', (e) => { const f = e.features?.[0]; if (f && onClick) onClick(f.properties as Record<string, unknown>, (f.geometry as GeoJSON.Point).coordinates as [number, number]); });
   for (const l of ['clusters', 'points']) { m.on('mouseenter', l, () => (m.getCanvas().style.cursor = 'pointer')); m.on('mouseleave', l, () => (m.getCanvas().style.cursor = '')); }
 }

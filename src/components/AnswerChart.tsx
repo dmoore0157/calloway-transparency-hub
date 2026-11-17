@@ -23,8 +23,9 @@ export function fmtFull(v: number, unit: ChartSpec['unit']) {
 export function fmtShort(v: number, unit: ChartSpec['unit']) {
   if (unit === 'percent') return `${Math.round(v * 10) / 10}%`;
   const a = Math.abs(v); const sign = v < 0 ? '-' : ''; const pre = unit === 'usd' ? '$' : '';
-  if (a >= 1e9) return `${sign}${pre}${(a / 1e9).toFixed(a >= 1e10 ? 0 : 1)}B`;
-  if (a >= 1e6) return `${sign}${pre}${(a / 1e6).toFixed(a >= 1e7 ? 1 : 2)}M`;
+  const trim = (s: string) => s.replace(/\.0+$/, '').replace(/(\.\d*?)0+$/, '$1');   // $9.00M -> $9M, $4.10M -> $4.1M
+  if (a >= 1e9) return `${sign}${pre}${trim((a / 1e9).toFixed(a >= 1e10 ? 0 : 1))}B`;
+  if (a >= 1e6) return `${sign}${pre}${trim((a / 1e6).toFixed(a >= 1e7 ? 1 : 2))}M`;
   if (a >= 1e4) return `${sign}${pre}${Math.round(a / 1e3)}K`;
   return `${sign}${pre}${a.toLocaleString('en-US', { maximumFractionDigits: unit === 'usd' ? 0 : 1 })}`;
 }

@@ -73,6 +73,31 @@ const SITE = 'https://dmoore0157.github.io/calloway-transparency-hub';
   t('external links stripped', !/evil\.example/.test(link.answer.answer));
 }
 
+// finalize: charts and headline numbers follow the same evidence rules as the text
+{
+  const ctx = newCtx();
+  await runTool('calculate', { expression: '2996752 + 126749', label: 'total' }, ctx);
+  const calcId = [...ctx.registry.keys()].find((k) => k.startsWith('calc:'));
+  await runTool('get_records', { ids: ['audit:2025'] }, ctx);
+  const base = { status: 'answered', title: 'x', answer_markdown: 'Totals below [1].', source_ids: ['audit:2025'], follow_up_questions: [], stats: [] };
+  const chart = (values, ids = [calcId]) => ({ type: 'column', title: 'Totals', subtitle: '', unit: 'usd', categories: ['A', 'B', 'C'], series: [{ name: 'Amount', values }], highlight: 'C', source_ids: ids });
+  const good = finalize({ ...base, charts: [chart([2996752, 126749, 3123501])] }, ctx, SITE, false);
+  t('chart with record values accepted', good.problems.length === 0 && good.answer.charts.length === 1 && good.answer.charts[0].highlight === 'C', JSON.stringify(good.problems));
+  t('chart source joins the numbered list', good.answer.sources.some((s) => s.id === calcId) && good.answer.charts[0].sources.length === 1);
+  const invented = finalize({ ...base, charts: [chart([2996752, 126749, 9999999])] }, ctx, SITE, false);
+  t('chart with invented value rejected', invented.problems.some((p) => /9999999/.test(p)));
+  const uncited = finalize({ ...base, charts: [chart([2996752, 126749, 3123501], [])] }, ctx, SITE, false);
+  t('chart without sources rejected', uncited.problems.some((p) => /must list the ids/.test(p)));
+  const ragged = finalize({ ...base, charts: [{ ...chart([1, 2]), categories: ['A', 'B', 'C'] }] }, ctx, SITE, false);
+  t('chart with missing values rejected', ragged.problems.some((p) => /one number per category/.test(p)));
+  const stat = finalize({ ...base, charts: [], stats: [{ label: 'Total', value: '$3,123,501', note: '' }, { label: 'Made up', value: '$42,000,000', note: '' }] }, ctx, SITE, false);
+  t('invented stat rejected, real one kept', stat.problems.some((p) => /Made up/.test(p)) && !stat.problems.some((p) => /"Total"/.test(p)));
+  const ascii = finalize({ ...base, answer_markdown: 'Totals below [1].\n\n```\nFY2026 T ████████ $5,702,499.71\n```\n\nDone [1].', charts: [] }, ctx, SITE, false);
+  t('text charts removed from the answer', !/```|█/.test(ascii.answer.answer) && /Done/.test(ascii.answer.answer));
+  const oos = finalize({ ...base, status: 'out_of_scope', charts: [chart([1, 2, 3])] }, ctx, SITE, false);
+  t('no charts outside answered', oos.answer.charts.length === 0);
+}
+
 // Tool loop with a scripted model
 const script = (turns) => { let i = 0; const calls = []; return { calls, create: async (p) => { calls.push(p); const r = turns[Math.min(i, turns.length - 1)]; i++; return typeof r === 'function' ? r(p) : r; } }; };
 const tu = (name, input, id = name + Math.random()) => ({ type: 'tool_use', id, name, input });

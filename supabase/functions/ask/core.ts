@@ -14,7 +14,11 @@ export type LiveData = {
   roadRequests: () => Promise<{ records: Source[]; summary: string }>;
 };
 export type Status = 'answered' | 'not_found' | 'out_of_scope' | 'opinion_declined' | 'needs_clarification' | 'not_verified' | 'error';
-export type FinalAnswer = { status: Status; title: string; answer: string; sources: (Omit<Source, 'text'> & { n: number })[]; follow_ups: string[]; verification: { sources_checked: number; figures_checked: number; unverified: string[]; repaired: boolean } };
+export type ChartType = 'column' | 'bar' | 'line' | 'grouped_column' | 'stacked_column';
+export type ChartUnit = 'usd' | 'count' | 'percent' | 'number';
+export type ChartSpec = { type: ChartType; title: string; subtitle: string; unit: ChartUnit; categories: string[]; series: { name: string; values: number[] }[]; highlight: string | null; sources: number[] };
+export type StatSpec = { label: string; value: string; note: string };
+export type FinalAnswer = { status: Status; title: string; answer: string; sources: (Omit<Source, 'text'> & { n: number })[]; follow_ups: string[]; charts: ChartSpec[]; stats: StatSpec[]; verification: { sources_checked: number; figures_checked: number; unverified: string[]; repaired: boolean } };
 
 /* ------------------------------------------------------------------ index */
 
@@ -99,12 +103,27 @@ export const TOOLS = [
     name: 'respond',
     description: 'Deliver the final answer. Call this exactly once, last. Every factual sentence in answer_markdown needs a [n] marker pointing at source_ids (1-based).',
     strict: true,
-    input_schema: { type: 'object', additionalProperties: false, required: ['status', 'title', 'answer_markdown', 'source_ids', 'follow_up_questions'], properties: {
+    input_schema: { type: 'object', additionalProperties: false, required: ['status', 'title', 'answer_markdown', 'source_ids', 'follow_up_questions', 'stats', 'charts'], properties: {
       status: { type: 'string', enum: ['answered', 'not_found', 'out_of_scope', 'opinion_declined', 'needs_clarification'] },
       title: { type: 'string', description: 'Short neutral title, under 80 characters.' },
       answer_markdown: { type: 'string', description: 'The answer in Markdown with [1], [2] markers. For out_of_scope / opinion_declined leave empty. For needs_clarification, one short question.' },
       source_ids: { type: 'array', items: { type: 'string' }, description: 'Record ids, in marker order: [1] = source_ids[0]. Only ids returned by tools in this conversation.' },
       follow_up_questions: { type: 'array', items: { type: 'string' }, description: 'Up to 3 short follow-up questions the records can answer.' },
+      stats: { type: 'array', description: 'Up to 4 headline numbers shown as tiles above the answer (empty when none stand out). Each value exactly as it appears in a record or calculation.', items: { type: 'object', additionalProperties: false, required: ['label', 'value', 'note'], properties: {
+        label: { type: 'string', description: 'Short label, e.g. "FY2025 General Fund spending".' },
+        value: { type: 'string', description: 'The figure as written, e.g. "$5.77M", "99.4%", "210".' },
+        note: { type: 'string', description: 'One short line of context, or empty.' },
+      } } },
+      charts: { type: 'array', description: 'Up to 3 charts drawn by the page (interactive, with a table view). Use one whenever the answer compares 3 or more numbers across years or categories. Never draw charts in text.', items: { type: 'object', additionalProperties: false, required: ['type', 'title', 'subtitle', 'unit', 'categories', 'series', 'highlight', 'source_ids'], properties: {
+        type: { type: 'string', enum: ['column', 'bar', 'line', 'grouped_column', 'stacked_column'], description: 'column: values over a few years or categories; bar: horizontal bars ranked largest first, for many or long-named categories; line: a trend over 5 or more periods; grouped_column: 2 to 4 series side by side per category (e.g. revenue vs spending by year); stacked_column: parts of a whole per category.' },
+        title: { type: 'string', description: 'Plain-English title that says what is plotted, under 70 characters.' },
+        subtitle: { type: 'string', description: 'Units, period and basis, e.g. "General Fund, audited FY2018-21 and county-reported FY2022-25". May be empty.' },
+        unit: { type: 'string', enum: ['usd', 'count', 'percent', 'number'] },
+        categories: { type: 'array', items: { type: 'string' }, description: 'X-axis labels in order (years oldest first), at most 24.' },
+        series: { type: 'array', description: '1 to 4 series. Each values array has one number per category, in category order, copied exactly from records or calculations.', items: { type: 'object', additionalProperties: false, required: ['name', 'values'], properties: { name: { type: 'string' }, values: { type: 'array', items: { type: 'number' } } } } },
+        highlight: { anyOf: [{ type: 'string' }, { type: 'null' }], description: 'One category to emphasize (the point of the chart), or null.' },
+        source_ids: { type: 'array', items: { type: 'string' }, description: 'Record or calculation ids the chart values come from.' },
+      } } },
     } },
   },
 ] as const;
@@ -249,6 +268,8 @@ Rules you never break:
 
 How to work: search with a few phrasings, read full records with get_records before relying on details, use query_motions for anything about votes or counts, and keep going until you can answer or are sure the records do not say. Prefer member fact sheets (member:id), issue records (issue:member:topic), record checks (check:...), audits (audit:year, finding:id) and budget summaries for overview questions, then cite the specific motions or findings behind them.
 
+Charts and headline numbers: never draw a chart in text (no ASCII bars, block characters or code blocks). When an answer compares 3 or more numbers across years or categories, put them in respond's charts field and the page draws an interactive chart with a table view; keep a short Markdown table in the answer too only if exact figures need reading side by side. Pick the chart type by the job: a trend over years is column (up to 6 years) or line (more); comparing many named things is bar, largest first; two measures per year (revenue and spending) is grouped_column; one total split into parts per year is stacked_column. Use highlight for the one category the answer is about. Never mix measures of different scale (dollars and counts) in one chart; make two charts instead. Put the 2 to 4 numbers a reader should leave with in stats. Every chart value and stat must be copied from a record or a calculation and its ids listed.
+
 Writing: plain English for residents, short paragraphs or bullet lists, figures with units and years, dates written out (May 20, 2026). In "report" mode write a structured document: a one-paragraph summary, then sections with ## headings, tables where they help (Markdown tables), and a closing "What the records do not show" section. Do not paste URLs; the sources list carries the links.
 
 Members (id: name, role, term): ${meta.members.map((m) => `${m.id}: ${m.name}, ${m.title}${m.term_start ? `, from ${m.term_start}` : ''}${m.term_end ? `, to ${m.term_end}` : ''}${m.incoming ? ', takes office January 2027, no voting record yet' : ''}`).join('; ')}.
@@ -309,16 +330,26 @@ export function unverifiedFigures(answer: string, evidence: string[]): string[] 
 }
 
 /** Turn the model's respond() call into the answer the reader sees. Fails closed. */
-export function finalize(resp: { status: string; title: string; answer_markdown: string; source_ids: string[]; follow_up_questions: string[] }, ctx: ToolCtx, siteUrl: string, repaired: boolean): { answer: FinalAnswer; problems: string[] } {
+type RespondInput = { status: string; title: string; answer_markdown: string; source_ids: string[]; follow_up_questions: string[]; stats?: { label: string; value: string; note: string }[]; charts?: { type: string; title: string; subtitle: string; unit: string; categories: string[]; series: { name: string; values: number[] }[]; highlight: string | null; source_ids: string[] }[] };
+const CHART_TYPES = ['column', 'bar', 'line', 'grouped_column', 'stacked_column'];
+const UNITS = ['usd', 'count', 'percent', 'number'];
+
+/** A chart value counts as verified when a retrieved record or calculation contains it (to the rounding shown). */
+export function chartValueVerified(v: number, nums: number[]): boolean {
+  const tol = Math.max(Number.isInteger(v) ? 0.5 : 0.006, Math.abs(v) * 0.0005);
+  return nums.some((e) => Math.abs(e - v) <= tol);
+}
+
+export function finalize(resp: RespondInput, ctx: ToolCtx, siteUrl: string, repaired: boolean): { answer: FinalAnswer; problems: string[] } {
   const problems: string[] = [];
   const status = (['answered', 'not_found', 'out_of_scope', 'opinion_declined', 'needs_clarification'].includes(resp.status) ? resp.status : 'not_found') as Status;
   const follow = (resp.follow_up_questions ?? []).slice(0, 3).map((q) => q.replace(/https?:\/\/\S+/g, '').slice(0, 160)).filter(Boolean);
   const verif = { sources_checked: 0, figures_checked: 0, unverified: [] as string[], repaired };
   const abs = (u: string) => (u && u.startsWith('/') ? siteUrl.replace(/\/$/, '') + u : u);
 
-  if (status === 'out_of_scope') return { answer: { status, title: 'Outside what this assistant covers', answer: TEMPLATES.out_of_scope, sources: [], follow_ups: follow, verification: verif }, problems };
-  if (status === 'opinion_declined') return { answer: { status, title: 'The hub does not give opinions', answer: TEMPLATES.opinion_declined, sources: [], follow_ups: follow, verification: verif }, problems };
-  if (status === 'needs_clarification') return { answer: { status, title: 'Can you say a bit more?', answer: stripUnsafe(resp.answer_markdown).replace(/\[\d+\]/g, '').slice(0, 400) || TEMPLATES.clarify, sources: [], follow_ups: follow, verification: verif }, problems };
+  if (status === 'out_of_scope') return { answer: { status, title: 'Outside what this assistant covers', answer: TEMPLATES.out_of_scope, sources: [], follow_ups: follow, charts: [], stats: [], verification: verif }, problems };
+  if (status === 'opinion_declined') return { answer: { status, title: 'The hub does not give opinions', answer: TEMPLATES.opinion_declined, sources: [], follow_ups: follow, charts: [], stats: [], verification: verif }, problems };
+  if (status === 'needs_clarification') return { answer: { status, title: 'Can you say a bit more?', answer: stripUnsafe(resp.answer_markdown).replace(/\[\d+\]/g, '').slice(0, 400) || TEMPLATES.clarify, sources: [], follow_ups: follow, charts: [], stats: [], verification: verif }, problems };
 
   // Map cited ids to retrieved records; renumber markers.
   const ids = (resp.source_ids ?? []).map(String);
@@ -330,7 +361,8 @@ export function finalize(resp: { status: string; title: string; answer_markdown:
     if (existing >= 0) { remap.set(i + 1, existing + 1); return; }
     valid.push(s); remap.set(i + 1, valid.length);
   });
-  let text = stripUnsafe(resp.answer_markdown ?? '');
+  // drop any chart typed out as text (code fences, runs of block characters); charts belong in the charts field
+  let text = stripUnsafe(resp.answer_markdown ?? '').replace(/```[\s\S]*?(```|$)/g, '').replace(/[\u2580-\u259F]{3,}/g, '').replace(/\n{3,}/g, '\n\n').trim();
   const orphan: number[] = [];
   text = text.replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g, (_all, g: string) => {
     const ns = g.split(',').map((x) => Number(x.trim()));
@@ -339,6 +371,36 @@ export function finalize(resp: { status: string; title: string; answer_markdown:
     return mapped.length ? `[${[...new Set(mapped)].join(', ')}]` : '';
   });
   if (orphan.length) problems.push(`citation markers ${[...new Set(orphan)].join(', ')} do not point to a retrieved source`);
+  // Charts and stats follow the same rules as the text: chart sources join the numbered list, and every value
+  // must appear in a retrieved record or calculation.
+  const charts: ChartSpec[] = []; const stats: StatSpec[] = [];
+  if (status === 'answered') {
+    const nums = evidenceNumbers(ctx.evidence);
+    for (const c of (resp.charts ?? []).slice(0, 3)) {
+      const name = `chart "${String(c.title ?? '').slice(0, 40)}"`;
+      const cats = (c.categories ?? []).map((x) => String(x).slice(0, 40)).slice(0, 24);
+      const series = (c.series ?? []).slice(0, 4).map((x) => ({ name: String(x.name ?? '').slice(0, 40), values: (x.values ?? []).map(Number) }));
+      if (!CHART_TYPES.includes(c.type) || !cats.length || !series.length) { problems.push(`${name} needs a type, categories and at least one series`); continue; }
+      if (series.some((x) => x.values.length !== cats.length || x.values.some((v) => !Number.isFinite(v)))) { problems.push(`${name}: every series needs exactly one number per category`); continue; }
+      const refs: number[] = [];
+      for (const id of (c.source_ids ?? []).map(String)) {
+        const src = ctx.registry.get(id);
+        if (!src) { problems.push(`${name} cites ${id}, which was not retrieved in this conversation`); continue; }
+        let i = valid.findIndex((v) => v.id === id);
+        if (i < 0) { valid.push(src); i = valid.length - 1; }
+        refs.push(i + 1);
+      }
+      if (!refs.length) problems.push(`${name} must list the ids its values come from`);
+      const bad = series.flatMap((x) => x.values.filter((v) => !chartValueVerified(v, nums))).map((v) => String(v));
+      if (bad.length) problems.push(`${name} has values that do not appear in any retrieved record or calculation: ${[...new Set(bad)].slice(0, 8).join(', ')}`);
+      charts.push({ type: c.type as ChartType, title: String(c.title ?? '').slice(0, 90), subtitle: String(c.subtitle ?? '').slice(0, 160), unit: (UNITS.includes(c.unit) ? c.unit : 'number') as ChartUnit, categories: cats, series, highlight: c.highlight && cats.includes(c.highlight) ? c.highlight : null, sources: [...new Set(refs)] });
+    }
+    for (const st of (resp.stats ?? []).slice(0, 4)) {
+      const value = String(st.value ?? '').slice(0, 24); if (!value) continue;
+      if (unverifiedFigures(value, ctx.evidence).length) problems.push(`stat "${String(st.label).slice(0, 40)}" (${value}) does not appear in any retrieved record or calculation`);
+      stats.push({ label: String(st.label ?? '').slice(0, 60), value, note: String(st.note ?? '').replace(/\[\d+(?:\s*,\s*\d+)*\]/g, '').slice(0, 120) });
+    }
+  }
   const sources = valid.map((s, i) => ({ n: i + 1, id: s.id, title: s.title, type: s.type, url: abs(s.url), source_url: s.source_url, source_label: s.source_label, date: s.date }));
 
   if (status === 'answered') {
@@ -349,7 +411,7 @@ export function finalize(resp: { status: string; title: string; answer_markdown:
     if (bad.length) problems.push(`these figures do not appear in any retrieved record or calculation: ${bad.join(', ')}`);
   } else { verif.sources_checked = sources.length; }
 
-  return { answer: { status, title: (resp.title || 'Answer').replace(/https?:\/\/\S+/g, '').slice(0, 90), answer: status === 'not_found' && !text.trim() ? TEMPLATES.not_found : text, sources, follow_ups: follow, verification: verif }, problems };
+  return { answer: { status, title: (resp.title || 'Answer').replace(/https?:\/\/\S+/g, '').slice(0, 90), answer: status === 'not_found' && !text.trim() ? TEMPLATES.not_found : text, sources, follow_ups: follow, charts, stats, verification: verif }, problems };
 }
 
 /** Remove raw links (except to the hub), HTML and control characters from model text. */

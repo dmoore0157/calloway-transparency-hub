@@ -112,7 +112,8 @@ Deno.serve(async (req) => {
         const index = await loadIndex();
         const result = await ask({ question, mode, history }, { client: modelClient(apiKey), index, live: liveData(), model: MODEL, siteUrl: SITE_URL, onStep: (t) => send('step', { text: t }) });
         const id = newId();
-        await hub(sb).from('ai_answers').insert({ id, question, mode, status: result.status, title: result.title, answer: result.answer, sources: result.sources, follow_ups: result.follow_ups, verification: result.verification, steps: result.steps, model: result.model, usage: result.usage, device_hash: devHash, corpus_built: index.corpus.meta.built });
+        const { error: saveErr } = await hub(sb).from('ai_answers').insert({ id, question, mode, status: result.status, title: result.title, answer: result.answer, sources: result.sources, follow_ups: result.follow_ups, charts: result.charts, stats: result.stats, verification: result.verification, steps: result.steps, model: result.model, usage: result.usage, device_hash: devHash, corpus_built: index.corpus.meta.built });
+        if (saveErr) console.error('answer not saved', saveErr.message);
         send('done', { id, ...result, corpus_built: index.corpus.meta.built });
       } catch (e) {
         const err = e as { status?: number; message?: string };

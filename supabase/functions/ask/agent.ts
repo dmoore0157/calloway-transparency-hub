@@ -86,5 +86,5 @@ export async function ask(input: AskInput, deps: { client: ModelClient; index: I
 function withheld(status: 'not_verified' | 'error', text: string, ctx: ToolCtx, siteUrl: string, model: string, usage: AskResult['usage'], steps: string[]): AskResult {
   const abs = (u: string) => (u && u.startsWith('/') ? siteUrl.replace(/\/$/, '') + u : u);
   const consulted = [...ctx.registry.values()].filter((s) => s.url).slice(0, 12).map((s, i) => ({ n: i + 1, id: s.id, title: s.title, type: s.type, url: abs(s.url), source_url: s.source_url, source_label: s.source_label, date: s.date }));
-  return { status, title: status === 'error' ? 'Something went wrong' : 'Answer withheld: could not verify', answer: text, sources: status === 'not_verified' ? consulted : [], follow_ups: [], verification: { sources_checked: consulted.length, figures_checked: 0, unverified: [], repaired: false }, model, usage, steps };
+  return { status, title: status === 'error' ? 'Something went wrong' : 'Answer withheld: could not verify', answer: text, sources: status === 'not_verified' ? consulted : [], follow_ups: [], charts: [], stats: [], verification: { sources_checked: consulted.length, figures_checked: 0, unverified: [], repaired: false }, model, usage, steps };
 }

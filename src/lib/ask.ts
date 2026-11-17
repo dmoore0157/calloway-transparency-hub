@@ -1,12 +1,14 @@
 // Client for the "Ask the records" edge function: streams progress, then the checked answer.
 import { SUPABASE_ANON_KEY, functionsUrl, backendReady, supabase, callFn } from './supabase';
 import { deviceToken } from './device';
+import type { ChartSpec, StatSpec } from '../components/AnswerChart';
 
 export type AskSource = { n: number; id: string; title: string; type: string; url: string; source_url: string | null; source_label: string; date: string | null };
 export type AskStatus = 'answered' | 'not_found' | 'out_of_scope' | 'opinion_declined' | 'needs_clarification' | 'not_verified' | 'error';
 export type AskAnswer = {
   id: string; question: string; mode: 'answer' | 'report'; status: AskStatus; title: string; answer: string;
   sources: AskSource[]; follow_ups: string[]; corpus_built?: string; created_at?: string;
+  charts?: ChartSpec[]; stats?: StatSpec[];
   verification: { sources_checked: number; figures_checked: number; unverified: string[]; repaired: boolean };
 };
 

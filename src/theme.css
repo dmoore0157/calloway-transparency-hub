@@ -351,3 +351,20 @@ sup.cite { font-size: 11px; margin-left: 1px; } sup.cite a { text-decoration: no
   .md table.data td, .md table.data th { white-space: normal; }
   article.card { padding: 14px 12px; }
 }
+
+/* Ask the records: headline tiles and chart chrome */
+.answer-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin: 12px 0 4px; }
+.answer-stats .stat { box-shadow: none; border: 1px solid var(--line); }
+.answer-stats .stat .value { font-size: clamp(24px, 6.4vw, 30px); white-space: nowrap; overflow-wrap: normal; }
+.answer-charts { display: grid; gap: 12px; margin: 14px 0 4px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .answer-charts.many { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.answer-charts .card { box-shadow: none; border: 1px solid var(--line); background: #FFFFFF; margin: 0; }
+.chart-tip { background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; box-shadow: 0 6px 20px rgba(6,14,30,.18); font-size: 12.5px; color: var(--navy); min-width: 120px; }
+.chart-tip-title { font-size: 11px; font-weight: 700; color: var(--ink-muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+.chart-tip-row { display: flex; align-items: center; gap: 6px; line-height: 1.5; }
+.chart-tip-row strong { font-variant-numeric: tabular-nums; }
+.chart-swatch { display: inline-block; width: 10px; height: 10px; border-radius: 3px; flex: none; vertical-align: -1px; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 8px; }
+.legend-key { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: #FFFFFF; color: var(--navy); border-radius: 999px; padding: 4px 10px; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.legend-key.off { opacity: .45; text-decoration: line-through; }
+.recharts-wrapper:focus, .recharts-surface:focus { outline: none; }

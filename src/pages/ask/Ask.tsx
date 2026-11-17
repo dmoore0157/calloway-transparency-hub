@@ -4,6 +4,7 @@ import { Sparkles, ShieldCheck, FileText, Download, Printer, Share2, Copy, Check
 import { Meta } from '../../components/Meta';
 import { Section, Empty, Hero } from '../../components/ui';
 import { Markdown, toPlain } from '../../components/Markdown';
+import { AnswerChart, StatTiles, fmtFull } from '../../components/AnswerChart';
 import { askQuestion, askStatus, shareAnswer, rateAnswer, sharedAnswer, AskError, type AskAnswer } from '../../lib/ask';
 import { backendReady } from '../../lib/supabase';
 import { useAsync } from '../../lib/useAsync';
@@ -110,7 +111,9 @@ export function AnswerCard({ a, onAsk, shared }: { a: AskAnswer; onAsk?: (q: str
     <div className="row between" style={{ alignItems: 'flex-start' }}>
       <div><span className={`badge ${st.cls}`}>{st.label}</span>{a.mode === 'report' && <span className="badge" style={{ marginLeft: 6 }}>Report</span>}<h2 style={{ margin: '8px 0 4px', fontSize: 21 }}>{a.title}</h2>{shared && <p className="small muted" style={{ margin: 0 }}>Question: {a.question}</p>}</div>
     </div>
+    <StatTiles stats={a.stats ?? []} />
     <Markdown text={a.answer} cite={cite} />
+    {(a.charts ?? []).length > 0 && <div className={`answer-charts ${(a.charts ?? []).length > 1 ? 'many' : ''}`}>{(a.charts ?? []).map((c, i) => <AnswerChart key={i} c={c} cite={cite} idx={i} />)}</div>}
     {checked && <p className="small" style={{ margin: '10px 0 0', color: 'var(--ok)' }}><ShieldCheck size={14} style={{ verticalAlign: '-2px' }} /> Every figure was matched to the {a.sources.length} record{a.sources.length === 1 ? '' : 's'} cited below{a.verification.repaired ? ', after the assistant corrected a figure it could not match' : ''}.{a.corpus_built ? ` Records as of ${dateLong(a.corpus_built)}.` : ''}</p>}
     {a.sources.length > 0 && <>
       <h3 style={{ margin: '14px 0 6px', fontSize: 15 }}>{a.status === 'not_verified' ? 'Records the assistant consulted' : 'Sources'}</h3>
@@ -202,9 +205,23 @@ const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(
 const shareText = (a: AskAnswer) => `${a.title}: answered from Calloway County public records, with sources.`;
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+function statsMd(a: AskAnswer) { return (a.stats ?? []).length ? (a.stats ?? []).map((s) => `- **${s.label}:** ${s.value}${s.note ? ` (${s.note})` : ''}`).join('\n') + '\n\n' : ''; }
+function chartsMd(a: AskAnswer) {
+  return (a.charts ?? []).map((c) => `### ${c.title}${c.sources.length ? ` [${c.sources.join(', ')}]` : ''}\n\n${c.subtitle ? `${c.subtitle}\n\n` : ''}| ${c.categories.length && /^(FY)?\d{4}/.test(c.categories[0]) ? 'Year' : 'Category'} | ${c.series.map((x) => x.name).join(' | ')} |\n|${'---|'.repeat(c.series.length + 1)}\n${c.categories.map((cat, i) => `| ${cat} | ${c.series.map((x) => fmtFull(x.values[i], c.unit)).join(' | ')} |`).join('\n')}\n\n`).join('');
+}
+function chartsHtml(a: AskAnswer) {
+  const colors = ['#13A08C', '#E09A00', '#2F6FD6', '#D9497F'];
+  return (a.charts ?? []).map((c) => {
+    const max = Math.max(1, ...c.series.flatMap((x) => x.values.map((v) => Math.abs(v))));
+    const head = `<tr><th>${c.categories.length && /^(FY)?\d{4}/.test(c.categories[0]) ? 'Year' : 'Category'}</th>${c.series.map((x, j) => `<th><span class="sw" style="background:${colors[j]}"></span>${esc(x.name)}</th>`).join('')}</tr>`;
+    const body = c.categories.map((cat, i) => `<tr${c.highlight === cat ? ' class="hl"' : ''}><td>${esc(cat)}</td>${c.series.map((x, j) => `<td class="v"><div class="bar" style="width:${Math.round((Math.abs(x.values[i]) / max) * 100)}%;background:${c.series.length > 1 ? colors[j] : c.highlight && c.highlight !== cat ? '#A3B1C2' : c.highlight ? '#E09A00' : colors[0]}"></div><span>${esc(fmtFull(x.values[i], c.unit))}</span></td>`).join('')}</tr>`).join('');
+    return `<h3>${esc(c.title)}${c.sources.length ? ` <sup>${c.sources.map((n) => `<a href="#s${n}">[${n}]</a>`).join('')}</sup>` : ''}</h3>${c.subtitle ? `<p class="m">${esc(c.subtitle)}</p>` : ''}<table class="chart"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+  }).join('');
+}
+
 function asMarkdown(a: AskAnswer, url: string | null) {
   const src = a.sources.map((s) => `${s.n}. ${s.title} (${s.source_label}${s.date ? `, ${s.date}` : ''})${s.url ? ` ${s.url}` : ''}${s.source_url ? ` | original: ${s.source_url}` : ''}`).join('\n');
-  return `# ${a.title}\n\n**Question:** ${a.question}\n\n${a.answer}\n\n${src ? `## Sources\n\n${src}\n\n` : ''}---\nAnswered by the Calloway County Transparency Hub assistant from public records${a.corpus_built ? ` as of ${a.corpus_built}` : ''}. Check the sources before relying on it.${url ? `\nLink: ${url}` : ''}\n`;
+  return `# ${a.title}\n\n**Question:** ${a.question}\n\n${statsMd(a)}${a.answer}\n\n${chartsMd(a)}${src ? `## Sources\n\n${src}\n\n` : ''}---\nAnswered by the Calloway County Transparency Hub assistant from public records${a.corpus_built ? ` as of ${a.corpus_built}` : ''}. Check the sources before relying on it.${url ? `\nLink: ${url}` : ''}\n`;
 }
 
 function mdToHtml(md: string, a: AskAnswer): string {
@@ -225,9 +242,11 @@ function mdToHtml(md: string, a: AskAnswer): string {
 function asHtml(a: AskAnswer, url: string | null) {
   const src = a.sources.map((s) => `<li id="s${s.n}" value="${s.n}">${s.url ? `<a href="${esc(s.url)}">${esc(s.title)}</a>` : esc(s.title)} <span class="m">· ${esc(s.source_label)}${s.date ? ` · ${esc(s.date)}` : ''}</span>${s.source_url ? ` · <a href="${esc(s.source_url)}">original document</a>` : ''}</li>`).join('');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(a.title)}</title>
-<style>body{font:16px/1.55 Georgia,'Times New Roman',serif;color:#222;max-width:760px;margin:32px auto;padding:0 18px}h1{font-size:26px;margin:0 0 6px}h2{font-size:20px;margin:22px 0 6px}h3{font-size:17px}.m{color:#666;font-size:13px}.q{background:#f4f1ea;padding:10px 14px;border-radius:6px}table{border-collapse:collapse;width:100%;font:14px Arial,sans-serif;margin:10px 0}th,td{border:1px solid #ccc;padding:6px 8px;text-align:left}th{background:#f4f1ea}sup a{text-decoration:none}ol{font-size:14px}footer{margin-top:28px;border-top:1px solid #ccc;padding-top:10px;font:12px Arial,sans-serif;color:#555}@media print{a{color:#222}}</style></head><body>
+<style>body{font:16px/1.55 Georgia,'Times New Roman',serif;color:#222;max-width:760px;margin:32px auto;padding:0 18px}h1{font-size:26px;margin:0 0 6px}h2{font-size:20px;margin:22px 0 6px}h3{font-size:17px}.m{color:#666;font-size:13px}.q{background:#f4f1ea;padding:10px 14px;border-radius:6px}table{border-collapse:collapse;width:100%;font:14px Arial,sans-serif;margin:10px 0}th,td{border:1px solid #ccc;padding:6px 8px;text-align:left}th{background:#f4f1ea}sup a{text-decoration:none}ol{font-size:14px}footer{margin-top:28px;border-top:1px solid #ccc;padding-top:10px;font:12px Arial,sans-serif;color:#555}@media print{a{color:#222}}.stats{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}.st{flex:1 1 150px;border:1px solid #d5dfea;border-radius:12px;padding:10px 12px}.sl{font:700 11px/1.3 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#4d5d73}.sv{font:800 24px/1.2 system-ui,sans-serif;color:#13304e}table.chart td.v{position:relative;min-width:120px}table.chart .bar{height:14px;border-radius:0 4px 4px 0;margin:2px 0}table.chart td.v span{font:600 12.5px system-ui,sans-serif}table.chart tr.hl td:first-child{font-weight:700}.sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}@media print{.bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style></head><body>
 <p class="m">Calloway County Transparency Hub · Ask the records${a.mode === 'report' ? ' · Report' : ''}</p><h1>${esc(a.title)}</h1><p class="q"><strong>Question:</strong> ${esc(a.question)}</p>
+${(a.stats ?? []).length ? `<div class="stats">${(a.stats ?? []).map((st) => `<div class="st"><div class="sl">${esc(st.label)}</div><div class="sv">${esc(st.value)}</div>${st.note ? `<div class="m">${esc(st.note)}</div>` : ''}</div>`).join('')}</div>` : ''}
 ${mdToHtml(a.answer, a)}
+${chartsHtml(a)}
 ${src ? `<h2>Sources</h2><ol>${src}</ol>` : ''}
 <footer>Answered by the Calloway County Transparency Hub assistant from public records${a.corpus_built ? ` as of ${esc(a.corpus_built)}` : ''}. Every figure was matched to the cited records before it was shown, but answers are AI-generated: check the sources before relying on them. ${url ? `Online: <a href="${esc(url)}">${esc(url)}</a>` : ''} Generated ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}.</footer></body></html>`;
 }

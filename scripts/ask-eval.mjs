@@ -40,7 +40,7 @@ const CASES = [
 ];
 
 async function ask(q) {
-  const res = await fetch(URL, { method: 'POST', headers: { apikey: KEY, Authorization: `Bearer ${KEY}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'ask', question: q, mode: 'answer', history: [], device_token: 'eval-runner' }) });
+  const res = await fetch(URL, { method: 'POST', headers: { apikey: KEY, Authorization: `Bearer ${KEY}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'ask', question: q, mode: 'answer', history: [], device_token: `eval-${Date.now()}` }) });
   if (!res.ok) return { status: 'http_' + res.status, answer: await res.text(), sources: [] };
   const text = await res.text();
   const done = text.split('\n\n').find((c) => c.startsWith('event: done'));

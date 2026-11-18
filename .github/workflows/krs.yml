@@ -1,0 +1,60 @@
+name: Refresh Kentucky law
+# Downloads the KRS chapters (scripts/fetch-krs.mjs -> data/krs.json) and KAR regulations (scripts/fetch-kar.mjs ->
+# data/kar.json) on county government, commits any change, and redeploys so the "Ask the records" assistant reads the current text.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 9 * * 1'   # Mondays, 4:41am Central
+  push:
+    branches: [main]
+    paths: [scripts/fetch-krs.mjs, scripts/fetch-kar.mjs, .github/workflows/krs.yml]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: krs
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install pdftotext
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Fetch statutes (KRS)
+        id: krs
+        continue-on-error: true
+        run: node scripts/fetch-krs.mjs
+      - name: Fetch regulations (KAR)
+        id: kar
+        continue-on-error: true
+        run: node scripts/fetch-kar.mjs
+      - name: Commit and redeploy if the law changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          FILES=""; for f in data/krs.json data/kar.json; do [ -f "$f" ] && FILES="$FILES $f"; done
+          [ -z "$FILES" ] && { echo "Nothing downloaded."; exit 0; }
+          git add -N $FILES
+          if git diff --quiet -- $FILES; then
+            echo "No changes to the statutes or regulations."; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add $FILES
+          git commit -m "Refresh Kentucky statutes and regulations (data/krs.json, data/kar.json)"
+          git push
+          # Pushes made with the workflow token do not start other workflows, so start the deploy directly.
+          gh workflow run deploy.yml --ref main
+      - name: Report a failed download
+        if: steps.krs.outcome == 'failure' || steps.kar.outcome == 'failure'
+        run: |
+          echo "KRS: ${{ steps.krs.outcome }}  KAR: ${{ steps.kar.outcome }}. Earlier data was kept for the part that failed."
+          exit 1

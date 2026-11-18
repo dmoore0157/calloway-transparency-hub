@@ -17,6 +17,9 @@ const debt = read('data/debt.json');
 const enactments = read('data/enactments.json');
 const glossary = read('data/glossary.json').terms;
 const law = read('data/law.json');
+// Kentucky Revised Statutes on county government (written weekly by scripts/fetch-krs.mjs); optional so a fresh clone still builds.
+const kar = fs.existsSync('data/kar.json') ? read('data/kar.json') : { fetched: null, chapters: [], regulations: [] };
+const krs = fs.existsSync('data/krs.json') ? read('data/krs.json') : { fetched: null, chapters: [], sections: [] };
 const audits = read('data/audits.json');
 const elections = read('data/elections.json').elections;
 const officials = read('data/officials.json');
@@ -152,6 +155,23 @@ for (const e of enactments.enactments) add({ id: `ordinance:${e.id}`, type: 'ord
 for (const [k, t] of Object.entries(glossary)) add({ id: `glossary:${k}`, type: 'glossary', date: null, title: `Glossary: ${k}`, text: `${k}: ${t.what} Why it matters: ${t.why}`, url: `/records/glossary#${encodeURIComponent(k)}`, source_url: null, source_label: 'Hub glossary' });
 for (const [k, l] of Object.entries(law)) add({ id: `law:${k}`, type: 'law', date: null, title: `Law: ${l.law}`, text: `${l.law}: ${l.detail}`, url: '/records', source_url: l.url, source_label: l.law });
 
+// Kentucky Revised Statutes: one record per chapter (table of contents) and one per section (official text).
+for (const c of krs.chapters) {
+  const secs = krs.sections.filter((x) => x.chapter === c.chapter);
+  add({ id: `krs-chapter:${c.chapter}`, type: 'krs_chapter', date: null, title: `KRS Chapter ${c.chapter}: ${c.title}`, text: `Kentucky Revised Statutes Chapter ${c.chapter}, ${c.title}. Governs: ${c.offices.join(', ')}. Sections: ${secs.map((x) => `KRS ${x.cite} ${x.title}`).join('; ')}`, url: c.url, source_url: c.url, source_label: `KRS Chapter ${c.chapter} (Kentucky Legislative Research Commission)`, tags: ['KRS', 'statute', 'law', `chapter ${c.chapter}`, ...c.offices] });
+}
+for (const x of krs.sections) {
+  add({ id: `krs:${x.cite}`, type: 'krs', date: null, title: `KRS ${x.cite} ${x.title}`, text: `KRS ${x.cite} (${x.title})${x.status === 'repealed' ? ' is no longer in force; the official list shows it as: ' + x.text : `. Official text as posted by the Legislative Research Commission, retrieved ${krs.fetched}${x.effective ? `, effective ${x.effective}` : ''}: ${x.text}`}${x.history ? ` ${x.history}` : ''}`, url: x.url, source_url: x.url, source_label: `KRS ${x.cite} (Kentucky Legislative Research Commission)`, tags: ['KRS', 'statute', 'law', `chapter ${x.chapter}`, ...x.offices] });
+}
+
+// Kentucky Administrative Regulations: one record per chapter and one per regulation.
+for (const c of kar.chapters) {
+  const regs = kar.regulations.filter((x) => x.title === c.title && x.chapter === c.chapter);
+  add({ id: `kar-chapter:${c.title}:${c.chapter}`, type: 'kar_chapter', date: null, title: `${c.cite}: ${c.name}`, text: `Kentucky Administrative Regulations ${c.cite}, ${c.name}, issued by the ${c.agency}. Applies to: ${c.offices.join(', ')}. Regulations in force: ${regs.map((x) => `${x.cite} ${x.name}`).join('; ') || 'none'}`, url: c.url, source_url: c.url, source_label: `${c.cite} (Kentucky Legislative Research Commission)`, tags: ['KAR', 'regulation', 'law', c.agency, ...c.offices] });
+}
+for (const x of kar.regulations) {
+  add({ id: `kar:${x.title}:${x.chapter}:${x.cite.split(':')[1]}`, type: 'kar', date: null, title: `${x.cite} ${x.name}`, text: `${x.cite} (${x.name}), a regulation of the ${x.agency}. Official text as posted by the Legislative Research Commission, retrieved ${kar.fetched}.${x.relates_to ? ` Relates to: ${x.relates_to}.` : ''}${x.authority ? ` Statutory authority: ${x.authority}.` : ''}${x.purpose ? ` Purpose: ${x.purpose}` : ''}\n${x.text}${x.history ? `\nHistory: ${x.history}` : ''}`, url: x.url, source_url: x.url, source_label: `${x.cite} (Kentucky Legislative Research Commission)`, tags: ['KAR', 'regulation', 'law', x.agency, ...x.offices] });
+}
 // Elections, offices
 for (const e of elections) {
   add({ id: `election:${e.id}`, type: 'election', date: e.date, title: e.label, text: `${e.label} in Calloway County. Status: ${e.status}.${e.ballots ? ` Ballots cast: ${e.ballots.toLocaleString('en-US')}.` : ''} ${e.ballots_note ?? ''} ${e.notes.join(' ')} Races: ${e.races.map((r) => `${r.office}${r.district ? ` District ${r.district}` : ''}`).join('; ')}.`, url: `/leaders/elections/${e.id}`, source_url: e.sources[0]?.url ?? null, source_label: e.sources[0]?.label ?? 'Election results' });
@@ -165,7 +185,7 @@ for (const o of officials.offices) add({ id: `office:${o.id}`, type: 'office', d
 // About the hub itself, so "how does this site work" questions are answerable from records too
 add({ id: 'hub:about', type: 'hub', date: null, title: 'About the Calloway County Transparency Hub', text: 'The Calloway County Transparency Hub is an independent, nonpartisan public-records project, not affiliated with county government or any candidate. It publishes budgets, state audits, Fiscal Court meetings, motions and votes, official profiles, election results, promise tracking, and resident road requests. Figures are labeled as audited (state audits) or county-reported (filings to the Department for Local Government) and never blended. Motions and votes are compiled from the official minutes, which the county has posted from November 17, 2021; earlier minutes are not posted. When minutes say "all voted aye", every present member is recorded as aye. Residents can report a road problem at /roads/report and flag any error on any page.', url: '/records/about', source_url: null, source_label: 'Hub methodology' });
 
-const meta = { built: new Date().toISOString().slice(0, 10), count: records.length, coverage: { minutes: `${meetings.at(-1)?.date ?? ''} to ${meetings[0]?.date ?? ''}`, meetings: meetings.length, motions: motions.length, audits: audits.audits.map((a) => a.fy), elections: elections.map((e) => e.id) }, members: members.map((m) => ({ id: m.id, name: m.full_name, short: m.short_name, title: m.title, incoming: Boolean(m.incoming), term_start: m.term_start ?? null, term_end: m.term_end ?? null })), categories: [...new Set(motions.flatMap((m) => m.category))] };
+const meta = { built: new Date().toISOString().slice(0, 10), count: records.length, coverage: { minutes: `${meetings.at(-1)?.date ?? ''} to ${meetings[0]?.date ?? ''}`, meetings: meetings.length, motions: motions.length, audits: audits.audits.map((a) => a.fy), elections: elections.map((e) => e.id), krs: { fetched: krs.fetched, chapters: krs.chapters.map((c) => `${c.chapter} (${c.title})`), sections: krs.sections.length }, kar: { fetched: kar.fetched, chapters: kar.chapters.map((c) => `${c.cite} (${c.name})`), regulations: kar.regulations.length } }, members: members.map((m) => ({ id: m.id, name: m.full_name, short: m.short_name, title: m.title, incoming: Boolean(m.incoming), term_start: m.term_start ?? null, term_end: m.term_end ?? null })), categories: [...new Set(motions.flatMap((m) => m.category))] };
 fs.mkdirSync(path.dirname(out), { recursive: true });
 fs.writeFileSync(out, JSON.stringify({ meta, records, motions: motions.map((m) => ({ id: m.id, date: m.date, meeting_id: m.meeting_id, text: m.text, mover: m.mover, seconder: m.seconder, outcome: m.outcome, result: m.result_label, votes: m.votes, category: m.category, routine: m.is_routine, dollars: m.dollar_amount, note: m.note, url: m.minutes_url })) }));
 console.log(`ai corpus: ${records.length} records, ${motions.length} motions -> ${out} (${(fs.statSync(out).size / 1024).toFixed(0)} KB)`);

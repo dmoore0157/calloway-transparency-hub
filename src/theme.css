@@ -236,6 +236,17 @@ table.data th, table.data td { padding: 9px 12px; text-align: left; border-botto
 table.data th { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-muted); background: var(--surface-2); position: sticky; top: 0; font-weight: 800; }
 table.data td.num, table.data th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 table.data tr:last-child td { border-bottom: none; }
+/* Stacked tables: on phones each row becomes a block, name on top, numbers in a labeled grid. */
+@media (max-width: 640px) {
+  table.data.stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table.data.stack, table.data.stack tbody { display: block; }
+  table.data.stack tr { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 12px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  table.data.stack tr:last-child { border-bottom: none; }
+  table.data.stack td { display: block; padding: 0; border: none; text-align: left !important; white-space: normal; font-size: 15px; font-variant-numeric: tabular-nums; }
+  table.data.stack td.stack-head { grid-column: 1 / -1; font-size: 15px; }
+  table.data.stack td.stack-head .small { display: block; }
+  table.data.stack td[data-label]::before { content: attr(data-label); display: block; font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-muted); font-weight: 800; margin-bottom: 1px; }
+}
 
 /* source lines and section titles */
 .src { font-size: 12px; color: var(--ink-muted); border-top: 1px dashed var(--line); margin-top: 12px; padding-top: 8px; }

@@ -79,8 +79,11 @@ export function parseChapter(html) {
 }
 
 /** Clean pdftotext output of one section: unwrap lines, keep the history line separate. */
+/** Lines that are only a subsection marker, e.g. "(2)": a sign the numbering was split from its text. */
+export const strayMarkers = (body) => (body.match(/^\(\w{1,4}\)\s*$/gm) ?? []).length;
+
 export function cleanSectionText(raw) {
-  const lines = raw.replace(/\f/g, '\n').split('\n').map((l) => l.replace(/\s+$/, ''))
+  const lines = raw.replace(/\f/g, '\n').split('\n').map((l) => l.replace(/\s+$/, '').replace(/^\s+/, ''))
     .filter((l) => !/^\s*Page \d+ of \d+\s*$/i.test(l) && !/Legislative Research Commission PDF Version/i.test(l));
   const text = lines.join('\n').replace(/-\n(?=[a-z])/g, '').replace(/([^\n])\n(?!\n|\s*\(\w{1,4}\)|\s*(?:History|Effective|Catchline|Legislative Research Commission Note)\b)/g, '$1 ').replace(/[ \t]+/g, ' ').replace(/\n{2,}/g, '\n').trim();
   const hist = /(?:^|\n)\s*(History:[\s\S]*)$/.exec(text);
@@ -91,7 +94,7 @@ export function cleanSectionText(raw) {
 function pdfText(buf) {
   const tmp = path.join(os.tmpdir(), `krs-${process.pid}.pdf`);
   fs.writeFileSync(tmp, buf);
-  try { return execFileSync('pdftotext', ['-enc', 'UTF-8', tmp, '-'], { encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 }); } finally { fs.rmSync(tmp, { force: true }); }
+  try { return execFileSync('pdftotext', ['-layout', '-enc', 'UTF-8', tmp, '-'], { encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 }); } finally { fs.rmSync(tmp, { force: true }); }
 }
 
 async function main() {
@@ -133,6 +136,10 @@ async function main() {
   sections.sort((a, b) => key(a.cite).localeCompare(key(b.cite)));
   chapters.sort((a, b) => key(a.chapter).localeCompare(key(b.chapter)));
   const inForce = sections.filter((s) => s.status === 'in_force').length;
+  const split = sections.filter((s) => s.status === 'in_force' && strayMarkers(s.text) > 0);
+  console.log(`Sections with subsection numbers split from their text: ${split.length} of ${inForce}${split.length ? ` (e.g. ${split.slice(0, 5).map((s) => s.cite).join(', ')})` : ''}`);
+  const sample = sections.find((s) => s.cite === '68.240'); if (sample) console.log(`Sample KRS 68.240: ${sample.text.slice(0, 400).replace(/\n/g, ' / ')}`);
+  if (split.length > inForce * 0.05) throw new Error(`${split.length} sections have subsection numbers split from their text; refusing to overwrite ${OUT}`);
   if (inForce < 100) throw new Error(`only ${inForce} sections fetched; refusing to overwrite ${OUT}. Failures: ${failures.slice(0, 10).join('; ')}`);
   fs.writeFileSync(OUT, JSON.stringify({ source: 'Kentucky Legislative Research Commission, apps.legislature.ky.gov/law/statutes', fetched: new Date().toISOString().slice(0, 10), chapters, sections }, null, 1) + '\n');
   console.log(`Wrote ${OUT}: ${chapters.length} chapters, ${sections.length} sections (${inForce} in force). ${failures.length} failures.`);

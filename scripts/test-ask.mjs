@@ -205,6 +205,8 @@ const resp = (...blocks) => ({ content: blocks, stop_reason: 'tool_use', usage: 
   t('kar fetch: chapter parse', ch.name === 'County Budget' && ch.regs.length === 2 && ch.regs[0].reg === '020' && ch.regs[0].status === 'current' && ch.regs[1].status === 'inactive', JSON.stringify(ch));
   const ti = k.parseTitle('<a href="https://apps.legislature.ky.gov/law/kar/titles/109/012"><div><span class="kar-number">Chapter 012</span> <span class="kar-mdash">—</span> <span class="kar-name">Advancements to Sheriffs</span></div><div class="kar-status repealed">Repealed</div></a><a href="https://apps.legislature.ky.gov/law/kar/titles/109/015"><div><span class="kar-number">Chapter 015</span> <span class="kar-mdash">—</span> <span class="kar-name">County Budget</span></div><div class="kar-status current">Current</div></a>', '109');
   t('kar fetch: title parse skips repealed chapters', ti.length === 1 && ti[0].chapter === '15' && ti[0].name === 'County Budget', JSON.stringify(ti));
+  const t31 = k.parseTitle('<a href="/law/kar/titles/031/003"><span class="kar-name">Election Procedures</span></a>', '31');
+  t('kar fetch: padded title, relative links, no status markup', t31.length === 1 && t31[0].chapter === '3', JSON.stringify(t31));
 }
 // KRS fetcher parsers, on markup copied from the Legislative Research Commission site.
 {
@@ -214,6 +216,9 @@ const resp = (...blocks) => ({ content: blocks, stop_reason: 'tool_use', usage: 
   const idx = k.parseIndex('<a href="https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=37360">CHAPTER 67 COUNTY GOVERNMENT (FISCAL COURTS AND COUNTY COMMISSIONERS)</a><a href="chapter.aspx?id=1">CHAPTER 91A <span>FINANCE AND REVENUE OF CITIES AND COUNTIES</span></a>');
   t('krs fetch: index parse', idx['67']?.id === '37360' && /COUNTY GOVERNMENT/.test(idx['67'].title) && idx['91A']?.id === '1', JSON.stringify(idx));
   const cl = k.cleanSectionText('179.020 County road engineer or supervisor.\n(1) The county judge/executive, with the approval of the\nfiscal court, may employ a road engineer.\n(2) Second part.\nPage 1 of 1\nEffective: July 15, 1998\nHistory: Amended 1998 Ky. Acts ch. 418, sec. 1,\neffective July 15, 1998.\n');
+  const lay = k.cleanSectionText('68.240 Proposed budget.\n   (1)   The county judge/executive shall annually\n         prepare a proposed budget.\n   (2)   Second subsection.\n');
+  t('krs fetch: layout text keeps numbers with their text', /^68\.240 Proposed budget\.\n\(1\) The county judge\/executive shall annually prepare a proposed budget\.\n\(2\) Second subsection\.$/.test(lay.body) && k.strayMarkers(lay.body) === 0, JSON.stringify(lay.body));
+  t('krs fetch: stray markers detected', k.strayMarkers('x\n(1)\n(2)\nThe text') === 2);
   t('krs fetch: section text cleaned', /approval of the fiscal court, may employ/.test(cl.body) && /\n\(2\) Second part/.test(cl.body) && !/Page 1/.test(cl.body) && cl.effective === 'July 15, 1998' && /^History: Amended 1998/.test(cl.history ?? ''), JSON.stringify(cl));
 }
 fs.rmSync(outfile, { force: true });

@@ -20,13 +20,13 @@ export const SCOPE = [
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const pad3 = (n) => String(Number(n)).padStart(3, '0');
 
-async function get(url) {
-  for (let attempt = 1; attempt <= 4; attempt++) {
+async function get(url, probe = false) {
+  for (let attempt = 1; attempt <= (probe ? 1 : 4); attempt++) {
     try {
       const r = await fetch(url, { headers: { 'User-Agent': 'CallowayTransparencyHub/1.0 (+https://dmoore0157.github.io/calloway-transparency-hub)' } });
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return await r.text();
-    } catch (e) { if (attempt === 4) throw new Error(`${url}: ${e.message}`); await sleep(1500 * attempt); }
+    } catch (e) { if (probe || attempt === 4) throw new Error(`${url}: ${e.message}`); await sleep(1500 * attempt); }
   }
 }
 
@@ -35,8 +35,8 @@ const decode = (s) => s.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(
 /** Chapter links on a title page: .../titles/109/015/ */
 export function parseTitle(html, title) {
   const out = new Map();
-  for (const m of html.matchAll(new RegExp(`<a[^>]+href="[^"]*/law/kar/titles/${title}/(\\d{3})/?"[^>]*>([\\s\\S]*?)</a>`, 'gi'))) {
-    const inner = m[2]; if (out.has(m[1]) || !/kar-status current/.test(inner)) continue;
+  for (const m of html.matchAll(new RegExp(`<a[^>]+href="[^"]*/law/kar/titles/0*${Number(title)}/(\\d{3})/?"[^>]*>([\\s\\S]*?)</a>`, 'gi'))) {
+    const inner = m[2]; if (out.has(m[1]) || (/kar-status/.test(inner) && !/kar-status current/.test(inner))) continue;
     out.set(m[1], decode(/class="kar-name">([\s\S]*?)<\/span>/.exec(inner)?.[1] ?? ''));
   }
   return [...out].map(([chapter, name]) => ({ chapter: String(Number(chapter)), name }));
@@ -75,11 +75,15 @@ async function main() {
   for (const sc of SCOPE) {
     let list = sc.chapter ? [{ chapter: sc.chapter, name: '' }] : [];
     if (!sc.chapter) {
-      try { list = parseTitle(await get(`${BASE}${sc.title}/`), sc.title); } catch (e) { failures.push(`title ${sc.title}: ${e.message}`); }
+      try { list = parseTitle(await get(`${BASE}${pad3(sc.title)}/`), sc.title); } catch (e) { failures.push(`title ${sc.title}: ${e.message}`); }
+      if (!list.length) { // index not readable: probe chapter pages directly
+        for (let n = 1; n <= 40; n++) { try { const p = parseKarChapter(await get(`${BASE}${pad3(sc.title)}/${pad3(n)}/`, true)); if (p.regs.some((r) => r.status === 'current')) list.push({ chapter: String(n), name: p.name }); } catch { /* no such chapter */ } await sleep(150); }
+        console.log(`title ${sc.title}: index unreadable, found ${list.length} chapters by probing`);
+      }
       if (!list.length) failures.push(`title ${sc.title}: no chapters found`);
     }
     for (const c of list) {
-      const url = `${BASE}${sc.title}/${pad3(c.chapter)}/`;
+      const url = `${BASE}${pad3(sc.title)}/${pad3(c.chapter)}/`;
       let parsed;
       try { parsed = parseKarChapter(await get(url)); } catch (e) { failures.push(`${sc.title} KAR ${c.chapter}: ${e.message}`); continue; }
       const current = parsed.regs.filter((r) => r.status === 'current');
@@ -87,7 +91,7 @@ async function main() {
       console.log(`${sc.title} KAR ${c.chapter}: ${current.length} current regulations`);
       for (const r of current) {
         const cite = `${sc.title} KAR ${c.chapter}:${r.reg}`;
-        const rurl = `${BASE}${sc.title}/${pad3(c.chapter)}/${r.reg}/`;
+        const rurl = `${BASE}${pad3(sc.title)}/${pad3(c.chapter)}/${r.reg}/`;
         try {
           const p = parseRegulation(await get(rurl));
           if (!p.text) throw new Error('no regulation text found');

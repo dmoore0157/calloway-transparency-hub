@@ -160,10 +160,20 @@ for (const c of krs.chapters) {
   const secs = krs.sections.filter((x) => x.chapter === c.chapter);
   add({ id: `krs-chapter:${c.chapter}`, type: 'krs_chapter', date: null, title: `KRS Chapter ${c.chapter}: ${c.title}`, text: `Kentucky Revised Statutes Chapter ${c.chapter}, ${c.title}. Governs: ${c.offices.join(', ')}. Sections: ${secs.map((x) => `KRS ${x.cite} ${x.title}`).join('; ')}`, url: c.url, source_url: c.url, source_label: `KRS Chapter ${c.chapter} (Kentucky Legislative Research Commission)`, tags: ['KRS', 'statute', 'law', `chapter ${c.chapter}`, ...c.offices] });
 }
-for (const x of krs.sections) {
-  add({ id: `krs:${x.cite}`, type: 'krs', date: null, title: `KRS ${x.cite} ${x.title}`, text: `KRS ${x.cite} (${x.title})${x.status === 'repealed' ? ' is no longer in force; the official list shows it as: ' + x.text : `. Official text as posted by the Legislative Research Commission, retrieved ${krs.fetched}${x.effective ? `, effective ${x.effective}` : ''}: ${x.text}`}${x.history ? ` ${x.history}` : ''}`, url: x.url, source_url: x.url, source_label: `KRS ${x.cite} (Kentucky Legislative Research Commission)`, tags: ['KRS', 'statute', 'law', `chapter ${x.chapter}`, ...x.offices] });
+// A section can be listed twice when an amendment takes effect later (e.g. one version "effective until" a date
+// and one "effective" from it). The version in effect on the build date keeps the plain id; others get @date.
+const effDate = (x) => { const t = Date.parse(x.effective ?? ''); return Number.isNaN(t) ? null : new Date(t).toISOString().slice(0, 10); };
+const today = new Date().toISOString().slice(0, 10);
+const versions = {}; for (const x of krs.sections) (versions[x.cite] ??= []).push(x);
+for (const [cite, vs] of Object.entries(versions)) {
+  const current = vs.length === 1 ? vs[0] : [...vs].filter((x) => (effDate(x) ?? '0000') <= today).sort((a, b) => (effDate(b) ?? '').localeCompare(effDate(a) ?? ''))[0] ?? vs[0];
+  for (const x of vs) {
+    const isCurrent = x === current; const d = effDate(x);
+    const others = vs.filter((o) => o !== x).map((o) => `${o === current ? 'the version in effect now' : `a version effective ${o.effective ?? 'on another date'}`} (record ${o === current ? `krs:${cite}` : `krs:${cite}@${effDate(o) ?? vs.indexOf(o)}`})`);
+    const note = vs.length > 1 ? ` The official list has ${vs.length} versions of this section: ${isCurrent ? 'this is the version in effect now' : `this version takes effect ${x.effective ?? 'on another date'} and is not yet in effect`}; see also ${others.join('; ')}.` : '';
+    add({ id: isCurrent ? `krs:${cite}` : `krs:${cite}@${d ?? vs.indexOf(x)}`, type: 'krs', date: null, title: `KRS ${cite} ${x.title}${!isCurrent ? ` (version effective ${x.effective ?? 'later'})` : ''}`, text: `KRS ${cite} (${x.title})${x.status === 'repealed' ? ' is no longer in force; the official list shows it as: ' + x.text : `. Official text as posted by the Legislative Research Commission, retrieved ${krs.fetched}${x.effective ? `, effective ${x.effective}` : ''}.${note} Text: ${x.text}`}${x.history ? ` ${x.history}` : ''}`, url: x.url, source_url: x.url, source_label: `KRS ${cite} (Kentucky Legislative Research Commission)`, tags: ['KRS', 'statute', 'law', `chapter ${x.chapter}`, ...x.offices] });
+  }
 }
-
 // Kentucky Administrative Regulations: one record per chapter and one per regulation.
 for (const c of kar.chapters) {
   const regs = kar.regulations.filter((x) => x.title === c.title && x.chapter === c.chapter);
@@ -185,6 +195,8 @@ for (const o of officials.offices) add({ id: `office:${o.id}`, type: 'office', d
 // About the hub itself, so "how does this site work" questions are answerable from records too
 add({ id: 'hub:about', type: 'hub', date: null, title: 'About the Calloway County Transparency Hub', text: 'The Calloway County Transparency Hub is an independent, nonpartisan public-records project, not affiliated with county government or any candidate. It publishes budgets, state audits, Fiscal Court meetings, motions and votes, official profiles, election results, promise tracking, and resident road requests. Figures are labeled as audited (state audits) or county-reported (filings to the Department for Local Government) and never blended. Motions and votes are compiled from the official minutes, which the county has posted from November 17, 2021; earlier minutes are not posted. When minutes say "all voted aye", every present member is recorded as aye. Residents can report a road problem at /roads/report and flag any error on any page.', url: '/records/about', source_url: null, source_label: 'Hub methodology' });
 
+{ const seen = new Set(); const dups = records.filter((r) => (seen.has(r.id) ? true : (seen.add(r.id), false))).map((r) => r.id);
+  if (dups.length) { console.error(`duplicate record ids: ${[...new Set(dups)].slice(0, 20).join(', ')}`); process.exit(1); } }
 const meta = { built: new Date().toISOString().slice(0, 10), count: records.length, coverage: { minutes: `${meetings.at(-1)?.date ?? ''} to ${meetings[0]?.date ?? ''}`, meetings: meetings.length, motions: motions.length, audits: audits.audits.map((a) => a.fy), elections: elections.map((e) => e.id), krs: { fetched: krs.fetched, chapters: krs.chapters.map((c) => `${c.chapter} (${c.title})`), sections: krs.sections.length }, kar: { fetched: kar.fetched, chapters: kar.chapters.map((c) => `${c.cite} (${c.name})`), regulations: kar.regulations.length } }, members: members.map((m) => ({ id: m.id, name: m.full_name, short: m.short_name, title: m.title, incoming: Boolean(m.incoming), term_start: m.term_start ?? null, term_end: m.term_end ?? null })), categories: [...new Set(motions.flatMap((m) => m.category))] };
 fs.mkdirSync(path.dirname(out), { recursive: true });
 fs.writeFileSync(out, JSON.stringify({ meta, records, motions: motions.map((m) => ({ id: m.id, date: m.date, meeting_id: m.meeting_id, text: m.text, mover: m.mover, seconder: m.seconder, outcome: m.outcome, result: m.result_label, votes: m.votes, category: m.category, routine: m.is_routine, dollars: m.dollar_amount, note: m.note, url: m.minutes_url })) }));

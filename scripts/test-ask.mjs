@@ -106,7 +106,7 @@ const resp = (...blocks) => ({ content: blocks, stop_reason: 'tool_use', usage: 
   const client = script([resp(tu('get_records', { ids: ['finding:2025-001'] })), resp(tu('respond', { status: 'answered', title: 'Finding', answer_markdown: 'In FY2025, 37 of 70 disbursements totaling $2,996,752 had late purchase orders [1].', source_ids: ['finding:2025-001'], follow_up_questions: ['What did the county say?'] }))]);
   const r = await ask({ question: 'What did the 2025 audit find?', mode: 'answer', history: [] }, { client, index, live, model: 'test', siteUrl: SITE });
   t('loop: grounded answer delivered', r.status === 'answered' && r.sources.length === 1 && !r.verification.repaired, JSON.stringify(r).slice(0, 300));
-  t('loop: tools and auto tool_choice sent, no forced choice', client.calls[0].tool_choice.type === 'auto' && client.calls[0].tools.length === 7);
+  t('loop: tools and auto tool_choice sent, no forced choice', client.calls[0].tool_choice.type === 'auto' && client.calls[0].tools.length === 8);
 }
 {
   const client = script([resp(tu('get_records', { ids: ['finding:2025-001'] })), resp(tu('respond', { status: 'answered', title: 'x', answer_markdown: 'The county wasted $9,999,999 [1].', source_ids: ['finding:2025-001'], follow_up_questions: [] })), resp(tu('respond', { status: 'answered', title: 'x', answer_markdown: 'Two invoices totaling $7,464 were paid late [1].', source_ids: ['finding:2025-001'], follow_up_questions: [] }))]);
@@ -145,6 +145,50 @@ const resp = (...blocks) => ({ content: blocks, stop_reason: 'tool_use', usage: 
   const r = await ask({ question: 'q', mode: 'report', history: [{ q: 'earlier', a: 'earlier answer' }] }, { client, index, live, model: 'test', siteUrl: SITE });
   t('loop: calculated figure accepted, report mode settings', r.status === 'answered' && client.calls[0].output_config.effort === 'high', r.status + JSON.stringify(r.verification));
   t('loop: history marked as unverified context', /re-checked with tools/.test(JSON.stringify(client.calls[0].messages[1])));
+}
+// Kentucky Revised Statutes tool. Uses an invented two-section fixture (not real statute text) so the test
+// runs before data/krs.json exists and never depends on the network.
+{
+  const fx = JSON.parse(JSON.stringify(corpus));
+  fx.meta.coverage.krs = { fetched: '2026-11-17', chapters: ['99 (TEST CHAPTER)'], sections: 2 };
+  fx.records = fx.records.filter((r) => !r.type.startsWith('krs'));
+  fx.records.push(
+    { id: 'krs-chapter:99', type: 'krs_chapter', date: null, title: 'KRS Chapter 99: TEST CHAPTER', text: 'Kentucky Revised Statutes Chapter 99. Sections: KRS 99.010 Test budget section; KRS 99.020 Repealed, 1990.', url: 'https://example.test/c', source_url: 'https://example.test/c', source_label: 'KRS Chapter 99', members: [], tags: ['KRS'] },
+    { id: 'krs:99.010', type: 'krs', date: null, title: 'KRS 99.010 Test budget section.', text: 'KRS 99.010 (Test budget section.). Official text: (1) The fiscal court shall adopt the zanzibar budget within 45 days.', url: 'https://example.test/s', source_url: 'https://example.test/s', source_label: 'KRS 99.010', members: [], tags: ['KRS', 'Fiscal Court'] },
+    { id: 'krs:99.020', type: 'krs', date: null, title: 'KRS 99.020 Repealed, 1990.', text: 'KRS 99.020 (Repealed, 1990.) is no longer in force; the official list shows it as: Repealed, 1990.', url: 'https://example.test/r', source_url: 'https://example.test/r', source_label: 'KRS 99.020', members: [], tags: ['KRS'] });
+  const kIndex = new Index(fx);
+  const kctx = () => ({ index: kIndex, live, registry: new Map(), evidence: [] });
+  t('normalizeCite', core.normalizeCite('KRS §61.810(1)(a)') === '61.810' && core.normalizeCite('krs 91a.080') === '91A.080' && core.normalizeCite('chapter 67') === null);
+  let c = kctx(); let r = await runTool('lookup_krs', { citation: 'KRS 99.010(1)', chapter: null, query: null, limit: null }, c);
+  t('krs: citation returns section text and registers it', /zanzibar budget within 45 days/.test(r.text) && c.registry.has('krs:99.010'), r.text.slice(0, 120));
+  c = kctx(); r = await runTool('lookup_krs', { citation: '99.500', chapter: null, query: null, limit: null }, c);
+  t('krs: missing section says not loaded, offers chapter', /not among the sections/.test(r.text) && c.registry.has('krs-chapter:99'));
+  c = kctx(); r = await runTool('lookup_krs', { citation: null, chapter: 'Chapter 99', query: null, limit: null }, c);
+  t('krs: chapter table of contents', /KRS 99.010/.test(r.text) && c.registry.has('krs-chapter:99'));
+  c = kctx(); r = await runTool('lookup_krs', { citation: null, chapter: null, query: 'zanzibar budget', limit: 5 }, c);
+  t('krs: topic search finds in-force sections only', /krs:99.010/.test(r.text) && !/krs:99.020/.test(r.text));
+  c = kctx(); r = await runTool('lookup_krs', { citation: null, chapter: '400', query: null, limit: null }, c);
+  t('krs: unloaded chapter reported', /not loaded/.test(r.text));
+  const empty = new Index({ ...corpus, meta: { ...corpus.meta, coverage: { ...corpus.meta.coverage, krs: { fetched: null, chapters: [], sections: 0 } } } });
+  r = await runTool('lookup_krs', { citation: '67.080', chapter: null, query: null, limit: null }, { index: empty, live, registry: new Map(), evidence: [] });
+  t('krs: not loaded yet handled', /not loaded the Kentucky Revised Statutes/.test(r.text));
+  // An answer citing the statute and its figure passes the checks; an invented deadline does not.
+  c = kctx(); await runTool('lookup_krs', { citation: '99.010', chapter: null, query: null, limit: null }, c);
+  const ok = finalize({ status: 'answered', title: 't', answer_markdown: 'Under KRS 99.010(1), the fiscal court must adopt the budget within 45 days [1].', source_ids: ['krs:99.010'], follow_up_questions: [] }, c, SITE, false);
+  t('krs: cited statute figure verified', !ok.problems.length && ok.answer.sources[0].source_url === 'https://example.test/s', ok.problems.join('; '));
+  const bad = finalize({ status: 'answered', title: 't', answer_markdown: 'The budget is due within 60 days [1].', source_ids: ['krs:99.010'], follow_up_questions: [] }, c, SITE, false);
+  t('krs: invented deadline rejected', bad.problems.some((p) => /60/.test(p)));
+  t('krs: prompt covers statutes and no legal advice', /lookup_krs/.test(core.systemPrompt(fx.meta, SITE)) && /never conclude that an official or the county broke the law/.test(core.systemPrompt(fx.meta, SITE)));
+}
+// KRS fetcher parsers, on markup copied from the Legislative Research Commission site.
+{
+  const k = await import(path.resolve('scripts/fetch-krs.mjs'));
+  const chap = k.parseChapter('<ul><li><p><a class="statute" href="https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=5473">.020  County road engineer or supervisor. </a></p>\n</li><li><p><a class="statute" href="https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=5474">.030  Repealed, 1944. </a></p></li></ul><div class="heading_text">Penalties </div>');
+  t('krs fetch: chapter parse', chap.length === 2 && chap[0].id === '5473' && chap[0].suffix === '.020' && chap[0].title === 'County road engineer or supervisor.', JSON.stringify(chap));
+  const idx = k.parseIndex('<a href="https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=37360">CHAPTER 67 COUNTY GOVERNMENT (FISCAL COURTS AND COUNTY COMMISSIONERS)</a><a href="chapter.aspx?id=1">CHAPTER 91A <span>FINANCE AND REVENUE OF CITIES AND COUNTIES</span></a>');
+  t('krs fetch: index parse', idx['67']?.id === '37360' && /COUNTY GOVERNMENT/.test(idx['67'].title) && idx['91A']?.id === '1', JSON.stringify(idx));
+  const cl = k.cleanSectionText('179.020 County road engineer or supervisor.\n(1) The county judge/executive, with the approval of the\nfiscal court, may employ a road engineer.\n(2) Second part.\nPage 1 of 1\nEffective: July 15, 1998\nHistory: Amended 1998 Ky. Acts ch. 418, sec. 1,\neffective July 15, 1998.\n');
+  t('krs fetch: section text cleaned', /approval of the fiscal court, may employ/.test(cl.body) && /\n\(2\) Second part/.test(cl.body) && !/Page 1/.test(cl.body) && cl.effective === 'July 15, 1998' && /^History: Amended 1998/.test(cl.history ?? ''), JSON.stringify(cl));
 }
 fs.rmSync(outfile, { force: true });
 console.log(`ask tests: ${pass} passed, ${failn} failed`);

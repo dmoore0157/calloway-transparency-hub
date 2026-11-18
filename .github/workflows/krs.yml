@@ -1,0 +1,46 @@
+name: Refresh Kentucky statutes
+# Downloads the KRS chapters on county government (scripts/fetch-krs.mjs) into data/krs.json, commits any
+# change, and redeploys so the "Ask the records" assistant reads the current text.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 9 * * 1'   # Mondays, 4:41am Central
+  push:
+    branches: [main]
+    paths: [scripts/fetch-krs.mjs, .github/workflows/krs.yml]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: krs
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install pdftotext
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Fetch statutes
+        run: node scripts/fetch-krs.mjs
+      - name: Commit and redeploy if the statutes changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/krs.json && git ls-files --error-unmatch data/krs.json >/dev/null 2>&1; then
+            echo "No statute changes."; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/krs.json
+          git commit -m "Refresh Kentucky Revised Statutes (data/krs.json)"
+          git push
+          # Pushes made with the workflow token do not start other workflows, so start the deploy directly.
+          gh workflow run deploy.yml --ref main

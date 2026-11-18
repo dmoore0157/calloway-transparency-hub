@@ -17,6 +17,7 @@ const SUGGESTIONS = [
   'Who moved and seconded the most motions, and who voted no most often?',
   'How much does the county spend on the jail, and how is it funded?',
   'Who ran for Judge/Executive in 2026 and what were the results?',
+  'What does Kentucky law require of the Fiscal Court when it adopts and amends the budget?',
 ];
 const SITE = 'https://dmoore0157.github.io/calloway-transparency-hub';
 const STATUS: Record<string, { label: string; cls: string }> = {

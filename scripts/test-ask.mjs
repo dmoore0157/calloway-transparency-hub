@@ -183,6 +183,13 @@ const resp = (...blocks) => ({ content: blocks, stop_reason: 'tool_use', usage: 
   t('krs: cited statute figure verified', !ok.problems.length && ok.answer.sources[0].source_url === 'https://example.test/s', ok.problems.join('; '));
   const bad = finalize({ status: 'answered', title: 't', answer_markdown: 'The budget is due within 60 days [1].', source_ids: ['krs:99.010'], follow_up_questions: [] }, c, SITE, false);
   t('krs: invented deadline rejected', bad.problems.some((p) => /60/.test(p)));
+  t('tools stay under the API limit of 16 union-typed parameters', core.unionParamCount(core.TOOLS) <= 16, String(core.unionParamCount(core.TOOLS)));
+  c = kctx(); r = await runTool('lookup_law', { mode: 'citation', value: 'KRS 99.010', source: 'both', limit: 6 }, c);
+  t('lookup_law: new schema, citation', /zanzibar budget/.test(r.text) && c.registry.has('krs:99.010'));
+  c = kctx(); r = await runTool('lookup_law', { mode: 'search', value: 'walrus report', source: 'regulations', limit: 6 }, c);
+  t('lookup_law: new schema, search', /kar:900:1:010/.test(r.text));
+  c = kctx(); r = await runTool('lookup_law', { mode: 'chapter', value: '900 KAR 1', source: 'both', limit: 6 }, c);
+  t('lookup_law: new schema, chapter', c.registry.has('kar-chapter:900:1'));
   t('normalizeKar', core.normalizeKar('109 kar 15:20') === '109:15:020' && core.normalizeKar('KRS 68.240') === null);
   c = kctx(); r = await runTool('lookup_law', { citation: '900 KAR 1:010', chapter: null, query: null, source: null, limit: null }, c);
   t('kar: citation returns regulation', /walrus report within 30 days/.test(r.text) && c.registry.has('kar:900:1:010'), r.text.slice(0, 100));

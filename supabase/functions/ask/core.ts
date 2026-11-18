@@ -83,14 +83,14 @@ export const TOOLS = [
   },
   {
     name: 'lookup_law',
-    description: 'Kentucky law that governs county government and its offices. Statutes (Kentucky Revised Statutes, KRS): Fiscal Court and Judge/Executive, county finance and budgets, taxes, roads, jail, sheriff, county clerk, county attorney, coroner, open meetings and records, purchasing and bids, legal notices, planning and zoning, elections. Regulations (Kentucky Administrative Regulations, KAR) that carry those statutes out: Department for Local Government (county budgets, uniform accounts, financial reports), State Board of Elections, Auditor of Public Accounts, jail standards, records retention, solid waste planning. Give a citation ("KRS 68.240", "61.810(1)", "109 KAR 15:020") for the official text; a chapter ("KRS 67", "109 KAR 15") for its list of sections; or a query ("budget amendment", "sheriff settlement") to find sections by topic. One per call.',
+    description: 'Kentucky law that governs county government and its offices. Statutes (Kentucky Revised Statutes, KRS): Fiscal Court and Judge/Executive, county finance and budgets, taxes, roads, jail, sheriff, county clerk, county attorney, coroner, open meetings and records, purchasing and bids, legal notices, planning and zoning, elections. Regulations (Kentucky Administrative Regulations, KAR) that carry those statutes out: Department for Local Government (county budgets, uniform accounts, financial reports), State Board of Elections, Auditor of Public Accounts, jail standards, records retention, solid waste planning. Set mode "citation" with a section or regulation ("KRS 68.240", "61.810(1)", "109 KAR 15:020") for the official text; mode "chapter" with a chapter ("KRS 67", "109 KAR 15") for its list of sections; or mode "search" with topic words ("budget amendment", "sheriff settlement").',
     strict: true,
-    input_schema: { type: 'object', additionalProperties: false, required: ['citation', 'chapter', 'query', 'source', 'limit'], properties: {
-      citation: { ...nullable('string'), description: 'A KRS section ("KRS 67.080", "68.240(2)") or KAR regulation ("109 KAR 15:020"), or null.' },
-      chapter: { ...nullable('string'), description: 'A KRS chapter ("KRS 68", "91A") or KAR chapter ("109 KAR 15"), or null.' },
-      query: { ...nullable('string'), description: 'Topic words to search the statutes and regulations, or null.' },
-      source: { anyOf: [{ type: 'string', enum: ['statutes', 'regulations', 'both'] }, { type: 'null' }], description: 'For a query: search statutes, regulations, or both (default both).' },
-      limit: { ...nullable('integer'), description: 'Results to return for a query, 1 to 10 (default 6).' },
+    // No nullable fields here: the API allows at most 16 union-typed parameters across all strict tools.
+    input_schema: { type: 'object', additionalProperties: false, required: ['mode', 'value', 'source', 'limit'], properties: {
+      mode: { type: 'string', enum: ['citation', 'chapter', 'search'], description: 'What value holds.' },
+      value: { type: 'string', description: 'The citation, the chapter, or the search words.' },
+      source: { type: 'string', enum: ['statutes', 'regulations', 'both'], description: 'For a search: statutes, regulations, or both. Ignored otherwise.' },
+      limit: { type: 'integer', description: 'Results for a search, 1 to 10 (use 6 unless you need more).' },
     } },
   },
   {
@@ -212,6 +212,7 @@ export async function runTool(name: string, input: Record<string, unknown>, ctx:
   }
 
   if (name === 'lookup_law') {
+    if (typeof input.mode === 'string') { const v = String(input.value ?? ''); input = { citation: input.mode === 'citation' ? v : null, chapter: input.mode === 'chapter' ? v : null, query: input.mode === 'search' ? v : null, source: input.source ?? null, limit: input.limit ?? null }; }
     const krs = index.corpus.meta.coverage.krs; const kar = index.corpus.meta.coverage.kar;
     if (!krs?.sections && !kar?.regulations) return out('The hub has not loaded Kentucky statutes or regulations yet. Say the text of the law is not available on the hub right now.', 'Looked for Kentucky law');
     const loaded = `Loaded on the hub: ${krs?.sections ? `KRS chapters (retrieved ${krs.fetched}): ${krs.chapters.join('; ')}` : 'no statutes'}. ${kar?.regulations ? `KAR chapters (retrieved ${kar.fetched}): ${kar.chapters.join('; ')}` : 'No regulations'}.`;
@@ -267,6 +268,19 @@ export async function runTool(name: string, input: Record<string, unknown>, ctx:
   }
 
   return out(`Unknown tool ${name}.`, 'Unknown tool');
+}
+
+/** Count of parameters whose schema is a union (type array or anyOf), across all tools. The API caps it at 16. */
+export function unionParamCount(tools: readonly { input_schema: unknown }[]): number {
+  let n = 0;
+  const walk = (o: unknown): void => {
+    if (!o || typeof o !== 'object') return;
+    const x = o as Record<string, unknown>;
+    if (x.properties && typeof x.properties === 'object') for (const p of Object.values(x.properties as Record<string, Record<string, unknown>>)) { if (Array.isArray(p.type) || Array.isArray(p.anyOf)) n++; walk(p); }
+    if (x.items) walk(x.items);
+  };
+  for (const t of tools) walk(t.input_schema);
+  return n;
 }
 
 /** "109 KAR 15:020" / "109 kar 15:20" -> "109:15:020"; null when it is not a KAR citation. */
